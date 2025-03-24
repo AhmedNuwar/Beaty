@@ -1,0 +1,119 @@
+/*@font-face {
+    font-family: 'CustomCairo';
+    src: url(Fonts/Cairo-VariableFont_slnt\,wght.ttf);
+    font-weight: normal;
+    font-style: normal;
+}
+body{
+    font-family: 'CustomCairo', sans-serif;
+    padding: 0px;
+    margin: 0px;
+    background-color: rgb(233, 233, 233);
+}
+/* Navbar Styling 
+.navbar{
+    padding: 10px;
+
+}
+nav .btn{
+    margin-top: 5px;
+}
+nav .navbar-brand{
+    margin-left: 1rem;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+/*Navbar End*/
+.cheif-info{
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    gap: 10px;
+}
+/* Cheif Info Styling */
+.cheif-info img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.cheif-info p{
+    color: gray;
+    margin-bottom: 5px;
+}
+/* Cheif Info End */
+/* Food Info Styling */
+.food-info{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 10px;
+}
+    /* Menu Styling */
+.menu{
+    background-color: white;
+}
+.menu img{
+    width: 100%;
+    max-height: 500px;
+    object-fit: cover;
+    
+}
+.menu-item{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px;
+    margin: 10px ;
+    border-bottom: 1px solid #ddd;
+}
+.menu-item img{
+    width: 80px;
+    height: 80px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+.menu-info{
+    flex-grow: 1;
+}
+.menu-info h3{
+    margin: 0;
+    font-size: 18px;
+}
+.menu-info p {
+    margin: 5px 0;
+    font-size: 14px;
+    color: #555;
+}
+
+.price {
+    font-weight: bold;
+    color: #e74c3c;
+    font-size: 16px;
+}
+/* Menu End */
+
+/* Reviews Styling */
+.reviews{
+    padding: 10px;
+    background-color: white;
+    width: 100%;
+}
+.review{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    background-color: white;
+    border-bottom: 1px solid #ddd;
+}
+.review img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.review p{
+    color: #555;
+}

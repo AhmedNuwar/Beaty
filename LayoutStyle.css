@@ -1,0 +1,27 @@
+@font-face {
+    font-family: 'CustomCairo';
+    src: url(Fonts/Cairo-VariableFont_slnt\,wght.ttf);
+    font-weight: normal;
+    font-style: normal;
+}
+body{
+    font-family: 'CustomCairo', sans-serif;
+    padding: 0px;
+    margin: 0px;
+    background-color: rgb(233, 233, 233);
+}
+/* Navbar Styling */
+.navbar{
+    padding: 10px;
+
+}
+nav .btn{
+    margin-top: 5px;
+}
+nav .navbar-brand{
+    margin-left: 1rem;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+/*Navbar End*/
