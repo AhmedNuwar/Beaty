@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="bootstrap-5.3.3-dist/css/bootstrap.min.css"> 
+    <link rel="stylesheet" href="Fonts/bootstrap-icons-1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="LayoutStyle.css">
     <link rel="stylesheet" href="indexStyle.css">
-    <title>Document</title>
+    <title data-lang-en="Beaty" data-lang-ar="بيتي">بيتي</title>
 </head>
 <body>
     <nav class="navbar navbar-expand-md bg-light navbar-light sticky-top">
@@ -29,8 +30,7 @@
                 <li class="nav-item"><a href="index.html" class="nav-link" data-lang-en="Home" data-lang-ar="الرئيسية">الرئيسية</a></li>
                 <li class="nav-item"><a href="Recipes.html" class="nav-link" data-lang-en="Recipes" data-lang-ar="الوصفات">الوصفات</a></li>
                 <li class="nav-item"><a href="CheifPage.html" class="nav-link" data-lang-en="Chief" data-lang-ar="الطباخ">الطباخ</a></li>
-                <li class="nav-item"> <a href="#" class="btn btn-sm btn-danger" data-lang-en="sign in" data-lang-ar="تسجيل دخول">تسجيل خروج</a></li>
-                
+                <li class="nav-item"> <a href="#" class="btn btn-sm btn-danger" data-lang-en="Sign In" data-lang-ar="تسجيل دخول">تسجيل خروج</a></li>
             </ul>
         </div>
     </nav>
@@ -39,10 +39,14 @@
         <div class="page-cover">
             <div class="pgcover-overlay"></div>
             <div class="cover-text">
-                <h2>اكل بيتي</h2>
+                <h2 data-lang-en="Delicious and Authentic Homemade Food" data-lang-ar="طعام بيتي لذيذ وأصيل">طعام بيتي لذيذ وأصيل</h2>
+                <!--search-->
                 <form action="CheifPage.html" class="search-form">
-                    <input id="search" type="text" name="srchTxt" placeholder="ابحث عن ظباخ" class="form-control">
-                    <input id="submit" type="submit" value="ابحث" class="btn btn-sm btn-danger">
+                    <input id="search" type="text" name="srchTxt" 
+                    placeholder="ابحث عن طباخ" class="form-control" data-lang-en="Search for a chef" data-lang-ar="ابحث عن طباخ">
+                    <button id="submit" type="submit" class="btn btn-danger lang-ar">
+                        <i class="bi bi-search"></i>
+                    </button>
                 </form>
             </div>
         </div>
@@ -51,26 +55,46 @@
             <div class="card">
                 <img src="Images/sofrArabi.jpg" alt="" class="card-img-top">
                 <div class="card-img-overlay">
-                    <p class="card-text">استكشف المطابخ</p>
+                    <p class="card-text" data-lang-en="Explore Kitchens" data-lang-ar="استكشف المطابخ">استكشف المطابخ</p>
                 </div>
             </div>
             <div class="card">
                 <img src="Images/sofrArabi.jpg" alt="" class="card-img-top">
                 <div class="card-img-overlay">
-                    <p class="card-text">استكشف المطابخ</p>
+                    <p class="card-text" data-lang-en="Explore Kitchens" data-lang-ar="استكشف المطابخ">استكشف المطابخ</p>
                 </div>
             </div>
             <div class="card">
                 <img src="Images/sofrArabi.jpg" alt="" class="card-img-top">
                 <div class="card-img-overlay">
-                    <p class="card-text">استكشف المطابخ</p>
+                    <p class="card-text" data-lang-en="Explore Kitchens" data-lang-ar="استكشف المطابخ">استكشف المطابخ</p>
                 </div>
             </div>
-
         </div>
-
     </main>
     <script src="bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
-    <script src="LangScript.js"></script>
+    <script>
+        const languageSwitcher = document.getElementById('languageSwitcher');
+        const elementsWithLang = document.querySelectorAll('[data-lang-en], [data-lang-ar]');
+
+        function translatePage(lang) {
+            document.documentElement.lang = lang;
+            document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+
+            elementsWithLang.forEach(element => {
+                element.textContent = element.getAttribute(`data-lang-${lang}`);
+                if (element.placeholder) {
+                    element.placeholder = element.getAttribute(`data-lang-${lang}`);
+                }
+            });
+        }
+
+        languageSwitcher.addEventListener('change', (event) => {
+            translatePage(event.target.value);
+        });
+
+        // Initialize the page with the default language
+        translatePage(languageSwitcher.value);
+    </script>
 </body>
 </html>
