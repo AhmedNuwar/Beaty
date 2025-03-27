@@ -51,50 +51,52 @@
             </div>
         </div>
         <!--page cover end-->
-        <div class="cards">
-            <div class="card">
-                <img src="Images/sofrArabi.jpg" alt="" class="card-img-top">
-                <div class="card-img-overlay">
-                    <p class="card-text" data-lang-en="Explore Kitchens" data-lang-ar="استكشف المطابخ">استكشف المطابخ</p>
+
+            <!--cards top-->
+            <div class="cards" id="cards-top">
+                <!--wide card 1-->
+                <div class="card card-wide" onclick="goTo('CheifPage.html');">
+                    <img src="Images/sofrArabi.jpg" alt="" class="card-img-top">
+                    <div class="card-img-overlay">
+                        <p class="card-text" data-lang-en="Explore Kitchens" data-lang-ar="استكشف المطابخ">استكشف المطابخ</p>
+                    </div>
+                </div>
+                <!--wide card 2-->
+                <div class="card card-wide">
+                    <img src="Images/sofrArabi.jpg" alt="" class="card-img-top">
+                    <div class="card-img-overlay">
+                        <p class="card-text" data-lang-en="Explore Kitchens" data-lang-ar="استكشف المطابخ">استكشف المطابخ</p>
+                    </div>
                 </div>
             </div>
-            <div class="card">
-                <img src="Images/sofrArabi.jpg" alt="" class="card-img-top">
-                <div class="card-img-overlay">
-                    <p class="card-text" data-lang-en="Explore Kitchens" data-lang-ar="استكشف المطابخ">استكشف المطابخ</p>
+            <!--cards bottom-->
+            <div class="cards" id="cards-bottom">
+                <!--thin card 1-->
+                <div class="card card-thin">
+                    <img src="Images/sofrArabi.jpg" alt="" class="card-img-top">
+                    <div class="card-img-overlay">
+                        <p class="card-text" data-lang-en="Explore Kitchens" data-lang-ar="استكشف المطابخ">استكشف المطابخ</p>
+                    </div>
+                <!--thin card 2-->    
                 </div>
-            </div>
-            <div class="card">
-                <img src="Images/sofrArabi.jpg" alt="" class="card-img-top">
-                <div class="card-img-overlay">
-                    <p class="card-text" data-lang-en="Explore Kitchens" data-lang-ar="استكشف المطابخ">استكشف المطابخ</p>
+                <div class="card card-thin">
+                    <img src="Images/sofrArabi.jpg" alt="" class="card-img-top">
+                    <div class="card-img-overlay">
+                        <p class="card-text" data-lang-en="Explore Kitchens" data-lang-ar="استكشف المطابخ">استكشف المطابخ</p>
+                    </div>
+                </div>
+                <!--thin card 3-->
+                <div class="card card-thin">
+                    <img src="Images/sofrArabi.jpg" alt="" class="card-img-top">
+                    <div class="card-img-overlay">
+                        <p class="card-text" data-lang-en="Explore Kitchens" data-lang-ar="استكشف المطابخ">استكشف المطابخ</p>
+                    </div>
                 </div>
             </div>
         </div>
     </main>
+    <script src="indexScript.js"></script>
     <script src="bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
-    <script>
-        const languageSwitcher = document.getElementById('languageSwitcher');
-        const elementsWithLang = document.querySelectorAll('[data-lang-en], [data-lang-ar]');
-
-        function translatePage(lang) {
-            document.documentElement.lang = lang;
-            document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
-
-            elementsWithLang.forEach(element => {
-                element.textContent = element.getAttribute(`data-lang-${lang}`);
-                if (element.placeholder) {
-                    element.placeholder = element.getAttribute(`data-lang-${lang}`);
-                }
-            });
-        }
-
-        languageSwitcher.addEventListener('change', (event) => {
-            translatePage(event.target.value);
-        });
-
-        // Initialize the page with the default language
-        translatePage(languageSwitcher.value);
-    </script>
+    <script src="LangScript.js"></script>
 </body>
 </html>
