@@ -93,15 +93,18 @@
                     </div>
                 </div>
             </div>
-            <!-- reviews -->
-            <div class="reviews col">
-                <h2 data-lang-en="Reviews" data-lang-ar="التقييمات">التقييمات</h2> 
+            <!-- Reviews Section -->
+        <div class="reviews col">
+            <h2 data-lang-en="Reviews" data-lang-ar="التقييمات">التقييمات</h2> 
+
+            <!-- Existing Reviews -->
+            <div id="review-list">
                 <div class="review">
                     <img src="Images/userAvatar.png" alt="user profile picture">
                     <div class="review-info">
                         <h6 data-lang-en="John Doe" data-lang-ar="محمد أحمد">محمد أحمد</h6>
                         <p data-lang-en="The food was amazing! Highly recommend." 
-                           data-lang-ar="الطعام كان رائعاً! أنصح به بشدة.">الطعام كان رائعاً! أنصح به بشدة.</p>
+                        data-lang-ar="الطعام كان رائعاً! أنصح به بشدة.">الطعام كان رائعاً! أنصح به بشدة.</p>
                     </div> 
                 </div>
                 <div class="review">
@@ -109,20 +112,21 @@
                     <div class="review-info">
                         <h6 data-lang-en="Jane Smith" data-lang-ar="فاطمة علي">فاطمة علي</h6>
                         <p data-lang-en="Great service and delicious meals." 
-                           data-lang-ar="خدمة رائعة ووجبات لذيذة.">خدمة رائعة ووجبات لذيذة.</p>
+                        data-lang-ar="خدمة رائعة ووجبات لذيذة.">خدمة رائعة ووجبات لذيذة.</p>
                     </div>   
                 </div>
-                <form action="">
-                    <!--Ar-->
-                    <input type="text" name="revTxt" placeholder="اكتب مراجعتك هنا" class="form-control lang-ar">
-                    <input type="submit" value="اضف مراجعتك" class="btn btn-sm btn-danger lang-ar">
-                    <!--En-->
-                    <input type="text" name="revTxt" placeholder="write your review here" class="form-control lang-en">
-                    <input type="submit" value="add review" class="btn btn-sm btn-danger lang-en">
-                </form>
             </div>
+
+            <!-- Add Review Form -->
+            <form id="review-form">
+                <input type="text" name="revTxt" id="review-text" placeholder="اكتب مراجعتك هنا" class="form-control lang-ar">
+                <input type="submit" value="اضف مراجعتك" class="btn btn-sm btn-danger lang-ar">
+                <input type="text" name="revTxtEn" id="review-text-en" placeholder="write your review here" class="form-control lang-en">
+                <input type="submit" value="add review" class="btn btn-sm btn-danger lang-en">
+            </form>
         </div>
     </main>
+    <script src="ChiefScript.js"></script>
     <script src="bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
     <script src="LangScript.js"></script>
 </body>

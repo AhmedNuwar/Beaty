@@ -119,5 +119,9 @@ form{
     padding: 10px;
 }
 form .form-control{
+    border-radius: 0;
     margin-bottom: 10px;
+}
+form .btn{
+    border-radius: 0;
 }
