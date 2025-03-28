@@ -1,0 +1,22 @@
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Ensure the main element takes full viewport height */
+}
+form{
+    width: 70%;
+    max-width: 500px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    background: #f9f9f9;
+    box-shadow: 0 0 10px #ccc;
+}
+.form-group{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+form .form-control, form .btn{
+    border-radius: 0;
+}
