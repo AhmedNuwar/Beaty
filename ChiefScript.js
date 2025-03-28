@@ -3,13 +3,12 @@ document.getElementById("review-form").addEventListener("submit", function(event
     
     // Get the review text (either Arabic or English)
     let reviewText = document.getElementById("review-text").value.trim();
-    let reviewTextEn = document.getElementById("review-text-en").value.trim();
-    
+
     // Get the document language direction or check which field is filled
     let lang = document.documentElement.lang || document.body.getAttribute("dir");
 
     // Check if both fields are empty
-    if (!reviewText && !reviewTextEn) {
+    if (!reviewText) {
         if (lang === "ar" || document.getElementById("review-text") === document.activeElement) {
             alert("يرجى إدخال مراجعة قبل الإرسال.");
         } else {
@@ -36,7 +35,13 @@ document.getElementById("review-form").addEventListener("submit", function(event
 
     // Create the user's name (You can replace "Guest" with actual username logic if available)
     let userName = document.createElement("h6");
-    userName.textContent = "Guest";
+     if (lang === "ar") {
+        userName.textContent = "زائر";
+    }
+    else{
+        userName.textContent = "Guest";
+    }
+    
 
     // Create the review text
     let userReview = document.createElement("p");
