@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="bootstrap-5.3.3-dist/css/bootstrap.min.css"> 
+    <link rel="stylesheet" href="Fonts/bootstrap-icons-1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="LayoutStyle.css">
     <link rel="stylesheet" href="LoginStyle.css">
     <title>Document</title>
@@ -35,18 +36,41 @@
         </div>
     </nav>
     <main>
-        <h1 data-lang-en="Login" data-lang-ar="تسجيل الدخول">تسجيل الدخول</h1>
-        <form action="index.html">
-            <div class="form-group"></div>
-            <label for="email" class="form-label" data-lang-en="Email" data-lang-ar="البريد الاكتروني">البريد الاكتروني</label>
-            <input type="text" id="email" name="email" placeholder="البريد الاكتروني" class="form-control" required>
+        <div class="container">
+            <h1 data-lang-en="Sign in" data-lang-ar="تسجيل الدخول">تسجيل الدخول</h1>
+            <!--form-->
+            <form action="index.html">
+                <div class="form-group" id="form-email">
+                <label for="email" class="form-label" data-lang-en="Email" data-lang-ar="البريد الاكتروني">البريد الاكتروني</label>
+                <input type="text" id="email" name="email" placeholder="البريد الاكتروني" class="form-control" required 
+                       data-lang-en="Email" data-lang-ar="البريد الاكتروني">
+                </div>
+                <div class="form-group" id ="form-password">
+                <label for="password" class="form-label" data-lang-en="Password" data-lang-ar="كلمة المرور">كلمة المرور</label>
+                <input type="password" id="password" name="password" placeholder="كلمة المرور" class="form-control" required 
+                       data-lang-en="Password" data-lang-ar="كلمة المرور">
+                </div>
+                <div class="form-group">
+                    <input type="checkbox" name="remember me" id="" value="remember me" data-lang-en="Remember me" data-lang-ar="تذكرني">
+                    <label for="remember me" data-lang-en="Remember me" data-lang-ar="تذكرني">تذكرني</label>
+                </div>
+                <input type="submit" class="btn btn-outline-danger form" value="تسجيل الدخول" data-lang-en="sign in" data-lang-ar="تسجيل الدخول">
+            </form>
+            <a href="#" data-lang-en="Forgot Password?" data-lang-ar="نسيت كلمة المرور؟">نسيت كلمة المرور؟</a>
+            <hr>
+            <!--socal login-->
+            <div class="social-login">
+                <p data-lang-en="Or sign in with" data-lang-ar="أو تسجيل الدخول باستخدام">أو تسجيل الدخول باستخدام</p>
+                <button id="btn-face" class="btn btn-primary"
+                        data-lang-en="Login with Facebook" data-lang-ar="تسجيل الدخول باستخدام فيسبوك">
+                    <i class="bi bi-facebook"></i> تسجيل الدخول باستخدام فيسبوك
+                </button>
+                <button id="btn-google" class="btn btn-danger"
+                        data-lang-en="Login with Google" data-lang-ar="تسجيل الدخول باستخدام جوجل">
+                    <i class="bi bi-google"></i> تسجيل الدخول باستخدام جوجل
+                </button>
             </div>
-            <div class="form-group">
-            <label for="password" class="form-label" data-lang-en="Password" data-lang-ar="كلمة المرور">كلمة المرور</label>
-            <input type="password" id="password" name="password" placeholder="كلمة المرور" class="form-control" required>
-            </div>
-            <input type="submit" class="btn btn-danger form" value="تسجيل الدخول" data-lang-en="Login" data-lang-ar="تسجيل الدخول">
-        </form>
+        </div>
     </main>
     <script src="bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
     <script src="LangScript.js"></script>

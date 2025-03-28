@@ -25,6 +25,7 @@ body{
 }
 nav .btn{
     margin-top: 5px;
+    border-radius: 0;
 }
 nav .navbar-brand{
     margin-left: 1rem;
