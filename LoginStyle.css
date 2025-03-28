@@ -18,12 +18,11 @@ main{
     margin-top: 10px;
     margin-bottom: 10px;
 }
-form .form-control, form .btn{
+form .form-control, .btn{
     border-radius: 0;
 }
 .social-login .btn{
     width: 100%;
-    border-radius: 0;
 }
 #btn-face{
     background-color: #3b5998; border-color: #3b5998;
