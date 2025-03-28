@@ -3,7 +3,17 @@ function changeLanguage(lang) {
     document.dir = lang === "ar" ? "rtl" : "ltr"; // Change text direction
 
     document.querySelectorAll("[data-lang-en]").forEach(element => {
-        element.textContent = element.getAttribute(`data-lang-${lang}`);
+        if (element.placeholder !== undefined) {
+            // Update input fields' placeholders
+            element.setAttribute("placeholder", element.getAttribute(`data-lang-${lang}`));
+        } else if (element.tagName === "BUTTON" || element.tagName === "INPUT" && element.type === "submit") {
+            // Update buttons and submit inputs
+            element.setAttribute("value", element.getAttribute(`data-lang-${lang}`)); // For input buttons
+            element.textContent = element.getAttribute(`data-lang-${lang}`); // For regular buttons
+        } else {
+            // For other elements with text content
+            element.textContent = element.getAttribute(`data-lang-${lang}`);
+        }
     });
 
     // Save preference in localStorage
