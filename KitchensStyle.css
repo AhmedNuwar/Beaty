@@ -1,0 +1,107 @@
+form{
+    display: flex;
+    width: 100%;
+    padding: .5rem 1rem;
+}
+form #searchInput{
+    width: 98%;
+    display: inline;
+    border-radius: 0;
+}
+form .btn{
+}
+.btn{
+    border-radius: 0;
+    cursor: pointer;
+}
+
+@media (max-width: 700px) {
+    .kitchens{
+        gap: .5rem;
+    }
+    .kitchens-list{
+        width: 100%;
+    }
+    .kitchen {
+        background-color: white;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        
+    }
+    .featured{
+        display: flex;
+        flex-direction: column;
+        gap: .5rem;
+        background-color: white;
+        padding: 10px;
+        width: 100%;
+    }
+}
+@media (min-width: 700px) {
+    .kitchens{
+        gap: 1%;
+    }
+    .kitchens-list{
+        width: 69%;
+    }
+    .kitchen {
+        background-color: white;
+        display: flex;
+        align-items: center;
+    }
+    .featured{
+        display: flex;
+        flex-direction: column;
+        gap: .5rem;
+        background-color: white;
+        padding: 10px;
+        width: 30%;
+        height: 50%;
+    }
+}
+.kitchens{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: .5rem 1rem;
+}
+.kitchens-list{
+    background-color: white;
+}
+.kitchen{
+    margin: 0rem 1.2rem;
+    padding: 1rem;
+    gap: .5rem;
+    border-bottom: 1px solid #ddd;
+}
+.kitchen img {
+        object-fit: cover;
+        width: 30%;
+        max-width: 250px;
+        min-width: 170px;
+        aspect-ratio: 1 / 1;
+        border-radius: 10px;
+    }
+.kitchen-info{
+    flex-grow: 1;
+    width: 50%;
+}
+h3{
+    margin: 0;
+    font-size: 18px;
+}
+p{
+    margin: 5px 0;
+    font-size: 14px;
+    color: #555;
+}
+
+.featured img{
+    width: 25%;
+    object-fit: cover;
+    min-width: 100px;
+    max-width: 250px;
+    aspect-ratio: 1 / 1;
+    border-radius: 10px; 
+}
