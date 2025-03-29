@@ -41,3 +41,6 @@ form .form-control, .btn{
     background-color: #c1351d; 
     border-color: #c1351d;
 }
+.bi{
+    margin: 0 5px;
+}
