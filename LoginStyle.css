@@ -25,9 +25,19 @@ form .form-control, .btn{
     width: 100%;
 }
 #btn-face{
-    background-color: #3b5998; border-color: #3b5998;
+    background-color: #3b5998; 
+    border-color: #3b5998;
     margin-bottom: 10px;
 }
+#btn-face:hover{
+    background-color: #2d4373; 
+    border-color: #2d4373;
+}
 #btn-google{
-    background-color: #db4437; border-color: #db4437;
+    background-color: #db4437; 
+    border-color: #db4437;
+}
+#btn-google:hover{
+    background-color: #c1351d; 
+    border-color: #c1351d;
 }
