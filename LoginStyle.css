@@ -6,10 +6,10 @@ main{
     height: 100vh; /* Ensure the main element takes full viewport height */
 }
 .container{
-    border: 1px solid #ccc;
     background: #f9f9f9;
     box-shadow: 0 0 10px #ccc;
     width: 70%;
+    min-width: 350px;
     max-width: 500px;
     padding: 20px;
 
