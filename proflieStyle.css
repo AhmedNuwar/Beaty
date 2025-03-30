@@ -1,0 +1,48 @@
+@media (min-width: 800px) {
+    main{
+        width: 60%;
+        margin: 2rem auto;
+    }
+    .options-list{
+        padding: 20px;
+    }
+}
+@media (max-width: 800px) {
+    .options-list{
+        padding: 0;
+    }
+}
+.user-data{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+}
+.user-data img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+.options-list{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    width: 100%;
+}
+.option{
+    display: flex;
+    padding: 10px;
+    background-color: #f0f0f0;
+}
+.option a{
+    text-decoration: none;
+    color: black;
+}
+.option:hover{
+    background-color: #e0e0e0;
+}
+.bi{
+    font-size: 20px;
+    margin-left: 10px;
+}
