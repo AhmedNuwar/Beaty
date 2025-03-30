@@ -32,5 +32,6 @@ nav .navbar-brand{
     font-size: 1.5em;
     font-weight: bold;
 }
-
-/*Navbar End*/
+#languageSwitcher{
+    border-radius: 0;
+}
