@@ -1,30 +1,35 @@
-function changeLanguage(lang) {
-    document.documentElement.lang = lang; // تغيير لغة الصفحة
-    document.dir = lang === "ar" ? "rtl" : "ltr"; // تغيير اتجاه النص
+document.addEventListener("DOMContentLoaded", () => {
+    const languageToggle = document.getElementById("languageToggle");
+    const savedLang = localStorage.getItem("selectedLanguage") || "ar";
 
-    document.querySelectorAll("[data-lang-en]").forEach(element => {
-        if (element.hasAttribute("placeholder")) {
-            // تحديث placeholder لعناصر الإدخال النصي
-            element.setAttribute("placeholder", element.getAttribute(`data-lang-${lang}`));
-        } else if (element.tagName === "INPUT" && (element.type === "submit" || element.type === "button")) {
-            // تحديث زر الإرسال أو أزرار الإدخال
-            element.setAttribute("value", element.getAttribute(`data-lang-${lang}`));
-        } else {
-            // تحديث النص لباقي العناصر (مثل الأزرار العادية والنصوص داخل العناصر)
-            element.textContent = element.getAttribute(`data-lang-${lang}`);
-        }
+    function changeLanguage(lang) {
+        if (!["ar", "en"].includes(lang)) lang = "ar"; // التأكد من أن اللغة صحيحة
+
+        document.documentElement.lang = lang;
+        document.dir = lang === "ar" ? "rtl" : "ltr";
+
+        document.querySelectorAll("[data-lang-en]").forEach(element => {
+            if (element.hasAttribute("placeholder")) {
+                element.setAttribute("placeholder", element.getAttribute(`data-lang-${lang}`));
+            } else if (element.tagName === "INPUT" && (element.type === "submit" || element.type === "button")) {
+                element.setAttribute("value", element.getAttribute(`data-lang-${lang}`));
+            } else {
+                element.textContent = element.getAttribute(`data-lang-${lang}`);
+            }
+        });
+
+        // تحديث نص الزر ليعكس اللغة التالية
+        languageToggle.textContent = lang === "ar" ? "English" : "العربية";
+
+        localStorage.setItem("selectedLanguage", lang);
+    }
+
+    // تبديل اللغة عند النقر على الزر
+    languageToggle.addEventListener("click", () => {
+        const newLang = document.documentElement.lang === "ar" ? "en" : "ar";
+        changeLanguage(newLang);
     });
 
-    // حفظ تفضيل اللغة في LocalStorage
-    localStorage.setItem("selectedLanguage", lang);
-}
-
-// ضبط مستمع الحدث (Event Listener) لتغيير اللغة عند الاختيار من القائمة
-document.getElementById("languageSwitcher").addEventListener("change", function () {
-    changeLanguage(this.value);
+    // تحميل اللغة المخزنة عند فتح الصفحة
+    changeLanguage(savedLang);
 });
-
-// تحميل اللغة المحفوظة عند فتح الصفحة
-const savedLang = localStorage.getItem("selectedLanguage") || "ar"; 
-document.getElementById("languageSwitcher").value = savedLang;
-changeLanguage(savedLang);

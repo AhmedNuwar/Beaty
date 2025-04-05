@@ -33,5 +33,6 @@ nav .navbar-brand{
     font-weight: bold;
 }
 #languageSwitcher{
+    margin-right: auto;
     border-radius: 0;
 }
