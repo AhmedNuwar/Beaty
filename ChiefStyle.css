@@ -1,37 +1,48 @@
-/*@font-face {
-    font-family: 'CustomCairo';
-    src: url(Fonts/Cairo-VariableFont_slnt\,wght.ttf);
-    font-weight: normal;
-    font-style: normal;
+/* Cart Style */
+.cart-btn{
+    position: relative;
+    margin-right: auto;
+    margin-left: 10px;
+    z-index: 2;
 }
-body{
-    font-family: 'CustomCairo', sans-serif;
-    padding: 0px;
-    margin: 0px;
-    background-color: rgb(233, 233, 233);
+[lang="en"] .cart-btn{
+    margin-right: 10px; 
+    margin-left: auto;
 }
-/* Navbar Styling 
-.navbar{
+
+.cart-container {
+    position: relative; 
+  }
+.cart {
+    position: absolute;
+    top: 100%;
+    left: 0px;
+    margin-top: 15px;
+    background-color: rgb(251, 251, 251);
     padding: 10px;
-
-}
-nav .btn{
-    margin-top: 5px;
-}
-nav .navbar-brand{
-    margin-left: 1rem;
-    font-size: 1.5em;
+    font-size: 12px;
     font-weight: bold;
+    width: 300px;
+    min-width: 200px;
+    z-index: 1; /* Ensure it stays above other elements */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
 }
-
-/*Navbar End*/
+[lang="en"] .cart {
+    left: auto;
+    right: 0;
+}
+.cart ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+/* Cheif Info Styling */
 .cheif-info{
     display: flex;
     align-items: center;
     padding: 10px;
     gap: 10px;
 }
-/* Cheif Info Styling */
 .cheif-info img{
     width: 100px;
     height: 100px;
@@ -92,6 +103,23 @@ nav .navbar-brand{
     color: #e74c3c;
     font-size: 16px;
 }
+.add-to-cart-section{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.item-quantity{
+    width: 15%;
+    max-width: 50px;
+}
+.add-to-cart{
+    border-radius: 0;
+    background-color: #e74c3c;
+    border: none;
+}
+.add-to-cart:hover{
+    background-color: #c0392b;
+}
 /* Menu End */
 
 /* Reviews Styling */
@@ -125,3 +153,4 @@ form .form-control{
 form .btn{
     border-radius: 0;
 }
+/* Reviews End */
