@@ -13,19 +13,32 @@
 .cart-container {
     display: none;
     position: relative; 
+
   }
+@media (min-width: 500px) {
+    .cart{
+        left: 0;
+        width: 400px;
+    }
+}
+@media (max-width: 500px) {
+    .cart {
+        width: calc(100vw - 90px); /* Shrinks while keeping a margin */
+        max-width: 300px; /* Optional: don't let it get too big */
+        left: calc(-1 * (450px - 100vw) / 2);
+    }
+}
 .cart {
     position: absolute;
-    left: 0;
     margin-top: 1.4rem;
     background-color: rgb(251, 251, 251);
     padding: 10px;
     font-size: 12px;
     font-weight: bold;
-    width: 200px;
     z-index: 1; /* Ensure it stays above other elements */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
 }
+
 [lang="en"] .cart {
     left: auto;
     right: 0;
@@ -38,6 +51,12 @@
 .cart .remove-item{
     color: rgb(195, 45, 45);
 
+}
+.cart-item{
+    gap: 10px;
+}
+.cart-item img {
+    object-fit: cover;
 }
 /* Cheif Info Styling */
 .cheif-info{

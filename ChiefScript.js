@@ -60,7 +60,6 @@ document.getElementById("review-form").addEventListener("submit", function(event
     document.getElementById("review-text-en").value = "";
 });
 // Add to cart functionality
-// Wait for the DOM to be fully loaded before running the script
 document.addEventListener("DOMContentLoaded", function () {
     // Initialize an empty cart array
     let cart = [];
@@ -78,29 +77,33 @@ document.addEventListener("DOMContentLoaded", function () {
     // Add event listener to each "Add to Cart" button on the page
     document.querySelectorAll(".add-to-cart").forEach(button => {
         button.addEventListener("click", function () {
-            // Get item name and price from data attributes
+            // Get item details from data attributes
             let itemName = this.dataset.name;
             let itemPrice = parseFloat(this.dataset.price);
+            let itemImg = this.dataset.img;
 
-            // Get the quantity input value (previous sibling of the button)
+            // Get the quantity input value
             let quantityInput = this.previousElementSibling;
             let quantity = parseInt(quantityInput.value) || 1;
 
-            // Check if the item already exists in the cart
+            // Check if item already exists in the cart
             let existingItem = cart.find(item => item.name === itemName);
 
             if (existingItem) {
-                // If item exists, update its quantity and total
                 existingItem.quantity += quantity;
                 existingItem.total = existingItem.price * existingItem.quantity;
             } else {
-                // If new item, add it to the cart array
-                cart.push({ name: itemName, price: itemPrice, quantity, total: itemPrice * quantity });
+                cart.push({
+                    name: itemName,
+                    price: itemPrice,
+                    quantity: quantity,
+                    total: itemPrice * quantity,
+                    img: itemImg
+                });
             }
 
-            // Update the cart display
+            // Update cart display and show cart
             updateCart();
-            // Automatically show the cart after adding an item
             cartContainer.style.display = "block";
         });
     });
@@ -109,47 +112,62 @@ document.addEventListener("DOMContentLoaded", function () {
     function updateCart() {
         let cartList = document.getElementById("cart-items");
         let totalAmount = 0;
-        cartList.innerHTML = ""; // Clear the cart list before re-rendering
+        cartList.innerHTML = ""; // Clear the cart list
 
-        // Loop through cart items and create list elements for each
         cart.forEach((item, index) => {
             totalAmount += item.total;
 
-            // Create list item element
-            let li = document.createElement("li");
-            li.textContent = `${item.name} (x${item.quantity}) - ${item.total.toFixed(2)} جنية `;
+            // Create wrapper for cart item
+            let itemDiv = document.createElement("div");
+            itemDiv.className = "cart-item d-flex align-items-center mb-2 border-bottom pb-2";
 
-            // Create remove button and attach its event
+            // Image
+            let img = document.createElement("img");
+            img.src = item.img;
+            img.alt = item.name;
+            img.style.width = "50px";
+            img.style.height = "50px";
+            img.className = "me-2 rounded";
+
+            // Item details
+            let itemDetails = document.createElement("div");
+            itemDetails.className = "flex-grow-1";
+            itemDetails.innerHTML = `
+                <strong>${item.name}</strong><br/>
+                Quantity: ${item.quantity}<br/>
+                Total: ${item.total.toFixed(2)} جنية
+            `;
+
+            // Remove button
             let removeBtn = document.createElement("button");
-            removeBtn.className = "remove-item btn btn-sm bi bi-x-circle-fill";
-            removeBtn.textContent = "";
+            removeBtn.className = "btn btn-sm remove-item ms-2";
+            removeBtn.innerHTML = `<i class="bi bi-x-circle-fill"></i>`;
             removeBtn.dataset.index = index;
-
-            // Remove item from cart when clicked
             removeBtn.addEventListener("click", function () {
-                cart.splice(index, 1); // Remove item by index
-                updateCart(); // Refresh cart UI
+                cart.splice(index, 1);
+                updateCart();
             });
 
-            // Append remove button to list item and list item to cart
-            li.appendChild(removeBtn);
-            cartList.appendChild(li);
+            // Assemble cart item
+            itemDiv.appendChild(img);
+            itemDiv.appendChild(itemDetails);
+            itemDiv.appendChild(removeBtn);
+            cartList.appendChild(itemDiv);
         });
 
-        // Update the total price in the cart
+        // Update total and cart count
         document.getElementById("cart-total").textContent = totalAmount.toFixed(2);
-
-        // Update the cart count next to the cart icon
         let totalQuantity = cart.reduce((sum, item) => sum + item.quantity, 0);
         cartCount.textContent = totalQuantity;
     }
 
-    // Clear the cart when the "Clear Cart" button is clicked
+    // Clear the cart when "Clear Cart" is clicked
     document.getElementById("clear-cart").addEventListener("click", function () {
-        cart = []; // Reset the cart array
-        updateCart(); // Refresh cart UI
+        cart = [];
+        updateCart();
     });
 });
+
 
 
 
