@@ -100,7 +100,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
             // Update the cart display
             updateCart();
-
             // Automatically show the cart after adding an item
             cartContainer.style.display = "block";
         });
@@ -122,8 +121,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
             // Create remove button and attach its event
             let removeBtn = document.createElement("button");
-            removeBtn.className = "remove-item btn btn-sm btn-danger";
-            removeBtn.textContent = "X";
+            removeBtn.className = "remove-item btn btn-sm bi bi-x-circle-fill";
+            removeBtn.textContent = "";
             removeBtn.dataset.index = index;
 
             // Remove item from cart when clicked
