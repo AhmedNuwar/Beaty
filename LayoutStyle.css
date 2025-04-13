@@ -36,3 +36,11 @@ nav .navbar-brand{
     margin-right: auto;
     border-radius: 0;
 }
+#collapsibleNavbar ul{
+    margin-right: auto;
+    margin-left: 10px;
+}
+[lang="en"] #collapsibleNavbar ul{
+    margin-left: auto;
+    margin-right: 10px;
+}
