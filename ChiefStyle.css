@@ -14,7 +14,10 @@
     display: none;
     position: relative; 
 
-  }
+}
+.cart-container.active{
+    display: block;
+}
 @media (min-width: 500px) {
     .cart{
         left: 0;
@@ -48,15 +51,23 @@
     padding: 0;
     margin: 0;
 }
-.cart .remove-item{
-    color: rgb(195, 45, 45);
-
+.cart .remove-btn{
+    color: white;
+    margin-right: auto;
+    padding: 0 5px;
+}
+[lang ="en"] .remove-btn{
+    margin-left: auto;
+    margin-right: 0;
 }
 .cart-item{
     gap: 10px;
 }
 .cart-item img {
+    width: 50px;
+    height: 50px;
     object-fit: cover;
+    border-radius: 8px;
 }
 /* Cheif Info Styling */
 .cheif-info{

@@ -18,18 +18,11 @@ document.addEventListener("DOMContentLoaded", function () {
             listItem.classList.add("cart-item");
             listItem.innerHTML = `
                 <img src="${item.img}" alt="${item.name}">
-                <strong>${item.name}</strong>
-                
+                <strong>${item.name}</strong>  
                 <span>${item.total.toFixed(2)} جنية</span>
-                <div class="quantity-controls">
-                    <i class="decrease bi bi-dash-circle-fill" data-index="${index}"></i>
-                    <span>${item.quantity}</span>
-                    <i class="increase bi bi-plus-circle-fill" data-index="${index}"></i>
-                </div>
-                
-                <i class="remove-item bi bi-x-circle" data-index="${index}"></i>
-            `;
-
+                <button class="remove-item btn btn-sm btn-danger" data-index="${index}">
+                    <i class="bi bi-x"></i>
+                </button>`;
             cartItemsList.appendChild(listItem);
         });
 
@@ -37,12 +30,12 @@ document.addEventListener("DOMContentLoaded", function () {
         cartTotalElement.textContent = totalAmount.toFixed(2);
 
         // Attach buttons
-        attachQuantityEvents();
         attachRemoveEvents();
+        //attachQuantityEvents(); // Uncomment if you want to handle quantity changes
     }
 
     // Handle increase/decrease quantity
-    function attachQuantityEvents() {
+   /* function attachQuantityEvents() {
         document.querySelectorAll(".increase").forEach(i => {
             i.addEventListener("click", function () {
                 const index = this.dataset.index;
@@ -64,7 +57,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 saveCartAndRender();
             });
         });
-    }
+    }*/
 
     // Handle remove button
     function attachRemoveEvents() {
@@ -88,7 +81,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Button: Edit cart (go back to main page)
     document.getElementById("edit-cart-btn").addEventListener("click", function () {
-        window.location.href = "index.html";
+        window.location.href = "Chief.html";
     });
 
     // Button: Continue checkout

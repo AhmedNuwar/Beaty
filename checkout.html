@@ -11,40 +11,117 @@
 </head>
 <body>
     <nav class="navbar navbar-expand-md bg-light navbar-light sticky-top">
-        <!--logo-->
-        <a href="index.html" class="navbar-brand text-danger" 
-           data-lang-en="Beaty" data-lang-ar="بيتي">بيتي</a>
+        <!-- logo -->
+        <a href="index.html" class="navbar-brand text-danger">
+            <span data-lang-en="Beaty" data-lang-ar="بيتي">بيتي</span>
+        </a>
+
         <!-- Language Switcher -->
         <button id="languageToggle" class="btn btn-secondary">العربية</button>
-        <!--toggle btn-->
+
+        <!-- toggle btn -->
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
             <span class="navbar-toggler-icon"></span>
         </button>
         
-        <!--nav links-->
+        <!-- nav links -->
         <div class="collapse navbar-collapse" id="collapsibleNavbar">
             <ul class="navbar-nav"> 
-                <li class="nav-item"><a href="index.html" class="nav-link" data-lang-en="Home" data-lang-ar="الرئيسية">الرئيسية</a></li>
-                <li class="nav-item"><a href="Recipes.html" class="nav-link" data-lang-en="Recipes" data-lang-ar="الوصفات">الوصفات</a></li>
-                <li class="nav-item"><a href="Chief.html" class="nav-link" data-lang-en="Chief" data-lang-ar="الطباخ">الطباخ</a></li>
-                <li class="nav-item"> <a href="Login.html" class="btn btn-sm btn-danger" data-lang-en="sign in" data-lang-ar="تسجيل دخول">تسجيل خروج</a></li>
-                
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">
+                        <span data-lang-en="Home" data-lang-ar="الرئيسية">الرئيسية</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="Recipes.html" class="nav-link">
+                        <span data-lang-en="Recipes" data-lang-ar="الوصفات">الوصفات</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="Chief.html" class="nav-link">
+                        <span data-lang-en="Chief" data-lang-ar="الطباخ">الطباخ</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="Login.html" class="btn btn-sm btn-danger">
+                        <span data-lang-en="sign in" data-lang-ar="تسجيل دخول">تسجيل خروج</span>
+                    </a>
+                </li>
             </ul>
         </div>
     </nav>
-    <div class="container">
-        <h1>Checkout Page</h1>
-
-        <div id="cart-summary">
-            <h2>Your Cart</h2>
-            <ul id="checkout-cart-items"></ul>
-            <p>Total: <span id="checkout-cart-total">0.00</span> جنية</p>
-            <button id="edit-cart-btn" class="btn btn-secondary">Edit Cart</button>
-            <button id="continue-checkout-btn" class="btn btn-primary">Continue to Checkout</button>
+    <main>
+        <h1>
+            <span data-lang-en="Checkout Page" data-lang-ar="صفحة الدفع">صفحة الدفع</span>
+        </h1>
+        <aside>
+            <h2><span data-lang-ar="الأطباق الجانبية" data-lang-en="Sides">الأطباق الجانبية</span></h2>
+            <div id="side-dishes-list">
+                <div class="side-dish-item" data-id="1">
+                    <img src="images/side1.jpg" alt="Side Dish 1">
+                    <h3>
+                        <span data-lang-en="Vegetable Salad" data-lang-ar="سلطة خضار">سلطة خضار</span>
+                    </h3>
+                    <p>
+                        <span data-lang-en="Fresh vegetable salad with delicious dressing." data-lang-ar="سلطة خضار طازجة مع صلصة لذيذة.">سلطة خضار طازجة مع صلصة لذيذة.</span>
+                    </p>
+                    <span class="price">
+                        <span data-lang-en="2.00 EGP" data-lang-ar="2.00 جنية">2.00 جنية</span>
+                    </span>
+                    <button class="btn btn-sm btn-primary add-to-cart"
+                    data-name="Vegetable Salad" 
+                    data-price="2"
+                    data-img="Images/side1.jpg"
+                    >
+                    <span data-lang-en="Add to Cart" data-lang-ar="أضف إلى العربة">أضف إلى العربة</span>
+                    </button>
+                </div>
+                <div class="side-dish-item" data-id="2">
+                    <img src="images/side2.jpg" alt="Side Dish 2">
+                    <h3>
+                        <span data-lang-en="French Fries" data-lang-ar="بطاطس مقلية">بطاطس مقلية</span>
+                    </h3>
+                    <p>
+                        <span data-lang-en="Crispy and delicious French fries." data-lang-ar="بطاطس مقلية مقرمشة ولذيذة.">بطاطس مقلية مقرمشة ولذيذة.</span>
+                    </p>
+                    <span class="price">
+                        <span data-lang-en="5.00 EGP" data-lang-ar="5.00 جنية">5.00 جنية</span>
+                    </span>
+                    <button class="btn btn-sm btn-primary add-to-cart-btn"
+                    data-name="Fries" 
+                    data-price="5"
+                    data-img="Images/side2.jpg"
+                    >
+                        <span data-lang-en="Add to Cart" data-lang-ar="أضف إلى العربة">أضف إلى العربة</span>
+                    </button>
+                </div>
+            </div>
+        </aside>
+        <div class="cart-container">
+            
+            <div id="cart-summary">
+                <h2>
+                    <span data-lang-en="Your Cart" data-lang-ar="عربة التسوق">عربة التسوق</span>
+                </h2>
+                <ul id="checkout-cart-items"></ul>
+                <p>
+                    <span data-lang-en="Total:" data-lang-ar="الإجمالي:">الإجمالي:</span>
+                    <span id="checkout-cart-total">0.00</span> 
+                    <span data-lang-en="EGP" data-lang-ar="جنية">جنية</span>
+                </p>
+                <button id="edit-cart-btn" class="btn btn-secondary">
+                    <span data-lang-en="Edit Cart" data-lang-ar="تعديل العربة">تعديل العربة</span>
+                </button>
+                <button id="continue-checkout-btn" class="btn btn-primary">
+                    <span data-lang-en="Continue to Checkout" data-lang-ar="متابعة الدفع">متابعة الدفع</span>
+                </button>
+            </div>
         </div>
-    </div>
+    </main>
+
     <script src="bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
     <script src="LangScript.js"></script>
     <script src="checkoutScript.js"></script>
+    <script src="cartScript.js"></script>
 </body>
 </html>
