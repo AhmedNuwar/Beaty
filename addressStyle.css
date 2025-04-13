@@ -1,0 +1,9 @@
+form{
+    margin-top: 10px;
+}
+.form-group{
+    margin-bottom: 10px;
+}
+.btn, .form-control{
+    border-radius: 0;
+}
