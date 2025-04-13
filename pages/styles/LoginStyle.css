@@ -1,0 +1,46 @@
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Ensure the main element takes full viewport height */
+}
+.container{
+    border: 1px solid #ccc;
+    background: #f9f9f9;
+    box-shadow: 0 0 10px #ccc;
+    width: 70%;
+    max-width: 500px;
+    padding: 20px;
+
+}
+.form-group{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+form .form-control, .btn{
+    border-radius: 0;
+}
+.social-login .btn{
+    width: 100%;
+}
+#btn-face{
+    background-color: #3b5998; 
+    border-color: #3b5998;
+    margin-bottom: 10px;
+}
+#btn-face:hover{
+    background-color: #2d4373; 
+    border-color: #2d4373;
+}
+#btn-google{
+    background-color: #db4437; 
+    border-color: #db4437;
+}
+#btn-google:hover{
+    background-color: #c1351d; 
+    border-color: #c1351d;
+}
+.bi{
+    margin: 0 5px;
+}

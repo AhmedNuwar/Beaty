@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="bootstrap-5.3.3-dist/css/bootstrap.min.css"> 
+    <link rel="stylesheet" href="LayoutStyle.css">
+    <link rel="stylesheet" href="RecipesStyle.css">
+    <title>Recipes</title>
+</head>
+<body>
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-md bg-light navbar-light sticky-top">
+        <!--logo-->
+        <a href="index.html" class="navbar-brand text-danger" 
+           data-lang-en="Beaty" data-lang-ar="بيتي">بيتي</a>
+        <!-- Language Switcher -->
+        <select id="languageSwitcher" class="form-select w-auto btn-sm">
+            <option value="ar">العربية</option>
+            <option value="en">English</option>
+        </select>
+        <!--toggle btn-->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <!--nav links-->
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav"> 
+                <li class="nav-item"><a href="index.html" class="nav-link" data-lang-en="Home" data-lang-ar="الرئيسية">الرئيسية</a></li>
+                <li class="nav-item"><a href="Recipes.html" class="nav-link" data-lang-en="Recipes" data-lang-ar="الوصفات">الوصفات</a></li>
+                <li class="nav-item"><a href="Chief.html" class="nav-link" data-lang-en="Chief" data-lang-ar="الطباخ">الطباخ</a></li>
+                <li class="nav-item"> <a href="Login.html" class="btn btn-sm btn-danger" data-lang-en="sign in" data-lang-ar="تسجيل دخول">تسجيل خروج</a></li>
+                
+            </ul>
+        </div>
+    </nav>
+    <!-- Page Content -->
+     <main>
+        <!--Recipes-->
+        <div class="recipes">  
+            <!--recipe 1-->  
+            <div class="recipe">
+                <div class="recipe-info">
+                    <h3 data-lang-en="Shakshuka" data-lang-ar="شكشوكة">شكشوكة</h3>
+                    <p data-lang-en="A flavorful Middle Eastern dish made with poached eggs in a spicy tomato and bell pepper sauce, often served with warm bread for dipping."
+                       data-lang-ar="طبق شرق أوسطي لذيذ مصنوع من البيض المسلوق في صلصة الطماطم والفلفل الحار، ويُقدم غالبًا مع خبز دافئ للتغميس.">
+                        طبق شرق أوسطي لذيذ مصنوع من البيض المسلوق في صلصة الطماطم والفلفل الحار، ويُقدم غالبًا مع خبز دافئ للتغميس.
+                    </p>
+                </div>
+                <img src="Images/shakshuka.jpg" alt="Shakshuka image">
+            </div>
+            <!--recipe 2-->  
+            <div class="recipe">
+                <div class="recipe-info">
+                    <h3 data-lang-en="Falafel" data-lang-ar="فلافل">فلافل</h3>
+                    <p data-lang-en="Crispy deep-fried balls made from ground chickpeas, herbs, and spices, often enjoyed in pita bread with tahini sauce and fresh vegetables."
+                       data-lang-ar="كرات مقلية مقرمشة مصنوعة من الحمص المطحون والأعشاب والتوابل، تُقدم غالبًا داخل خبز البيتا مع صلصة الطحينة والخضروات الطازجة.">
+                        كرات مقلية مقرمشة مصنوعة من الحمص المطحون والأعشاب والتوابل، تُقدم غالبًا داخل خبز البيتا مع صلصة الطحينة والخضروات الطازجة.
+                    </p>
+                </div>
+                <img src="Images/falafel.jpg" alt="Falafel image">
+            </div>
+            <!--recipe 3-->  
+            <div class="recipe">
+                <div class="recipe-info">
+                    <h3 data-lang-en="Koshari" data-lang-ar="كشري">كشري</h3>
+                    <p data-lang-en="A popular Egyptian dish made with layers of rice, lentils, pasta, and a spicy tomato sauce, topped with crispy fried onions and served with vinegar and hot sauce."
+                       data-lang-ar="طبق مصري شهير مصنوع من طبقات من الأرز والعدس والمكرونة وصلصة الطماطم الحارة، يُزين بالبصل المقلي المقرمش ويُقدم مع الخل وصلصة حارة.">
+                        طبق مصري شهير مصنوع من طبقات من الأرز والعدس والمكرونة وصلصة الطماطم الحارة، يُزين بالبصل المقلي المقرمش ويُقدم مع الخل وصلصة حارة.
+                    </p>
+                </div>
+                <img src="Images/koshari.jpg" alt="Koshari image">
+            </div>
+         </div>
+     </main>
+    <script src="bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="LangScript.js"></script>
+</body>
+</html></p>
