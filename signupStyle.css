@@ -1,0 +1,15 @@
+.btn{
+    border-radius: 0;
+}
+.container{
+    
+    margin: 30px auto;
+    padding: 20px;
+    max-width: 600px;
+    background-color: #f8f9fa;
+    border-radius: 0px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+#submit{
+    margin: 10px 0;
+}
