@@ -54,10 +54,12 @@ footer{
 }
 .footer-head{
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
     border-bottom: 1px solid #ffffff;
     padding-bottom: 10px;
+    
 }
 .footer-head ul{
     list-style-type: none;
