@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Fonts/bootstrap-icons-1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" type="text/css" href="bootstrap-5.3.3-dist/css/bootstrap.min.css"> 
+    <link rel="stylesheet" href="LayoutStyle.css">
+    <link rel="stylesheet" href="styles/walletStyle.css">
+    <title>Document</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-md bg-light navbar-light sticky-top">
+        <!--logo-->
+        <a href="index.html" class="navbar-brand text-danger" 
+           data-lang-en="Beaty" data-lang-ar="بيتي">بيتي</a>
+        <!-- Language Switcher -->
+        <button id="languageToggle" class="btn btn-secondary">العربية</button>
+        <!--toggle btn-->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <!--nav links-->
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav"> 
+                <li class="nav-item"><a href="index.html" class="nav-link" data-lang-en="Home" data-lang-ar="الرئيسية">الرئيسية</a></li>
+                <li class="nav-item"><a href="Recipes.html" class="nav-link" data-lang-en="Recipes" data-lang-ar="الوصفات">الوصفات</a></li>
+                <li class="nav-item"><a href="Chief.html" class="nav-link" data-lang-en="Chief" data-lang-ar="الطباخ">الطباخ</a></li>
+                <li class="nav-item"> <a href="Login.html" class="btn btn-sm btn-danger" data-lang-en="sign in" data-lang-ar="تسجيل دخول">تسجيل خروج</a></li>
+                
+            </ul>
+        </div>
+    </nav>
+    <main>
+        <aside>
+            <div class="profile">
+                <img src="Images/userAvatar.png" alt="user avatar" class="user-avatar">
+                <span data-lang-en="Username" data-lang-ar="اسم المستخدم">اسم المستخدم</span>
+            </div>
+            <div class="balance">
+                <p data-lang-en="Your Balance" data-lang-ar="رصيدك">رصيدك</p>
+                <span class="balance-amount" data-lang-en="1000" data-lang-ar="1000">1000</span>
+                <span class="currency" data-lang-en="EGP" data-lang-ar="جنيه">جنيه</span>
+                <button class="btn btn-sm btn-dark" id="rechargeButton">
+                    <span data-lang-en="Recharge Your Balance" data-lang-ar="شحن رصيدك">شحن رصيدك</span>
+                </button>
+                <div class="recharge" id="rechargeDiv">
+                    <button class="btn btn-sm btn-warning" id="walletRechargeButton">
+                        <span data-lang-en="Charge from a Wallet" data-lang-ar="الشحن من محفظة">الشحن من محفظة</span>
+                        <i class="bi bi-wallet2"></i>
+                    </button>
+                    <button class="btn btn-sm btn-dark" id="bankRechargeButton">
+                        <span data-lang-en="Charge from a Bank Account" data-lang-ar="الشحن من حساب بنكي">الشحن من حساب بنكي</span>
+                        <i class="bi bi-bank"></i>
+                    </button>
+                    <button class="btn btn-sm btn-light" id="instapayRechargeButton">
+                        <span data-lang-en="Charge from Instapay" data-lang-ar="الشحن من انستاباي">الشحن من انستاباي</span>
+                        <i class="bi bi-phone"></i>
+                    </button>
+                </div>
+            </div>
+            <button class="btn btn-danger goTo-ktichens" onclick="goTo('Kitchens.html')">
+        
+                <span data-lang-en="Go to Kitchens" data-lang-ar="اذهب إلى المطابخ">اذهب إلى المطابخ</span>
+            </button>
+        </aside>
+        <div class="history">
+            <h3 data-lang-en="Previous Transactions" data-lang-ar="المعملات السابقة">تفاصيل التعملات السابقة</h3>
+            <div class="transactions-list">
+                <div class="transaction">
+                    <p>
+                        <span data-lang-en="Transaction Date:" data-lang-ar="تاريخ المعاملة:">تاريخ المعاملة:</span>
+                        <span class="date" data-lang-en="10-5-2025" data-lang-ar="10-5-2025">10-5-2025</span>
+                    </p>
+                    <p>
+                        <span data-lang-en="Transaction Amount:" data-lang-ar="قيمة المعاملة:">قيمة المعاملة:</span>
+                        <span class="amount" data-lang-en="1000" data-lang-ar="1000">1000</span>
+                        <span class="currency" data-lang-en="EGP" data-lang-ar="جنيه">جنيه</span>
+                    </p>
+                    <p>
+                        <span data-lang-en="Kitchen:" data-lang-ar="المطبخ:">المطبخ:</span>
+                        <span class="kitchen-name" data-lang-en="Kitchen Name" data-lang-ar="اسم المطبخ">اسم المطبخ</span>
+                    </p>
+                </div>
+                <div class="transaction">
+                    <p>
+                        <span data-lang-en="Transaction Date:" data-lang-ar="تاريخ المعاملة:">تاريخ المعاملة:</span>
+                        <span class="date" data-lang-en="15-5-2025" data-lang-ar="15-5-2025">15-5-2025</span>
+                    </p>
+                    <p>
+                        <span data-lang-en="Transaction Amount:" data-lang-ar="قيمة المعاملة:">قيمة المعاملة:</span>
+                        <span class="amount" data-lang-en="500" data-lang-ar="500">500</span>
+                        <span class="currency" data-lang-en="EGP" data-lang-ar="جنيه">جنيه</span>
+                    </p>
+                    <p>
+                        <span data-lang-en="Kitchen:" data-lang-ar="المطبخ:">المطبخ:</span>
+                        <span class="kitchen-name" data-lang-en="Another Kitchen" data-lang-ar="مطبخ آخر">مطبخ آخر</span>
+                    </p>
+                </div>
+                <div class="transaction">
+                    <p>
+                        <span data-lang-en="Transaction Date:" data-lang-ar="تاريخ المعاملة:">تاريخ المعاملة:</span>
+                        <span class="date" data-lang-en="20-5-2025" data-lang-ar="20-5-2025">20-5-2025</span>
+                    </p>
+                    <p>
+                        <span data-lang-en="Transaction Amount:" data-lang-ar="قيمة المعاملة:">قيمة المعاملة:</span>
+                        <span class="amount" data-lang-en="750" data-lang-ar="750">750</span>
+                        <span class="currency" data-lang-en="EGP" data-lang-ar="جنيه">جنيه</span>
+                    </p>
+                    <p>
+                        <span data-lang-en="Kitchen:" data-lang-ar="المطبخ:">المطبخ:</span>
+                        <span class="kitchen-name" data-lang-en="Famous Kitchen" data-lang-ar="المطبخ الشهير">المطبخ الشهير</span>
+                    </p>
+                </div>
+                <div class="transaction">
+                    <p>
+                        <span data-lang-en="Transaction Date:" data-lang-ar="تاريخ المعاملة:">تاريخ المعاملة:</span>
+                        <span class="date" data-lang-en="25-5-2025" data-lang-ar="25-5-2025">25-5-2025</span>
+                    </p>
+                    <p>
+                        <span data-lang-en="Transaction Amount:" data-lang-ar="قيمة المعاملة:">قيمة المعاملة:</span>
+                        <span class="amount" data-lang-en="1200" data-lang-ar="1200">1200</span>
+                        <span class="currency" data-lang-en="EGP" data-lang-ar="جنيه">جنيه</span>
+                    </p>
+                    <p>
+                        <span data-lang-en="Kitchen:" data-lang-ar="المطبخ:">المطبخ:</span>
+                        <span class="kitchen-name" data-lang-en="Delicious Kitchen" data-lang-ar="المطبخ اللذيذ">المطبخ اللذيذ</span>
+                    </p>
+                </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="footer-head">
+            <ul>
+                <li><a href="Partner.html" data-lang-en="Be Our Partner" data-lang-ar="كن شريكنا">كن شريكنا</a></li>
+                <li><a href="Jobs.html" data-lang-en="Available Jobs" data-lang-ar="الوظائف المتاحة">الوظائف المتاحة</a></li>
+                <li><a href="FAQ.html" data-lang-en="FAQ" data-lang-ar="الأسئلة الشائعة">الأسئلة الشائعة</a></li>
+                <li><a href="Contact.html" data-lang-en="Contact Us" data-lang-ar="اتصل بنا">اتصل بنا</a></li>
+            </ul>
+            <a href="#" class="btn btn-light"><span data-lang-en="give us your recommendation" data-lang-ar="شاركنا باقرتاحك"></span></a>
+        </div>
+        <div class="footer-main">
+            <div class="chiefs">
+                <h4 data-lang-en="Our Famous Chefs" data-lang-ar="اشهر الطباخيين">طباخينا</h4>
+                <ul>
+                    <li data-lang-en="Chief 1" data-lang-ar="طباخ 1"></li>
+                    <li data-lang-en="Chief 2" data-lang-ar="طباخ 2"></li>
+                    <li data-lang-en="Chief 3" data-lang-ar="طباخ 3"></li>
+                    <li data-lang-en="Chief 4" data-lang-ar="طباخ 4"></li>
+                    <li data-lang-en="Chief 5" data-lang-ar="طباخ 5"></li>
+                    <li data-lang-en="Chief 6" data-lang-ar="طباخ 6"></li>
+                </ul>
+            </div>
+            <div class="cities">
+                <h4 data-lang-en="Cities" data-lang-ar="المدن">المدن</h4>
+                <ul>
+                    <li data-lang-en="Tanta" data-lang-ar="طنطا">طنطا</li>
+                    <li data-lang-en="Alexandria" data-lang-ar="الإسكندرية">الإسكندرية</li>
+                    <li data-lang-en="Cairo" data-lang-ar="القاهرة">القاهرة</li>
+                </ul>
+            </div>
+            <div class="services">
+                <h4 data-lang-en="Other Services" data-lang-ar="الخدمات الاخري">الخدمات</h4>
+                <ul>
+                    <li data-lang-en="Service 1" data-lang-ar="خدمة 1"></li>
+                    <li data-lang-en="Service 2" data-lang-ar="خدمة 2"></li>
+                    <li data-lang-en="Service 3" data-lang-ar="خدمة 3"></li>
+                    <li data-lang-en="Service 4" data-lang-ar="خدمة 4"></li>
+                    <li data-lang-en="Service 5" data-lang-ar="خدمة 5"></li>
+                </ul>
+            </div>
+            <div class="socials">
+                <h4 data-lang-en="Follow Us" data-lang-ar="تابعنا">تابعنا</h4>
+                <a href="#"><i class="bi bi-facebook"></i></a>
+                <a href="#"><i class="bi bi-instagram"></i></a>
+                <a href="#"><i class="bi bi-twitter-x"></i></a>
+                <a href="#"><i class="bi bi-youtube"></i></a>
+                <a href="#"><i class="bi bi-linkedin"></i></a>
+        </div>
+    </footer>
+    <script src="bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="LangScript.js"></script>
+    <script src="scripts/walletScript.js"></script>
+</body>
+</html>

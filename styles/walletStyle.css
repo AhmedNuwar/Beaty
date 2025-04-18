@@ -1,0 +1,131 @@
+body{
+    background-color: white;
+}
+main{
+    display: flex;
+    gap: 10px;
+    box-sizing: border-box;
+    background-color: white;
+
+
+
+}
+aside{
+    padding: 10px;
+    flex-grow: 1;
+    background-color: white;
+}
+.profile{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #ccc;
+}
+.user-avatar{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+.balance{
+    margin: 10px 0;
+
+}
+
+.balance p{
+    font-size: 1.2em;
+    margin-bottom: 5px;
+}
+.balance .balance-amount{
+    color: #4CAF50;
+    font-weight: none;
+}
+.balance .btn{
+    margin-top: 5px;
+    display: block;
+}
+.recharge {
+    
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: opacity 0.3s ease, max-height 0.3s ease;
+}
+
+.recharge.show {
+    opacity: 1;
+    max-height: 200px; /* Adjust based on content height */
+}
+
+.recharge i{
+    margin: 0 5px;
+}
+#instapayRechargeButton{
+    background-color:rgb(173, 0, 173);
+    color:white;
+}
+#instapayRechargeButton:hover{
+    background-color:rgb(136, 0, 136); /* Slightly lighter shade of purple */
+    color: white;
+}
+.goTo-kitchens{
+}
+.history{
+    flex-grow: 10;
+    background-color: white;
+    padding: 10px;
+}
+.transactions-list{
+    display: flex;
+    flex-direction: column;
+
+}
+.transaction{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    background-color: rgb(224, 224, 224);
+    color: #5e5e5e;
+    border-radius: 8px;
+}
+.transaction p{
+    margin: 5px 0;
+}
+.transaction .date{
+    color: black;
+}
+.transaction .amount, .transaction .currency{
+    color: #4CAF50;
+}
+.transaction .kitchen-name{
+    color: #185bea;
+}
+
+.transaction:nth-child(odd) {
+    background-color: #eaeaea; /* Light grey for odd transactions */
+}
+
+.transaction:nth-child(even) {
+    background-color: #ffffff; /* White for even transactions */
+}
+
+
+@media (max-width: 600px) {
+    main {
+        flex-direction: column; /* Stack the elements vertically */
+    }
+
+    aside {
+        width: 100%; /* Make the sidebar take full width */
+        order: -1; /* Move the sidebar to the top */
+    }
+
+    .history {
+        width: 100%; /* Make the history section take full width */
+    }
+}
