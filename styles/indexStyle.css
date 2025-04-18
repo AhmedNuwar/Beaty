@@ -1,7 +1,7 @@
 .page-cover{
     width: 100%;
     height: 80vh; /* Full screen height */
-    background: url('Images/iftar.jpg') no-repeat center center;
+    background: url('/Images/iftar.jpg') no-repeat center center;
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -56,25 +56,28 @@ form .btn{
     }
 }
 @media (min-width: 600px) {
+
     .cards{
         display: flex;
-        justify-content: center;
         flex-wrap: wrap;
-        padding: .5rem;
+        padding: 0 40px;
+        box-sizing: border-box;
+        width: 100%;
+        margin-top: 10px;
+    }
+    .card{
+        width: 30%;
+        flex-grow: 1;
+        height: 250px;
     }
     #cards-top{
-        gap: 1.5rem;
+        gap: 10px;
     }
+
     #cards-bottom{
-        gap: .5rem;
+        gap: 10px;
     }
-    .card-wide{
-        width: 30%;
-        min-width: 300px;
-    }
-    .card-thin{
-        width: 20%;
-    }
+
 }
 .card-img-overlay {
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0)); /* Dark overlay fades to transparent */
