@@ -81,9 +81,14 @@ form .btn{
     #cards-top{
         gap: 10px;
     }
-
+    #cards-top .card{
+        height: 200px;
+    }
     #cards-bottom{
         gap: 10px;
+    }
+    #cards-bottom .card{
+        height: 250px;
     }
 
 }
