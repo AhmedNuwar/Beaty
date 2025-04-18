@@ -73,8 +73,7 @@ aside{
     background-color:rgb(136, 0, 136); /* Slightly lighter shade of purple */
     color: white;
 }
-.goTo-kitchens{
-}
+
 .history{
     flex-grow: 10;
     background-color: white;
