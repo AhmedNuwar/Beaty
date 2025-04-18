@@ -54,16 +54,11 @@ form .btn{
         padding: .5rem;
         gap: 1rem;
     }
+    .card{
+        height: 150px;
+    }
 }
 @media (min-width: 600px) {
-    .kard{
-        background: url('/Images/bePartner.jpg');
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        width: 30%;
-        height: 30%;
-    }
     .cards{
         display: flex;
         flex-wrap: wrap;

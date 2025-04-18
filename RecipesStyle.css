@@ -30,12 +30,16 @@
 }
 @media (min-width: 501px) {
     .recipe img {
+        align-self: flex-start;
         object-fit: cover;
         max-width: 300px;
         width: 40%;
     }
 }
-
+ .recipe img{
+        object-fit: cover;
+        width: 100%;
+    }
 .recipe-info{
     flex-grow: 1;
     padding: 10px;
@@ -44,8 +48,17 @@
     margin: 0;
     font-size: 18px;
 }
-.recipe-info p{
+.recipe-info h4{
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+.recipe-info li{
     margin: 5px 0;
     font-size: 14px;
     color: #555;
+}
+
+.prep-method {
+    display: none;
 }
