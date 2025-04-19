@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Fonts/bootstrap-icons-1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" type="text/css" href="bootstrap-5.3.3-dist/css/bootstrap.min.css"> 
+    <link rel="stylesheet" href="LayoutStyle.css">
+    <link rel="stylesheet" href="styles/voucherStyle.css">
+    <title>Document</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-md bg-light navbar-light sticky-top">
+        <!--logo-->
+        <a href="index.html" class="navbar-brand text-danger" 
+           data-lang-en="Beaty" data-lang-ar="بيتي">بيتي</a>
+        <!-- Language Switcher -->
+        <button id="languageToggle" class="btn btn-secondary">العربية</button>
+        <!--toggle btn-->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <!--nav links-->
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav"> 
+                <li class="nav-item"><a href="index.html" class="nav-link" data-lang-en="Home" data-lang-ar="الرئيسية">الرئيسية</a></li>
+                <li class="nav-item"><a href="Kitchens.html" class="nav-link" data-lang-en="Discover Kitchens" data-lang-ar="اكتشف المطابخ">المطابخ</a></li>
+                <li class="nav-item"><a href="Partner.html" class="nav-link" data-lang-en="Be Our Partner" data-lang-ar="كن شريكنا">كن شريكنا</a></li>
+                <li class="nav-item"><a href="JoinTeam.html" class="nav-link" data-lang-en="Join Our Team" data-lang-ar="انضم لفريقنا">انضم لفريقنا</a></li>
+                <li class="nav-item"><a href="Help.html" class="nav-link" data-lang-en="Help" data-lang-ar="مساعدة">مساعدة</a></li>
+                <li class="navitem">
+                    <a href="profile.html" class="nav-link" id="profile-link">
+                        <i class="bi bi-person-circle"></i>
+                        <span data-lang-en="Profile" data-lang-ar="الملف الشخصي">الملف الشخصي</span>
+                    </a>
+                </li>
+            </ul>
+                
+        </div>
+    </nav>
+    <main>
+        <aside>
+            <div class="profile">
+                <img src="Images/userAvatar.png" alt="user avatar" class="user-avatar">
+                <span data-lang-en="Username" data-lang-ar="اسم المستخدم">اسم المستخدم</span>
+            </div>
+            <div class="points">
+                <h5 data-lang-en="Your points" data-lang-ar="نقاطك">your points: </h5>
+                <span class="points-amount" data-lang-en="1000" data-lang-ar="١٠٠٠">1000</span>
+                <div class="redeem-points">
+                    <button class="btn btn-sm btn-primary" data-lang-en="Redeem points for discount" data-lang-ar="استبدل النقاط بخصم">redeem points for discount</button>
+                    <br>
+                    <button class="btn btn-sm btn-outline-secondary" data-lang-en="Redeem to wallet" data-lang-ar="استبدل للمحفظة">redeem to wallet</button>
+                </div>
+            </div>
+        </aside>
+        <div class="vouchers">
+            <h4 data-lang-en="Vouchers" data-lang-ar="القسائم">Vouchers</h4>
+            <ul class="voucher-list">
+                <li class="voucher-item">
+                    <h5 data-lang-en="First Order Voucher" data-lang-ar="قسيمة الطلب الأول">First Order Voucher</h5>
+                    <p data-lang-en="Get 10% off on your first order!" data-lang-ar="احصل على خصم 10٪ على طلبك الأول!">Get 10% off on your first order!</p>
+                </li>
+                <li class="voucher-item">
+                    <h5 data-lang-en="Friend Invite Voucher" data-lang-ar="قسيمة دعوة صديق">Friend Invite Voucher</h5>
+                    <p data-lang-en="Invite a friend and both of you get 50 EGP off!" data-lang-ar="ادعُ صديقًا واحصل كلاكما على خصم 50 جنيهًا!">Invite a friend and both of you get 50 EGP off!</p>
+                </li>
+                <li class="voucher-item">
+                    <h5 data-lang-en="High Order Voucher" data-lang-ar="قسيمة الطلب الكبير">High Order Voucher</h5>
+                    <p data-lang-en="Spend over 1000 EGP and get 100 EGP off!" data-lang-ar="أنفق أكثر من 1000 جنيه واحصل على خصم 100 جنيه!">Spend over 1000 EGP and get 100 EGP off!</p>
+                </li>
+            </ul>
+        </div>
+            <div class="offers">
+                <h4 data-lang-en="Offers" data-lang-ar="العروض">offers</h4>
+                <div class="offer">
+                    <img src="Images/recipes/7mam.jfif" alt="" data-lang-en="Stuffed Pigeon" data-lang-ar="حمام محشي">
+                    <p data-lang-en="From Amira's Kitchen" data-lang-ar="من مطبخ أميرة">from Amir's Kitchen</p>
+                </div>
+                <div class="offer">
+                    <img src="Images/recipes/ma7shi.jfif" alt="" data-lang-en="Stuffed Vegetables" data-lang-ar="محشي">
+                    <p data-lang-en="From Samira's Kitchen" data-lang-ar="من مطبخ سميرة">from Samir's Kitchen</p>
+                </div>
+            </div>
+
+    </main>
+    <footer>
+        <div class="footer-head">
+            <ul>
+                <li><a href="Partner.html" data-lang-en="Be Our Partner" data-lang-ar="كن شريكنا">كن شريكنا</a></li>
+                <li><a href="Jobs.html" data-lang-en="Available Jobs" data-lang-ar="الوظائف المتاحة">الوظائف المتاحة</a></li>
+                <li><a href="FAQ.html" data-lang-en="FAQ" data-lang-ar="الأسئلة الشائعة">الأسئلة الشائعة</a></li>
+                <li><a href="Contact.html" data-lang-en="Contact Us" data-lang-ar="اتصل بنا">اتصل بنا</a></li>
+            </ul>
+            <a href="#" class="btn btn-light"><span data-lang-en="give us your recommendation" data-lang-ar="شاركنا باقرتاحك"></span></a>
+        </div>
+        <div class="footer-main">
+            <div class="chiefs">
+                <h4 data-lang-en="Our Famous Chefs" data-lang-ar="اشهر الطباخيين">طباخينا</h4>
+                <ul>
+                    <li data-lang-en="Chief 1" data-lang-ar="طباخ 1"></li>
+                    <li data-lang-en="Chief 2" data-lang-ar="طباخ 2"></li>
+                    <li data-lang-en="Chief 3" data-lang-ar="طباخ 3"></li>
+                    <li data-lang-en="Chief 4" data-lang-ar="طباخ 4"></li>
+                    <li data-lang-en="Chief 5" data-lang-ar="طباخ 5"></li>
+                    <li data-lang-en="Chief 6" data-lang-ar="طباخ 6"></li>
+                </ul>
+            </div>
+            <div class="cities">
+                <h4 data-lang-en="Cities" data-lang-ar="المدن">المدن</h4>
+                <ul>
+                    <li data-lang-en="Tanta" data-lang-ar="طنطا">طنطا</li>
+                    <li data-lang-en="Alexandria" data-lang-ar="الإسكندرية">الإسكندرية</li>
+                    <li data-lang-en="Cairo" data-lang-ar="القاهرة">القاهرة</li>
+                </ul>
+            </div>
+            <div class="services">
+                <h4 data-lang-en="Other Services" data-lang-ar="الخدمات الاخري">الخدمات</h4>
+                <ul>
+                    <li data-lang-en="Service 1" data-lang-ar="خدمة 1"></li>
+                    <li data-lang-en="Service 2" data-lang-ar="خدمة 2"></li>
+                    <li data-lang-en="Service 3" data-lang-ar="خدمة 3"></li>
+                    <li data-lang-en="Service 4" data-lang-ar="خدمة 4"></li>
+                    <li data-lang-en="Service 5" data-lang-ar="خدمة 5"></li>
+                </ul>
+            </div>
+            <div class="socials">
+                <h4 data-lang-en="Follow Us" data-lang-ar="تابعنا">تابعنا</h4>
+                <a href="#"><i class="bi bi-facebook"></i></a>
+                <a href="#"><i class="bi bi-instagram"></i></a>
+                <a href="#"><i class="bi bi-twitter-x"></i></a>
+                <a href="#"><i class="bi bi-youtube"></i></a>
+                <a href="#"><i class="bi bi-linkedin"></i></a>
+        </div>
+    </footer>
+    <script src="bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="LangScript.js"></script>
+</body>
+</html>
