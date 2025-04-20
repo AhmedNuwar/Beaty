@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title data-lang-en="Cheif Page" data-lang-ar="صفحة الطباخ">صفحة الطباخ</title>
+    <title data-lang-en="Chief Page" data-lang-ar="صفحة الطباخ">صفحة الطباخ</title>
     <link rel="stylesheet" type="text/css" href="bootstrap-5.3.3-dist/css/bootstrap.min.css"> 
     <link rel="stylesheet" href="Fonts/bootstrap-icons-1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="LayoutStyle.css">
@@ -21,7 +21,7 @@
             <span id="cart-count" 
             class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-dark">
                 0
-            </span>
+</span>
         </button>
         <!-- Cart Section -->
         <div id="cart-container" class="cart-container">
@@ -29,7 +29,7 @@
                 <h3 data-lang-en="Cart" data-lang-ar="السلة">سلة المشتريات</h3>
                 <ul id="cart-items"></ul>
                 <p><strong data-lang-en="Total:" data-lang-ar="الإجمالي:">الإجمالي:</strong> 
-                    <span id="cart-total">0</span> جنية
+                    <span id="cart-total" data-lang-en="0 EGP" data-lang-ar="0 جنية">0 جنية</span>
                 </p>
                 <button class="btn btn-danger btn-sm" id="clear-cart">
                     <span data-lang-en="Clear Cart" data-lang-ar="إفراغ السلة">إفراغ السلة</span>
@@ -50,7 +50,7 @@
         <div class="cheif-info">
             <img src="Images/cheifAvatar.png" alt="cheif profile picture">
             <div class="all-data">
-                <h3 data-lang-en="Not OM Mohammed" data-lang-ar=" مش ام محمد">ام محمد</h3>
+                <h3 data-lang-en="Not OM Mohammed" data-lang-ar="مش ام محمد">ام محمد</h3>
                 <p class="data" data-lang-en="Breakfast, Lunch, and Dinner" 
                    data-lang-ar="فطار و غداء و عشاء">فطار و غداء و عشاء
                 </p> 
@@ -66,17 +66,17 @@
         <div class="food-info">
             <div class="togl-btns">
                 <button id="toglMenu" class="btn active" data-target="#menu-section">
-                    <span>Menu</span>
+                    <span data-lang-en="Menu" data-lang-ar="القائمة">القائمة</span>
                 </button>
                 <button id="toglReview" class="btn" data-target="#reviews-section">
-                    <span>Reviews</span>
+                    <span data-lang-en="Reviews" data-lang-ar="التقييمات">التقييمات</span>
                 </button>
             </div>
             <div id="menu-section" class="menu active">
                 <!--menu items-->
                 <div class="menu-items">
                     <h3>
-                        <span>Menu</span>
+                        <span data-lang-en="Menu" data-lang-ar="القائمة">القائمة</span>
                     </h3>
                     <!--item 1-->
                     <div class="menu-item">
@@ -89,7 +89,8 @@
                             <span class="price" data-lang-en="5 EGP" data-lang-ar="5 جنية">5 جنية</span>
                             <br>
                             <div class="add-to-cart-section">
-                                <input type="number" class="item-quantity" min="1" value="1">
+                                <input type="number" class="item-quantity" min="1" value="1" 
+                                       data-lang-en="Quantity" data-lang-ar="الكمية">
                                 <button class="btn btn-sm btn-success add-to-cart"
                                 data-name="Falafel" 
                                 data-price="5"
@@ -98,7 +99,8 @@
                                 </button>
                             </div>
                         </div>
-                        <img src="Images/falafel.jpg" alt="item image">
+                        <img src="Images/falafel.jpg" alt="item image" 
+                             data-lang-en="Falafel image" data-lang-ar="صورة فلافل">
                     </div>
                     <!--item 2-->
                     <div class="menu-item">
@@ -111,7 +113,8 @@
                             <span class="price" data-lang-en="35 EGP" data-lang-ar="35 جنية">35 جنية</span>
                             <br>
                             <div class="add-to-cart-section">
-                                <input type="number" class="item-quantity" min="1" value="1">
+                                <input type="number" class="item-quantity" min="1" value="1" 
+                                       data-lang-en="Quantity" data-lang-ar="الكمية">
                                 <button class="btn btn-sm btn-success add-to-cart" 
                                 data-name="Koshari" 
                                 data-price="35"
@@ -121,7 +124,8 @@
                                 </button>
                             </div>
                         </div>
-                        <img src="Images/koshari.jpg" alt="item image">
+                        <img src="Images/koshari.jpg" alt="item image" 
+                             data-lang-en="Koshari image" data-lang-ar="صورة كشري">
                     </div>
                     <!--item 3-->
                     <div class="menu-item">
@@ -134,7 +138,8 @@
                             <span class="price" data-lang-en="40 EGP" data-lang-ar="40 جنية">40 جنية</span>
                             <br>
                             <div class="add-to-cart-section">
-                                <input type="number" class="item-quantity" min="1" value="1">
+                                <input type="number" class="item-quantity" min="1" value="1" 
+                                       data-lang-en="Quantity" data-lang-ar="الكمية">
                                 <button class="btn btn-sm btn-success add-to-cart" 
                                 data-name="Shawarma" 
                                 data-price="40"
@@ -143,7 +148,8 @@
                                 </button>
                             </div>
                         </div>
-                        <img src="Images/shawarma.jpg" alt="item image">
+                        <img src="Images/shawarma.jpg" alt="item image" 
+                             data-lang-en="Shawarma image" data-lang-ar="صورة شاورما">
                     </div>
                 </div>
 
@@ -151,14 +157,15 @@
                 <div class="menu-cart">
                     <h3 data-lang-en="Cart" data-lang-ar="السلة">سلة المشتريات</h3>
                     <ul id="cart-items"></ul>
-                    <p><strong data-lang-en="Total:" data-lang-ar="الإجمالي:">الإجمالي:</strong> 
-                        <span id="cart-total">0</span> جنية
+                    <p>
+                        <strong data-lang-en="Total:" data-lang-ar="الإجمالي:">الإجمالي:</strong> 
+                        <span id="cart-total" data-lang-en="0 EGP" data-lang-ar="0 جنية">0 جنية</span>
                     </p>
                     <button class="btn btn-danger btn-sm" id="menu-clear-cart">
                         <span data-lang-en="Clear Cart" data-lang-ar="إفراغ السلة">إفراغ السلة</span>
                     </button>
-                    <button id="menu-checkout-btn" class="btn btn-sm btn-dark"
-                    onclick=>
+                    <button id="menu-checkout-btn" class="btn btn-sm btn-dark" 
+                            onclick="">
                         <span data-lang-en="Checkout" data-lang-ar="الدفع">الدفع</span>
                     </button>
                 </div>
@@ -170,8 +177,8 @@
                 <div id="review-list">
                     <div class="review">
                         <img src="Images/userAvatar.png" alt="user profile picture">
-                <div class="review-info">
-                        <h6 data-lang-en="John Doe" data-lang-ar="محمد أحمد">محمد أحمد</h6>
+                        <div class="review-info">
+                            <h6 data-lang-en="John Doe" data-lang-ar="محمد أحمد">محمد أحمد</h6>
                             <p data-lang-en="The food was amazing! Highly recommend." 
                             data-lang-ar="الطعام كان رائعاً! أنصح به بشدة.">الطعام كان رائعاً! أنصح به بشدة.</p>
                         </div> 
