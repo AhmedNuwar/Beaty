@@ -1,0 +1,76 @@
+body{
+    background-color: white;
+}
+main{
+    display: flex;
+    padding: 0 10px;
+    gap: 10px;
+}
+.tab-btns{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.tab-btn{
+    padding: 20px 20px;
+}
+.tabs{
+    width: 100%;
+}
+.tab-content{
+    display: none;
+    border: 1px solid #9e9fa0;
+    height: 100%;
+    border-radius: 5px
+    
+}
+.tab-content.active{
+    display: block;
+}
+.tab-head{
+    color: #fff;
+    background-color: #212529 !important;
+    padding: 0 10px;
+    height: 10%;
+}
+.tab-body{
+    height: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+.Row{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+
+    gap: 5px;
+    
+}
+.Row .tab-head{
+    height: inherit;
+}
+#sales, #profit-details, #soldItems-details{
+    flex-grow: 1;
+}
+#stats, #wallet{
+    flex-grow: .5;
+}
+.sales-item:first-child{
+    margin-top: 0px;
+}
+.sales-data{
+    display: flex;
+    flex-direction: column;
+}
+.sales-item{
+    margin-top: 2px;
+}
+.sales-item h5{
+    font-size: 16px;
+    font-weight: bold;
+    display: inline;
+}
+.sales-item p{
+    display: inline;
+}
