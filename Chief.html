@@ -25,7 +25,7 @@
         </button>
         <!-- Cart Section -->
         <div id="cart-container" class="cart-container">
-            <div id="cart" class="cart" >
+            <div id="cart" class="cart">
                 <h3 data-lang-en="Cart" data-lang-ar="السلة">سلة المشتريات</h3>
                 <ul id="cart-items"></ul>
                 <p><strong data-lang-en="Total:" data-lang-ar="الإجمالي:">الإجمالي:</strong> 
@@ -50,20 +50,34 @@
         <div class="cheif-info">
             <img src="Images/cheifAvatar.png" alt="cheif profile picture">
             <div class="all-data">
-                <h3 data-lang-en="OM Mohammed" data-lang-ar="ام محمد">ام محمد</h3>
-                <p class="data" data-lang-en="123 Nile Street, Cairo, Egypt" 
-                   data-lang-ar="123 شارع النيل، القاهرة، مصر">123 شارع النيل، القاهرة، مصر</p> 
+                <h3 data-lang-en="Not OM Mohammed" data-lang-ar=" مش ام محمد">ام محمد</h3>
                 <p class="data" data-lang-en="Breakfast, Lunch, and Dinner" 
-                   data-lang-ar="فطار و غداء و عشاء">فطار و غداء و عشاء</p> 
+                   data-lang-ar="فطار و غداء و عشاء">فطار و غداء و عشاء
+                </p> 
+                <span class="stars">
+                    <i class="bi bi-star-fill text-warning"></i>
+                    <i class="bi bi-star-fill text-warning"></i>
+                    <i class="bi bi-star-fill text-warning"></i>
+                    <i class="bi bi-star-half text-warning"></i>
+                </span>
             </div>
         </div>
+       
         <div class="food-info">
-            <!-- menu -->
-            <div class="menu col-md-8">
-                <!--cover image-->
-                <img src="Images/iftar.jpg" alt="menu cover">
+            <div class="togl-btns">
+                <button id="toglMenu" class="btn active" data-target="#menu-section">
+                    <span>Menu</span>
+                </button>
+                <button id="toglReview" class="btn" data-target="#reviews-section">
+                    <span>Reviews</span>
+                </button>
+            </div>
+            <div id="menu-section" class="menu active">
                 <!--menu items-->
                 <div class="menu-items">
+                    <h3>
+                        <span>Menu</span>
+                    </h3>
                     <!--item 1-->
                     <div class="menu-item">
                         <div class="menu-info">
@@ -132,51 +146,66 @@
                         <img src="Images/shawarma.jpg" alt="item image">
                     </div>
                 </div>
-            </div>
-            <!-- Reviews Section -->
-        <div class="reviews col">
-            <h2 data-lang-en="Reviews" data-lang-ar="التقييمات">التقييمات</h2> 
 
-            <!-- Existing Reviews -->
-            <div id="review-list">
-                <div class="review">
-                    <img src="Images/userAvatar.png" alt="user profile picture">
-                    <div class="review-info">
+                <!-- Menu Cart -->
+                <div class="menu-cart">
+                    <h3 data-lang-en="Cart" data-lang-ar="السلة">سلة المشتريات</h3>
+                    <ul id="cart-items"></ul>
+                    <p><strong data-lang-en="Total:" data-lang-ar="الإجمالي:">الإجمالي:</strong> 
+                        <span id="cart-total">0</span> جنية
+                    </p>
+                    <button class="btn btn-danger btn-sm" id="menu-clear-cart">
+                        <span data-lang-en="Clear Cart" data-lang-ar="إفراغ السلة">إفراغ السلة</span>
+                    </button>
+                    <button id="menu-checkout-btn" class="btn btn-sm btn-dark"
+                    onclick=>
+                        <span data-lang-en="Checkout" data-lang-ar="الدفع">الدفع</span>
+                    </button>
+                </div>
+            </div>
+            <div id="reviews-section" class="reviews">
+                <h2 data-lang-en="Reviews" data-lang-ar="التقييمات">التقييمات</h2> 
+
+                <!-- Existing Reviews -->
+                <div id="review-list">
+                    <div class="review">
+                        <img src="Images/userAvatar.png" alt="user profile picture">
+                <div class="review-info">
                         <h6 data-lang-en="John Doe" data-lang-ar="محمد أحمد">محمد أحمد</h6>
-                        <p data-lang-en="The food was amazing! Highly recommend." 
-                        data-lang-ar="الطعام كان رائعاً! أنصح به بشدة.">الطعام كان رائعاً! أنصح به بشدة.</p>
-                    </div> 
+                            <p data-lang-en="The food was amazing! Highly recommend." 
+                            data-lang-ar="الطعام كان رائعاً! أنصح به بشدة.">الطعام كان رائعاً! أنصح به بشدة.</p>
+                        </div> 
+                    </div>
+                    <div class="review">
+                   <img src="Images/userAvatar.png" alt="user profile picture">
+                        <div class="review-info">
+                            <h6 data-lang-en="Jane Smith" data-lang-ar="فاطمة علي">فاطمة علي</h6>
+                            <p data-lang-en="Great service and delicious meals." 
+                            data-lang-ar="خدمة رائعة ووجبات لذيذة.">خدمة رائعة ووجبات لذيذة.</p>
+                        </div>   
+                    </div>
                 </div>
-                <div class="review">
-                    <img src="Images/userAvatar.png" alt="user profile picture">
-                    <div class="review-info">
-                        <h6 data-lang-en="Jane Smith" data-lang-ar="فاطمة علي">فاطمة علي</h6>
-                        <p data-lang-en="Great service and delicious meals." 
-                        data-lang-ar="خدمة رائعة ووجبات لذيذة.">خدمة رائعة ووجبات لذيذة.</p>
-                    </div>   
-                </div>
+
+                <!-- Add Review Form -->
+                <form id="review-form">
+                    <input type="text" name="revTxt" id="review-text" 
+                           placeholder="اكتب مراجعتك هنا" 
+                           class="form-control" 
+                           data-lang-en="Write your review here" 
+                           data-lang-ar="اكتب مراجعتك هنا">
+                    <input type="submit" value="اضف مراجعتك" 
+                           class="btn btn-sm btn-danger" 
+                           data-lang-en="Add Review" 
+                           data-lang-ar="اضف مراجعتك">
+                </form>
             </div>
-
-            <!-- Add Review Form -->
-            <form id="review-form">
-                <input type="text" name="revTxt" id="review-text" 
-                       placeholder="اكتب مراجعتك هنا" 
-                       class="form-control" 
-                       data-lang-en="Write your review here" 
-                       data-lang-ar="اكتب مراجعتك هنا">
-                <input type="submit" value="اضف مراجعتك" 
-                       class="btn btn-sm btn-danger" 
-                       data-lang-en="Add Review" 
-                       data-lang-ar="اضف مراجعتك">
-            </form>
+            
         </div>
-        
-        
-
     </main>
     <script src="ChiefScript.js"></script>
     <script src="cartScript.js"></script>
     <script src="bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
     <script src="LangScript.js"></script>
+    <script src="mainScript.js"> </script>
 </body>
 </html>

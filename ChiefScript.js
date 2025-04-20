@@ -60,6 +60,30 @@ document.getElementById("review-form").addEventListener("submit", function(event
     document.getElementById("review-text-en").value = "";
 });
 
+// Tab toggle functionality
+document.querySelectorAll('.togl-btns button').forEach(button => {
+    button.addEventListener('click', function () {
+        // Remove active class from all buttons
+        document.querySelectorAll('.togl-btns button').forEach(btn => {
+            btn.classList.remove('active');
+        });
+
+        // Add active class to the clicked button
+        this.classList.add('active');
+
+        // Hide all sections
+        document.querySelectorAll('.menu, .reviews').forEach(section => {
+            section.classList.remove('active');
+        });
+
+        // Show the targeted section
+        const target = document.querySelector(this.getAttribute('data-target'));
+        if (target) {
+            target.classList.add('active');
+        }
+    });
+});
+
 
 
 

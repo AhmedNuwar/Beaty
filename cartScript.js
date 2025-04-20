@@ -47,78 +47,98 @@ addToCartBtns.forEach(btn =>
         }
         SaveCart();
         UpdateCart();
-        if (!cartContainer.classList.contains("active")) {
-            cartContainer.classList.add("active");
-        }
     });
     
 });
 // -- add to cart end --
 // Updates the cart display when items are added
-function UpdateCart()
-{
+function UpdateCart() {
     let cartList = document.getElementById("cart-items");
-    cartList.innerHTML = ""; // Clear the cart display
+    let menuCartList = document.querySelector(".menu-cart #cart-items");
+    cartList.innerHTML = ""; // Clear the navbar cart display
+    menuCartList.innerHTML = ""; // Clear the menu cart display
     let total = 0;
-    cart.forEach((item, index) => 
-    {
+
+    cart.forEach((item, index) => {
         total += item.total; // Calculate the total price
+
         // Create container for each cart item
         let itemDiv = document.createElement("div");
         itemDiv.className = "cart-item d-flex align-items-center mb-2 border-bottom pb-2";
+
         // Create img element
         let itemImg = document.createElement("img");
         itemImg.src = item.img;
         itemImg.alt = item.name;
         itemImg.className = "cart-item-img";
+
         // Create item details element
         let itemDetails = document.createElement("div");
-        itemDetails.className="cart-item-details";
+        itemDetails.className = "cart-item-details";
         itemDetails.innerHTML = `
                 <strong>${item.name}</strong><br/>
                 Quantity: ${item.quantity}<br/>
                 Total: ${item.total.toFixed(2)} جنية`;
+
         // Create remove button element
         let removeBtn = document.createElement("button");
         removeBtn.className = "btn btn-sm btn-danger remove-btn";
         removeBtn.innerHTML = `<i class="bi bi-x"></i>`;
         removeBtn.dataset.index = index;
+
         // Remove item from cart when button is clicked
-        removeBtn.addEventListener("click", function() 
-        {
+        removeBtn.addEventListener("click", function () {
             let index = this.dataset.index;
             cart.splice(index, 1); // Remove item from cart array
             SaveCart(); // Save the updated cart
-            UpdateCart(); // Update the cart display
+            UpdateCart(); // Update both carts
         });
 
         // Assemble the cart item element
         itemDiv.appendChild(itemImg);
         itemDiv.appendChild(itemDetails);
         itemDiv.appendChild(removeBtn);
-        cartList.appendChild(itemDiv);
-    })
+
+        // Append to both carts
+        cartList.appendChild(itemDiv.cloneNode(true));
+        menuCartList.appendChild(itemDiv);
+    });
+
     // Update the total price display
     document.getElementById("cart-total").textContent = `Total: ${total.toFixed(2)} جنية`;
+    document.querySelector(".menu-cart #cart-total").textContent = `Total: ${total.toFixed(2)} جنية`;
 
     // Update the number next to the cart icon
     let totalQuantity = cart.reduce((sum, item) => sum + item.quantity, 0);
     cartCount.textContent = totalQuantity;
 }
+
 // Save the cart to localStorage
 function SaveCart() {
     localStorage.setItem("cart", JSON.stringify(cart));
 }
-// When "Clear Cart" is clicked
+
+// Fix clear cart button for both carts
 document.getElementById("clear-cart").addEventListener("click", function () {
-    cart = [];       // empty the array
-    SaveCart();      // update localStorage
-    UpdateCart();    // re-render cart
+    cart = []; // Empty the array
+    SaveCart(); // Update localStorage
+    UpdateCart(); // Re-render both carts
 });
 
-// When "Checkout" is clicked
+document.getElementById("menu-clear-cart").addEventListener("click", function () {
+    cart = []; // Empty the array
+    SaveCart(); // Update localStorage
+    UpdateCart(); // Re-render both carts
+});
+
+// Fix checkout button for both carts
 document.getElementById("checkout-btn").addEventListener("click", function () {
-    SaveCart();                      // Save the current state of the cart
+    SaveCart(); // Save the current state of the cart
+    window.location.href = "checkout.html"; // Redirect to the checkout page
+});
+
+document.getElementById("menu-checkout-btn").addEventListener("click", function () {
+    SaveCart(); // Save the current state of the cart
     window.location.href = "checkout.html"; // Redirect to the checkout page
 });
 
