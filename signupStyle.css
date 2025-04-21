@@ -13,3 +13,29 @@
 #submit{
     margin: 10px 0;
 }
+.tab-content{
+    display: none;
+}
+.tab-content.active{
+    display: block;
+}
+.togl-btns{
+    padding: 10px 0px;
+}
+.togl-btns .btn{
+    border-radius: 20px;
+    
+}
+.avatar-option {
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid transparent;
+    cursor: pointer;
+    transition: 0.3s;
+}
+input[type="radio"]:checked + .avatar-option {
+    border-color: #dc3545; /* Bootstrap Danger color */
+    box-shadow: 0 0 5px rgba(220, 53, 69, 0.6);
+}

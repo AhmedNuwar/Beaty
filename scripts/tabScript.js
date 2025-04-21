@@ -11,4 +11,7 @@ function openTab(evt, tabId) {
     document.getElementById(tabId).classList.add('active');
     evt.currentTarget.classList.add('active');
   }
-  
+  /* html template
+  <button class="tab-btn"onclick="openTab(event, 'tabId')"></button>
+  <div id="tabId" class="tab-content active"></div>
+  */
