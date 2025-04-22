@@ -20,8 +20,7 @@ main{
 .tab-content{
     display: none;
     border: 1px solid #9e9fa0;
-    height: 100%;
-    border-radius: 5px
+    border-radius: 6px
     
 }
 .tab-content.active{
@@ -31,24 +30,25 @@ main{
     color: #fff;
     background-color: #212529 !important;
     padding: 0 10px;
-    height: 10%;
+    border-radius: 5px 5px 0 0;
+    
 }
 .tab-body{
-    height: 90%;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
+    
 }
 .Row{
     display: flex;
     flex-wrap: wrap;
     width: 100%;
-
-    gap: 5px;
-    
+    gap: 10px;    
+    padding: 0 10px;
 }
 .Row .tab-head{
     height: inherit;
+    border-radius: 9px 9px 0 0 !important;
 }
 #sales, #profit-details, #soldItems-details{
     flex-grow: 1;
@@ -56,21 +56,49 @@ main{
 #stats, #wallet{
     flex-grow: .5;
 }
-.sales-item:first-child{
-    margin-top: 0px;
+.section{
+    margin: 5px 0;
+    border: 1px #212529 solid;
+    border-radius:  10px;
+    padding: 0;
 }
-.sales-data{
+.data{
     display: flex;
     flex-direction: column;
+    width: 100%;
+    margin: 0;
+    padding: 0;
 }
-.sales-item{
-    margin-top: 2px;
+.item{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 5px;
 }
-.sales-item h5{
-    font-size: 16px;
-    font-weight: bold;
+.item:nth-child(odd){
+    background-color: #e1e1e1;
+}
+.item:last-child{
+    border-radius: 0 0 9px 9px;
+}
+.item h5{
+    font-size: 18px;
     display: inline;
 }
-.sales-item p{
+.item p{
     display: inline;
+    margin: 0;
+}
+#sales .tab-head{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#sales select{
+    width: 20%;
+    border: none;
+    padding: 0 5px;
+    margin: 5px 0;
+    min-width: 100px;
 }

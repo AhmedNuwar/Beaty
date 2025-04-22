@@ -60,42 +60,128 @@
         </div>
         <div class="tabs">
             <div id="finance" class="tab-content active">
-            <div class="tab-head">Finances</div>
+            <div class="tab-head"><span>Finance</span></div>
             <div class="tab-body">
                 <div class="Row top-row">
-                    <div id="sales">
-                        <div class="tab-head">Sales</div>
-                        <div class="sales-data">
-                            <div class="sales-item">
-                                <h5>Current Month Sales:</h5>
+                    <div id="sales" class="section">
+                        <div class="tab-head">
+                            <span data-lang-en="Sales" data-lang-ar="المبيعات">المبيعات</span>
+                            <select name="showBy" id="showBy" class="form-control form-select-sm">
+                                <option value="allTime" data-lang-en="All Time" data-lang-ar="كل الوقت">كل الوقت</option>
+                                <option value="monthly" data-lang-en="This Month" data-lang-ar="هذا الشهر">هذا الشهر</option>
+                                <option value="weekly" data-lang-en="This Week" data-lang-ar="هذا الأسبوع">هذا الأسبوع</option>
+                                <option value="daily" data-lang-en="This Day" data-lang-ar="هذا اليوم">هذا اليوم</option>
+                            </select>
+                        </div>
+                        <div id="allTime" class="sales-data data">
+                            <div class="sales-item item">
+                                <h5 data-lang-en="Total Sales:" data-lang-ar="إجمالي المبيعات:">إجمالي المبيعات:</h5>
+                                <p>120,000 EGP</p>
+                            </div>
+                            <div class="sales-item item">
+                                <h5 data-lang-en="Average Monthly Sales:" data-lang-ar="متوسط المبيعات الشهرية:">متوسط المبيعات الشهرية:</h5>
+                                <p>18,500 EGP</p>
+                            </div>
+                            <div class="sales-item item">
+                                <h5 data-lang-en="Average Weekly Sales:" data-lang-ar="متوسط المبيعات الأسبوعية:">متوسط المبيعات الأسبوعية:</h5>
+                                <p>3000 EGP</p>
+                            </div>
+                            <div class="sales-item item">
+                                <h5 data-lang-en="Average Daily Sales:" data-lang-ar="متوسط المبيعات اليومية:">متوسط المبيعات اليومية:</h5>
+                                <p>450 EGP</p>
+                            </div>
+                         </div>
+                        <div id="monthly" class="sales-data data">
+                            <div class="sales-item item">
+                                <h5 data-lang-en="Current Month Sales:" data-lang-ar="مبيعات الشهر الحالي:">مبيعات الشهر الحالي:</h5>
                                 <p>10,000 EGP</p>
                             </div>
-                            <div class="sales-item">
-                                <h5>Last Month Sales:</h5>
+                            <div class="sales-item item">
+                                <h5 data-lang-en="Last Month Sales:" data-lang-ar="مبيعات الشهر الماضي:">مبيعات الشهر الماضي:</h5>
                                 <p>8,500 EGP</p>
                             </div>
-                            <div class="sales-item">
-                                <h5>Current Day Sales:</h5>
+                        </div>
+                        <div id="weekly" class="sales-data data">
+                            <div class="sales-item item">
+                                <h5 data-lang-en="Current Week Sales:" data-lang-ar="مبيعات الاسبوع الحالي:">مبيعات اليوم الحالي:</h5>
+                                <p>2900 EGP</p>
+                            </div>
+                            <div class="sales-item item">
+                                <h5 data-lang-en="Last Week Sales:" data-lang-ar="مبيعات الاسبوع الماضي:">مبيعات اليوم الماضي:</h5>
+                                <p>3850 EGP</p>
+                            </div>                       
+                         </div>
+                        <div id="daily" class="sales-data data">
+                            <div class="sales-item item">
+                                <h5 data-lang-en="Current Day Sales:" data-lang-ar="مبيعات اليوم الحالي:">مبيعات اليوم الحالي:</h5>
                                 <p>500 EGP</p>
                             </div>
-                            <div class="sales-item">
-                                <h5>Last Day Sales:</h5>
+                            <div class="sales-item item">
+                                <h5 data-lang-en="Last Day Sales:" data-lang-ar="مبيعات اليوم الماضي:">مبيعات اليوم الماضي:</h5>
                                 <p>450 EGP</p>
                             </div>
                         </div>
-                    </div>
-                    <div id="profit-details">
-                        <div class="tab-head">Profit</div>
-                    </div>
+                    </div>   
+                    <div id="profit-details" class="section">
+                        <div class="tab-head"><span>Profit Details</span></div>
+                        <div class="profit-data data">
+                            <div class="profit-item item">
+                                <h5><span data-lang-en="Total Sales" data-lang-ar="إجمالي المبيعات">Total Sales</span></h5>
+                                <p>120,000</p>
+                            </div>
+                            <div class="profit-item item">
+                                <h5><span data-lang-en="Total Profit" data-lang-ar="إجمالي الربح">Total Profit</span></h5>
+                                <p>45,000</p>
+                            </div>
+                            <div class="profit-item item">
+                                <h5><span data-lang-en="Net Profit" data-lang-ar="صافي الربح">Net Profit</span></h5>
+                                <p>30,000</p>
+                            </div>
+                            <div class="profit-item item">
+                                <h5><span data-lang-en="Our Percentage" data-lang-ar="نسبتنا">Our Percentage</span></h5>
+                                <p>25%</p>
+                            </div>
+                            <div class="profit-item item">
+                                <h5><span data-lang-en="Profit After Discount" data-lang-ar="الربح بعد الخصم">Profit After Discount</span></h5>
+                                <p>22,500</p>
+                            </div>
+                        </div>
+                    </div> 
                 </div>
-                <div class="Row bottom-row">
-                    <div id="soldItems-details">
-                        <div class="tab-head">Sold Items</div>
+                <div class="Row bottom-row" >
+                    <div id="soldItems-details" class="section">
+                        <div class="tab-head"><span>Sold Items</span></div>
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th scope="col"><span>Item Name</span></th>
+                                    <th scope="col"><span>Quantity Sold</span></th>
+                                    <th scope="col"><span>Product Net Profit</span></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td></td>
+                                    <td>Item 1</td>
+                                    <td>50</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>Item 2</td>
+                                    <td>30</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>Item 3</td>
+                                    <td>20</td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
-                    <div id="stats">
+                    <div id="stats" class="section">
                         <div class="tab-head">Stats</div>
                     </div>
-                    <div id="wallet">
+                    <div id="wallet" class="section">
                         <div class="tab-head">Wallet</div>
                     </div>
                 </div>
@@ -164,5 +250,6 @@
     <script src="bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
     <script src="LangScript.js"></script>
     <script src="scripts/tabScript.js"></script>
+    <script src="scripts/dashboardScript.js"></script>
 </body>
 </html>
