@@ -50,10 +50,10 @@ main{
     height: inherit;
     border-radius: 9px 9px 0 0 !important;
 }
-#sales, #profit-details, #soldItems-details{
+#sales, #profit-details, #soldItems-details,#stats{
     flex-grow: 1;
 }
-#stats, #wallet{
+#wallet{
     flex-grow: .5;
 }
 .section{
@@ -102,3 +102,99 @@ main{
     margin: 5px 0;
     min-width: 100px;
 }
+
+.withdrawal-btns{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+    border: 1px solid #9e9fa0;
+    border-radius: 10px;
+    gap: 10px;
+    margin: 10px auto;
+}
+
+.chart-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    font-family: Arial, sans-serif;
+  }
+  
+  .y-axis-label {
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+  
+  .bar-chart {
+    display: flex;
+    align-items: flex-end;
+    border-left: 2px solid #333;
+    border-bottom: 2px solid #333;
+    position: relative;
+    padding: 10px;
+    background-color: #fff;
+  }
+  
+  .y-axis {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 200px;
+    margin-right: 10px;
+    font-size: 12px;
+    color: #666;
+  }
+  
+  .bars {
+    display: flex;
+    gap: 30px;
+    align-items: flex-end;
+    height: 200px;
+    padding-left: 10px;
+    position: relative;
+  }
+  
+  .bar {
+    position: relative;
+    width: 60px;
+    height: 100%;
+    background-color: #eee;
+    border-radius: 10px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+  }
+  
+  .bar::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: var(--value);
+    background-color: #212529;
+    border-radius: 10px 10px 0 0;
+    transition: height 0.3s ease;
+  }
+  
+  .label {
+    position: absolute;
+    bottom: -30px;
+    font-size: 13px;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+    width: 100%;
+  }
+  
+  
+  .x-axis-label {
+    text-align: center;
+    width: 100%;
+    margin-top: 20px;
+    font-weight: bold;
+   
+  }
+  
