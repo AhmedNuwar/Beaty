@@ -7,7 +7,7 @@
     <link rel="stylesheet" type="text/css" href="bootstrap-5.3.3-dist/css/bootstrap.min.css"> 
     <link rel="stylesheet" href="LayoutStyle.css">
     <link rel="stylesheet" href="styles/dashboardStyle.css">
-    <title>Document</title>
+    <title data-lang-en="Dashboard" data-lang-ar="لوحة التحكم">Document</title>
 </head>
 <body>
     <nav class="navbar navbar-expand-md bg-light navbar-light sticky-top">
@@ -41,26 +41,26 @@
     </nav>
     <main>
         <div class="tab-btns">
-            <button class="tab-btn btn btn-outline-dark active"
-            onclick="openTab(event, 'finance')">
+            <button class="tab-btn btn btn-outline-dark "
+            onclick="openTab(event, 'finance')" data-lang-en="Finance" data-lang-ar="المالية">
                 Finance
             </button>
-            <button class="tab-btn btn btn-outline-dark"
-            onclick="openTab(event, 'items')">
+            <button class="tab-btn btn btn-outline-dark active"
+            onclick="openTab(event, 'dishes')" data-lang-en="Dishes" data-lang-ar="الاصناف">
                 Items
             </button>
             <button class="tab-btn btn btn-outline-dark"
-            onclick="openTab(event, 'orders')">
+            onclick="openTab(event, 'orders')" data-lang-en="Orders" data-lang-ar="الطلبات">
                 Orders
             </button>
             <button class="tab-btn btn btn-outline-dark"
-            onclick="openTab(event, 'info')">
+            onclick="openTab(event, 'info')" data-lang-en="Info" data-lang-ar="المعلومات">
                 Info
             </button>
         </div>
         <div class="tabs">
-            <div id="finance" class="tab-content active">
-            <div class="tab-head"><span>Finance</span></div>
+            <div id="finance" class="tab-content">
+            <div class="tab-head"><span data-lang-en="Finance" data-lang-ar="المالية">Finance</span></div>
             <div class="tab-body">
                 <div class="Row top-row">
                     <div id="sales" class="section">
@@ -76,174 +76,257 @@
                         <div id="allTime" class="sales-data data">
                             <div class="sales-item item">
                                 <h5 data-lang-en="Total Sales" data-lang-ar="إجمالي المبيعات">إجمالي المبيعات</h5>
-                                <p>120,000 EGP</p>
+                                <p data-lang-en="120,000 EGP" data-lang-ar="١٢٠,٠٠٠ جنيه">120,000 EGP</p>
                             </div>
                             <div class="sales-item item">
                                 <h5 data-lang-en="Average Monthly Sales" data-lang-ar="متوسط المبيعات الشهرية">متوسط المبيعات الشهرية</h5>
-                                <p>18,500 EGP</p>
+                                <p data-lang-en="18,500 EGP" data-lang-ar="١٨,٥٠٠ جنيه">18,500 EGP</p>
                             </div>
                             <div class="sales-item item">
                                 <h5 data-lang-en="Average Weekly Sales" data-lang-ar="متوسط المبيعات الأسبوعية">متوسط المبيعات الأسبوعية</h5>
-                                <p>3000 EGP</p>
+                                <p data-lang-en="3000 EGP" data-lang-ar="٣٠٠٠ جنيه">3000 EGP</p>
                             </div>
                             <div class="sales-item item">
                                 <h5 data-lang-en="Average Daily Sales" data-lang-ar="متوسط المبيعات اليومية">متوسط المبيعات اليومية</h5>
-                                <p>450 EGP</p>
+                                <p data-lang-en="450 EGP" data-lang-ar="٤٥٠ جنيه">450 EGP</p>
                             </div>
                          </div>
                         <div id="monthly" class="sales-data data">
                             <div class="sales-item item">
                                 <h5 data-lang-en="Current Month Sales" data-lang-ar="مبيعات الشهر الحالي">مبيعات الشهر الحالي</h5>
-                                <p>10,000 EGP</p>
+                                <p data-lang-en="10,000 EGP" data-lang-ar="١٠,٠٠٠ جنيه">10,000 EGP</p>
                             </div>
                             <div class="sales-item item">
                                 <h5 data-lang-en="Last Month Sales" data-lang-ar="مبيعات الشهر الماضي">مبيعات الشهر الماضي</h5>
-                                <p>8,500 EGP</p>
+                                <p data-lang-en="8,500 EGP" data-lang-ar="٨,٥٠٠ جنيه">8,500 EGP</p>
                             </div>
                         </div>
                         <div id="weekly" class="sales-data data">
                             <div class="sales-item item">
                                 <h5 data-lang-en="Current Week Sales" data-lang-ar="مبيعات الاسبوع الحالي">مبيعات الاسبوع الحالي</h5>
-                                <p>2900 EGP</p>
+                                <p data-lang-en="2900 EGP" data-lang-ar="٢٩٠٠ جنيه">2900 EGP</p>
                             </div>
                             <div class="sales-item item">
                                 <h5 data-lang-en="Last Week Sales" data-lang-ar="مبيعات الاسبوع الماضي">مبيعات الاسبوع الماضي</h5>
-                                <p>3850 EGP</p>
+                                <p data-lang-en="3850 EGP" data-lang-ar="٣٨٥٠ جنيه">3850 EGP</p>
                             </div>                       
                          </div>
                         <div id="daily" class="sales-data data">
                             <div class="sales-item item">
                                 <h5 data-lang-en="Current Day Sales" data-lang-ar="مبيعات اليوم الحالي">مبيعات اليوم الحالي</h5>
-                                <p>500 EGP</p>
+                                <p data-lang-en="500 EGP" data-lang-ar="٥٠٠ جنيه">500 EGP</p>
                             </div>
                             <div class="sales-item item">
                                 <h5 data-lang-en="Last Day Sales" data-lang-ar="مبيعات اليوم الماضي">مبيعات اليوم الماضي</h5>
-                                <p>450 EGP</p>
+                                <p data-lang-en="450 EGP" data-lang-ar="٤٥٠ جنيه">450 EGP</p>
                             </div>
                         </div>
                     </div>   
                     <div id="profit-details" class="section">
-                        <div class="tab-head"><span>Profit Details</span></div>
+                        <div class="tab-head"><span data-lang-en="Profit Details" data-lang-ar="تفاصيل الربح">Profit Details</span></div>
                         <div class="profit-data data">
                             <div class="profit-item item">
                                 <h5><span data-lang-en="Total Sales" data-lang-ar="إجمالي المبيعات">Total Sales</span></h5>
-                                <p>120,000</p>
+                                <p data-lang-en="120,000" data-lang-ar="١٢٠,٠٠٠">120,000</p>
                             </div>
                             <div class="profit-item item">
                                 <h5><span data-lang-en="Total Profit" data-lang-ar="إجمالي الربح">Total Profit</span></h5>
-                                <p>45,000</p>
+                                <p data-lang-en="45,000" data-lang-ar="٤٥,٠٠٠">45,000</p>
                             </div>
                             <div class="profit-item item">
                                 <h5><span data-lang-en="Net Profit" data-lang-ar="صافي الربح">Net Profit</span></h5>
-                                <p>30,000</p>
+                                <p data-lang-en="30,000" data-lang-ar="٣٠,٠٠٠">30,000</p>
                             </div>
                             <div class="profit-item item">
                                 <h5><span data-lang-en="Our Percentage" data-lang-ar="نسبتنا">Our Percentage</span></h5>
-                                <p>25%</p>
+                                <p data-lang-en="25%" data-lang-ar="٢٥٪">25%</p>
                             </div>
                             <div class="profit-item item">
                                 <h5><span data-lang-en="Profit After Discount" data-lang-ar="الربح بعد الخصم">Profit After Discount</span></h5>
-                                <p>22,500</p>
+                                <p data-lang-en="22,500" data-lang-ar="٢٢,٥٠٠">22,500</p>
                             </div>
                         </div>
                     </div> 
                 </div>
                 <div class="Row bottom-row" >
                     <div id="soldItems-details" class="section">
-                        <div class="tab-head"><span>Sold Items</span></div>
+                        <div class="tab-head"><span data-lang-en="Sold Items" data-lang-ar="العناصر المباعة">Sold Items</span></div>
                         <table class="table table-sm table-bordered table-striped">
                             <thead class="thead-dark">
                                 <tr>
-                                    <th scope="col"><span>Item Name</span></th>
-                                    <th scope="col"><span>Quantity Sold</span></th>
-                                    <th scope="col"><span>Product Net Profit</span></th>
+                                    <th scope="col"><span data-lang-en="Item Name" data-lang-ar="اسم العنصر">Item Name</span></th>
+                                    <th scope="col"><span data-lang-en="Quantity Sold" data-lang-ar="الكمية المباعة">Quantity Sold</span></th>
+                                    <th scope="col"><span data-lang-en="Product Net Profit" data-lang-ar="صافي ربح المنتج">Product Net Profit</span></th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td><span>Mahshi</span></td>
-                                    <td><span>50</span></td>
-                                    <td><span>100 EGP</span></td> <!-- or any net profit -->
+                                    <td><span data-lang-en="Mahshi" data-lang-ar="محشي">Mahshi</span></td>
+                                    <td><span data-lang-en="50" data-lang-ar="٥٠">50</span></td>
+                                    <td><span data-lang-en="100 EGP" data-lang-ar="١٠٠ جنيه">100 EGP</span></td>
                                 </tr>
                                 <tr>
-                                    <td>Item 2</td>
-                                    <td>30</td>
-                                    <td>$60</td>
+                                    <td><span data-lang-en="Koshary" data-lang-ar="كشري">Koshary</span></td>
+                                    <td><span data-lang-en="30" data-lang-ar="٣٠">30</span></td>
+                                    <td><span data-lang-en="600 EGP" data-lang-ar="٦٠٠ جنيه">600 EGP</span></td>
                                 </tr>
                                 <tr>
-                                    <td>Item 3</td>
-                                    <td>20</td>
-                                    <td>$40</td>
+                                    <td><span data-lang-en="Molokhia" data-lang-ar="ملوخية">Molokhia</span></td>
+                                    <td><span data-lang-en="20" data-lang-ar="٢٠">20</span></td>
+                                    <td><span data-lang-en="400 EGP" data-lang-ar="٤٠٠ جنيه">400 EGP</span></td>
                                 </tr>
                             </tbody>
-                            
                         </table>
                     </div>
                     <div id="stats" class="section">
-                        <div class="tab-head">Stats</div>
+                        <div class="tab-head"><span data-lang-en="Stats" data-lang-ar="الإحصائيات">Stats</span></div>
                         <div class="chart-container">
-                            <div class="y-axis-label"><span>Sales (EGP)</span></div>
+                            <div class="y-axis-label"><span data-lang-en="Sales (EGP)" data-lang-ar="المبيعات (جنيه)">Sales (EGP)</span></div>
                             <div class="bar-chart">
-                              <div class="y-axis">
-                                <div><span>20,000 </span></div>
-                                <div><span>16,000 </span></div>
-                                <div><span>12,000 </span></div>
-                                <div><span>8,000 </span></div>
-                                <div><span>4,000 </span></div>
-                                <div><span>0 </span></div>
-                              </div>
-                              <div class="bars">
-                                <div class="bar" style="--value: 75%">
-                                  <span class="label">Burger</span>
-
+                                <div class="y-axis">
+                                    <div><span data-lang-en="20,000" data-lang-ar="٢٠,٠٠٠">20,000 </span></div>
+                                    <div><span data-lang-en="16,000" data-lang-ar="١٦,٠٠٠">16,000 </span></div>
+                                    <div><span data-lang-en="12,000" data-lang-ar="١٢,٠٠٠">12,000 </span></div>
+                                    <div><span data-lang-en="8,000" data-lang-ar="٨,٠٠٠">8,000 </span></div>
+                                    <div><span data-lang-en="4,000" data-lang-ar="٤,٠٠٠">4,000 </span></div>
+                                    <div><span data-lang-en="0" data-lang-ar="٠">0 </span></div>
                                 </div>
-                                <div class="bar" style="--value: 50%">
-                                  <span class="label">Pizza</span>
-                                  
+                                <div class="bars">
+                                    <div class="bar" style="--value: 75%">
+                                        <span class="label" data-lang-en="Mahshi" data-lang-ar="محشي">Mahshi</span>
+                                    </div>
+                                    <div class="bar" style="--value: 50%">
+                                        <span class="label" data-lang-en="Koshary" data-lang-ar="كشري">Koshary</span>
+                                    </div>
+                                    <div class="bar" style="--value: 30%">
+                                        <span class="label" data-lang-en="Molokhia" data-lang-ar="ملوخية">Molokhia</span>
+                                    </div>
                                 </div>
-                                <div class="bar" style="--value: 30%">
-                                  <span class="label">Pasta</span>
-                                  
-                                </div>
-                                <div class="bar" style="--value: 90%">
-                                  <span class="label">Tacos</span>
-                                  
-                                </div>
-                              </div>
                             </div>
-                            <div class="x-axis-label">Items</div>
-                          </div>
-                          
-                          
+                            <div class="x-axis-label"><span data-lang-en="Items" data-lang-ar="العناصر">Items</span></div>
+                        </div>
                     </div>
+                    
                     <div id="wallet" class="section">
-                        <div class="tab-head"><span>Wallet</span></div>
+                        <div class="tab-head"><span data-lang-en="Wallet" data-lang-ar="المحفظة">Wallet</span></div>
                         <div class="data">
                             <div class="item">
-                                <h5><span data-lang-en="Balance" data-lang-ar="الرصيد">Total Sales</span></h5>
-                                <p>20,000</p>
+                                <h5><span data-lang-en="Balance" data-lang-ar="الرصيد">Balance</span></h5>
+                                <p data-lang-en="20,000" data-lang-ar="٢٠,٠٠٠">20,000</p>
                             </div>
                             <div class="item">
                                 <h5><span data-lang-en="Balance Available For Withdrawal" data-lang-ar="الرصيد المتاح للسحب">Balance Available For Withdrawal</span></h5>
-                                <p>12,000</p>
+                                <p data-lang-en="12,000" data-lang-ar="١٢,٠٠٠">12,000</p>
                             </div>
                             <div class="withdrawal-btns">
-                                <button class="btn btn-sm btn-dark"><span>Withdraw</span></button>
-                                <button class="btn btn-sm btn-outline-secondary"><span>Change Withdrawal Method</span></button>
+                                <button class="btn btn-sm btn-dark"><span data-lang-en="Withdraw" data-lang-ar="سحب">Withdraw</span></button>
+                                <button class="btn btn-sm btn-outline-secondary"><span data-lang-en="Change Withdrawal Method" data-lang-ar="تغيير طريقة السحب">Change Withdrawal Method</span></button>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
             </div>
-            <div id="items" class="tab-content">
-            <div class="tab-head">Items</div>
+            <div id="dishes" class="tab-content active">
+                <div class="tab-head"><span data-lang-en="Dishes" data-lang-ar="الاصناف">Dishes</span></div>
+                <div id="dishStats" class="section">
+                    <div class="tab-head"><span data-lang-en="Dish Statistics" data-lang-ar="إحصائيات الأصناف">Dish Statistics</span></div>
+                    <table class="table table-sm table-bordered table-striped">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th scope="col"><span data-lang-en="Dish Name" data-lang-ar="اسم الصنف">Dish Name</span></th>
+                                <th scope="col"><span data-lang-en="Quantity Sold" data-lang-ar="الكمية المباعة">Quantity Sold</span></th>
+                                <th scope="col"><span data-lang-en="Product Net Profit" data-lang-ar="صافي ربح المنتج">Product Net Profit</span></th>
+                                <th scope="col"><span data-lang-en="Percentage Sold" data-lang-ar="نسبة بيعه">Percentage Sold</span></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><span data-lang-en="Mahshi" data-lang-ar="محشي">Mahshi</span></td>
+                                <td><span data-lang-en="50" data-lang-ar="٥٠">50</span></td>
+                                <td><span data-lang-en="100 EGP" data-lang-ar="١٠٠ جنيه">100 EGP</span></td>
+                                <td><span data-lang-en="50%" data-lang-ar="٥٠٪">50%</span></td>
+                            </tr>
+                            <tr>
+                                <td><span data-lang-en="Koshary" data-lang-ar="كشري">Koshary</span></td>
+                                <td><span data-lang-en="30" data-lang-ar="٣٠">30</span></td>
+                                <td><span data-lang-en="600 EGP" data-lang-ar="٦٠٠ جنيه">600 EGP</span></td>
+                                <td><span data-lang-en="30%" data-lang-ar="٣٠٪">30%</span></td>
+                            </tr>
+                            <tr>
+                                <td><span data-lang-en="Molokhia" data-lang-ar="ملوخية">Molokhia</span></td>
+                                <td><span data-lang-en="20" data-lang-ar="٢٠">20</span></td>
+                                <td><span data-lang-en="400 EGP" data-lang-ar="٤٠٠ جنيه">400 EGP</span></td>
+                                <td><span data-lang-en="20%" data-lang-ar="٢٠٪">20%</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="add-dish section">
+                    <div class="tab-head"><span data-lang-en="Add New Dish" data-lang-ar="اضف صنف جديد"> </span></div>
+                    <form action="#" method="POST" class="dish-form">
+                        <!-- Dish Name -->
+                        <div class="name-descrption">
+                          <label for="dish-name" class="form-label">
+                            <span data-lang-en="Dish Name" data-lang-ar="اسم الطبق">Dish Name</span>:
+                          </label>
+                          <input type="text" id="dish-name" name="dish-name" class="form-control" required>
+                      
+                        <!-- Dish Description -->
+                    
+                          <label for="dish-description" class="form-label">
+                            <span data-lang-en="Dish Description" data-lang-ar="وصف الطبق">Dish Description</span>:
+                          </label>
+                          <textarea id="dish-description" name="dish-description" class="form-control" required></textarea>
+                        </div>
+                      
+                        <!-- Dish Image -->
+                        <div class="img-div">
+                          <label for="dish-image" class="form-label">
+                            <span data-lang-en="Dish Image" data-lang-ar="صورة الطبق">Dish Image</span>:
+                          </label>
+                          <input type="file" id="dish-image" name="dish-image" class="form-control" accept="image/*" required>
+                        </div>
+                      
+                        <!-- Price -->
+                        <div>
+                          <label for="price" class="form-label">
+                            <span data-lang-en="Price" data-lang-ar="السعر">Price</span>:
+                          </label>
+                          <input type="number" id="price" name="price" class="form-control" required>
+                        </div>
+                      
+                        <!-- Sale (Optional) -->
+                        <div>
+                          <label for="sale" class="form-label">
+                            <span data-lang-en="Sale (Optional)" data-lang-ar="عرض (اختياري)">Sale (Optional)</span>:
+                          </label>
+                          <textarea id="sale" name="sale" class="form-control"></textarea>
+                        </div>
+                      
+                        <div class="form-btns">
+                            <!-- Reset Button -->
+                        <button type="reset" class="btn btn-secondary">
+                            <span data-lang-en="Reset" data-lang-ar="إعادة تعيين">Reset</span>
+                          </button>
+                        
+                          <!-- Submit Button -->
+                          <button type="submit" class="btn btn-primary">
+                            <span data-lang-en="Submit" data-lang-ar="إرسال">Submit</span>
+                          </button>
+                        </div>
+                      </form>
+                      
+                      
+                      
+                      
+                </div>
             </div>
             <div id="orders" class="tab-content">
-            <div class="tab-head">Orders</div>
+            <div class="tab-head"><span data-lang-en="Orders" data-lang-ar="الطلبات">Orders</span></div>
             </div>
             <div id="info" class="tab-content">
-            <div class="tab-head">Info</div>
+            <div class="tab-head"><span data-lang-en="Info" data-lang-ar="المعلومات">Info</span></div>
             </div>
         </div>
     </main>
@@ -255,18 +338,18 @@
                 <li><a href="FAQ.html" data-lang-en="FAQ" data-lang-ar="الأسئلة الشائعة">الأسئلة الشائعة</a></li>
                 <li><a href="Contact.html" data-lang-en="Contact Us" data-lang-ar="اتصل بنا">اتصل بنا</a></li>
             </ul>
-            <a href="#" class="btn btn-light"><span data-lang-en="give us your recommendation" data-lang-ar="شاركنا باقرتاحك"></span></a>
+            <a href="#" class="btn btn-light"><span data-lang-en="Give us your recommendation" data-lang-ar="شاركنا باقتراحك"></span></a>
         </div>
         <div class="footer-main">
             <div class="chiefs">
                 <h4 data-lang-en="Our Famous Chefs" data-lang-ar="اشهر الطباخيين">طباخينا</h4>
                 <ul>
-                    <li data-lang-en="Chief 1" data-lang-ar="طباخ 1"></li>
-                    <li data-lang-en="Chief 2" data-lang-ar="طباخ 2"></li>
-                    <li data-lang-en="Chief 3" data-lang-ar="طباخ 3"></li>
-                    <li data-lang-en="Chief 4" data-lang-ar="طباخ 4"></li>
-                    <li data-lang-en="Chief 5" data-lang-ar="طباخ 5"></li>
-                    <li data-lang-en="Chief 6" data-lang-ar="طباخ 6"></li>
+                    <li data-lang-en="Chief 1" data-lang-ar="طباخ 1">طباخ 1</li>
+                    <li data-lang-en="Chief 2" data-lang-ar="طباخ 2">طباخ 2</li>
+                    <li data-lang-en="Chief 3" data-lang-ar="طباخ 3">طباخ 3</li>
+                    <li data-lang-en="Chief 4" data-lang-ar="طباخ 4">طباخ 4</li>
+                    <li data-lang-en="Chief 5" data-lang-ar="طباخ 5">طباخ 5</li>
+                    <li data-lang-en="Chief 6" data-lang-ar="طباخ 6">طباخ 6</li>
                 </ul>
             </div>
             <div class="cities">
@@ -280,11 +363,11 @@
             <div class="services">
                 <h4 data-lang-en="Other Services" data-lang-ar="الخدمات الاخري">الخدمات</h4>
                 <ul>
-                    <li data-lang-en="Service 1" data-lang-ar="خدمة 1"></li>
-                    <li data-lang-en="Service 2" data-lang-ar="خدمة 2"></li>
-                    <li data-lang-en="Service 3" data-lang-ar="خدمة 3"></li>
-                    <li data-lang-en="Service 4" data-lang-ar="خدمة 4"></li>
-                    <li data-lang-en="Service 5" data-lang-ar="خدمة 5"></li>
+                    <li data-lang-en="Service 1" data-lang-ar="خدمة 1">خدمة 1</li>
+                    <li data-lang-en="Service 2" data-lang-ar="خدمة 2">خدمة 2</li>
+                    <li data-lang-en="Service 3" data-lang-ar="خدمة 3">خدمة 3</li>
+                    <li data-lang-en="Service 4" data-lang-ar="خدمة 4">خدمة 4</li>
+                    <li data-lang-en="Service 5" data-lang-ar="خدمة 5">خدمة 5</li>
                 </ul>
             </div>
             <div class="socials">

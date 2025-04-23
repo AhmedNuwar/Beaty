@@ -13,6 +13,7 @@ main{
 }
 .tab-btn{
     padding: 20px 20px;
+    height: 100%;
 }
 .tabs{
     width: 100%;
@@ -50,17 +51,14 @@ main{
     height: inherit;
     border-radius: 9px 9px 0 0 !important;
 }
-#sales, #profit-details, #soldItems-details,#stats{
-    flex-grow: 1;
-}
-#wallet{
-    flex-grow: .5;
-}
 .section{
-    margin: 5px 0;
     border: 1px #212529 solid;
     border-radius:  10px;
     padding: 0;
+}
+#finance .section{
+    margin: 5px 0;
+    flex-grow: 1;
 }
 .data{
     display: flex;
@@ -118,6 +116,8 @@ main{
     display: flex;
     flex-wrap: wrap;
     align-items: center;
+    justify-content: center;
+    margin: 10px 0;
     font-family: Arial, sans-serif;
   }
   
@@ -137,13 +137,17 @@ main{
     padding: 10px;
     background-color: #fff;
   }
+  [lang="ar"] .bar-chart{
+    border-left: 0px;
+    border-right: 2px solid #333;
+  }
   
   .y-axis {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     height: 200px;
-    margin-right: 10px;
+    margin: 0 10px;
     font-size: 12px;
     color: #666;
   }
@@ -195,6 +199,49 @@ main{
     width: 100%;
     margin-top: 20px;
     font-weight: bold;
-   
   }
+  /* تحسين المظهر العام للفورم */
+.dish-form label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: inline-block;
+}
+
+.dish-form input,
+.dish-form textarea {
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    padding: 8px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.dish-form .form-btns {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+/* استجابة للموبايل */
+@media (max-width: 768px) {
+    .dish-form {
+        flex-direction: column;
+    }
+    .dish-form > div {
+        width: 100%;
+    }
+}
+
+/* تحسين المسافات في القسم العام للفورم */
+.dish-form {
+    margin: 20px;
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+}
+#dishes .section{
+    margin: 10px;
+}
   
