@@ -55,11 +55,10 @@ main{
     border: 1px #212529 solid;
     border-radius:  10px;
     padding: 0;
-}
-#finance .section{
     margin: 5px 0;
     flex-grow: 1;
 }
+
 .data{
     display: flex;
     flex-direction: column;
@@ -239,7 +238,3 @@ main{
     border-radius: 10px;
     background-color: #f9f9f9;
 }
-#dishes .section{
-    margin: 10px;
-}
-  

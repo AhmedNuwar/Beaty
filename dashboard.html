@@ -7,6 +7,7 @@
     <link rel="stylesheet" type="text/css" href="bootstrap-5.3.3-dist/css/bootstrap.min.css"> 
     <link rel="stylesheet" href="LayoutStyle.css">
     <link rel="stylesheet" href="styles/dashboardStyle.css">
+    <link rel="stylesheet" href="styles/dash-orderStyle.css">
     <title data-lang-en="Dashboard" data-lang-ar="لوحة التحكم">Document</title>
 </head>
 <body>
@@ -45,11 +46,11 @@
             onclick="openTab(event, 'finance')" data-lang-en="Finance" data-lang-ar="المالية">
                 Finance
             </button>
-            <button class="tab-btn btn btn-outline-dark active"
+            <button class="tab-btn btn btn-outline-dark "
             onclick="openTab(event, 'dishes')" data-lang-en="Dishes" data-lang-ar="الاصناف">
                 Items
             </button>
-            <button class="tab-btn btn btn-outline-dark"
+            <button class="tab-btn btn btn-outline-dark active"
             onclick="openTab(event, 'orders')" data-lang-en="Orders" data-lang-ar="الطلبات">
                 Orders
             </button>
@@ -227,105 +228,212 @@
                 </div>
             </div>
             </div>
-            <div id="dishes" class="tab-content active">
+            <div id="dishes" class="tab-content ">
                 <div class="tab-head"><span data-lang-en="Dishes" data-lang-ar="الاصناف">Dishes</span></div>
-                <div id="dishStats" class="section">
-                    <div class="tab-head"><span data-lang-en="Dish Statistics" data-lang-ar="إحصائيات الأصناف">Dish Statistics</span></div>
-                    <table class="table table-sm table-bordered table-striped">
-                        <thead class="thead-dark">
-                            <tr>
-                                <th scope="col"><span data-lang-en="Dish Name" data-lang-ar="اسم الصنف">Dish Name</span></th>
-                                <th scope="col"><span data-lang-en="Quantity Sold" data-lang-ar="الكمية المباعة">Quantity Sold</span></th>
-                                <th scope="col"><span data-lang-en="Product Net Profit" data-lang-ar="صافي ربح المنتج">Product Net Profit</span></th>
-                                <th scope="col"><span data-lang-en="Percentage Sold" data-lang-ar="نسبة بيعه">Percentage Sold</span></th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td><span data-lang-en="Mahshi" data-lang-ar="محشي">Mahshi</span></td>
-                                <td><span data-lang-en="50" data-lang-ar="٥٠">50</span></td>
-                                <td><span data-lang-en="100 EGP" data-lang-ar="١٠٠ جنيه">100 EGP</span></td>
-                                <td><span data-lang-en="50%" data-lang-ar="٥٠٪">50%</span></td>
-                            </tr>
-                            <tr>
-                                <td><span data-lang-en="Koshary" data-lang-ar="كشري">Koshary</span></td>
-                                <td><span data-lang-en="30" data-lang-ar="٣٠">30</span></td>
-                                <td><span data-lang-en="600 EGP" data-lang-ar="٦٠٠ جنيه">600 EGP</span></td>
-                                <td><span data-lang-en="30%" data-lang-ar="٣٠٪">30%</span></td>
-                            </tr>
-                            <tr>
-                                <td><span data-lang-en="Molokhia" data-lang-ar="ملوخية">Molokhia</span></td>
-                                <td><span data-lang-en="20" data-lang-ar="٢٠">20</span></td>
-                                <td><span data-lang-en="400 EGP" data-lang-ar="٤٠٠ جنيه">400 EGP</span></td>
-                                <td><span data-lang-en="20%" data-lang-ar="٢٠٪">20%</span></td>
-                            </tr>
-                        </tbody>
-                    </table>
+                <div class="Row">
+                    <div id="dishStats" class="section">
+                        <div class="tab-head"><span data-lang-en="Dish Statistics" data-lang-ar="إحصائيات الأصناف">Dish Statistics</span></div>
+                        <table class="table table-sm table-bordered table-striped">
+                            <thead class="thead-dark">
+                                <tr>
+                                    <th scope="col"><span data-lang-en="Dish Name" data-lang-ar="اسم الصنف">Dish Name</span></th>
+                                    <th scope="col"><span data-lang-en="Quantity Sold" data-lang-ar="الكمية المباعة">Quantity Sold</span></th>
+                                    <th scope="col"><span data-lang-en="Product Net Profit" data-lang-ar="صافي ربح المنتج">Product Net Profit</span></th>
+                                    <th scope="col"><span data-lang-en="Percentage Sold" data-lang-ar="نسبة بيعه">Percentage Sold</span></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><span data-lang-en="Mahshi" data-lang-ar="محشي">Mahshi</span></td>
+                                    <td><span data-lang-en="50" data-lang-ar="٥٠">50</span></td>
+                                    <td><span data-lang-en="100 EGP" data-lang-ar="١٠٠ جنيه">100 EGP</span></td>
+                                    <td><span data-lang-en="50%" data-lang-ar="٥٠٪">50%</span></td>
+                                </tr>
+                                <tr>
+                                    <td><span data-lang-en="Koshary" data-lang-ar="كشري">Koshary</span></td>
+                                    <td><span data-lang-en="30" data-lang-ar="٣٠">30</span></td>
+                                    <td><span data-lang-en="600 EGP" data-lang-ar="٦٠٠ جنيه">600 EGP</span></td>
+                                    <td><span data-lang-en="30%" data-lang-ar="٣٠٪">30%</span></td>
+                                </tr>
+                                <tr>
+                                    <td><span data-lang-en="Molokhia" data-lang-ar="ملوخية">Molokhia</span></td>
+                                    <td><span data-lang-en="20" data-lang-ar="٢٠">20</span></td>
+                                    <td><span data-lang-en="400 EGP" data-lang-ar="٤٠٠ جنيه">400 EGP</span></td>
+                                    <td><span data-lang-en="20%" data-lang-ar="٢٠٪">20%</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
-                <div class="add-dish section">
-                    <div class="tab-head"><span data-lang-en="Add New Dish" data-lang-ar="اضف صنف جديد"> </span></div>
-                    <form action="#" method="POST" class="dish-form">
-                        <!-- Dish Name -->
-                        <div class="name-descrption">
-                          <label for="dish-name" class="form-label">
-                            <span data-lang-en="Dish Name" data-lang-ar="اسم الطبق">Dish Name</span>:
-                          </label>
-                          <input type="text" id="dish-name" name="dish-name" class="form-control" required>
-                      
-                        <!-- Dish Description -->
-                    
-                          <label for="dish-description" class="form-label">
-                            <span data-lang-en="Dish Description" data-lang-ar="وصف الطبق">Dish Description</span>:
-                          </label>
-                          <textarea id="dish-description" name="dish-description" class="form-control" required></textarea>
-                        </div>
-                      
-                        <!-- Dish Image -->
-                        <div class="img-div">
-                          <label for="dish-image" class="form-label">
-                            <span data-lang-en="Dish Image" data-lang-ar="صورة الطبق">Dish Image</span>:
-                          </label>
-                          <input type="file" id="dish-image" name="dish-image" class="form-control" accept="image/*" required>
-                        </div>
-                      
-                        <!-- Price -->
-                        <div>
-                          <label for="price" class="form-label">
-                            <span data-lang-en="Price" data-lang-ar="السعر">Price</span>:
-                          </label>
-                          <input type="number" id="price" name="price" class="form-control" required>
-                        </div>
-                      
-                        <!-- Sale (Optional) -->
-                        <div>
-                          <label for="sale" class="form-label">
-                            <span data-lang-en="Sale (Optional)" data-lang-ar="عرض (اختياري)">Sale (Optional)</span>:
-                          </label>
-                          <textarea id="sale" name="sale" class="form-control"></textarea>
-                        </div>
-                      
-                        <div class="form-btns">
-                             <!-- Submit Button -->
-                          <button type="submit" class="btn btn-sm btn-dark">
-                            <span data-lang-en="Submit" data-lang-ar="إرسال">Submit</span>
-                          </button>
-                            <!-- Reset Button -->
-                        <button type="reset" class="btn btn-sm btn-outline-secondary">
-                            <span data-lang-en="Reset" data-lang-ar="إعادة تعيين">Reset</span>
-                          </button>
+                <div class="Row">
+                    <div class="add-dish section">
+                        <div class="tab-head"><span data-lang-en="Add New Dish" data-lang-ar="اضف صنف جديد"> </span></div>
+                        <form action="#" method="POST" class="dish-form">
+                            <!-- Dish Name -->
+                            <div class="name-descrption">
+                              <label for="dish-name" class="form-label">
+                                <span data-lang-en="Dish Name" data-lang-ar="اسم الطبق">Dish Name</span>:
+                              </label>
+                              <input type="text" id="dish-name" name="dish-name" class="form-control" required>
+                          
+                            <!-- Dish Description -->
                         
-                         
-                        </div>
-                      </form>
-                      
-                      
-                      
-                      
+                              <label for="dish-description" class="form-label">
+                                <span data-lang-en="Dish Description" data-lang-ar="وصف الطبق">Dish Description</span>:
+                              </label>
+                              <textarea id="dish-description" name="dish-description" class="form-control" required></textarea>
+                            </div>
+                          
+                            <!-- Dish Image -->
+                            <div class="img-div">
+                              <label for="dish-image" class="form-label">
+                                <span data-lang-en="Dish Image" data-lang-ar="صورة الطبق">Dish Image</span>:
+                              </label>
+                              <input type="file" id="dish-image" name="dish-image" class="form-control" accept="image/*" required>
+                            </div>
+                          
+                            <!-- Price -->
+                            <div>
+                              <label for="price" class="form-label">
+                                <span data-lang-en="Price" data-lang-ar="السعر">Price</span>:
+                              </label>
+                              <input type="number" id="price" name="price" class="form-control" required>
+                            </div>
+                          
+                            <!-- Sale (Optional) -->
+                            <div>
+                              <label for="sale" class="form-label">
+                                <span data-lang-en="Sale (Optional)" data-lang-ar="عرض (اختياري)">Sale (Optional)</span>:
+                              </label>
+                              <textarea id="sale" name="sale" class="form-control"></textarea>
+                            </div>
+                          
+                            <div class="form-btns">
+                                 <!-- Submit Button -->
+                              <button type="submit" class="btn btn-sm btn-dark">
+                                <span data-lang-en="Submit" data-lang-ar="إرسال">Submit</span>
+                              </button>
+                                <!-- Reset Button -->
+                            <button type="reset" class="btn btn-sm btn-outline-secondary">
+                                <span data-lang-en="Reset" data-lang-ar="إعادة تعيين">Reset</span>
+                              </button>
+                            
+                             
+                            </div>
+                          </form>
+                          
+                          
+                          
+                          
+                    </div>
                 </div>
             </div>
-            <div id="orders" class="tab-content">
-            <div class="tab-head"><span data-lang-en="Orders" data-lang-ar="الطلبات">Orders</span></div>
+            <div id="orders" class="tab-content active">
+                <div class="tab-head">
+                    <span data-lang-en="Orders" data-lang-ar="الطلبات">الطلبات</span>
+                </div>
+                <div class="Row">
+                    <div id="details" class="section">
+                        <div class="tab-head">
+                            <span data-lang-en="Orders Details" data-lang-ar="تفاصيل الطلبات">تفاصيل الطلبات</span>
+                        </div>
+                        <table class="table table-sm table-striped table-bordered">
+                            <thead>
+                                <tr>
+                                    <th><span data-lang-en="All orders" data-lang-ar="جميع الطلبات">جميع الطلبات</span></th>
+                                    <th><span data-lang-en="Finished" data-lang-ar="منتهي">منتهي</span></th>
+                                    <th><span data-lang-en="Order Date" data-lang-ar="تاريخ الطلب">تاريخ الطلب</span></th>
+                                    <th><span data-lang-en="Total Price" data-lang-ar="السعر الكلي">السعر الكلي</span></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><span data-lang-en="Molokhia with Chicken" data-lang-ar="ملوخية بالدجاج">ملوخية بالدجاج</span></td>
+                                    <td><span data-lang-en="Yes" data-lang-ar="نعم">نعم</span></td>
+                                    <td><span data-lang-en="2025-04-20" data-lang-ar="٢٠٢٥-٠٤-٢٠">٢٠٢٥-٠٤-٢٠</span></td>
+                                    <td><span data-lang-en="150 EGP" data-lang-ar="١٥٠ جنية">١٥٠ جنية</span></td>
+                                </tr>
+                                <tr>
+                                    <td><span data-lang-en="Koshary Family Size" data-lang-ar="كشري الحجم العائلي">كشري الحجم العائلي</span></td>
+                                    <td><span data-lang-en="No" data-lang-ar="لا">لا</span></td>
+                                    <td><span data-lang-en="2025-04-22" data-lang-ar="٢٠٢٥-٠٤-٢٢">٢٠٢٥-٠٤-٢٢</span></td>
+                                    <td><span data-lang-en="80 EGP" data-lang-ar="٨٠ جنية">٨٠ جنية</span></td>
+                                </tr>
+                                <tr>
+                                    <td><span data-lang-en="Mahshi (Stuffed Vegetables)" data-lang-ar="محشي (خضار محشي)">محشي (خضار محشي)</span></td>
+                                    <td><span data-lang-en="Yes" data-lang-ar="نعم">نعم</span></td>
+                                    <td><span data-lang-en="2025-04-18" data-lang-ar="٢٠٢٥-٠٤-١٨">٢٠٢٥-٠٤-١٨</span></td>
+                                    <td><span data-lang-en="120 EGP" data-lang-ar="١٢٠ جنية">١٢٠ جنية</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="Row">
+                    <div id="manage-orders" class="section">
+                        <div class="tab-head">
+                            <span data-lang-en="Manage Orders" data-lang-ar="إدارة الطلبات">إدارة الطلبات</span>
+                        </div>
+                        <div class="item">
+                            <h5><span data-lang-en="Customer Name" data-lang-ar="اسم العميل">اسم العميل</span></h5>
+                            <p>
+                                <span data-lang-en="Fatma ElSayed" data-lang-ar="فاطمة السيد">فاطمة السيد</span>
+                            </p>
+                        </div>
+                        <div class="item">
+                            <h5><span data-lang-en="Order No." data-lang-ar="رقم الطلب">رقم الطلب</span></h5>
+                            <p>#1001</p>
+                        </div>
+                        <div class="item">
+                            <h5><span data-lang-en="Order Price" data-lang-ar="سعر الطلب">سعر الطلب</span></h5>
+                            <p ><span data-lang-en="135 EGP" data-lang-ar="١٣٥ جنية">١٣٥ جنية</span></p>
+                        </div>
+                        <button id="order-ready" class="btn btn-dark"><span data-lang-en="Order Ready" data-lang-ar="الطلب جاهز">الطلب جاهز</span></button>
+                    </div>
+                    <div id="current-orders" class="section">
+                        <div class="tab-head">
+                            <span data-lang-en="Current Orders" data-lang-ar="الطلبات الحالية">الطلبات الحالية</span>
+                        </div>
+                        <table class="table table-bordered table-sm table-striped">
+                            <thead>
+                                <tr>
+                                    <th><span data-lang-en="Order No." data-lang-ar="رقم الطلب">رقم الطلب</span></th>
+                                    <th><span data-lang-en="Customer Name" data-lang-ar="اسم العميل">اسم العميل</span></th>
+                                    <th><span data-lang-en="Order Price" data-lang-ar="سعر الطلب">سعر الطلب</span></th>
+                                    <th><span data-lang-en="Ordered From" data-lang-ar="تم الطلب من">تم الطلب من</span></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><span data-lang-en="#1001" data-lang-ar="#1001">#1001</span></td>
+                                    <td><span data-lang-en="Fatma ElSayed" data-lang-ar="فاطمة السيد">فاطمة السيد</span></td>
+                                    <td><span data-lang-en="135 EGP" data-lang-ar="١٣٥ جنية">١٣٥ جنية</span></td>
+                                    <td><span class="timer" data-start="00:30:00">00:30:00</span></td>
+                                </tr>
+                                <tr>
+                                    <td><span data-lang-en="#1002" data-lang-ar="#1002">#1002</span></td>
+                                    <td><span data-lang-en="Omar Adel" data-lang-ar="عمر عادل">عمر عادل</span></td>
+                                    <td><span data-lang-en="90 EGP" data-lang-ar="٩٠ جنية">٩٠ جنية</span></td>
+                                    <td><span class="timer" data-start="00:10:00" >00:10:00</span></td>
+                                </tr>
+                                <tr>
+                                    <td><span data-lang-en="#1003" data-lang-ar="#1003">#1003</span></td>
+                                    <td><span data-lang-en="Noura Hassan" data-lang-ar="نورا حسن">نورا حسن</span></td>
+                                    <td><span data-lang-en="110 EGP" data-lang-ar="١١٠ جنية">١١٠ جنية</span></td>
+                                    <td><span class="timer" data-start="00:05:00" >00:05:00</span></td>
+                                </tr>
+                                <tr>
+                                    <td><span data-lang-en="#1004" data-lang-ar="#1004">#1004</span></td>
+                                    <td><span data-lang-en="Mohamed Saad" data-lang-ar="محمد سعد">محمد سعد</span></td>
+                                    <td><span data-lang-en="75 EGP" data-lang-ar="٧٥ جنية">٧٥ جنية</span></td>
+                                    <td><span class="timer" data-start="00:00:00" >00:00:00</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
             </div>
+            
             <div id="info" class="tab-content">
             <div class="tab-head"><span data-lang-en="Info" data-lang-ar="المعلومات">Info</span></div>
             </div>
@@ -384,5 +492,6 @@
     <script src="LangScript.js"></script>
     <script src="scripts/tabScript.js"></script>
     <script src="scripts/dashboardScript.js"></script>
+    <script src="scripts/timerScript.js"></script>
 </body>
 </html>

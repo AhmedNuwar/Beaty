@@ -1,0 +1,9 @@
+#order-ready{
+    display: flex;
+    justify-self: flex-end;
+    margin: 10px;
+}
+.late-order{
+    color: red;
+}
+
