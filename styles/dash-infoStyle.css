@@ -42,9 +42,12 @@
 }
 .All-data div p{
     margin: 5px 0;
+    padding: 5px 10px;
+    border-radius: 50px;
     color: rgb(57, 57, 57);
+    background-color: rgb(244, 244, 244);
 }
-@media (max-width:765px) {
+@media (max-width:768px) {
     #info .section{
        flex-direction: column;
     }
