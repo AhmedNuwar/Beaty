@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="Fonts/bootstrap-icons-1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" type="text/css" href="bootstrap-5.3.3-dist/css/bootstrap.min.css"> 
     <link rel="stylesheet" href="LayoutStyle.css">
-    <link rel="stylesheet" href="styles/dashboardStyle.css">
+    <link rel="stylesheet" href="styles/dashboardV1Style.css">
     <link rel="stylesheet" href="styles/dash-orderStyle.css">
     <link rel="stylesheet" href="styles/dash-infoStyle.css">
     <title data-lang-en="Dashboard" data-lang-ar="لوحة التحكم">Document</title>
@@ -44,26 +44,26 @@
     </nav>
     <main>
         <div class="tab-btns">
-            <button class="tab-btn btn active"
+            <button class="tab-btn btn btn-outline-dark "
             onclick="openTab(event, 'finance')" data-lang-en="Finance" data-lang-ar="المالية">
                 Finance
             </button>
-            <button class="tab-btn btn  "
+            <button class="tab-btn btn btn-outline-dark "
             onclick="openTab(event, 'dishes')" data-lang-en="Dishes" data-lang-ar="الاصناف">
                 Items
             </button>
-            <button class="tab-btn btn "
+            <button class="tab-btn btn btn-outline-dark "
             onclick="openTab(event, 'orders')" data-lang-en="Orders" data-lang-ar="الطلبات">
                 Orders
             </button>
-            <button id="info-tab-btn" class="tab-btn btn "
+            <button class="tab-btn btn btn-outline-dark active"
             onclick="openTab(event, 'info')" data-lang-en="Info" data-lang-ar="المعلومات">
                 Info
             </button>
         </div>
         <div class="tabs">
-            <div id="finance" class="tab-content active">
-            <div id="fin-head" class="tab-head"><span data-lang-en="Finance" data-lang-ar="المالية">Finance</span></div>
+            <div id="finance" class="tab-content">
+            <div class="tab-head"><span data-lang-en="Finance" data-lang-ar="المالية">Finance</span></div>
             <div class="tab-body">
                 <div class="Row top-row">
                     <div id="sales" class="section">
@@ -435,8 +435,8 @@
                     </div>
                 </div>
             </div>    
-            <div id="info" class="tab-content ">
-                <div id="info-head" class="tab-head">
+            <div id="info" class="tab-content active">
+                <div class="tab-head">
                     <span data-lang-en="Info" data-lang-ar="المعلومات">Info</span>
                 </div>
                 <div class="Row">

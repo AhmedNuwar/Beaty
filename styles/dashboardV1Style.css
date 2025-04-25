@@ -1,99 +1,40 @@
-:root{
-    --tab-bg-color: #f6f6f6;
-    --tab-txt-color: #313131;
-    --border-color:#a7a7a7;
-}
 body{
     background-color: white;
 }
 main{
-    margin-top: 5px;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     padding: 0 10px;
-    gap: 0px;
+    gap: 10px;
 }
 .tab-btns{
     display: flex;
-    flex-direction: column;
-    gap: 0px;
+    flex-direction: row;
+    gap: 5px;
 }
 .tab-btn{
-    border: none;
-    margin: 5px;
-}
-.tab-btn:hover{
-    color: var(--tab-txt-color);
-    background-color: var(--tab-bg-color);
-}
-
-.tab-btn.active {
-    margin: 0;
-    background-color: var(--tab-bg-color);
-    color: var(--tab-txt-color);
-    border-radius: 0px 10px 10px 0 !important;
-    border: 1px solid var(--border-color);
-    z-index: 2;
-    margin-left: -1px;
-    border-left: none;
-}
-[lang='en'] .tab-btn.active{
-    margin-left: 0px;
-    border-left: 1px solid var(--border-color);
-    margin-right: -1px;
-    border-right: none;
-    border-radius: 10px 0px 0px 10px !important;
-}
-@media (max-width:768px) {
-    main{
-        flex-direction: column;
-    }
-    
-    .tab-btns{
-        flex-direction: row;
-    }
-    .tab-btn.active {
-        border-radius: 10px 10px 0px 0px !important;
-        border: 1px solid var(--border-color);
-        margin-bottom: -1px;
-        border-bottom: none;
-        border-right: 1px solid var(--border-color);
-    }
-    [lang='en'] .tab-btn.active{
-        border-right: 1px solid var(--border-color);
-        margin-bottom: -1px;
-        border-bottom: none;
-        border-radius: 10px 10px 0px 0px !important;
-    }
+    flex-grow: 1;
 }
 .tabs{
     width: 100%;
 }
 .tab-content{
     display: none;
-    border-radius: 10px;
-    background-color: var(--tab-bg-color);
-    padding-bottom: 15px;
-    border: 1px solid var(--border-color);
+    border: 1px solid #9e9fa0;
+    border-radius: 6px
+    
 }
-
-.tab-content.active {
+.tab-content.active{
     display: block;
 }
 .tab-head{
-    color: var(--tab-txt-color);
+    color: #fff;
+    background-color: #212529 !important;
     padding: 0 10px;
-    border-radius: 5px;
+    border-radius: 5px 5px 0 0;
     
 }
-#finance.tab-content.active{
-    border-radius: 5px 0 5px 5px;
-}
-
-[lang='en'] #finance.tab-content.active{
-    border-radius: 0px 5px 5px 5px;
-}
-tab-body{
+.tab-body{
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
@@ -109,18 +50,13 @@ tab-body{
 .Row .tab-head{
     height: inherit;
     border-radius: 9px 9px 0 0 !important;
-    background-color: white !important;
-    color: black;
-    border-bottom: 1px #e1e1e1 solid;
 }
 .section{
-    background-color: white;
-    border: 1px solid var(--border-color);
+    border: 1px #212529 solid;
     border-radius:  10px;
     padding: 0;
     margin: 5px 0;
     flex-grow: 1;
-    
 }
 
 .data{
@@ -137,10 +73,12 @@ tab-body{
     width: 100%;
     padding: 0 5px;
 }
-.item:nth-child(even){
+.item:nth-child(odd){
     background-color: rgba(0, 0, 0, 0.05);
 }
-
+.item:last-child{
+    border-radius: 0 0 9px 9px;
+}
 .item h5{
     font-size: 18px;
     display: inline;
@@ -156,11 +94,10 @@ tab-body{
 }
 #sales select{
     width: 20%;
-    border-radius: 10px;
+    border: none;
     padding: 0 5px;
     margin: 5px 0;
     min-width: 100px;
-    border: 1px solid var(--border-color);
 }
 
 .withdrawal-btns{
@@ -285,7 +222,6 @@ tab-body{
 
 /* استجابة للموبايل */
 @media (max-width: 768px) {
-
     .dish-form {
         flex-direction: column;
     }
