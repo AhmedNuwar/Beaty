@@ -108,3 +108,38 @@ footer{
     margin-right: 10px;
     font-size: 1.5rem;
 }
+@media (max-width: 768px) {
+    .footer-head {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .footer-head ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .footer-head ul li {
+        border: none;
+        padding-left: 0;
+    }
+
+    .footer-main {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .socials {
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .socials a {
+        margin-right: 15px;
+        font-size: 1.2rem;
+    }
+}
