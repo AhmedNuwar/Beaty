@@ -1,0 +1,51 @@
+#info .section {
+    display: flex;
+    width: 100%;
+    padding: 10px; /* Optional: adds some spacing inside the section */
+}
+.avatar-div{
+    position: relative;
+
+}
+.avatar-div img{
+    width: 200px;
+    height: 200px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+.avatar-div .btn{
+    position: absolute;
+    left: 5px;
+    top: 5px;
+    border-radius: 50%;
+}
+[lang="ar"] .avatar-div .btn{
+    left: auto;
+    right: 5px;
+}
+.All-data {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    gap: 10px;
+    width: 100%;
+}
+
+.All-data div {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Shadow added */
+    
+}
+.All-data div p{
+    margin: 5px 0;
+    color: rgb(57, 57, 57);
+}
+@media (max-width:765px) {
+    #info .section{
+       flex-direction: column;
+    }
+}
