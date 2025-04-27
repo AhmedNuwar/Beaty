@@ -33,3 +33,6 @@ document.addEventListener("DOMContentLoaded", () => {
     // تحميل اللغة المخزنة عند فتح الصفحة
     changeLanguage(savedLang);
 });
+let userAvatar = localStorage.getItem('currentUser').avatar
+let profilePic = document.getElementById("profile");
+profilePic.innerHTML = `<img src="images/${userAvatar}" alt="">`
