@@ -1,0 +1,25 @@
+.join-team-form {
+    max-width: 500px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border: 1px solid #f1dcdc;
+    border-radius: 12px;
+  }
+  
+  .form-title {
+    text-align: center;
+    color: #b30000;
+    margin-bottom: 25px;
+    font-weight: bold;
+  }
+  
+  .form-group {
+    margin-bottom: 18px;
+  }
+  
+  .join-team-form .btn {
+    width: 100%;
+    font-weight: bold;
+  }
+  

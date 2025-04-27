@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Fonts/bootstrap-icons-1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" type="text/css" href="bootstrap-5.3.3-dist/css/bootstrap.min.css"> 
+    <link rel="stylesheet" href="LayoutStyle.css">
+    <link rel="stylesheet" href="styles/partnerStyle.css">
+    <title>Document</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-md bg-light navbar-light sticky-top">
+        <!--logo-->
+        <a href="index.html" class="navbar-brand text-danger" 
+           data-lang-en="Beaty" data-lang-ar="بيتي">بيتي</a>
+        <!-- Language Switcher -->
+        <button id="languageToggle" class="btn btn-secondary">العربية</button>
+        <!--toggle btn-->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <!--nav links-->
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav"> 
+                <li class="nav-item"><a href="index.html" class="nav-link" data-lang-en="Home" data-lang-ar="الرئيسية">الرئيسية</a></li>
+                <li class="nav-item"><a href="Kitchens.html" class="nav-link" data-lang-en="Discover Kitchens" data-lang-ar="اكتشف المطابخ">المطابخ</a></li>
+                <li class="nav-item"><a href="Partner.html" class="nav-link active" data-lang-en="Be Our Partner" data-lang-ar="كن شريكنا">كن شريكنا</a></li>
+                <li class="nav-item"><a href="JoinTeam.html" class="nav-link" data-lang-en="Join Our Team" data-lang-ar="انضم لفريقنا">انضم لفريقنا</a></li>
+                <li class="nav-item"><a href="Help.html" class="nav-link" data-lang-en="Help" data-lang-ar="مساعدة">مساعدة</a></li>
+                <li class="nav-item">
+                    <a href="profile.html" class="nav-link" id="profile-link">
+                        <i class="bi bi-person-circle"></i>
+                        <span data-lang-en="Profile" data-lang-ar="الملف الشخصي">الملف الشخصي</span>
+                    </a>
+                </li>
+                <li class="nav-item"> <a href="Login.html" class="btn btn-sm btn-danger" data-lang-en="sign in" data-lang-ar="تسجيل دخول">تسجيل خروج</a></li>
+            </ul>
+                
+        </div>
+    </nav>
+    <form class="join-team-form">
+        <h2 class="form-title" data-lang-en="Partnership Request" data-lang-ar="طلب شراكة">Partnership Request</h2>
+      
+        <div class="form-group">
+          <label for="name" data-lang-en="Full Name" data-lang-ar="الاسم الكامل">Full Name</label>
+          <input type="text" class="form-control" id="name"
+                 placeholder="Enter your name"
+                 data-lang-en="Enter your name"
+                 data-lang-ar="أدخل اسمك"
+                 required>
+        </div>
+      
+        <div class="form-group">
+          <label for="phone" data-lang-en="Phone" data-lang-ar="رقم الهاتف">Phone</label>
+          <input type="tel" class="form-control" id="phone"
+                 placeholder="Enter your phone number"
+                 data-lang-en="Enter your phone number"
+                 data-lang-ar="أدخل رقم هاتفك"
+                 required>
+        </div>
+      
+        <div class="form-group">
+          <label for="email" data-lang-en="Email" data-lang-ar="البريد الإلكتروني">Email</label>
+          <input type="email" class="form-control" id="email"
+                 placeholder="Enter your email"
+                 data-lang-en="Enter your email"
+                 data-lang-ar="أدخل بريدك الإلكتروني"
+                 required>
+        </div>
+      
+        <div class="form-group">
+          <label for="website" data-lang-en="Website (optional)" data-lang-ar="الموقع الإلكتروني (اختياري)">Website (optional)</label>
+          <input type="url" class="form-control" id="website"
+                 placeholder="Enter your website"
+                 data-lang-en="Enter your website"
+                 data-lang-ar="أدخل موقعك الإلكتروني">
+        </div>
+      
+        <div class="form-group">
+          <label for="social" data-lang-en="Social Media (optional)" data-lang-ar="وسائل التواصل الاجتماعي (اختياري)">Social Media (optional)</label>
+          <input type="text" class="form-control" id="social"
+                 placeholder="Enter your social media"
+                 data-lang-en="Enter your social media"
+                 data-lang-ar="أدخل حسابات التواصل الاجتماعي الخاصة بك">
+        </div>
+      
+        <div class="form-group">
+          <label for="description" data-lang-en="Partnership Description" data-lang-ar="وصف الشراكة">Partnership Description</label>
+          <textarea class="form-control" id="description" rows="4"
+                    placeholder="What do you need from our partnership?"
+                    data-lang-en="What do you need from our partnership?"
+                    data-lang-ar="ماذا تحتاج من شراكتنا؟"
+                    required></textarea>
+        </div>
+      
+        <button type="submit" class="btn btn-danger"
+                data-lang-en="Send Request"
+                data-lang-ar="إرسال الطلب">Send Request</button>
+      </form>
+      
+    <footer>
+        <div class="footer-head">
+            <ul>
+                <li><a href="Partner.html" data-lang-en="Be Our Partner" data-lang-ar="كن شريكنا">كن شريكنا</a></li>
+                <li><a href="Jobs.html" data-lang-en="Available Jobs" data-lang-ar="الوظائف المتاحة">الوظائف المتاحة</a></li>
+                <li><a href="FAQ.html" data-lang-en="FAQ" data-lang-ar="الأسئلة الشائعة">الأسئلة الشائعة</a></li>
+                <li><a href="Contact.html" data-lang-en="Contact Us" data-lang-ar="اتصل بنا">اتصل بنا</a></li>
+            </ul>
+            <a href="#" class="btn btn-light"><span data-lang-en="give us your recommendation" data-lang-ar="شاركنا باقرتاحك"></span></a>
+        </div>
+        <div class="footer-main">
+            <div class="chiefs">
+                <h4 data-lang-en="Our Famous Chefs" data-lang-ar="اشهر الطباخيين">طباخينا</h4>
+                <ul>
+                    <li data-lang-en="Chief 1" data-lang-ar="طباخ 1"></li>
+                    <li data-lang-en="Chief 2" data-lang-ar="طباخ 2"></li>
+                    <li data-lang-en="Chief 3" data-lang-ar="طباخ 3"></li>
+                    <li data-lang-en="Chief 4" data-lang-ar="طباخ 4"></li>
+                    <li data-lang-en="Chief 5" data-lang-ar="طباخ 5"></li>
+                    <li data-lang-en="Chief 6" data-lang-ar="طباخ 6"></li>
+                </ul>
+            </div>
+            <div class="cities">
+                <h4 data-lang-en="Cities" data-lang-ar="المدن">المدن</h4>
+                <ul>
+                    <li data-lang-en="Tanta" data-lang-ar="طنطا">طنطا</li>
+                    <li data-lang-en="Alexandria" data-lang-ar="الإسكندرية">الإسكندرية</li>
+                    <li data-lang-en="Cairo" data-lang-ar="القاهرة">القاهرة</li>
+                </ul>
+            </div>
+            <div class="services">
+                <h4 data-lang-en="Other Services" data-lang-ar="الخدمات الاخري">الخدمات</h4>
+                <ul>
+                    <li data-lang-en="Service 1" data-lang-ar="خدمة 1"></li>
+                    <li data-lang-en="Service 2" data-lang-ar="خدمة 2"></li>
+                    <li data-lang-en="Service 3" data-lang-ar="خدمة 3"></li>
+                    <li data-lang-en="Service 4" data-lang-ar="خدمة 4"></li>
+                    <li data-lang-en="Service 5" data-lang-ar="خدمة 5"></li>
+                </ul>
+            </div>
+            <div class="socials">
+                <h4 data-lang-en="Follow Us" data-lang-ar="تابعنا">تابعنا</h4>
+                <a href="#"><i class="bi bi-facebook"></i></a>
+                <a href="#"><i class="bi bi-instagram"></i></a>
+                <a href="#"><i class="bi bi-twitter-x"></i></a>
+                <a href="#"><i class="bi bi-youtube"></i></a>
+                <a href="#"><i class="bi bi-linkedin"></i></a>
+        </div>
+    </footer>
+    <script src="bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="LangScript.js"></script>
+</body>
+</html>
