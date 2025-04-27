@@ -12,6 +12,15 @@
 [lang="en"] .lang-en { display: block; }
 [lang="en"] .lang-ar { display: none; }
 /*Body Styling*/
+.chief-content{
+    display: none !important;
+}
+.chief-content.show{
+    display: block !important;
+}
+.user-content.hide{
+    display: none !important;
+}
 body{
     font-family: 'CustomCairo', sans-serif;
     padding: 0px;
@@ -147,4 +156,5 @@ footer{
         margin-right: 15px;
         font-size: 1.2rem;
     }
+   
 }

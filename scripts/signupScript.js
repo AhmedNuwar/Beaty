@@ -39,4 +39,5 @@ document.querySelector("form").addEventListener("submit", function(event) {
 
     // Redirect to the login page after successful signup
     window.location.href = "Login.html";
+    
 });

@@ -13,10 +13,11 @@ document.querySelector("form").addEventListener("submit", function(event) {
 
     // If user exists, log them in and redirect; otherwise, show an error message
     if (user) {
-        localStorage.setItem("currentUser", user)
+        localStorage.setItem("currentUser", JSON.stringify(user));
         // Redirect to a page (e.g., homepage) after successful login
         window.location.href = "index.html";
     } else {
         alert("Invalid email or password.");
     }
+    
 });
