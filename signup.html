@@ -44,19 +44,22 @@
         <div class="container">
             <h1 data-lang-en="Sign up" data-lang-ar="إنشاء حساب">إنشاء حساب</h1>
             <!--forms-->
-            <div class="togl-btns">
-                <button class="btn btn-outline-danger tab-btn active" onclick="openTab(event, 'userForm')">
-                    <span data-lang-ar="مستخدم" data-lang-en="User"></span>
-                </button>
-                <button class="btn btn-outline-danger tab-btn" onclick="openTab(event, 'chief-Form')">
-                    <span data-lang-ar="طباخ" data-lang-en="Chief"></span>
-                </button>
-            </div>
+           <!--forms-->
+        <div class="togl-btns">
+            <label class="tab-btn btn btn-outline-danger active" onclick="openTab(event, 'userForm')">
+                <input type="radio" name="user-type" value="User" required >
+                <span data-lang-ar="مستخدم" data-lang-en="User">مستخدم</span>
+            </label>
+            <label class="tab-btn btn btn-outline-danger" onclick="openTab(event, 'chief-Form')">
+                <input class="tab-btn" type="radio" name="user-type" value="Chief" required >
+                <span data-lang-ar="طباخ" data-lang-en="Chief">طباخ</span>
+            </label>
+        </div>
+
             
             <!-- User Form -->
             <div id="userForm" class="tab-content active">
                 <form action="index.html">
-                    <input type="hidden" name="user-type" value="User"> <!-- Hidden User Type Field -->
                     
                     <!-- Full Name -->
                     <div class="form-group" id="form-name">
@@ -104,83 +107,82 @@
                     <input id="submit" type="submit" class="btn btn-outline-danger form" value="إنشاء حساب" data-lang-en="Sign up" data-lang-ar="إنشاء حساب">
                 </form>
             </div>
-            
-            <!-- Chief Form -->
             <div id="chief-Form" class="tab-content">
+            <!-- Chief Form -->
                 <form action="index.html">
                     <input type="hidden" name="user-type" value="Chief"> <!-- Hidden User Type Field -->
                     
                     <!-- Full Name -->
                     <div class="form-group" id="form-name">
-                        <label for="name" class="form-label" data-lang-en="Full Name" data-lang-ar="الاسم الكامل">الاسم الكامل</label>
-                        <input type="text" id="name" name="name" placeholder="الاسم الكامل" class="form-control" required data-lang-en="Full Name" data-lang-ar="الاسم الكامل">
+                        <label for="chief-name" class="form-label" data-lang-en="Full Name" data-lang-ar="الاسم الكامل">الاسم الكامل</label>
+                        <input type="text" id="chief-name" name="chief-name" placeholder="الاسم الكامل" class="form-control" required data-lang-en="Full Name" data-lang-ar="الاسم الكامل">
                     </div>
             
                     <!-- Email -->
                     <div class="form-group" id="form-email">
-                        <label for="email" class="form-label" data-lang-en="Email" data-lang-ar="البريد الإلكتروني">البريد الإلكتروني</label>
-                        <input type="email" id="email" name="email" placeholder="البريد الإلكتروني" class="form-control" required data-lang-en="Email" data-lang-ar="البريد الإلكتروني">
+                        <label for="chief-email" class="form-label" data-lang-en="Email" data-lang-ar="البريد الإلكتروني">البريد الإلكتروني</label>
+                        <input type="email" id="chief-email" name="chief-email" placeholder="البريد الإلكتروني" class="form-control" required data-lang-en="Email" data-lang-ar="البريد الإلكتروني">
                     </div>
             
                     <!-- Password -->
                     <div class="form-group" id="form-password">
-                        <label for="password" class="form-label" data-lang-en="Password" data-lang-ar="كلمة المرور">كلمة المرور</label>
-                        <input type="password" id="password" name="password" placeholder="كلمة المرور" class="form-control" required data-lang-en="Password" data-lang-ar="كلمة المرور">
+                        <label for="chief-password" class="form-label" data-lang-en="Password" data-lang-ar="كلمة المرور">كلمة المرور</label>
+                        <input type="password" id="chief-password" name="chief-password" placeholder="كلمة المرور" class="form-control" required data-lang-en="Password" data-lang-ar="كلمة المرور">
                     </div>
             
                     <!-- Confirm Password -->
                     <div class="form-group" id="form-confirm-password">
-                        <label for="confirm-password" class="form-label" data-lang-en="Confirm Password" data-lang-ar="تأكيد كلمة المرور">تأكيد كلمة المرور</label>
-                        <input type="password" id="confirm-password" name="confirm-password" placeholder="تأكيد كلمة المرور" class="form-control" required data-lang-en="Confirm Password" data-lang-ar="تأكيد كلمة المرور">
+                        <label for="chief-confirm-password" class="form-label" data-lang-en="Confirm Password" data-lang-ar="تأكيد كلمة المرور">تأكيد كلمة المرور</label>
+                        <input type="password" id="chief-confirm-password" name="chief-confirm-password" placeholder="تأكيد كلمة المرور" class="form-control" required data-lang-en="Confirm Password" data-lang-ar="تأكيد كلمة المرور">
                     </div>
             
                     <!-- Phone Number -->
                     <div class="form-group" id="form-phone">
-                        <label for="phone" class="form-label" data-lang-en="Phone Number" data-lang-ar="رقم الهاتف">رقم الهاتف</label>
-                        <input type="tel" id="phone" name="phone" placeholder="0123456789" class="form-control" required data-lang-en="Phone Number" data-lang-ar="رقم الهاتف">
+                        <label for="chief-phone" class="form-label" data-lang-en="Phone Number" data-lang-ar="رقم الهاتف">رقم الهاتف</label>
+                        <input type="tel" id="chief-phone" name="chief-phone" placeholder="0123456789" class="form-control" required data-lang-en="Phone Number" data-lang-ar="رقم الهاتف">
                     </div>
             
                     <!-- National ID -->
                     <div class="form-group" id="form-nid">
-                        <label for="national-id" class="form-label" data-lang-en="National ID" data-lang-ar="الرقم القومي">الرقم القومي</label>
-                        <input type="text" id="national-id" name="national-id" placeholder="الرقم القومي" class="form-control" required data-lang-en="National ID" data-lang-ar="الرقم القومي">
+                        <label for="chief-national-id" class="form-label" data-lang-en="National ID" data-lang-ar="الرقم القومي">الرقم القومي</label>
+                        <input type="text" id="chief-national-id" name="chief-national-id" placeholder="الرقم القومي" class="form-control" required data-lang-en="National ID" data-lang-ar="الرقم القومي">
                     </div>
             
                     <!-- Bank Account Number -->
                     <div class="form-group" id="form-bank">
-                        <label for="bank-account" class="form-label" data-lang-en="Bank Account Number" data-lang-ar="رقم الحساب البنكي">رقم الحساب البنكي</label>
-                        <input type="text" id="bank-account" name="bank-account" placeholder="رقم الحساب البنكي" class="form-control" required data-lang-en="Bank Account Number" data-lang-ar="رقم الحساب البنكي">
+                        <label for="chief-bank-account" class="form-label" data-lang-en="Bank Account Number" data-lang-ar="رقم الحساب البنكي">رقم الحساب البنكي</label>
+                        <input type="text" id="chief-bank-account" name="chief-bank-account" placeholder="رقم الحساب البنكي" class="form-control" required data-lang-en="Bank Account Number" data-lang-ar="رقم الحساب البنكي">
                     </div>
             
                     <!-- Wallet Number -->
                     <div class="form-group" id="form-wallet">
-                        <label for="wallet-number" class="form-label" data-lang-en="Wallet Number" data-lang-ar="رقم المحفظة">رقم المحفظة</label>
-                        <input type="text" id="wallet-number" name="wallet-number" placeholder="رقم المحفظة" class="form-control" required data-lang-en="Wallet Number" data-lang-ar="رقم المحفظة">
+                        <label for="chief-wallet-number" class="form-label" data-lang-en="Wallet Number" data-lang-ar="رقم المحفظة">رقم المحفظة</label>
+                        <input type="text" id="chief-wallet-number" name="chief-wallet-number" placeholder="رقم المحفظة" class="form-control" required data-lang-en="Wallet Number" data-lang-ar="رقم المحفظة">
                     </div>
             
                     <!-- Address -->
                     <div class="form-group" id="form-address">
-                        <label for="address" class="form-label" data-lang-en="Address" data-lang-ar="العنوان">العنوان</label>
-                        <input type="text" id="address" name="address" placeholder="العنوان" class="form-control" required data-lang-en="Address" data-lang-ar="العنوان">
+                        <label for="chief-address" class="form-label" data-lang-en="Address" data-lang-ar="العنوان">العنوان</label>
+                        <input type="text" id="chief-address" name="chief-address" placeholder="العنوان" class="form-control" required data-lang-en="Address" data-lang-ar="العنوان">
                     </div>
             
                     <!-- Kitchen Name (Visible Name) -->
                     <div class="form-group" id="form-kitchen">
-                        <label for="kitchen-name" class="form-label" data-lang-en="Kitchen Name (Visible Name)" data-lang-ar="اسم المطبخ (الاسم الظاهر)">اسم المطبخ (الاسم الظاهر)</label>
-                        <input type="text" id="kitchen-name" name="kitchen-name" placeholder="اسم المطبخ" class="form-control" required data-lang-en="Kitchen Name (Visible Name)" data-lang-ar="اسم المطبخ (الاسم الظاهر)">
+                        <label for="chief-kitchen-name" class="form-label" data-lang-en="Kitchen Name (Visible Name)" data-lang-ar="اسم المطبخ (الاسم الظاهر)">اسم المطبخ (الاسم الظاهر)</label>
+                        <input type="text" id="chief-kitchen-name" name="chief-kitchen-name" placeholder="اسم المطبخ" class="form-control" required data-lang-en="Kitchen Name (Visible Name)" data-lang-ar="اسم المطبخ (الاسم الظاهر)">
                     </div>
             
                     <div class="d-flex flex-wrap gap-3">
                         <label>
-                            <input type="radio" name="avatar" value="avatar1.png" required hidden>
+                            <input type="radio" name="chief-avatar" value="teaAvatar.jpg" required hidden>
                             <img src="Images/teaAvatar.jpg" class="avatar-option" alt="Avatar 1">
                         </label>
                         <label>
-                            <input type="radio" name="avatar" value="avatar2.png" required hidden>
+                            <input type="radio" name="chief-avatar" value="tomatoAvatar.jpg" required hidden>
                             <img src="Images/tomatoAvatar.jpg" class="avatar-option" alt="Avatar 2">
                         </label>
                         <label>
-                            <input type="radio" name="avatar" value="avatar3.png" required hidden>
+                            <input type="radio" name="chief-avatar" value="flafelAvatar.png" required hidden>
                             <img src="Images/flafelAvatar.png" class="avatar-option" alt="Avatar 3">
                         </label>
                     </div>

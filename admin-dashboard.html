@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Registered Users</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        table {
+            width: 80%;
+            margin: 30px auto;
+            border-collapse: collapse;
+            background: white;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        th, td {
+            padding: 12px 15px;
+            border: 1px solid #ccc;
+            text-align: center;
+        }
+        th {
+            background-color: #007bff;
+            color: white;
+        }
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        .no-users {
+            text-align: center;
+            margin-top: 50px;
+            font-size: 20px;
+            color: gray;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Registered Users</h1>
+
+    <table id="usersTable">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Email</th>
+                <th>Password</th>
+            </tr>
+        </thead>
+        <tbody id="usersBody">
+            <!-- Users will appear here -->
+        </tbody>
+    </table>
+
+    <div class="no-users" id="noUsersMessage" style="display:none;">
+        No users found.
+    </div>
+    <a href="index.html">back to home</a>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Get the users array from localStorage
+            let users = JSON.parse(localStorage.getItem('users')) || [];
+
+            let usersBody = document.getElementById('usersBody');
+            let noUsersMessage = document.getElementById('noUsersMessage');
+
+            if (users.length === 0) {
+                noUsersMessage.style.display = 'block';
+                document.getElementById('usersTable').style.display = 'none';
+            } else {
+                users.forEach((user, index) => {
+                    let row = document.createElement('tr');
+                    row.innerHTML = `
+                        <td>${index + 1}</td>
+                        <td>${user.email}</td>
+                        <td>${user.password}</td>
+                    `;
+                    usersBody.appendChild(row);
+                });
+            }
+        });
+    </script>
+
+</body>
+</html>
