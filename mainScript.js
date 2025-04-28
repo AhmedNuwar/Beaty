@@ -9,12 +9,29 @@ function logout() {
 document.addEventListener('DOMContentLoaded', function() {
     let currentUser = JSON.parse(localStorage.getItem("currentUser"));
 
-    // set user avatar
-    let profile = document.getElementById('profile');
-    if (profile){
-    profile.innerHTML = `<img src="images/${currentUser.avatar}" style="width:50px; border-radius:50%; margin: 0 5px;">`;
-    } 
+    // set user data
+    let userImg = document.getElementById('user-img') || "";
+    let userName = document.getElementById('user-name')|| "";
+    let userEmail = document.getElementById('user-email')|| "";
+    let userPhone = document.getElementById('user-phone')|| "";
+    let userAddress = document.getElementById('user-address')|| "";
+    let kitchName = document.getElementById('kitchen-name')|| "";
+    let bankNo = document.getElementById('bank-number')|| "";
+    let walletNo = document.getElementById('wallet-number')|| "";
+    let nid = document.getElementById('national-id')|| "";
 
+    userImg.src = `images/${currentUser.avatar}`;
+    userName.innerHTML = currentUser.name;
+    userEmail.innerHTML = currentUser.email;
+    if (currentUser.userType === 'Chief') {
+        userPhone.innerHTML = currentUser.phone;
+        userAddress.innerHTML = currentUser.address;
+        kitchName.innerHTML = currentUser.kitchenName;
+        bankNo.innerHTML = currentUser.bankAccount;
+        walletNo.innerHTML = currentUser.walletNo;
+        nid.innerHTML = currentUser.nid;
+    }
+    
     // show/hide content based on user type
     if (currentUser.userType === 'Chief') 
     {

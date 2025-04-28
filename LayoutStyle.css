@@ -30,7 +30,8 @@ body{
 /* Navbar Styling */
 .navbar{
     padding: 10px;
-
+    display: flex;
+   
 }
 nav .btn{
     margin-top: 5px;
@@ -53,11 +54,14 @@ nav .navbar-brand{
     margin-left: auto;
     margin-right: 10px;
 }
-#profile-link.active {
-    display: flex;
-    align-items: center;
+nav #user-img{
+    width: 50px;
+    border-radius: 50%; 
+    margin-top: -5px;
 }
-
+nav #user-img:hover{
+    cursor: pointer;
+}
 footer{
     background-color: #333;
     color: white;

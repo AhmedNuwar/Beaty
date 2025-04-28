@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="Fonts/bootstrap-icons-1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" type="text/css" href="bootstrap-5.3.3-dist/css/bootstrap.min.css"> 
     <link rel="stylesheet" href="LayoutStyle.css">
-    <link rel="stylesheet" href="proflieStyle.css">
+    <link rel="stylesheet" href="styles/userDataStyle.css">
     <title>Document</title>
 </head>
 <body>
@@ -16,9 +16,6 @@
            data-lang-en="Beaty" data-lang-ar="بيتي">بيتي</a>
         <!-- Language Switcher -->
         <button id="languageToggle" class="btn btn-secondary">العربية</button>
-
-        <div id="profile">
-        </div>
         <!--toggle btn-->
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
             <span class="navbar-toggler-icon"></span>
@@ -33,7 +30,7 @@
                 <li class="nav-item"><a href="JoinTeam.html" class="nav-link" data-lang-en="Join Our Team" data-lang-ar="انضم لفريقنا">انضم لفريقنا</a></li>
                 <li class="nav-item"><a href="Help.html" class="nav-link" data-lang-en="Help" data-lang-ar="مساعدة">مساعدة</a></li>
                 <li class="nav-item">
-                    <a href="profile.html" class="nav-link active" id="profile-link">
+                    <a href="profile.html" class="nav-link" id="profile-link">
                         <i class="bi bi-person-circle"></i>
                         <span data-lang-en="Profile" data-lang-ar="الملف الشخصي">الملف الشخصي</span>
                     </a>
@@ -43,40 +40,35 @@
                 
         </div>
     </nav>
-    <main>
-        <div class="user-data">
-            <h2  id="user-name" data-lang-en="User Name" data-lang-ar="اسم المستخدم">اسم المستخدم</h2>
-            <img src="" alt="" id="user-img">
-        </div>
-        <div class="options-list">
-            <div class="option chief-content" onclick="goTo('dashboard.html');">
-                <i class="bi bi-speedometer"></i>
-                <a href="#" data-lang-en="dashboard" data-lang-ar="لوحة التحكم">المحفظة</a>
+    <div class="section">
+        <div class="avatar-div">
+            <img src="Images/manAvatar.png" alt="" id="user-img" class="userAvatar"> 
+            <button class="btn btn-sm btn-dark" title="change avatar">
+                <i class="bi bi-pencil"></i>
+            </button>
+            <button class="btn btn-sm btn-dark lang-ar" title="تغير الافتار">
+                <i class="bi bi-pencil"></i>
+            </button>
+        </div> 
+        <div class="All-data">
+            <h4>
+                <span data-lang-en="Personal Data" data-lang-ar="البيانات الشخصية">Personal Data</span>
+            </h4>
+            <div class="personal-data">  
+                <h5><span data-lang-en="Chief Name" data-lang-ar="اسم الشيف">Chief Name</span></h5>
+                <p id="user-name" data-lang-en="Essam Mohammed" data-lang-ar="عصام محمد">Essam Mohammed</p>
+
+                <h5><span data-lang-en="Email" data-lang-ar="البريد الإلكتروني">Email</span></h5>
+                <p id="user-email" data-lang-en="essam@gmail.com" data-lang-ar="essam@gmail.com">essam@gmail.com</p>
+
+                
             </div>
-            <div class="option user-content" onclick="goTo('userData.html');">
-                <i class="bi bi-person-circle"></i>
-                <a href="#" data-lang-en="Account Information" data-lang-ar="معلومات الحساب">معلومات الحساب</a>
-            </div>
-            <div class="option" onclick="goTo('addressForm.html')">
-                <i class="bi bi-geo-alt"></i>
-                <a href="#" data-lang-en="Change Address" data-lang-ar="تغيير العنوان">تغيير العنوان</a>
-            </div>
-            <div class="option" onclick="goTo('orders.html');">
-                <i class="bi bi-bag"></i>
-                <a href="#" data-lang-en="Orders" data-lang-ar="الطلبات">الطلبات</a>
-            </div>
-            <div class="option" onclick="goTo('voucher.html')">
-                <i class="bi bi-ticket"></i>
-                <a href="#" data-lang-en="Vouchers" data-lang-ar="القسائم">القسائم</a>
-            </div>
-            <div class="option" onclick="goTo('wallet.html');">
-                <i class="bi bi-wallet2"></i>
-                <a href="#" data-lang-en="Wallet" data-lang-ar="المحفظة">المحفظة</a>
-            </div>
+
             
         </div>
-    </main>
+    </div>
     <footer>
+        
         <div class="footer-head">
             <ul>
                 <li><a href="Partner.html" data-lang-en="Be Our Partner" data-lang-ar="كن شريكنا">كن شريكنا</a></li>
@@ -128,6 +120,5 @@
     <script src="bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
     <script src="LangScript.js"></script>
     <script src="mainScript.js"></script>
-    <script src="scripts/checkAuth.js"></script>
 </body>
 </html>

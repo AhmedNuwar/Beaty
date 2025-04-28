@@ -19,7 +19,14 @@ document.querySelectorAll("form").forEach(form => {
             password = document.getElementById("chief-password").value;
             confirmPassword = document.getElementById("chief-confirm-password").value;
             avatar = document.querySelector('input[name="chief-avatar"]:checked')?.value;
+            phone = document.getElementById("chief-phone").value;
+            nid = document.getElementById("chief-national-id").value;
+            bankAccount = document.getElementById("chief-bank-account").value;
+            walletNo = document.getElementById("chief-wallet-number").value;
+            address = document.getElementById("chief-address").value;
+            kitchenName = document.getElementById("chief-kitchen-name").value;
         }
+          
 
         // Validation for password match
         if (password !== confirmPassword) {
@@ -37,14 +44,32 @@ document.querySelectorAll("form").forEach(form => {
         }
 
         // Create a new user object
-        let newUser = {
-            name: name,
-            email: email,
-            password: password,
-            userType: userType,
-            avatar: avatar
-        };
+        let newUser;
 
+        if (userType === "User") {
+            newUser = {
+                name: name,
+                email: email,
+                password: password,
+                userType: userType,
+                avatar: avatar
+            };
+        }
+        else if (userType === "Chief") {
+            newUser = {
+                name: name,
+                email: email,
+                password: password,
+                userType: userType,
+                avatar: avatar,
+                phone: phone,
+                nid: nid,
+                bankAccount: bankAccount,
+                walletNo: walletNo,
+                address: address,
+                kitchenName: kitchenName
+            };
+        }
         // Save the new user to the users array and update localStorage
         users.push(newUser);
         localStorage.setItem("users", JSON.stringify(users));

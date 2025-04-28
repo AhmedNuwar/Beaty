@@ -442,7 +442,7 @@
                 <div class="Row">
                     <div class="section">
                         <div class="avatar-div">
-                            <img src="Images/manAvatar.png" alt="" class="userAvatar"> 
+                            <img src="Images/manAvatar.png" alt="" id="user-img" class="userAvatar"> 
                             <button class="btn btn-sm btn-dark" title="change avatar">
                                 <i class="bi bi-pencil"></i>
                             </button>
@@ -456,13 +456,13 @@
                             </h4>
                             <div class="personal-data">  
                                 <h5><span data-lang-en="Chief Name" data-lang-ar="اسم الشيف">Chief Name</span></h5>
-                                <p data-lang-en="Essam Mohammed" data-lang-ar="عصام محمد">Essam Mohammed</p>
+                                <p id="user-name" data-lang-en="Essam Mohammed" data-lang-ar="عصام محمد">Essam Mohammed</p>
             
                                 <h5><span data-lang-en="Email" data-lang-ar="البريد الإلكتروني">Email</span></h5>
-                                <p data-lang-en="essam@gmail.com" data-lang-ar="essam@gmail.com">essam@gmail.com</p>
+                                <p id="user-email" data-lang-en="essam@gmail.com" data-lang-ar="essam@gmail.com">essam@gmail.com</p>
             
                                 <h5><span data-lang-en="National ID" data-lang-ar="الرقم القومي">National ID</span></h5>
-                                <p data-lang-en="302132465" data-lang-ar="٣٠٢١٣٢٤٦٥">302132465</p>
+                                <p id="national-id" data-lang-en="302132465" data-lang-ar="٣٠٢١٣٢٤٦٥">302132465</p>
                             </div>
             
                             <h4>
@@ -470,16 +470,16 @@
                             </h4>
                             <div class="kitchen-data">
                                 <h5><span data-lang-en="Kitchen Name" data-lang-ar="اسم المطبخ">Kitchen Name</span></h5>
-                                <p data-lang-en="Beaty Kitchen" data-lang-ar="مطبخ بيتي">Beaty Kitchen</p>
+                                <p id="kitchen-name" data-lang-en="Beaty Kitchen" data-lang-ar="مطبخ بيتي">Beaty Kitchen</p>
             
                                 <h5><span data-lang-en="Address" data-lang-ar="العنوان">Address</span></h5>
-                                <p data-lang-en="12 Al-Nasr Street, Cairo" data-lang-ar="١٢ شارع النصر، القاهرة">12 Al-Nasr Street, Cairo</p>
+                                <p id="user-address" data-lang-en="12 Al-Nasr Street, Cairo" data-lang-ar="١٢ شارع النصر، القاهرة">12 Al-Nasr Street, Cairo</p>
             
                                 <h5><span data-lang-en="Wallet No." data-lang-ar="رقم المحفظة">Wallet No.</span></h5>
-                                <p data-lang-en="010077889911" data-lang-ar="٠١٠٠٧٧٨٨٩٩١١">010077889911</p>
+                                <p id="wallet-number" data-lang-en="010077889911" data-lang-ar="٠١٠٠٧٧٨٨٩٩١١">010077889911</p>
             
                                 <h5><span data-lang-en="Bank Account Number" data-lang-ar="رقم الحساب البنكي">Bank Account Number</span></h5>
-                                <p data-lang-en="10235698745210" data-lang-ar="١٠٢٣٥٦٩٨٧٤٥٢١٠">10235698745210</p>
+                                <p id="bank-number" data-lang-en="10235698745210" data-lang-ar="١٠٢٣٥٦٩٨٧٤٥٢١٠">10235698745210</p>
                             </div>
                         </div>
                     </div>
@@ -539,8 +539,10 @@
     </footer>
     <script src="bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
     <script src="LangScript.js"></script>
+    <script src="mainScript.js"></script>
     <script src="scripts/tabScript.js"></script>
     <script src="scripts/dashboardScript.js"></script>
     <script src="scripts/timerScript.js"></script>
+    
 </body>
 </html>
