@@ -5,7 +5,7 @@ document.querySelectorAll("form").forEach(form => {
         // Get the selected user type
         let userType = document.querySelector('input[name="user-type"]:checked').value;
 
-        let name, email, password, confirmPassword, avatar;
+        let name, email, password, confirmPassword, avatar, phone, nid, bankAccount, walletNo, address, kitchenName;
 
         if (userType === "User") {
             name = document.getElementById("name").value;
@@ -78,3 +78,6 @@ document.querySelectorAll("form").forEach(form => {
         window.location.href = "Login.html";
     });
 });
+function clearForm(form) {
+    document.getElementById(form).reset();
+  }

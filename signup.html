@@ -46,11 +46,11 @@
             <!--forms-->
            <!--forms-->
         <div class="togl-btns">
-            <label class="tab-btn btn btn-outline-danger active" onclick="openTab(event, 'userForm')">
+            <label class="tab-btn btn btn-outline-danger active" onclick="openTab(event, 'userForm'); clearForm('chif-Form');">
                 <input type="radio" name="user-type" value="User" required >
                 <span data-lang-ar="مستخدم" data-lang-en="User">مستخدم</span>
             </label>
-            <label class="tab-btn btn btn-outline-danger" onclick="openTab(event, 'chief-Form')">
+            <label class="tab-btn btn btn-outline-danger" onclick="openTab(event, 'chief-Form'); clearForm('usrForm');">
                 <input class="tab-btn" type="radio" name="user-type" value="Chief" required >
                 <span data-lang-ar="طباخ" data-lang-en="Chief">طباخ</span>
             </label>
@@ -59,7 +59,7 @@
             
             <!-- User Form -->
             <div id="userForm" class="tab-content active">
-                <form action="index.html">
+                <form action="index.html" id="usrForm">
                     
                     <!-- Full Name -->
                     <div class="form-group" id="form-name">
@@ -109,7 +109,7 @@
             </div>
             <div id="chief-Form" class="tab-content">
             <!-- Chief Form -->
-                <form action="index.html">
+                <form action="index.html" id="chif-Form">
                     <input type="hidden" name="user-type" value="Chief"> <!-- Hidden User Type Field -->
                     
                     <!-- Full Name -->
@@ -188,6 +188,7 @@
                     </div>
             
                     <input id="submit" type="submit" class="btn btn-outline-danger form" value="إنشاء حساب" data-lang-en="Sign up" data-lang-ar="إنشاء حساب">
+                    
                 </form>
             </div>
             
