@@ -48,16 +48,25 @@
     <div class="progress order-progress-container">
         <div class="progress-bar order-progress"></div>
     </div>
-    <div class="actionDetails">
-        <div class="details" data-lang-en="Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat odio facilis est praesentium voluptas, accusamus cupiditate, nulla ratione ducimus eum suscipit esse veniam natus itaque sapiente provident quaerat, non sed optio animi? Quod, quis voluptatibus. Nostrum, illum quaerat repellendus ipsum rem eius impedit voluptatibus non excepturi dicta qui ducimus voluptas, provident neque dolore facilis aliquid deleniti nulla. Numquam repudiandae repellat placeat id aliquid odio ex explicabo nihil, quae recusandae quia, ullam quos expedita voluptatem minima, sapiente cumque magnam quisquam officiis dolor. Laborum pariatur quos ipsum eligendi asperiores sapiente odit quis expedita numquam tenetur quaerat, delectus illo obcaecati ut. Iste, temporibus!" 
-             data-lang-ar="لوريم إيبسوم دولار سيت أميت، كونسيكتيتور أديبيسيسينغ إيليت. فوجيات أوديو فاسيليس إيست برايسنتيوم فولوبتاس، أكوساموس كيوبيديتاتي، نيهيلا راتيون دوكيموس إيم سوسيب إيسي فينيام ناتوس إيتاك سابيينتي بروفيدنت كوارات، نون سيد أوبتيو أنيمي؟ كواد، كويز فولوبتاتيبيوس. نوستروم، إيلوم كوارات ريبيليندوس إيبسوم ريم إيوس إمبيديت فولوبتاتيبيوس نون إكسبتيوري ديكتا كوي دوكيموس فولوبتاس، بروفيدنت نيكي دولوري فاسيليس أليكويد ديلينيتي نيهيلا. نومكوام ريبيودياندي ريبيلات بلاسيت إيد أليكويد أوديو إكس إكسبليكابو نيهيلا، كواي ريكوسانداي كيا، أولام كواس إكسبيديتا فولوبتاتيم مينيم، سابيينتي كومكوي ماجنام كويزكوام أوفيسيس دولور. لابوروم بارايتور كواس إيبسوم إيليجيندي أسبيريوريس سابيينتي أوديت كويز إكسبيديتا نومكوام تينيتور كوارات، ديليكتوس إيلو أوبكاياتي أوت. إيستي، تيمبوريبوس!">
-        </div>
+    <div class="actionDetails" >
+        <ul id="details" class="details">
+            <h4 data-lang-ar="تعليمات السائق" data-lang-en="Driver's Notes"></h4>
+            <li class="note" data-lang-ar="التعليمات تظهر هنا" data-lang-en="Notes show up here"></li>
+        </ul>
         <div class="actions">
-            <div class="add-note">
-                <input type="text" placeholder="Add a note to the driver" class="note-input form-control" 
-               data-lang-en="Add a note to the driver" data-lang-ar="أضف ملاحظة للسائق">
-               <i class="bi bi-plus-circle-fill"></i>
-            </div>
+            <form id="noteForm" class="add-note-form">
+                <div class="add-note">
+                    <textarea name="driverNote" id="driverNote"
+                    placeholder="Add a note to the driver" 
+                    class="note-input form-control" 
+                    data-lang-en="Add a note to the driver" 
+                    data-lang-ar="أضف تعليمات للسائق"
+                    ></textarea>
+                    <button type="submit" id="add-note-btn" class="">
+                        <i class="bi bi-plus-circle-fill"></i>
+                    </button>
+                </div>
+            </form>
             <div class="buttons">
                 <button onclick="goTo('Chief.html');" class="btn btn-primary"><span data-lang-en="add to the order" data-lang-ar="إضافة الي الطلب">إضافة عنصر</span></button>
                 <button class="btn btn-warning"><span data-lang-en="cancel order" data-lang-ar="إلغاء الطلب">إلغاء الطلب</span></button>
@@ -117,5 +126,6 @@
     <script src="bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
     <script src="LangScript.js"></script>
     <script src="mainScript.js"></script>
+    <script src="scripts/addNote.js"></script>
 </body>
 </html>

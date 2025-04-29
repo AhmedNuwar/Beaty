@@ -1,11 +1,6 @@
-
-.btn, .note-input{
-    border-radius: 0;
-}
 main{
     width: 100%;
     height: 100%;
-    height: 100vw;
     padding: 10px;
     background-color: white;
 }
@@ -25,15 +20,55 @@ img{
     display: flex;
     gap: 10px;
 }
+
 .details{
     width: 70%;
 }
+/* Style for the UL container */
+ul.details {
+    list-style-type: none; /* Remove default bullets */
+    padding: 0;
+    margin: 0;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  }
+  
+  /* Style for the H4 inside UL */
+  ul.details h4 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  /* Style for each LI note */
+  ul.details li.note {
+    padding: 8px 12px;
+    margin-bottom: 8px;
+    
+    border-radius: 6px;
+    color: #444;
+    font-size: 0.95rem;
+    border: 1px solid #e6e6e6; /* Soft border */
+    border-right: 4px solid #d9534f; /* Accent line */
+  }
+  [lang='en'] ul.details li.note {
+    border-right: 1px solid #e6e6e6; /* Remove right border for RTL */
+    border-left: 4px solid #d9534f !important; /* Accent line on left */
+  }
 .actions{
     width: 30%;
     display: flex;
     flex-direction: column;
     gap: 10px;
+    background-color: #fff;
+    border: 1px solid #ddd; /* Soft border */
+    border-radius: 10px; /* Rounded corners */
+    padding: 15px 20px; /* Inner spacing */
 }
+
 .add-note{
     width: 100%;
     display: flex;
@@ -44,6 +79,10 @@ img{
     padding: 5px;
     margin-right: 10px;
     width: 80%;
+}
+#add-note-btn{
+    border: none;
+    background-color: transparent;
 }
 .add-note i{
     font-size: xx-large;
@@ -56,4 +95,19 @@ img{
 .buttons{
     display: flex;
     gap: 10px;
+}
+
+@media (max-width: 600px) {
+    .actionDetails{
+        flex-direction: column-reverse;
+    }
+    .details{
+        width: 100%;
+    }
+    .actions{
+        width: 100%;
+    }
+    img{
+        height: 20vw;
+    }
 }
