@@ -1,4 +1,44 @@
-document.addEventListener("DOMContentLoaded", function () {
+function addSide(id){
+    cart = JSON.parse(localStorage.getItem("cart")) || [];
+    let addSideBtn = document.getElementById(id);
+        let itemName = addSideBtn.dataset.name;
+        let itemPrice = parseFloat(addSideBtn.dataset.price);
+        let itemImg = addSideBtn.dataset.img;
+        //console.log(itemImg, itemName, itemPrice);
+        //get quantity from input field
+        
+        let quantity = 1;
+        let itemToatl = itemPrice * quantity;
+        //check if the item is item already in the cart
+        let existingItem = cart.find(item => item.name === itemName);
+        if (existingItem)
+        {
+            existingItem.quantity += quantity;
+            existingItem.total += existingItem.price * quantity;
+        }
+        else
+        {
+            cart.push(
+            {
+                name: itemName,
+                price: itemPrice,
+                img: itemImg,
+                quantity: quantity,
+                total: itemToatl
+            });
+            
+            
+        }
+        //console.log(cart, "cart pushed");
+        SaveCart();
+        renderCart();
+   
+
+}
+function SaveCart() {
+    localStorage.setItem("cart", JSON.stringify(cart));
+}
+
     // Load cart from localStorage
     let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
@@ -33,6 +73,8 @@ document.addEventListener("DOMContentLoaded", function () {
         attachRemoveEvents();
         //attachQuantityEvents(); // Uncomment if you want to handle quantity changes
     }
+
+    
 
     // Handle increase/decrease quantity
    /* function attachQuantityEvents() {
@@ -89,4 +131,5 @@ document.addEventListener("DOMContentLoaded", function () {
         alert("Proceeding to checkout...");
         // Implement checkout logic here
     });
-});
+    
+   

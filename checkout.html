@@ -58,7 +58,7 @@
             <h2><span data-lang-ar="الأطباق الجانبية" data-lang-en="Sides">الأطباق الجانبية</span></h2>
             <div id="side-dishes-list">
                 <div class="side-dish-item" data-id="1">
-                    <img src="images/side1.jpg" alt="Side Dish 1">
+                    <img src="Images/salad.jpg" alt="Side Dish 1">
                     <h3>
                         <span data-lang-en="Vegetable Salad" data-lang-ar="سلطة خضار">سلطة خضار</span>
                     </h3>
@@ -68,16 +68,17 @@
                     <span class="price">
                         <span data-lang-en="2.00 EGP" data-lang-ar="2.00 جنية">2.00 جنية</span>
                     </span>
-                    <button class="btn btn-sm btn-primary add-to-cart"
+                    <button id="add-salad" class="btn btn-sm btn-primary add-side-to-cart"
                     data-name="Vegetable Salad" 
                     data-price="2"
-                    data-img="Images/side1.jpg"
+                    data-img="Images/salad.jpg"
+                    onclick="addSide('add-salad');"
                     >
                     <span data-lang-en="Add to Cart" data-lang-ar="أضف إلى العربة">أضف إلى العربة</span>
                     </button>
                 </div>
                 <div class="side-dish-item" data-id="2">
-                    <img src="images/side2.jpg" alt="Side Dish 2">
+                    <img src="Images/ptats.jpg" alt="Side Dish 2">
                     <h3>
                         <span data-lang-en="French Fries" data-lang-ar="بطاطس مقلية">بطاطس مقلية</span>
                     </h3>
@@ -87,10 +88,11 @@
                     <span class="price">
                         <span data-lang-en="5.00 EGP" data-lang-ar="5.00 جنية">5.00 جنية</span>
                     </span>
-                    <button class="btn btn-sm btn-primary add-to-cart-btn"
+                    <button id="add-fries" class="btn btn-sm btn-primary add-side-to-cart"
                     data-name="Fries" 
                     data-price="5"
-                    data-img="Images/side2.jpg"
+                    data-img="Images/ptats.jpg"
+                    onclick="addSide('add-fries');"
                     >
                         <span data-lang-en="Add to Cart" data-lang-ar="أضف إلى العربة">أضف إلى العربة</span>
                     </button>
@@ -170,7 +172,7 @@
     <script src="bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
     <script src="LangScript.js"></script>
     <script src="checkoutScript.js"></script>
-    <script src="cartScript.js"></script>
+    
     <script src="scripts/checkAuth.js"></script>
 </body>
 </html>

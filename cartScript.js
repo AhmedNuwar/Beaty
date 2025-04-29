@@ -3,33 +3,35 @@ let cartContainer = document.getElementById("cart-container");
 let cartCount = document.getElementById("cart-count");
 //shows The cart when the button is clicked
 let cartToggleBtn = document.getElementById("cart-toggle-btn");
-cartToggleBtn.addEventListener("click", toggleCart);
+if (cartToggleBtn) {
+    cartToggleBtn.addEventListener("click", toggleCart);
+}
 function toggleCart(){
-    cartContainer.classList.toggle("active");
+    if (cartContainer) {
+        cartContainer.classList.toggle("active");
+    }
 }
 // -- toggle cart end --
 
 // initializes the cart with an empty array
 
-
 // Adds items to the cart when the button is clicked
 let addToCartBtns = document.querySelectorAll(".add-to-cart");
-addToCartBtns.forEach(btn => 
+addToCartBtns.forEach(btn =>
 {
-    btn.addEventListener("click", function() 
+    btn.addEventListener("click", function()
     {
-        
         let itemName = this.dataset.name;
         let itemPrice = parseFloat(this.dataset.price);
         let itemImg = this.dataset.img;
-        
+
         //get quantity from input field
         let quantityInput = this.previousElementSibling;
-        let quantity = parseInt(quantityInput.value);
+        let quantity = parseInt(quantityInput?.value) || 1;
         let itemToatl = itemPrice * quantity;
         //check if the item is item already in the cart
         let existingItem = cart.find(item => item.name === itemName);
-        if (cart.find(item => item.name === itemName)) 
+        if (existingItem)
         {
             existingItem.quantity += quantity;
             existingItem.total += existingItem.price * quantity;
@@ -48,15 +50,15 @@ addToCartBtns.forEach(btn =>
         SaveCart();
         UpdateCart();
     });
-    
+
 });
 // -- add to cart end --
 // Updates the cart display when items are added
 function UpdateCart() {
     let cartList = document.getElementById("cart-items");
     let menuCartList = document.querySelector(".menu-cart #cart-items");
-    cartList.innerHTML = ""; // Clear the navbar cart display
-    menuCartList.innerHTML = ""; // Clear the menu cart display
+    if (cartList) cartList.innerHTML = ""; // Clear the navbar cart display
+    if (menuCartList) menuCartList.innerHTML = ""; // Clear the menu cart display
     let total = 0;
 
     cart.forEach((item, index) => {
@@ -100,17 +102,21 @@ function UpdateCart() {
         itemDiv.appendChild(removeBtn);
 
         // Append to both carts
-        cartList.appendChild(itemDiv.cloneNode(true));
-        menuCartList.appendChild(itemDiv);
+        if (cartList) cartList.appendChild(itemDiv.cloneNode(true));
+        if (menuCartList) menuCartList.appendChild(itemDiv);
     });
 
     // Update the total price display
-    document.getElementById("cart-total").textContent = `Total: ${total.toFixed(2)} جنية`;
-    document.querySelector(".menu-cart #cart-total").textContent = `Total: ${total.toFixed(2)} جنية`;
+    let cartTotal = document.getElementById("cart-total");
+    let menuCartTotal = document.querySelector(".menu-cart #cart-total");
+    if (cartTotal) cartTotal.textContent = `Total: ${total.toFixed(2)} جنية`;
+    if (menuCartTotal) menuCartTotal.textContent = `Total: ${total.toFixed(2)} جنية`;
 
     // Update the number next to the cart icon
-    let totalQuantity = cart.reduce((sum, item) => sum + item.quantity, 0);
-    cartCount.textContent = totalQuantity;
+    if (cartCount) {
+        let totalQuantity = cart.reduce((sum, item) => sum + item.quantity, 0);
+        cartCount.textContent = totalQuantity;
+    }
 }
 
 // Save the cart to localStorage
@@ -119,28 +125,40 @@ function SaveCart() {
 }
 
 // Fix clear cart button for both carts
-document.getElementById("clear-cart").addEventListener("click", function () {
-    cart = []; // Empty the array
-    SaveCart(); // Update localStorage
-    UpdateCart(); // Re-render both carts
-});
+let clearCartBtn = document.getElementById("clear-cart")
+if (clearCartBtn){
+    clearCartBtn.addEventListener("click", function () {
+        cart = []; // Empty the array
+        SaveCart(); // Update localStorage
+        UpdateCart(); // Re-render both carts
+    });
+}
 
-document.getElementById("menu-clear-cart").addEventListener("click", function () {
-    cart = []; // Empty the array
-    SaveCart(); // Update localStorage
-    UpdateCart(); // Re-render both carts
-});
+let menuClearCartBtn = document.getElementById("menu-clear-cart");
+if (menuClearCartBtn) {
+    menuClearCartBtn.addEventListener("click", function () {
+        cart = []; // Empty the array
+        SaveCart(); // Update localStorage
+        UpdateCart(); // Re-render both carts
+    });
+}
 
 // Fix checkout button for both carts
-document.getElementById("checkout-btn").addEventListener("click", function () {
-    SaveCart(); // Save the current state of the cart
-    window.location.href = "checkout.html"; // Redirect to the checkout page
-});
+let checkoutBtn = document.getElementById("checkout-btn");
+if (checkoutBtn) {
+    checkoutBtn.addEventListener("click", function () {
+        SaveCart(); // Save the current state of the cart
+        window.location.href = "checkout.html"; // Redirect to the checkout page
+    });
+}
 
-document.getElementById("menu-checkout-btn").addEventListener("click", function () {
-    SaveCart(); // Save the current state of the cart
-    window.location.href = "checkout.html"; // Redirect to the checkout page
-});
+let menuCheckoutBtn = document.getElementById("menu-checkout-btn");
+if (menuCheckoutBtn) {
+    menuCheckoutBtn.addEventListener("click", function () {
+        SaveCart(); // Save the current state of the cart
+        window.location.href = "checkout.html"; // Redirect to the checkout page
+    });
+}
 
 // Initial render when page loads
 UpdateCart();
