@@ -1,5 +1,6 @@
-body{
+main{
     background-color: white;
+    padding: 5px;
 }
 .btn{
     border-radius: 20px;
@@ -14,7 +15,7 @@ body{
 }
 @media (max-width: 700px) {
     .recipe {
-        background-color: white;
+       
         display: flex;
         flex-wrap: wrap;
         width: 100%;
@@ -31,7 +32,7 @@ body{
 
 @media (min-width: 501px) {
     .recipe {
-        background-color: white;
+        
         display: flex;
         flex-wrap: wrap;
         width: 100%;
@@ -47,6 +48,7 @@ body{
     }
 }
 .recipe{
+    
     border: 1px solid rgb(212, 212, 212);
     border-radius: 20px;
 }
@@ -85,7 +87,12 @@ body{
     padding: 10px;
 }
 .prep-method {
-    display: none;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height .5s ease;
+}
+.prep-method.active{
+    max-height: 1000px;
 }
 .prep-method iframe{
     border-radius: 20px;

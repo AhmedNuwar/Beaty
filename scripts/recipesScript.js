@@ -4,11 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
     prepToggleButtons.forEach(button => {
         button.addEventListener("click", () => {
             const prepMethod = button.nextElementSibling;
-            if (prepMethod.style.display === "none" || !prepMethod.style.display) {
-                prepMethod.style.display = "block";
-            } else {
-                prepMethod.style.display = "none";
-            }
+            prepMethod.classList.toggle("active");
         });
     });
 });
