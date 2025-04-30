@@ -5,9 +5,6 @@ main {
     height: 100vh; /* Makes the main container take the full height of the screen */
     box-sizing: border-box; /* Ensures padding is included in the height/width */
 }
-.btn{
-    border-radius: 0;
-}
 
 aside {
     flex: 1; /* Takes 1 part of the available space */
@@ -78,7 +75,7 @@ h4{
     margin-bottom: 10px;
     padding: 10px;
 }
-.order-img{
+.kitchen-img{
     width: 30%;
     height: 30%;
     border-radius: 8px;
@@ -86,9 +83,11 @@ h4{
 .order-info{
     display: flex;
     flex-direction: column;
+    width: 100%;
     padding: 10px 0;
 }
 .datePrice{
+    display: none;
     margin-top: auto;
 }
 .order-info p{
@@ -103,11 +102,33 @@ h4{
     overflow-y: auto; /* Adds scrolling if content overflows */
 }
 
-.add-to-cart{
+.order-item{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: #d1d1d1 1px solid;
+    border-radius: 20px;
+}
+.item-name{
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0;
+    width: 60%;
+}
+.item-img{
+    width: 100px !important;
+    border-radius: 20px;
+}
+
+.order-again{
     width: 20%;
     align-self: flex-end;
     margin-right: auto;
 }
+
 [lang='en'] .add-to-cart{
     margin-left: auto;
     margin-right: 0;
@@ -124,6 +145,29 @@ h4{
         flex: 1 1 100%; /* Each div takes full width */
     }
 }
-footer{
-    position: relative;
+#cart-container{
+    flex-grow: 1;
+}
+.cart ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.cart .remove-btn{
+    color: white;
+    margin-right: auto;
+    padding: 0 5px;
+}
+[lang ="en"] .remove-btn{
+    margin-left: auto;
+    margin-right: 0;
+}
+.cart-item{
+    gap: 10px;
+}
+.cart-item img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 8px;
 }

@@ -59,7 +59,7 @@
         </aside>
         <div class="orders">
             <div class="order">
-                <img src="Images/kitchenSquare.jpg" alt="" class="order-img">
+                <img src="Images/kitchenSquare.jpg" alt="" class="kitchen-img">
                 <div class="order-info">
                     <h4 class="kitchen-name">
                         <span data-lang-en="Kitchen Name" data-lang-ar="اسم المطبخ">اسم المطبخ</span>
@@ -72,13 +72,38 @@
                             <span data-lang-en="Price: 100 EGP" data-lang-ar="السعر: 100 جنيه">السعر: 100 جنيه</span>
                         </p>
                     </div>
+                    <div id="1" class="order-items"> 
+                        <div class="order-item"  
+                            data-name="Shawarma"   
+                            data-price="40"  
+                            data-img="Images/shawarma.jpg"  
+                            data-quantity="4"> 
+                            
+                            <h3 class="item-name" data-lang-en=" Shawarma" data-lang-ar=" شاورما">
+                                <span data-lang-en>Shawarma</span>
+                                <span data-lang-ar>شاورما</span>
+                            </h3> 
+                            <p class="item-price" data-lang-en="Price: 40EGP" data-lang-ar="السعر: 40 جنيه">
+                                <span data-lang-en>Price: 40 EGP</span>
+                                <span data-lang-ar>السعر: 40 جنيه</span>
+                            </p> 
+                            <p class="item-quantity" data-lang-en="Quantity: 4" data-lang-ar="الكمية: 4">
+                                <span data-lang-en>Quantity: 4</span>
+                                <span data-lang-ar>الكمية: 4</span>
+                            </p> 
+                            <img class="item-img" src="Images/shawarma.jpg" alt="Shawarma"
+                                 data-lang-en="Shawarma image" data-lang-ar="صورة شاورما" width="150"> 
+                        </div> 
+                    </div>              
                 </div>
-                <button class="btn btn-sm btn-primary add-to-cart">
+                  
+                <button class="btn btn-sm btn-primary order-again"
+                onclick="orderAgain('1');">
                     <span data-lang-en="Order Again" data-lang-ar="اطلب مره اخري">أضف إلى السلة</span>
                 </button>
             </div>
             <div class="order">
-                <img src="Images/kitchenSquare.jpg" alt="" class="order-img">
+                <img src="Images/kitchenSquare.jpg" alt="" class="kitchen-img">
                 <div class="order-info">
                     <h4 class="kitchen-name">
                         <span data-lang-en="Kitchen Name" data-lang-ar="اسم المطبخ">اسم المطبخ</span>
@@ -91,8 +116,77 @@
                             <span data-lang-en="Price: 100 EGP" data-lang-ar="السعر: 100 جنيه">السعر: 100 جنيه</span>
                         </p>
                     </div>
+                    <div id="2" class="order-items"> 
+                        <div class="order-item" 
+                            data-name="Falafel"  
+                            data-price="5" 
+                            data-img="Images/falafel.jpg" 
+                            data-quantity="2">
+                            
+                            <h3 class="item-name" data-lang-en="Falafel" data-lang-ar="فلافل">
+                                <span class="lang-en">Falafel</span>
+                                <span class="lang-ar">فلافل</span>
+                            </h3>
+                            <p class="item-price" data-lang-en="Price: 5 EGP" data-lang-ar="السعر: 5 جنيه">
+                                <span class="lang-en">Price: 5 EGP</span>
+                                <span class="lang-ar">السعر: 5 جنيه</span>
+                            </p>
+                            <p class="item-quantity" data-lang-en="Quantity: 2" data-lang-ar="الكمية: 2">
+                                <span class="lang-en">Quantity: 2</span>
+                                <span class="lang-ar">الكمية: 2</span>
+                            </p>
+                            <img class="item-img" src="Images/falafel.jpg" alt="Falafel"
+                                 data-lang-en="Falafel image" data-lang-ar="صورة فلافل">
+                        </div> 
+                    
+                        <div class="order-item" 
+                            data-name="Koshari"  
+                            data-price="35" 
+                            data-img="Images/koshari.jpg" 
+                            data-quantity="1">
+                            
+                            <h3 class="item-name" data-lang-en="Koshari" data-lang-ar="كشري">
+                                <span class="lang-en">Koshari</span>
+                                <span class="lang-ar">كشري</span>
+                            </h3>
+                            <p class="item-price" data-lang-en="Price: 35 EGP" data-lang-ar="السعر: 35 جنيه">
+                                <span class="lang-en">Price: 35 EGP</span>
+                                <span class="lang-ar">السعر: 35 جنيه</span>
+                            </p>
+                            <p class="item-quantity" data-lang-en="Quantity: 1" data-lang-ar="الكمية: 1">
+                                <span class="lang-en">Quantity: 1</span>
+                                <span class="lang-ar">الكمية: 1</span>
+                            </p>
+                            <img class="item-img" src="Images/koshari.jpg" alt="Koshari"
+                                 data-lang-en="Koshari image" data-lang-ar="صورة كشري" width="150">
+                        </div> 
+                    
+                        <div class="order-item" 
+                            data-name="Shawarma"  
+                            data-price="40" 
+                            data-img="Images/shawarma.jpg" 
+                            data-quantity="3">
+                            
+                            <h3 class="item-name" data-lang-en="Shawarma" data-lang-ar="شاورما">
+                                <span class="lang-en">Shawarma</span>
+                                <span class="lang-ar">شاورما</span>
+                            </h3>
+                            <p class="item-price" data-lang-en="Price: 40 EGP" data-lang-ar="السعر: 40 جنيه">
+                                <span class="lang-en">Price: 40 EGP</span>
+                                <span class="lang-ar">السعر: 40 جنيه</span>
+                            </p>
+                            <p class="item-quantity" data-lang-en="Quantity: 3" data-lang-ar="الكمية: 3">
+                                <span class="lang-en">Quantity: 3</span>
+                                <span class="lang-ar">الكمية: 3</span>
+                            </p>
+                            <img class="item-img" src="Images/shawarma.jpg" alt="Shawarma"
+                                 data-lang-en="Shawarma image" data-lang-ar="صورة شاورما" width="150">
+                        </div> 
+                    </div>
+                    
                 </div>
-                <button class="btn btn-sm btn-primary add-to-cart">
+                <button class="btn btn-sm btn-primary order-again"
+                onclick="orderAgain('2');">
                     <span data-lang-en="Order Again" data-lang-ar="اطلب مره اخري">أضف إلى السلة</span>
                 </button>
             </div>
@@ -167,5 +261,6 @@
     <script src="LangScript.js"></script>
     <script src="mainScript.js"></script>
     <script src="cartScript.js"></script>
+    <script src="scripts/orderAgain.js"></script>
 </body>
 </html>
