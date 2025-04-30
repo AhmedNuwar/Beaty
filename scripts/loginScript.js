@@ -15,7 +15,8 @@ document.querySelector("form").addEventListener("submit", function(event) {
     if (user) {
         localStorage.setItem("currentUser", JSON.stringify(user));
         // Redirect to a page (e.g., homepage) after successful login
-        window.location.href = "index.html";
+        if (user.userType === 'User') window.location.href = "index.html";
+        else if (user.userType === 'Chief') window.location.href = "Profile.html";
     } else {
         alert("Invalid email or password.");
     }
