@@ -60,7 +60,7 @@
                 <label for="suggestion-image" class="form-label">
                   <span data-lang-en="Add an image to clarify" data-lang-ar="اضف صوره لتوضيح">Dish Image</span>:
                 </label>
-                <input type="file" id="suggestion-image" name="suggestion-image" class="form-control" accept="image/*" required>
+                <input type="file" id="suggestion-image" name="suggestion-image" class="form-control" accept="image/*">
               </div>
             <button type="submit" class="btn btn-danger" data-lang-ar="إرسال" data-lang-en="Send">إرسال</button>
         </form>
@@ -116,5 +116,23 @@
     <script src="bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
     <script src="LangScript.js"></script>
     <script src="mainScript.js"></script>
+    <script>
+        document.getElementById('suggest-from').addEventListener('submit', function (e) {
+            e.preventDefault(); // Prevent actual form submission
+        
+            // Determine language based on the `html` lang attribute or use default 'ar'
+            const lang = document.documentElement.lang || 'ar';
+        
+            if (lang === 'ar') {
+                alert('تم إرسال الاقتراح بنجاح');
+            } else {
+                alert('Suggestion sent successfully');
+            }
+        
+            // Optionally reset the form after submission
+            this.reset();
+        });
+    </script>
+        
 </body>
 </html>
