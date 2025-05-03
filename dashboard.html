@@ -222,8 +222,30 @@
                                 <p data-lang-en="12,000" data-lang-ar="١٢,٠٠٠">12,000</p>
                             </div>
                             <div class="withdrawal-btns">
-                                <button class="btn btn-sm btn-dark"><span data-lang-en="Withdraw" data-lang-ar="سحب">Withdraw</span></button>
+                                <button class="btn btn-sm btn-dark"
+                                data-lang-en="Withdraw" data-lang-ar="سحب"
+                                onclick="showHideDiv('withdraw-div')"></button>
                                 <button class="btn btn-sm btn-outline-secondary"><span data-lang-en="Change Withdrawal Method" data-lang-ar="تغيير طريقة السحب">Change Withdrawal Method</span></button>
+                                <div id="withdraw-div">
+                                    <form action="" id="withdrawForm" onsubmit="withdraw(event)">
+                                        <div class="form-group">
+                                            <label for="withdraw-amount" class="form-label">
+                                                <span data-lang-en="Withdrawal Amount" data-lang-ar="مبلغ السحب">Withdrawal Amount</span>
+                                            </label>
+                                            <input type="number" id="withdraw-amount" name="withdraw-amount" class="form-control" required>
+                                            
+                                            <button type="submit" class="btn btn-sm btn-dark"><span data-lang-en="Confirm" data-lang-ar="تأكيد">Submit</span></button>
+                                            
+                                        </div>
+                                    </form>
+                                    <div class="withdraw-method">
+                                        <h5><span data-lang-en="Withdrawal Method" data-lang-ar="طريقة السحب"></span></h5>
+                                        <p data-lang-en="Withdrawal Method" data-lang-ar="طريقة السحب">Withdrawal Method</p>
+                                    </div>
+                                    
+                                </div>
+                                <span id="withdrawSucess" class="msg" data-lang-en="Withdrawal successful!" data-lang-ar="تم السحب بنجاح" ></span>
+                                    <span id="withdrawError" class="msg" data-lang-en="Invalid amount" data-lang-ar="مبلغ غير صالح"></span>
                             </div>
                         </div>
                     </div>
@@ -539,10 +561,13 @@
     </footer>
     <script src="bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
     <script src="LangScript.js"></script>
+    <script src="scripts/showHideScript.js"></script>
     <script src="mainScript.js"></script>
     <script src="scripts/tabScript.js"></script>
     <script src="scripts/dashboardScript.js"></script>
     <script src="scripts/timerScript.js"></script>
+    <script src="scripts/withdraw.js"></script>
+    
     
 </body>
 </html>

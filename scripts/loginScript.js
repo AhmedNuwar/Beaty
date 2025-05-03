@@ -56,7 +56,7 @@ function toggleForgotPass(formId){
             emailNotFound.classList.add('hidden');
             setTimeout(() => {
               div.style.display = 'none';
-            }, 1000); // match the transition duration
+            }, 1000); 
           }, 3000);
     }
 });

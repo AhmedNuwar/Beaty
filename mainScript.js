@@ -6,6 +6,7 @@ function logout() {
     localStorage.removeItem("currentUser");
     window.location.href = "index.html";
 }
+
 document.addEventListener('DOMContentLoaded', function() {
     let currentUser = JSON.parse(localStorage.getItem("currentUser"));
 
@@ -45,9 +46,7 @@ document.addEventListener('DOMContentLoaded', function() {
             element.classList.toggle('hide')
         });
     }
-    
-    // logout form
-    
+        
     
 });
 

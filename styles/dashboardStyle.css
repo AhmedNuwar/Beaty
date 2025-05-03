@@ -93,7 +93,7 @@ main{
 [lang='en'] #finance.tab-content.active{
     border-radius: 0px 5px 5px 5px;
 }
-tab-body{
+.tab-body{
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
@@ -171,16 +171,75 @@ tab-body{
     border: 1px solid #9e9fa0;
     border-radius: 10px;
     gap: 10px;
-    margin: 10px auto;
+    margin: 30px auto;
 }
-
+#withdraw-div{
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    gap: 10px;
+    max-height: 0px;
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out;
+}
+#withdraw-div.show{
+    max-height: 500px;
+}
+#withdrawForm .form-control{
+    margin-bottom: 5px;
+}
+#withdrawForm .btn{
+    width: 100%;
+}
+.withdraw-method{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.withdraw-method h5{
+    font-size: 16px;
+    margin: 0;
+}
+.withdraw-method p{
+    font-size: 14px;
+    color: #666;
+    margin: 0;
+}
+.msg{
+    display: none;
+    transition: opacity 1s ease;
+    opacity: 1;
+}
+.msg.show{
+    display: block;
+}
+.msg.hidden{
+    opacity: 0;
+}
+  
+#withdrawSucess{
+    background-color: #d4edda;
+    color: #155724;
+    border-color: #c3e6cb;
+    padding: 5px 10px;
+    border-radius: 10px;
+}
+#withdrawError{
+    background-color: #f8d7da;
+    color: #721c24;
+    border-color: #f5c6cb;
+    padding: 5px 10px;
+    border-radius: 10px;
+}
+.hidden {
+    opacity: 0;
+}
 .chart-container {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
     margin: 10px 0;
-    font-family: Arial, sans-serif;
   }
   
   .y-axis-label {
