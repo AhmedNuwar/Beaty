@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="Fonts/bootstrap-icons-1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="LayoutStyle.css">
     <link rel="stylesheet" href="LoginStyle.css">
+    <link rel="stylesheet" href="styles/formStyle.css">
     <title>Document</title>
 </head>
 <body>
@@ -58,8 +59,25 @@
                     <a href="signup.html" class="" data-lang-en="Sign up" data-lang-ar="إنشاء حساب">إنشاء حساب</a>
                 </p>
                 
-            <a href="#" data-lang-en="Forgot Password?" data-lang-ar="نسيت كلمة المرور؟">نسيت كلمة المرور؟</a>
+            <button class="btn btn-sm btn-warning"  data-lang-en="Forgot Password?" data-lang-ar="نسيت كلمة المرور؟"
+            onclick="toggleForgotPass('forgot-pass')">
+            </button>
+            <div id="forgot-pass">
+                <form action="" id="forgotPassForm" class="form-style">
+                    <div class="form-group">
+                        <label for="forgot-email" data-lang-en="Enter your Email" data-lang-ar="ادخل بريدك الاكتروني"></label>
+                        <input type="text" class="form-control" id="forgot-email" name="forgot-email" required>
+                    </div>
+                    <input type="submit" class="btn btn-outline-danger form" value="ارسال" data-lang-en="Send" data-lang-ar="ارسال">
+
+                </form>
+            </div>
+            <div id="restNoti">
+                <span id="emailSent" class='notifi' data-lang-en="A reset password link has been sent to your email." data-lang-ar="تم إرسال رابط إعادة تعيين كلمة المرور إلى بريدك الإلكتروني."></span>
+                <span id="notFound" class='notifi' data-lang-en="Email not found" data-lang-ar="لم يتم العثور علي البريد الإلكتروني"></span>
+            </div>
             <hr>
+            
             <!--socal login-->
             <div class="social-login">
                 <p data-lang-en="Or sign in with" data-lang-ar="أو تسجيل الدخول باستخدام">أو تسجيل الدخول باستخدام</p>

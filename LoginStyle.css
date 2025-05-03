@@ -1,9 +1,11 @@
+
 main{
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh; /* Ensure the main element takes full viewport height */
+     /* Ensure the main element takes full viewport height */
 }
 .container{
     background: #f9f9f9;
@@ -14,15 +16,55 @@ main{
     padding: 20px;
 
 }
-.form-group{
-    margin-top: 10px;
-    margin-bottom: 10px;
-}
-form .form-control, .btn{
-    border-radius: 0;   
-    margin: 10px 0;
-}
-
 .bi{
     margin: 0 5px;
 }
+.form-style{
+    margin: 10px auto !important;
+    padding: 20px;
+}
+#forgot-pass{
+    max-height: 0;
+    transition: max-height 0.5s ease-out;
+    overflow: hidden;
+}
+#forgot-pass.active{
+    max-height: 500px;
+}
+
+#new-pass{
+    display: none;
+}
+#new-pass.active{
+    display: block;
+}
+#restNoti{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+[lang = 'en'] #restNoti{
+    left: 10px;
+    right: auto;
+}
+.notifi{
+    display: none;
+    transition: opacity 1s ease;
+    opacity: 1;
+    background-color: white;
+    padding: 10px;
+    border-radius: 20px;
+}
+#emailSent{
+    color: green;
+}
+#notFound{
+    color: red;
+}
+.notifi.show{
+    display: block !important;
+}
+.hidden {
+    opacity: 0;
+}
+  

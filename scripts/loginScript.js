@@ -22,3 +22,41 @@ document.querySelector("form").addEventListener("submit", function(event) {
     }
     
 });
+function toggleForgotPass(formId){
+    let forgotPasswrodForm = document.getElementById(formId);
+    forgotPasswrodForm.classList.toggle('active')
+}
+    let forgotPasswrodForm = document.getElementById('forgotPassForm')
+    forgotPasswrodForm.addEventListener("submit", function(event) {
+        event.preventDefault();
+        let email = document.getElementById("forgot-email").value;
+    let users = JSON.parse(localStorage.getItem("users")) || [];
+
+    // Find the user with the matching email
+    let user = users.find(user => user.email === email);
+
+    // If user exists, send a reset password link; otherwise, show an error message
+    let emailSent = document.getElementById('emailSent');
+    let emailNotFound = document.getElementById('notFound');
+    if (user) {
+        emailSent.classList.remove('hidden');
+        emailSent.classList.add('show');
+        forgotPasswrodForm.reset()
+        toggleForgotPass(forgotPasswrodForm.parentElement.id)
+        setTimeout(() => {
+            emailSent.classList.add('hidden');
+            setTimeout(() => {
+              div.style.display = 'none';
+            }, 1000); // match the transition duration
+          }, 3000);
+    } else {
+        emailNotFound.classList.remove('hidden');
+        emailNotFound.classList.add('show');
+        setTimeout(() => {
+            emailNotFound.classList.add('hidden');
+            setTimeout(() => {
+              div.style.display = 'none';
+            }, 1000); // match the transition duration
+          }, 3000);
+    }
+});
