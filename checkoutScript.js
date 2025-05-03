@@ -125,11 +125,5 @@ function SaveCart() {
     document.getElementById("edit-cart-btn").addEventListener("click", function () {
         window.location.href = "Chief.html";
     });
-
-    // Button: Continue checkout
-    document.getElementById("continue-checkout-btn").addEventListener("click", function () {
-        alert("Proceeding to checkout...");
-        // Implement checkout logic here
-    });
     
    
