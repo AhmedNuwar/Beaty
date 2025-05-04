@@ -7,18 +7,30 @@ function withdraw(event){
 
     successMsg.classList.remove('hidden');
     if (amount > 12000){
-        errorMsg.classList.add('show');
-        successMsg.classList.remove('show');
+        showMsg(errorMsg.id, false)
     }
     else{
-        successMsg.classList.add('show');
-        errorMsg.classList.remove('show');
-        setTimeout(() => {
-            successMsg.classList.add('hidden');
-        }, 2000);
-        
+        showMsg(successMsg.id, true)
         let withdrawForm = document.getElementById('withdrawForm');
         withdrawForm.reset();
         showHideDiv('withdraw-div');
     }
+}
+function showMsg(id, transtion){
+    let msg = document.getElementById(id);
+    if (msg){
+        let allMsg = document.querySelectorAll('.msg')
+        allMsg.forEach(Msg =>{
+            Msg.classList.remove('hidden')
+            Msg.classList.remove('show');
+            
+        })
+        msg.classList.add('show')
+        if(transtion){
+            setTimeout(() => {
+                msg.classList.add('hidden');
+            }, 2000);
+        }
+    }
+    
 }

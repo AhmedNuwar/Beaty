@@ -185,6 +185,15 @@ main{
 #withdraw-div.show{
     max-height: 500px;
 }
+#changeMethodDiv{
+    max-height: 0px;
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out;
+}
+#changeMethodDiv.show{
+    max-height: 500px;
+}
+
 #withdrawForm .form-control{
     margin-bottom: 5px;
 }
@@ -231,9 +240,7 @@ main{
     padding: 5px 10px;
     border-radius: 10px;
 }
-.hidden {
-    opacity: 0;
-}
+
 .chart-container {
     display: flex;
     flex-wrap: wrap;
