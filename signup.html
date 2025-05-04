@@ -46,12 +46,12 @@
             <!--forms-->
            <!--forms-->
         <div class="togl-btns">
-            <label class="tab-btn btn btn-outline-danger active" onclick="openTab(event, 'userForm'); clearForm('chif-Form');">
-                <input type="radio" name="user-type" value="User" required >
+            <label class="tab-btn btn btn-outline-danger active" onclick="openTab(event, 'userForm'); clearForm('chif-Form'); checkUserType('userCheck')">
+                <input id="userCheck" type="radio" name="user-type" value="User" required >
                 <span data-lang-ar="مستخدم" data-lang-en="User">مستخدم</span>
             </label>
-            <label class="tab-btn btn btn-outline-danger" onclick="openTab(event, 'chief-Form'); clearForm('usrForm');">
-                <input class="tab-btn" type="radio" name="user-type" value="Chief" required >
+            <label class="tab-btn btn btn-outline-danger" onclick="openTab(event, 'chief-Form'); clearForm('usrForm'); checkUserType('chiefCheck')">
+                <input id="chiefCheck" class="tab-btn" type="radio" name="user-type" value="Chief" required >
                 <span data-lang-ar="طباخ" data-lang-en="Chief">طباخ</span>
             </label>
         </div>
