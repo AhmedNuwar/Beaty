@@ -240,6 +240,14 @@ main{
     padding: 5px 10px;
     border-radius: 10px;
 }
+#instapayWithdrawBtn{
+    background-color:rgb(173, 0, 173);
+    color:white;
+}
+#instapayWithdrawBtn:hover{
+    background-color:rgb(136, 0, 136); /* Slightly lighter shade of purple */
+    color: white;
+}
 
 .chart-container {
     display: flex;

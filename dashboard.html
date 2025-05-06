@@ -44,11 +44,11 @@
     </nav>
     <main>
         <div class="tab-btns">
-            <button class="tab-btn btn active"
+            <button class="tab-btn btn "
             onclick="openTab(event, 'finance')" data-lang-en="Finance" data-lang-ar="المالية">
                 Finance
             </button>
-            <button class="tab-btn btn  "
+            <button class="tab-btn btn  active"
             onclick="openTab(event, 'dishes')" data-lang-en="Dishes" data-lang-ar="الاصناف">
                 Items
             </button>
@@ -62,7 +62,7 @@
             </button>
         </div>
         <div class="tabs">
-            <div id="finance" class="tab-content active">
+            <div id="finance" class="tab-content ">
             <div id="fin-head" class="tab-head"><span data-lang-en="Finance" data-lang-ar="المالية">Finance</span></div>
             <div class="tab-body">
                 <div class="Row top-row">
@@ -275,7 +275,7 @@
                 </div>
             </div>
             </div>
-            <div id="dishes" class="tab-content ">
+            <div id="dishes" class="tab-content active">
                 <div class="tab-head"><span data-lang-en="Dishes" data-lang-ar="الاصناف">Dishes</span></div>
                 <div class="Row">
                     <div id="dishStats" class="section">
@@ -313,9 +313,29 @@
                     </div>
                 </div>
                 <div class="Row">
+                    <div id="allDishes" class="section">
+                        <div class="tab-head"><span data-lang-en="Dishes" data-lang-ar="الأصناف">Dish Statistics</span></div>
+                        <table class="table table-sm table-striped table-bordered'">
+                            <thead>
+                                <th>dish Img</th>
+                                <th>dish name</th>
+                                <th>dish Description</th>
+                                <th>dish Price</th>
+                                <th>dish Sale</th>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
                     <div class="add-dish section">
                         <div class="tab-head"><span data-lang-en="Add New Dish" data-lang-ar="اضف صنف جديد"> </span></div>
-                        <form action="#" method="POST" class="dish-form">
+                        <form id="addNewDishForm" action="" class="dish-form" onsubmit="addNewDish();">
                             <!-- Dish Name -->
                             <div class="name-descrption">
                               <label for="dish-name" class="form-label">
@@ -341,18 +361,18 @@
                           
                             <!-- Price -->
                             <div>
-                              <label for="price" class="form-label">
+                              <label for="dish-price" class="form-label">
                                 <span data-lang-en="Price" data-lang-ar="السعر">Price</span>:
                               </label>
-                              <input type="number" id="price" name="price" class="form-control" required>
+                              <input type="number" id="dish-price" name="dish-price" class="form-control" required>
                             </div>
                           
                             <!-- Sale (Optional) -->
                             <div>
-                              <label for="sale" class="form-label">
+                              <label for="dish-sale" class="form-label">
                                 <span data-lang-en="Sale (Optional)" data-lang-ar="عرض (اختياري)">Sale (Optional)</span>:
                               </label>
-                              <textarea id="sale" name="sale" class="form-control"></textarea>
+                              <textarea id="dish-sale" name="dish-sale" class="form-control"></textarea>
                             </div>
                           
                             <div class="form-btns">
@@ -373,6 +393,7 @@
                           
                           
                     </div>
+                    
                 </div>
             </div>
             <div id="orders" class="tab-content ">
