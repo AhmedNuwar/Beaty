@@ -1,10 +1,26 @@
+window.onload = function(){
+    let tabBtnLbl = document.querySelectorAll('.tab-btn');
+    console.log(tabBtnLbl);
+    tabBtnLbl.forEach(lbl =>{
+        if (lbl.classList.contains('active')){
+            let cb = lbl.querySelector('input[type="radio"]');
+            
+            cb.checked = true;
+            console.log("checkbox: ", cb,  cb.checked )
+        }
+        
+    })
+}
+
 document.querySelectorAll("form").forEach(form => {
     form.addEventListener("submit", function(event) {
         event.preventDefault();
 
         // Get the selected user type
+        
+        
         let userType = document.querySelector('input[name="user-type"]:checked').value;
-
+        console.log(userType)
         let name, email, password, confirmPassword, avatar, phone, nid, bankAccount, walletNo, address, kitchenName;
 
         if (userType === "User") {
@@ -70,6 +86,7 @@ document.querySelectorAll("form").forEach(form => {
                 kitchenName: kitchenName
             };
         }
+        console.log(userType)
         // Save the new user to the users array and update localStorage
         users.push(newUser);
         localStorage.setItem("users", JSON.stringify(users));
@@ -81,3 +98,11 @@ document.querySelectorAll("form").forEach(form => {
 function clearForm(form) {
     document.getElementById(form).reset();
   }
+
+function checkUserType(id){
+    let checkBox = document.getElementById(id);
+    if (checkBox){
+        checkBox.checked = true;
+        console.log('box checked', checkBox, checkBox.checked);
+    } 
+}
