@@ -174,14 +174,17 @@ form .btn{
     
 }
 .table {
-    width: 500px;
+    width: 100%;
+    max-width: 500px;
     aspect-ratio: 1/1;
-    background: url('Images/table.png') no-repeat center center/cover;
+    background: url('Images/vectors/woodTexture2.svg') no-repeat center center/cover;
     border-radius: 50%;
     display: grid;
     padding: 50px;
+    border: 9px solid silver;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
+    box-shadow: 10px 20px 10px 15px rgba(0, 0, 0, 0.5);
   }
   
   
@@ -198,6 +201,12 @@ form .btn{
     width: 40px;
     height: 40px;
   }
+  .plate-img{
+    width: 100%;
+    border-radius: 50%;
+    aspect-ratio: 1/1;
+
+  }
   .plate { 
     aspect-ratio: 1/1;
     width: 150px; 
@@ -208,6 +217,9 @@ form .btn{
   } 
 
   .left{
+    transform: rotateY(180deg); 
+  }
+  .left .info p{
     transform: rotateY(180deg); 
   }
   .info{
