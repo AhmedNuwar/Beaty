@@ -62,3 +62,12 @@ function Run(id, url){
         goTo(url);
       }, 100);
 }
+document.addEventListener("DOMContentLoaded", function(){
+    const images = ['Images/fatta.png', 'Images/bamia.png', 'Images/fteer.png']
+    let index = 0;
+    let landingImg = document.getElementById('landingImg');
+    setInterval(() => {
+        index = (index + 1) % images.length;
+        landingImg.src = images[index];
+    }, 2000); 
+})

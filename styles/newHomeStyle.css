@@ -1,25 +1,29 @@
-:root{
-    --light: #FEF3E2;
-    --light-hover: #FAC97E;
-    --red: #FA4032;
-    --red-hover: #E71506;
-    --yellow: #FAB12F;
-    --yellow-hover: #E39206;
-    --orange: #FA812F;
-    --orange-hover: #E35E06;
-    
-}
 body{
     background-color: var(--light);
 }
 nav{
     background: linear-gradient(to right, var(--light) 66.67%, var(--red) 33.33%);
 }
+[lang='en'] nav{
+    background: linear-gradient(to left, var(--light) 66.67%, var(--red) 33.33%);
+
+}
 .navbar-brand{
     color: var(--light);
 }
+.navbar-brand:hover{
+    color: var(--light-hover);
+}
 .nav-link.active{
     color: var(--orange) !important;
+}
+#languageToggle{
+    background-color: var(--light);
+    border-radius: 20px;
+    color: var(--red);
+}
+#languageToggle:hover{
+    background-color: var(--light-hover);
 }
 .section1{
     position: relative;
@@ -52,10 +56,13 @@ nav{
     background-color: var(--red);
     color: var(--light);
     border-radius: 20px;
-    transition: margin-right .1s ease;
+    transition: margin .1s ease;
 }
-#discoverBtn.active{
+[lang='ar'] #discoverBtn.active{
     margin-right: 500px;
+}
+[lang='en'] #discoverBtn.active{
+    margin-left: 500px;
 }
 #discoverBtn:hover{
     background-color: var(--red-hover);
@@ -76,6 +83,8 @@ nav{
     height: 400px;
     animation: spin 2s ease;
 }
+
+
 #topRate{
     background-color: var(--red);
 }
@@ -126,4 +135,5 @@ nav{
 }
 .plate:hover{
     transform: rotate(-10deg);
+    cursor: pointer;
 }
