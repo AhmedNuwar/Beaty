@@ -173,6 +173,40 @@ form .btn{
     
     
 }
+.dishes{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 10px;
+    gap: 50px;
+}
+.dish{
+    width: 200px;
+    height: 150px;
+    background-color: white;
+    border-radius: 80px;
+    box-shadow: 0px 15px 15px 5px rgba(0, 0, 0, 0.5);
+    transition:  width 0.3s ease-in-out;
+}
+.row1 .dish:first-child{
+    width: 300px;
+}
+.row1 .dish:hover:last-child {
+    width: 400px;
+}
+.row2 .dish:last-child{
+    width: 300px;
+}
+.row2 .dish:hover:first-child{
+    width: 400px;
+}
+.row1, .row2{
+    display: flex;
+    gap: 10px;
+    width: 500px;
+}
 .table {
     width: 100%;
     max-width: 500px;

@@ -1,3 +1,14 @@
+:root{
+    --light: #FEF3E2;
+    --light-hover: #FAC97E;
+    --red: #FA4032;
+    --red-hover: #E71506;
+    --yellow: #FAB12F;
+    --yellow-hover: #E39206;
+    --orange: #FA812F;
+    --orange-hover: #E35E06;
+    
+}
 /*Font*/
 @font-face {
     font-family: 'CustomCairo';
@@ -32,6 +43,9 @@ body{
     padding: 10px;
     display: flex;
    
+}
+.nav-link.active{
+    color: var(--orange) !important;
 }
 nav .btn{
     margin-top: 5px;
