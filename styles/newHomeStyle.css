@@ -1,4 +1,14 @@
-
+:root{
+    --light: #FEF3E2;
+    --light-hover: #FAC97E;
+    --red: #FA4032;
+    --red-hover: #E71506;
+    --yellow: #FAB12F;
+    --yellow-hover: #E39206;
+    --orange: #FA812F;
+    --orange-hover: #E35E06;
+    
+}
 body{
     background-color: var(--light);
 }
