@@ -1,34 +1,28 @@
 body{
     background-color: var(--light);
 }
-nav{
-    background: linear-gradient(to right, var(--light) 66.67%, var(--red) 33.33%);
-}
-[lang='en'] nav{
-    background: linear-gradient(to left, var(--light) 66.67%, var(--red) 33.33%);
 
-}
 .navbar-brand{
-    color: var(--light);
+    color: var(--red);
 }
 .navbar-brand:hover{
-    color: var(--light-hover);
+    color: var(--red-hover);
 }
 .nav-link.active{
     color: var(--orange) !important;
 }
 #languageToggle{
-    background-color: var(--light);
+    background-color: var(--red);
     border-radius: 20px;
-    color: var(--red);
+    color: var(--light);
 }
 #languageToggle:hover{
-    background-color: var(--light-hover);
+    background-color: var(--red-hover);
 }
 .section1{
     position: relative;
 }
-.section1, .section2{
+.pageSection{
     width: 100%;
     display: flex;
     min-height: 90vh;
@@ -36,11 +30,9 @@ nav{
 .slogan{
     display: flex;
     justify-content: center;
-    background-color: var(--red);
-    color: var(--light);
+    color: var(--red);
     flex-basis: 33.33%;
     align-items: center;
-    text-align: center;
     font-size: 64px;
     font-weight: bolder;
 }
@@ -58,14 +50,16 @@ nav{
     border-radius: 20px;
     transition: margin .1s ease;
 }
-[lang='ar'] #discoverBtn.active{
-    margin-right: 500px;
-}
-[lang='en'] #discoverBtn.active{
-    margin-left: 500px;
+#lrnCookingBtn{
+    background-color: var(--light);
+    color: var(--red);
+    border-radius: 20px;
 }
 #discoverBtn:hover{
     background-color: var(--red-hover);
+}
+#lrnCookingBth:hover{
+    background-color: var(--light-hover);
 }
 
 @keyframes spin {
@@ -103,6 +97,9 @@ nav{
 #fastDelivery .plate{
     box-shadow: 10px 10px 10px var(--yellow-hover);
 }
+#learnCooking .plate{
+    box-shadow: 10px 10px 10px var(--orange-hover);
+}
 .menu-option{
     position: relative;
     display: flex;
@@ -136,4 +133,50 @@ nav{
 .plate:hover{
     transform: rotate(-10deg);
     cursor: pointer;
+}
+.section3{
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(
+        to left,
+        var(--red) 33.33%,
+        var(--orange) 33.33% 66.66%,
+        var(--yellow) 66.66%
+      );
+}
+.others{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+    
+      }
+.option{
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    width: 120px;
+    gap: 50px;
+    min-height: 100px;
+    border-radius: 100px;
+    background-color: var(--light);
+    transition: width 0.3s ease-in-out;
+}
+.option:hover{
+    cursor: pointer;
+    width: 400px;
+}
+.option-img{
+    aspect-ratio: 1/1;
+    margin: 10px;
+    width: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+.option p{
+    font-size: 26px;
+    margin: 0;
+    color: var(--red);
 }
