@@ -51,15 +51,15 @@ body{
     transition: margin .1s ease;
 }
 #lrnCookingBtn{
-    background-color: var(--light);
-    color: var(--red);
+    background-color: var(--red);
+    color: var(--light);
     border-radius: 20px;
 }
 #discoverBtn:hover{
     background-color: var(--red-hover);
 }
 #lrnCookingBth:hover{
-    background-color: var(--light-hover);
+    background-color: var(--red-hover);
 }
 
 @keyframes spin {
@@ -155,33 +155,31 @@ body{
 .others{
     width: 100%;
     display: flex;
-    flex-direction: column;
     gap: 20px;
-    justify-content: center;
-    padding: 20px;
+    justify-content: space-around;
+    padding: 50px;
     
       }
 .option{
     display: flex;
+    flex-direction: column;
     align-items: center;
     overflow: hidden;
-    width: 120px;
-    gap: 50px;
+    width: 300px;
+    height: 300px;
     min-height: 100px;
-    border-radius: 100px;
+    border-radius: 20px;
     background-color: var(--light);
-    transition: width 0.3s ease-in-out;
+    transition: height 0.4s ease-in-out;
 }
 .option:hover{
     cursor: pointer;
-    width: 400px;
+    height: 350px;
 }
 .option-img{
     aspect-ratio: 1/1;
-    margin: 10px;
-    width: 100px;
+    width: 300px;
     object-fit: cover;
-    border-radius: 50%;
 }
 .option p{
     font-size: 26px;
