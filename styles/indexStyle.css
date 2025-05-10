@@ -144,6 +144,14 @@ body{
         var(--yellow) 66.66%
       );
 }
+[lang='en'] .section3{
+    background: linear-gradient(
+        to right,
+        var(--red) 33.33%,
+        var(--orange) 33.33% 66.66%,
+        var(--yellow) 66.66%
+      );
+}
 .others{
     width: 100%;
     display: flex;
