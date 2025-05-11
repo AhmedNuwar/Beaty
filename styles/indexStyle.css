@@ -129,7 +129,9 @@ form .btn, .form-control{
     justify-content: space-between;
     width: 100%;
     align-items: center;
-    background-color: var(--orange);
+    border: 20px solid var(--orange);
+    border-left: none;
+    border-right: none;
     padding: 100px;
 }
 #dealsImg{
@@ -138,12 +140,13 @@ form .btn, .form-control{
     border-radius: 10px;
     object-fit: cover;
     box-shadow: 10px 10px black;
-    border: 10px solid var(--light);
+    border: 1px solid black;
 
 }
 .deals-details{
     color: black;
     box-shadow: 10px 10px black;
+    border: 1px solid black;
     width: 450px;
     padding: 10px;
     background-color: var(--light);
