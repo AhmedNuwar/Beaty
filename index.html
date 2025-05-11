@@ -47,53 +47,59 @@
         </div>
     </nav>
     <main>
-        <div class="section1 pageSection">
-            <div class="slogan">
-                <p>اكل <br> من البيت <br> للبيت</p>
+        <!--page cover-->
+        <div class="page-cover">
+            <div class="pgcover-overlay"></div>
+            <div class="cover-text">
+                <h2 data-lang-en="Dishes From Home To Home" data-lang-ar='اكل من البيت للبيت'>طعام بيتي لذيذ وأصيل</h2>
+                <!--search-->
+                <form action="Chief.html" class="search-form">
+                    <input id="search" type="text" name="srchTxt" 
+                    placeholder="ابحث عن طباخ" class="form-control" data-lang-en="Search for a chef" data-lang-ar="ابحث عن طباخ">
+                    <button id="submit" type="submit" class="btn goToBtn">
+                        <i class="bi bi-search"></i>
+                    </button>
+                </form>
             </div>
+        </div>
+        <!--page cover end-->
+        <div class="section1 pageSection">
             <div class="landingImgDiv">
                 <img id="landingImg" src="Images/fatta.png" alt="" class="landingImg">
-                <button id="discoverBtn" class="btn" data-lang-ar="اكتشف المطابخ" data-lang-en="Discover Kitchens"
+                <button id="discoverBtn" class="btn goToBtn" data-lang-ar="اكتشف المطابخ" data-lang-en="Discover Kitchens"
                 onclick="goTo('Kitchens.html')"></button>
             </div>
-        </div>
-        <div class="section2 pageSection">
-            <div id="topRate" class="menu-option">
-                <p data-lang-ar="الاعلي تقيم" data-lang-en="Highest Rated"></p>
-                <div  class="plate">
-                    <img src="Images/flafelAvatar.png" alt="" class="plate-img">
-                </div>
-                <p >مطبخ دنيا</p>
-            </div>
-            <div id="bestSeller" class=" menu-option">
-                <p data-lang-ar="الاكثر مبيعا" data-lang-en="Best Seller"></p>
-                <div class="plate">
-                    <img src="Images/womanAvatar.png" alt="" class="plate-img">
-                </div>
-                <p >مطبخ مريم</p>
-            </div>
-            <div id="fastDelivery" class="menu-option">
-                <p data-lang-ar="الاسرع توصيل" data-lang-en="Fastes Delivery"></p>
-
-                <div class="plate">
-                    <img src="Images/tomatoAvatar.jpg   " alt="" class="plate-img">
-                </div>
-                <p>مطبخ ريم</p>
+            <div class="learnCooking">
+                <img id="lrnCookingImg" src="Images/GreenSoup.png" alt="" class="landingImg">
+                <button id="" class="btn goToBtn" data-lang-ar="تعلم الطبخ" data-lang-en="learn how to cook"
+                onclick="goTo('Recipes.html')"></button>
             </div>
         </div>
-        <div class="section3 pageSection">
-            <div id="learnCooking"  class="menu-option">
-                    <p data-lang-ar="احسن طباخ في مصر" data-lang-en="best chief in Egypt"></p>
-                    <div  class="plate">
-                        <img src="Images/chiefCallingYou.jpeg" alt="" class="plate-img"
-                        onclick="goTo('Recipes.html')">
-                    </div>
-                    <p data-lang-ar="انت" data-lang-en="you"></p>
-                    <button id="lrnCookingBtn" class="btn" data-lang-ar="تعلم الطبخ؟" data-lang-en="Learn How To Cook?"
-                    onclick="goTo('Recipes.html')"></button>
-                    
+        <div class="deals">
+            <div class="deals-details">
+                <h2 data-lang-ar="اكتشف العروض و الخصومات" data-lang-en="Discover Our Deals"></h2>
+                <p data-lang-ar="اكتشف احدث العروض و القسائم المتاحه لك" data-lang-en="discover deals and vouchers available to you"></p>
+                <button class="dealsBtn btn" data-lang-ar="اكتشف العروض" data-lang-en="discover deals" 
+                onclick="goTo('voucher.html')"></button>
             </div>
-        
+            <img src="Images/recipes/grilledChicken.jpg" alt="" id="dealsImg">
+        </div>
+        <div class="app">
+            <div class="appInfo">
+                <h2 data-lang-ar="تطيبق الهاتف" data-lang-en="Mobile App"></h2>
+            <p data-lang-ar="تطيبق الهاتف قادم قريبا" data-lang-en="moblie app coming soon"></p>
+            <div class="storeBtns">
+                <button id="googleBtn" class="storeBtn btn">
+                    <span data-lang-en="downlad form Google Play" data-lang-ar="حمل من Google Play"></span>
+                    <i class="bi bi-google-play"></i>
+                </button>
+                <button id="appleBtn" class="storeBtn btn"> 
+                    <span data-lang-en="downlad from App Sotre" data-lang-ar="حمل من App Store"></span>
+                    <i class="bi bi-apple"></i>
+                </button>
+            </div>
+            </div>
+            <img src="" alt="app image" class="appImg">
         </div>
     </main>
     <footer>

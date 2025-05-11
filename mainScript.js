@@ -63,11 +63,22 @@ function Run(id, url){
       }, 100);
 }
 document.addEventListener("DOMContentLoaded", function(){
-    const images = ['Images/fatta.png', 'Images/bamia.png', 'Images/fteer.png']
+    const kitchenImgs = ['Images/fatta.png', 'Images/bamia.png', 'Images/fteer.png'];
+    const learnImgs =  ['Images/GreenSoup.png', 'Images/GoldenCrust.png', 'Images/Kunafa.png'];
+    const dealsImgs = ["Images/recipes/7mam.jfif", "Images/recipes/duck.jpg", "Images/recipes/grilledChicken.jpg"]
     let index = 0;
     let landingImg = document.getElementById('landingImg');
+    let lrnImg = document.getElementById('lrnCookingImg');
+    let dealImg = document.getElementById('dealsImg');
     setInterval(() => {
-        index = (index + 1) % images.length;
-        landingImg.src = images[index];
+        index = (index + 1) % kitchenImgs.length;
+        landingImg.src = kitchenImgs[index];
+       
     }, 2000); 
+     setInterval(() =>{
+            lrnImg.src = learnImgs[index];
+    }, 1500);
+    setInterval(() =>{
+            dealImg.src = dealsImgs[index];
+    }, 1500);
 })

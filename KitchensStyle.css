@@ -1,4 +1,3 @@
-
 body{
     background-color: var(--light);
 }
@@ -28,6 +27,7 @@ form{
 form #searchInput{
     width: 98%;
     display: inline;
+    background-color: transparent;
 }
 form .btn{
     background-color: var(--red);
@@ -88,15 +88,7 @@ form .btn:hover{
 }
 .featured{
     background-color: var(--light); 
-    box-shadow: 10px 10px 15px var(--light-hover);
-    box-shadow: 10px 10px 15px var(--light-hover);  
-    border: 2px solid var(--red-hover); 
-    border-left: none;
-    border-bottom: none;  
-}
-[lang='en'] .featured{
-    border-left: 2px solid var(--red-hover); 
-    border-right: none;
+    
 }
 [lang='en'] .kitchen{
     border-left: 2px solid var(--red-hover); 
@@ -104,23 +96,22 @@ form .btn:hover{
 }
 .kitchens{
     display: flex;
+    background-color: var(--light);
     flex-wrap: wrap;
     width: 100%;
-    margin-bottom: 10px;
+    padding: 20px;
+    
 }
 .kitchens-list{
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    border-radius: 20px;
 }
 .kitchen{
     margin: 0rem 1.2rem;
     padding: 1rem;
     gap: .5rem;
-    border-radius: 50px;
-    background-color: var(--light); 
-    box-shadow: 10px 10px 15px var(--light-hover);  
-    border: 2px solid var(--red-hover); 
+    color: var(--light);
     border-left: none;
     border-bottom: none;
 }
@@ -138,10 +129,13 @@ form .btn:hover{
 h3{
     margin: 0;
     font-size: 18px;
+    color: rgb(37, 37, 37);
 }
 p{
     margin: 5px 0;
     font-size: 14px;
+    color: rgb(37, 37, 37);
+
 }
 .kitchen-info .btn{
     background-color: var(--red);
