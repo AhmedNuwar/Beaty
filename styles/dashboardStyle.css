@@ -3,6 +3,9 @@
     --tab-txt-color: #313131;
     --border-color:#a7a7a7;
 }
+*{
+    box-sizing: border-box;
+}
 body{
     background-color: white;
 }
@@ -16,6 +19,7 @@ main{
     padding: 0 10px;
     gap: 0px;
 }
+
 .tab-btns{
     display: flex;
     flex-direction: column;
@@ -23,7 +27,9 @@ main{
 }
 .tab-btn{
     border: none;
-    margin: 5px;
+    margin-block: 5px;
+    margin-inline-start: 20px;
+    transition: margin .4s ease-in-out;
 }
 .tab-btn:hover{
     color: var(--tab-txt-color);
@@ -118,12 +124,11 @@ main{
 }
 .section{
     background-color: white;
-    border: 1px solid var(--border-color);
     border-radius:  10px;
     padding: 0;
     margin: 5px 0;
     flex-grow: 1;
-    
+    box-shadow: 2px 2px 5px var(--border-color);
 }
 
 .data{
@@ -299,7 +304,15 @@ main{
     padding-left: 10px;
     position: relative;
   }
-  
+  #bar1::before{
+    background-color: var(--red);
+  }
+  #bar2::before{
+    background-color: var(--orange);
+  }
+  #bar3::before{
+    background-color: var(--yellow);
+  }
   .bar {
     position: relative;
     width: 60px;

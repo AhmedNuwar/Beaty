@@ -50,15 +50,15 @@
     </nav>
     <main>
         <div class="tab-btns">
-            <button class="tab-btn btn active"
+            <button id="finBtn" class="tab-btn btn active"
             onclick="openTab(event, 'finance')" data-lang-en="Finance" data-lang-ar="المالية">
                 Finance
             </button>
-            <button class="tab-btn btn  "
+            <button id="dishBtn" class="tab-btn btn  "
             onclick="openTab(event, 'dishes')" data-lang-en="Dishes" data-lang-ar="الاصناف">
                 Items
             </button>
-            <button class="tab-btn btn "
+            <button  id="order" class="tab-btn btn "
             onclick="openTab(event, 'orders')" data-lang-en="Orders" data-lang-ar="الطلبات">
                 Orders
             </button>
@@ -201,13 +201,13 @@
                                     <div><span data-lang-en="0" data-lang-ar="٠">0 </span></div>
                                 </div>
                                 <div class="bars">
-                                    <div class="bar" style="--value: 75%">
+                                    <div id="bar1" class="bar" style="--value: 75%">
                                         <span class="label" data-lang-en="Mahshi" data-lang-ar="محشي">Mahshi</span>
                                     </div>
-                                    <div class="bar" style="--value: 50%">
+                                    <div id="bar2" class="bar" style="--value: 50%">
                                         <span class="label" data-lang-en="Koshary" data-lang-ar="كشري">Koshary</span>
                                     </div>
-                                    <div class="bar" style="--value: 30%">
+                                    <div id="bar3" class="bar" style="--value: 30%">
                                         <span class="label" data-lang-en="Molokhia" data-lang-ar="ملوخية">Molokhia</span>
                                     </div>
                                 </div>
