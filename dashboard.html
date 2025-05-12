@@ -44,11 +44,11 @@
     </nav>
     <main>
         <div class="tab-btns">
-            <button class="tab-btn btn "
+            <button class="tab-btn btn active"
             onclick="openTab(event, 'finance')" data-lang-en="Finance" data-lang-ar="المالية">
                 Finance
             </button>
-            <button class="tab-btn btn  active"
+            <button class="tab-btn btn  "
             onclick="openTab(event, 'dishes')" data-lang-en="Dishes" data-lang-ar="الاصناف">
                 Items
             </button>
@@ -62,7 +62,7 @@
             </button>
         </div>
         <div class="tabs">
-            <div id="finance" class="tab-content ">
+            <div id="finance" class="tab-content active">
             <div id="fin-head" class="tab-head"><span data-lang-en="Finance" data-lang-ar="المالية">Finance</span></div>
             <div class="tab-body">
                 <div class="Row top-row">
@@ -275,7 +275,7 @@
                 </div>
             </div>
             </div>
-            <div id="dishes" class="tab-content active">
+            <div id="dishes" class="tab-content">
                 <div class="tab-head"><span data-lang-en="Dishes" data-lang-ar="الاصناف">Dishes</span></div>
                 <div class="Row">
                     <div id="dishStats" class="section">
@@ -322,20 +322,53 @@
                                 <th>dish Description</th>
                                 <th>dish Price</th>
                                 <th>dish Sale</th>
+                                <th></th>
                             </thead>
                             <tbody>
-                                <tr>
+                                <tr id="row1">
                                     <td></td>
+                                    <td>ملوخية</td>
+                                    <td>ملوخية بالدجاج</td>
+                                    <td>60EGP</td>
                                     <td></td>
-                                    <td></td>
-                                    <td></td>
+                                    <td>
+                                        <button class="btn btn-sm" onclick="removeDish('row1')">
+                                        <i class="bi bi-x"></i>
+                                        </button>
+                                    </td>
                                 </tr>
+                                <tr id="row2">
+                                    <td></td>
+                                    <td>حمام محشي</td>
+                                    <td>حمام محشي فريك</td>
+                                    <td>50EGP</td>
+                                    <td></td>
+                                    <td>
+                                        <button class="btn btn-sm" onclick="removeDish('row2')">
+                                        <i class="bi bi-x"></i>
+                                    </button>
+                                    </td>
+                                </tr>
+                                <tr id="row3">
+                                    <td></td>
+                                    <td>محشي</td>
+                                    <td>محشي ورق عنب</td>
+                                    <td>40EGP</td>
+                                    <td></td>
+                                    <td>
+                                        <button class="btn btn-sm" onclick="removeDish('row3')">
+                                        <i class="bi bi-x"></i>
+                                    </button>
+                                    </td>
+                                </tr>
+
+                               
                             </tbody>
                         </table>
                     </div>
                     <div class="add-dish section">
                         <div class="tab-head"><span data-lang-en="Add New Dish" data-lang-ar="اضف صنف جديد"> </span></div>
-                        <form id="addNewDishForm" action="" class="dish-form" onsubmit="addNewDish();">
+                        <form id="addNewDishForm" action="" class="dish-form" onsubmit="alert('جاري مراجعة طلبك')">
                             <!-- Dish Name -->
                             <div class="name-descrption">
                               <label for="dish-name" class="form-label">
@@ -423,7 +456,7 @@
                                 </tr>
                                 <tr>
                                     <td><span data-lang-en="Koshary Family Size" data-lang-ar="كشري الحجم العائلي">كشري الحجم العائلي</span></td>
-                                    <td><span data-lang-en="No" data-lang-ar="لا">لا</span></td>
+                                    <td><span data-lang-en="Yes" data-lang-ar="تعم">لا</span></td>
                                     <td><span data-lang-en="2025-04-22" data-lang-ar="٢٠٢٥-٠٤-٢٢">٢٠٢٥-٠٤-٢٢</span></td>
                                     <td><span data-lang-en="80 EGP" data-lang-ar="٨٠ جنية">٨٠ جنية</span></td>
                                 </tr>
@@ -444,17 +477,17 @@
                         </div>
                         <div class="item">
                             <h5><span data-lang-en="Customer Name" data-lang-ar="اسم العميل">اسم العميل</span></h5>
-                            <p>
-                                <span data-lang-en="Fatma ElSayed" data-lang-ar="فاطمة السيد">فاطمة السيد</span>
+                            <p id="customerName">
+                                فاطمة السيد
                             </p>
                         </div>
                         <div class="item">
                             <h5><span data-lang-en="Order No." data-lang-ar="رقم الطلب">رقم الطلب</span></h5>
-                            <p>#1001</p>
+                            <p id="orderId">#1001</p>
                         </div>
                         <div class="item">
                             <h5><span data-lang-en="Order Price" data-lang-ar="سعر الطلب">سعر الطلب</span></h5>
-                            <p ><span data-lang-en="135 EGP" data-lang-ar="١٣٥ جنية">١٣٥ جنية</span></p>
+                            <p id="orderPrice">١٣٥ جنية</span></p>
                         </div>
                         <button id="order-ready" class="btn btn-dark"><span data-lang-en="Order Ready" data-lang-ar="الطلب جاهز">الطلب جاهز</span></button>
                     </div>
