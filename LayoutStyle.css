@@ -23,42 +23,61 @@
 [lang="en"] .lang-en { display: block; }
 [lang="en"] .lang-ar { display: none; }
 /*Body Styling*/
-.chief-content{
+.chief-content, .guest-content{
     display: none !important;
 }
-.chief-content.show{
+.chief-content.show, .guest-content.show{
     display: block !important;
 }
-.user-content.hide{
+.user-content.hide ,.login-content.hide{
     display: none !important;
 }
 body{
     font-family: 'CustomCairo', sans-serif;
     padding: 0px;
     margin: 0px;
-    background-color: rgb(233, 233, 233);
+    background-color: var(--light);
 }
 /* Navbar Styling */
 .navbar{
     padding: 10px;
     display: flex;
-   
+       background-color: var(--light) !important;
+
 }
 .nav-link.active{
     color: var(--orange) !important;
 }
-nav .btn{
+
+.authBtn{
     margin-top: 5px;
-    border-radius: 0;
+    background-color: var(--red);
+    color: var(--light);
 }
-nav .navbar-brand{
+.authBtn:hover{
+    color: var(--light);
+    background-color: var(--red-hover);
+}
+.navbar-brand{
     margin-left: 1rem;
     font-size: 1.5em;
     font-weight: bold;
+    color: var(--red);
+}
+.navbar-brand:hover{
+    color: var(--red-hover);
 }
 #languageSwitcher{
     margin-right: auto;
     border-radius: 0;
+}
+#languageToggle{
+    background-color: var(--red);
+    border-radius: 20px;
+    color: var(--light);
+}
+#languageToggle:hover{
+    background-color: var(--red-hover);
 }
 #collapsibleNavbar ul{
     margin-right: auto;

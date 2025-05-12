@@ -20,6 +20,11 @@ document.addEventListener('DOMContentLoaded', function() {
     let bankNo = document.getElementById('bank-number')|| "";
     let walletNo = document.getElementById('wallet-number')|| "";
     let nid = document.getElementById('national-id')|| "";
+    let chiefContent = document.querySelectorAll('.chief-content');
+    let userContent = document.querySelectorAll('.user-content');
+    let guestContent = document.querySelectorAll('.guest-content');
+    let loginContent = document.querySelectorAll('.login-content');
+
 
     if (currentUser){
         userImg.src = `images/${currentUser.avatar}`;
@@ -36,20 +41,42 @@ document.addEventListener('DOMContentLoaded', function() {
         }
         
         // show/hide content based on user type
-        if (currentUser.userType === 'Chief') 
-        {
-            let chiefContent = document.querySelectorAll('.chief-content');
+        if (currentUser.userType == 'User'){
             chiefContent.forEach(element => 
             {
-                element.classList.toggle('show');
+                element.classList.remove('show');
             });
-            let userContent = document.querySelectorAll('.user-content');
             userContent.forEach(element => {
-                element.classList.toggle('hide')
+                element.classList.remove('hide');
             });
+            guestContent.forEach(element => {
+                element.classList.remove('show');
+            });
+        loginContent.forEach(element =>{
+            element.classList.remove('hide');
+        });
+        }
+        if (currentUser.userType === 'Chief') 
+        {
+            chiefContent.forEach(element => 
+            {
+                element.classList.add('show');
+            });
+            userContent.forEach(element => {
+                element.classList.add('hide');
+            });
+            
         }
     }
-        
+    else{
+        guestContent.forEach(element => {
+                element.classList.toggle('show');
+            });
+        loginContent.forEach(element =>{
+            element.classList.add('hide');
+        });
+    }
+     
     
         
     
