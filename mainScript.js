@@ -97,15 +97,19 @@ document.addEventListener("DOMContentLoaded", function(){
     let landingImg = document.getElementById('landingImg');
     let lrnImg = document.getElementById('lrnCookingImg');
     let dealImg = document.getElementById('dealsImg');
-    setInterval(() => {
+    
+    if(kitchenImgs && learnImgs && dealsImgs && landingImg && lrnImg &&dealImg){
+        setInterval(() => {
         index = (index + 1) % kitchenImgs.length;
-        landingImg.src = kitchenImgs[index];
-       
+        landingImg.src= kitchenImgs[index];
     }, 2000); 
      setInterval(() =>{
             lrnImg.src = learnImgs[index];
     }, 1500);
-    setInterval(() =>{
+    setInterval(() =>{ 
+       
             dealImg.src = dealsImgs[index];
     }, 1500);
+    }
+    
 })
