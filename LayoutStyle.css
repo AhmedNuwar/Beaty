@@ -1,12 +1,15 @@
 :root{
-    --light: white;
+    --light: #FEF3E2;
     --light-hover: #fce0b5;
+    --light-shadow: #c3b8a8;
     --red: #FA4032;
     --red-hover: #E71506;
     --yellow: #FAB12F;
     --yellow-hover: #E39206;
     --orange: #FA812F;
     --orange-hover: #E35E06;
+    --dark: #1c0d14;
+    --dark-blue: #495867
     
 }
 /*Font*/
@@ -45,10 +48,13 @@ body{
        background-color: var(--light) !important;
 
 }
-.nav-link.active{
-    color: var(--orange) !important;
-}
+.nav-link{
+    margin-inline: 3px;
 
+}
+.nav-link.active, .nav-link:hover{
+    border-top: 3px solid var(--red);
+}   
 .authBtn{
     margin-top: 5px;
     background-color: var(--red);

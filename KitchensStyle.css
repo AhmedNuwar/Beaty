@@ -4,23 +4,7 @@
 body{
     background-color: var(--light);
 }
-.navbar-brand{
-    color: var(--red);
-}
-.navbar-brand:hover{
-    color: var(--red-hover);
-}
-.nav-link.active{
-    color: var(--orange) !important;
-}
-#languageToggle{
-    background-color: var(--red);
-    border-radius: 20px;
-    color: var(--light);
-}
-#languageToggle:hover{
-    background-color: var(--red-hover);
-}
+
 form{
     display: flex;
     width: 100%;
@@ -89,18 +73,12 @@ form .btn:hover{
         height: 50%;
     }
 }
-.featured{
-    background-color: var(--light); 
-    
-}
-
 .kitchens{
     display: flex;
     background-color: var(--light);
     flex-wrap: wrap;
     width: 100%;
     padding: 20px;
-    
 }
 .kitchens-list{
     display: flex;
@@ -113,41 +91,53 @@ form .btn:hover{
     border-radius: 10px;
     gap: 5px;
     width: 33.3%;
-    box-shadow: 5px 5px 10px  #c9c9c9;
-
+    
+    border: 2px solid var(--dark-blue);
+    transition: box-shadow 0.5s ease;
 }
-.kitchen-info{
+
+.kitchen:hover{
+    box-shadow: 5px 5px 0px var(--dark-blue);
+}
+.kitchen .kitchen-info{
     text-align: center;
+    width: 100%;
 }
 .kitchen img {
         object-fit: cover;
         width: 150px;
         aspect-ratio: 1 / 1;
         border-radius: 10px;
+        border: 1px solid var(--dark-blue);
     }
 h3{
     margin: 0;
     font-size: 18px;
-    color: rgb(37, 37, 37);
+    color: var(--dark)
 }
 p{
     margin: 5px 0;
     font-size: 14px;
-    color: rgb(82, 82, 82);
+    color:var(--dark-blue)
 
 }
 .kitchen-info .btn{
-    background-color: var(--red);
+    background-color: var(--dark-blue);
     color: var(--light);
     border-radius: 10px;
-    width: 100%;
-}
-.kitchen-info .btn{
-    background-color: var(--red-hover);
-    color: var(--light);
+    width: 60%;
 }
 .featured{
-    border-radius: 20px;
+    background-color: var(--light);
+    border-radius: 10px;
+    box-shadow: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    border: 2px solid var(--orange-hover);
+    
+    transition: box-shadow 0.3s ease, border-color 0.5s ease-in-out;
 }
 .featured img{
     width: 25%;
@@ -155,5 +145,22 @@ p{
     min-width: 100px;
     max-width: 250px;
     aspect-ratio: 1 / 1;
-    border-radius: 20px; 
+    border-radius: 10px; 
+    border: 1px solid var(--orange-hover);
+}
+.featured:hover{
+    box-shadow:  10px 10px var(--orange-hover);
+}
+ @keyframes colorShift {
+      0%   { color: var(--red); }
+      50%  { color: var(--orange); }
+      100%  { color: var(--yellow); }
+
+    }
+.featured h2{
+    width: 100%;
+    animation: colorShift 3s infinite;
+}
+.featured .btn{
+    background-color: var(--orange-hover);
 }
