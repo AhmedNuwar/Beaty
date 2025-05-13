@@ -1,5 +1,5 @@
-main{
-    margin: auto;
+*{
+    box-sizing: border-box;
 }
 /* Cart Style */
 .cart-btn{
@@ -34,18 +34,26 @@ main{
         left: calc(-1 * (450px - 100vw) / 2);
     }
 }
+@media (max-width: 768px) {
+    main{
+        width: 100% !important;
+        margin-inline: 10px;
+    }
+}
 .cart {
     position: absolute;
     margin-top: 1.4rem;
-    background-color: rgb(251, 251, 251);
+    background-color: var(--light);
+    color: var(--dark-blue);
+    border-radius: 10px;
     padding: 10px;
     font-size: 12px;
     font-weight: bold;
     z-index: 1; /* Ensure it stays above other elements */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-[lang="en"] .cart {
+[lang="en"] .cart{
     left: auto;
     right: 0;
 }
@@ -72,17 +80,25 @@ main{
     object-fit: cover;
     border-radius: 8px;
 }
+main{
+    width: 70%;
+    margin: auto;
+    background-color: var(--light-hover);
+    box-shadow: 5px 10px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;    
+    margin-block: 30px;
+}
 /* Cheif Info Styling */
 .cheif-info{
     display: flex;
     align-items: center;
     padding: 10px;
     gap: 10px;
-    background-color: white;
+    color: var(--dark-blue);
 }
 .cheif-info img{
     width: 100px;
-    height: 100px;
+    aspect-ratio: 1/1;
     border-radius: 50%;
     object-fit: cover;
 }
@@ -95,28 +111,27 @@ main{
 .food-info{
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
-    padding: 10px;
-    background-color: white;
 }
 /* toggle buttons Styling*/
 .togl-btns{
     width: 100%;
     padding: 0 10px;
+    display: flex;
+    gap: 10px;
+    margin-block-end: -1px;
 }
 .togl-btns .btn{
-    border-radius: 20px;
+    border-radius: 10px 10px 0 0;
     background-color:transparent;
-    border: 1px solid #e74c3c;
-    color:  #e74c3c;;
+    border: 1px solid var(--dark-blue);
+    color:  var(--dark-blue);
 }
 .togl-btns .btn.active{
-    background-color:  #e74c3c;
-    color: white;
+    background-color:  var(--dark-blue);
+    color: var(--light);
 }
     /* Menu Styling */
 .menu{
-    background-color: white;
     width: 100%;
     display: none;
 }
@@ -126,8 +141,10 @@ main{
 .menu-items{
     flex-grow: 1;
 }
-.menu-items h3{
-    padding: 0 10px;
+.section-h3{
+    padding: 10px;
+    color: var(--light);
+    background-color: var(--dark-blue);
 }
 /* Menu item */
 .menu-item{
@@ -135,8 +152,9 @@ main{
     align-items: center;
     gap: 15px;
     padding: 15px;
-    margin: 10px ;
-    border-bottom: 1px solid #ddd;
+    margin: 20px 10px ;
+    background-color: var(--light);
+    border-radius: 10px;
 }
 .menu-item img{
     width: 200px;
@@ -149,7 +167,8 @@ main{
 }
 .menu-info h3{
     margin: 0;
-    font-size: 18px;
+    font-size: 26px;
+    color: var(--dark-blue);
 }
 .menu-info p {
     margin: 5px 0;
@@ -170,22 +189,24 @@ main{
 .item-quantity{
     width: 15%;
     max-width: 50px;
+    background-color: var(--light);
+    border-radius: 5px;
 }
 .add-to-cart{
-    border-radius: 0;
-    background-color: #e74c3c;
-    border: none;
-}
+    background-color: var(--red);
+    border: 2px solid var(--red) !important;
+    color: var(--light);
+}   
 .add-to-cart:hover{
-    background-color: #c0392b;
+    background-color: transparent;
+    color: var(--red);
 }
 /* Menu End */
 
 /* Reviews Styling */
 .reviews{
     display: none;
-    padding: 10px;
-    background-color: white;
+    width: 100%;
 }
 .reviews.active{
     display: block;
@@ -195,7 +216,7 @@ main{
     align-items: center;
     gap: 10px;
     padding: 10px;
-    border-bottom: 1px solid #ddd;
+    background-color: var(--light);
 }
 .review img{
     width: 50px;
@@ -204,17 +225,21 @@ main{
     object-fit: cover;
 }
 .review p{
-    color: #555;
+    color: var(--dark-blue);
 }
 form{
     padding: 10px;
 }
 form .form-control{
-    border-radius: 0;
     margin-bottom: 10px;
+    background-color: var(--light) !important;
 }
 form .btn{
-    border-radius: 0;
+    background-color: var(--red);
+    
+}
+form .btn:hover{
+    background-color: var(--red-hover);
 }
 /* Reviews End */
 

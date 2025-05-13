@@ -142,7 +142,8 @@ p{
     }
 .featured h2{
     width: 100%;
-    animation: colorShift 3s infinite;
+    color: var(--red);
+    animation: colorShift 2s infinite;
 }
 .featured .btn{
     background-color: var(--orange-hover);

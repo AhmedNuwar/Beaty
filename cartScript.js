@@ -49,7 +49,9 @@ addToCartBtns.forEach(btn =>
         }
         SaveCart();
         UpdateCart();
-        cartContainer.style.display = "block";
+        
+        cartContainer.classList.add('active');
+        
     });
     
 

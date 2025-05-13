@@ -1,6 +1,7 @@
 :root{
     --light: #FEF3E2;
-    --light-hover: #fce0b5;
+    --light-hover: #fdeace
+;
     --light-shadow: #c3b8a8;
     --red: #FA4032;
     --red-hover: #E71506;
@@ -40,6 +41,15 @@ body{
     padding: 0px;
     margin: 0px;
     background-color: var(--light);
+}
+.page-title{
+    text-align: center;
+    padding: 10px;
+    font-weight: bold;
+    color: var(--light);
+    background-color: var(--red);
+    margin: 0;
+
 }
 /* Navbar Styling */
 .navbar{
