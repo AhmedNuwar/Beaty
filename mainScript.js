@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
     if (currentUser){
-        userImg.src = `images/${currentUser.avatar}`;
+        userImg.src = currentUser.avatar;
         userName.innerHTML = currentUser.name;
         userEmail.innerHTML = currentUser.email;
 
