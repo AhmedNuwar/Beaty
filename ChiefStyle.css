@@ -139,8 +139,8 @@ main{
     border-bottom: 1px solid #ddd;
 }
 .menu-item img{
-    width: 80px;
-    height: 80px;
+    width: 200px;
+    height: 150px;
     border-radius: 8px;
     object-fit: cover;
 }
