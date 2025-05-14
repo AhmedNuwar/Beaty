@@ -111,6 +111,18 @@ nav #user-img{
 nav #user-img:hover{
     cursor: pointer;
 }
+@media (max-width: 768px) {
+    .navbar{
+        background-color: var(--light) !important;
+    }
+    .nav-link{
+    color: inherit !important;
+    }
+    .nav-link.active, .nav-link:hover{
+        border-top: none;
+        border-bottom: 3px solid var(--red);
+    }     
+}
 footer{
     background-color: #333;
     color: white;

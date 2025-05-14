@@ -12,7 +12,6 @@
     margin-right: 10px; 
     margin-left: auto;
 }
-
 .cart-container {
     display: none;
     position: relative; 
@@ -158,9 +157,15 @@ main{
 }
 .menu-item img{
     width: 200px;
-    height: 150px;
+    aspect-ratio: 4/3;
     border-radius: 8px;
     object-fit: cover;
+}
+@media (max-width:400px) {
+    .menu-item img{
+        aspect-ratio: 1/1;
+        width: 150px;
+    }
 }
 .menu-info{
     flex-grow: 1;
