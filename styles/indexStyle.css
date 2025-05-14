@@ -15,7 +15,7 @@
 }   
 .page-cover{
     width: 100%;
-    height: 80vh; /* Full screen height */
+    height: 100dvh; /* Full screen height */
     background: url('../Images/egyFood3.jpeg') no-repeat center center;
     background-size: cover;
     background-position: center;
@@ -79,7 +79,7 @@ form .btn, .form-control{
 .pageSection{
     width: 100%;
     display: flex;
-    min-height: 90vh;
+    min-height: 90dvh;
 }
 .landingImgDiv, .learnCooking{
     display: flex;
@@ -196,9 +196,7 @@ form .btn, .form-control{
 }
 
 @media (max-width: 768px) {
-    .page-cover {
-        height: 60vh; /* Reduce height for smaller screens */
-    }
+
     .cover-text h2 {
         font-size: 2rem; /* Adjust font size */
     }
@@ -207,6 +205,8 @@ form .btn, .form-control{
     }
     .section1 {
         flex-direction: column; /* Stack elements vertically */
+        align-items: center;
+        justify-content: center;
     }
     .landingImgDiv, .learnCooking {
         flex-grow: unset;
@@ -217,8 +217,9 @@ form .btn, .form-control{
         height: 300px;
     }
     .deals {
-        flex-direction: column; /* Stack deals section */
+        flex-direction: column-reverse; /* Stack deals section */
         padding: 50px; /* Adjust padding */
+        gap: 20px;
     }
     #dealsImg {
         width: 100%; /* Full width for image */
