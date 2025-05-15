@@ -10,32 +10,38 @@
     <title>Document</title>
 </head>
 <body>
-    <nav class="navbar navbar-expand-md bg-light navbar-light sticky-top">
+    <nav class="navbar navbar-expand-md">
         <!--logo-->
-        <a href="index.html" class="navbar-brand text-danger" 
+        <a href="index.html" class="navbar-brand" 
            data-lang-en="Beaty" data-lang-ar="بيتي">بيتي</a>
         <!-- Language Switcher -->
-        <button id="languageToggle" class="btn btn-secondary">العربية</button>
+        <button id="languageToggle" class="btn">العربية</button>
+        <div id="profile">
+        </div>
         <!--toggle btn-->
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
             <span class="navbar-toggler-icon"></span>
         </button>
-        
         <!--nav links-->
         <div class="collapse navbar-collapse" id="collapsibleNavbar">
             <ul class="navbar-nav"> 
-                <li class="nav-item"><a href="index.html" class="nav-link" data-lang-en="Home" data-lang-ar="الرئيسية">الرئيسية</a></li>
-                <li class="nav-item"><a href="Kitchens.html" class="nav-link" data-lang-en="Discover Kitchens" data-lang-ar="اكتشف المطابخ">المطابخ</a></li>
-                <li class="nav-item"><a href="Partner.html" class="nav-link active" data-lang-en="Be Our Partner" data-lang-ar="كن شريكنا">كن شريكنا</a></li>
-                <li class="nav-item"><a href="JoinTeam.html" class="nav-link" data-lang-en="Join Our Team" data-lang-ar="انضم لفريقنا">انضم لفريقنا</a></li>
+                <li class="nav-item"><a href="index.html" class="nav-link " data-lang-en="Home" data-lang-ar="الرئيسية">الرئيسية</a></li>
+                <li class="nav-item user-content"><a href="Kitchens.html" class="nav-link    " data-lang-en="Discover Kitchens" data-lang-ar="اكتشف المطابخ">المطابخ</a></li>
+                <li class="nav-item"><a href="Partner.html" class="nav-link" data-lang-en="Be Our Partner" data-lang-ar="كن شريكنا">كن شريكنا</a></li>
+                <li class="nav-item"><a href="JoinTeam.html" class="nav-link active" data-lang-en="Join Our Team" data-lang-ar="انضم لفريقنا">انضم لفريقنا</a></li>
                 <li class="nav-item"><a href="Help.html" class="nav-link" data-lang-en="Help" data-lang-ar="مساعدة">مساعدة</a></li>
-                <li class="nav-item">
-                    <a href="profile.html" class="nav-link" id="profile-link">
-                        <i class="bi bi-person-circle"></i>
-                        <span data-lang-en="Profile" data-lang-ar="الملف الشخصي">الملف الشخصي</span>
-                    </a>
+                <li class="nav-item chief-content"><a href="dashboard.html" class="nav-link" data-lang-en="Dashboard" data-lang-ar="التحكم">مساعدة</a></li>
+                
+                    <img src="" alt="" id="user-img" class="nav-link" onclick="goTo('profile.html')">
+               
+                <li class="nav-item guest-content"> <a href="Login.html" class=" authBtn btn btn-sm" data-lang-en="sign in" data-lang-ar="تسجيل دخول">تسجيل خروج</a></li>
+                <li id="logioutBtn" class="nav-item login-content "> 
+                    <button class="btn btn-sm authBtn" onclick="logout()">
+                    <span data-lang-en="logout" data-lang-ar="تسجيل خروج">تسجيل خروج</span>
+                    </button>
+                    
                 </li>
-                <li class="nav-item"> <a href="Login.html" class="btn btn-sm btn-danger" data-lang-en="sign in" data-lang-ar="تسجيل دخول">تسجيل خروج</a></li>
+                
             </ul>
                 
         </div>
@@ -44,7 +50,7 @@
         <h2 class="form-title" data-lang-en="Partnership Request" data-lang-ar="طلب شراكة">Partnership Request</h2>
       
         <div class="form-group">
-          <label for="name" data-lang-en="Full Name" data-lang-ar="الاسم الكامل">Full Name</label>
+          <label for="name" class="visually-hidden" data-lang-en="Full Name" data-lang-ar="الاسم الكامل">Full Name</label>
           <input type="text" class="form-control" id="name"
                  placeholder="Enter your name"
                  data-lang-en="Enter your name"
@@ -53,8 +59,8 @@
         </div>
       
         <div class="form-group">
-          <label for="phone" data-lang-en="Phone" data-lang-ar="رقم الهاتف">Phone</label>
-          <input type="tel" class="form-control" id="phone"
+          <label for="phone" class="visually-hidden" data-lang-en="Phone" data-lang-ar="رقم الهاتف">Phone</label>
+          <input type="text" class="form-control" id="phone"
                  placeholder="Enter your phone number"
                  data-lang-en="Enter your phone number"
                  data-lang-ar="أدخل رقم هاتفك"
@@ -62,7 +68,7 @@
         </div>
       
         <div class="form-group">
-          <label for="email" data-lang-en="Email" data-lang-ar="البريد الإلكتروني">Email</label>
+          <label for="email" class="visually-hidden" data-lang-en="Email" data-lang-ar="البريد الإلكتروني">Email</label>
           <input type="email" class="form-control" id="email"
                  placeholder="Enter your email"
                  data-lang-en="Enter your email"
@@ -71,7 +77,7 @@
         </div>
       
         <div class="form-group">
-          <label for="website" data-lang-en="Website (optional)" data-lang-ar="الموقع الإلكتروني (اختياري)">Website (optional)</label>
+          <label for="website" class="visually-hidden" data-lang-en="Website (optional)" data-lang-ar="الموقع الإلكتروني (اختياري)">Website (optional)</label>
           <input type="url" class="form-control" id="website"
                  placeholder="Enter your website"
                  data-lang-en="Enter your website"
@@ -79,7 +85,8 @@
         </div>
       
         <div class="form-group">
-          <label for="social" data-lang-en="Social Media (optional)" data-lang-ar="وسائل التواصل الاجتماعي (اختياري)">Social Media (optional)</label>
+          <label for="social" class="visually-hidden" data-lang-en="Enter your social media"
+          data-lang-ar="ادخل حسابات السوشيال مديا الخاصة بك"></label>
           <input type="text" class="form-control" id="social"
                  placeholder="Enter your social media"
                  data-lang-en="Enter your social media"
@@ -87,7 +94,7 @@
         </div>
       
         <div class="form-group">
-          <label for="description" data-lang-en="Partnership Description" data-lang-ar="وصف الشراكة">Partnership Description</label>
+          <label for="description"class="visually-hidden" data-lang-en="Partnership Description" data-lang-ar="وصف الشراكة">Partnership Description</label>
           <textarea class="form-control" id="description" rows="4"
                     placeholder="What do you need from our partnership?"
                     data-lang-en="What do you need from our partnership?"
@@ -151,5 +158,6 @@
     </footer>
     <script src="bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
     <script src="LangScript.js"></script>
+    <script src="mainScript.js"></script>
 </body>
 </html>

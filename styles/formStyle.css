@@ -2,16 +2,23 @@
     max-width: 500px;
     margin: 40px auto;
     padding: 20px;
-    background-color: #ffffff;
-    border: 1px solid #f1dcdc;
+    background-color: var(--light-hover);
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.104);
     border-radius: 12px;
   }
-  
+  .form-style label{
+    color: var(--dark-blue) !important;
+  }
+  .form-control{
+    color: var(--dark-blue);
+    background-color: var(--light);
+  }
   .form-title {
     text-align: center;
-    color: #b30000;
+    color: var(--red);
     margin-bottom: 25px;
     font-weight: bold;
+   
   }
   
   .form-group {
@@ -21,5 +28,11 @@
   .form-style .btn {
     width: 100%;
     font-weight: bold;
+    background-color: var(--red);
+    border: none;
+  }
+  .form-style .btn:hover{
+    background-color: var(--red-hover);
+    
   }
   
