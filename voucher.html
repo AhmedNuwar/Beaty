@@ -56,17 +56,19 @@
             </div>
             <div class="points">
                 <h5 data-lang-en="Your points" data-lang-ar="نقاطك">your points: </h5>
-                <span class="points-amount" data-lang-en="1000" data-lang-ar="١٠٠٠">1000</span>
+                <span id="pointsAmount" class="points-amount">1000</span>
                 <div class="redeem-points">
-                    <button class="btn btn-sm btn-discount" data-lang-en="Redeem points for discount" data-lang-ar="استبدل النقاط بخصم">redeem points for discount</button>
+                    <button class="btn btn-sm btn-discount" data-lang-en="Redeem points for discount" data-lang-ar="استبدل النقاط بخصم"
+                    onclick="redeemPoints('voucher')">redeem points for discount</button>
                     <br>
-                    <button class="btn btn-sm btn-wallet" data-lang-en="Redeem to wallet" data-lang-ar="استبدل للمحفظة">redeem to wallet</button>
+                    <button class="btn btn-sm btn-wallet" data-lang-en="Redeem to wallet" data-lang-ar="استبدل للمحفظة"
+                    onclick="redeemPoints('wallet')">redeem to wallet</button>
                 </div>
             </div>
         </aside>
         <div class="vouchers">
             <h4 data-lang-en="Vouchers" data-lang-ar="القسائم">Vouchers</h4>
-            <ul class="voucher-list">
+            <ul id="voucherList" class="voucher-list">
                 <li class="voucher-item">
                     <h5 data-lang-en="First Order Voucher" data-lang-ar="قسيمة الطلب الأول">First Order Voucher</h5>
                     <p data-lang-en="Get 10% off on your first order!" data-lang-ar="احصل على خصم 10٪ على طلبك الأول!">Get 10% off on your first order!</p>
@@ -84,13 +86,15 @@
             <div class="offers">
                 <h4 data-lang-en="Deals" data-lang-ar="العروض">offers</h4>
                 <div class="offer">
-                    <img class="offer-img"  src="Images/recipes/7mam.jfif" alt="" data-lang-en="Stuffed Pigeon" data-lang-ar="حمام محشي">
+                    <img class="offer-img"  src="Images/recipes/7mam.jfif" alt="" data-lang-en="Stuffed Pigeon" data-lang-ar="حمام محشي"
+                    onclick="goTo('Chief.html')">
                     <div class="offer-content">
                     <p data-lang-en="A Deal From Amira's Kitchen" data-lang-ar="عرض من مطبخ أميرة">from Amir's Kitchen</p>
                     </div>
                 </div>
                 <div class="offer">
-                    <img class="offer-img" src="Images/recipes/ma7shi.jfif" alt="" data-lang-en="Stuffed Vegetables" data-lang-ar="محشي">
+                    <img class="offer-img" src="Images/recipes/ma7shi.jfif" alt="" data-lang-en="Stuffed Vegetables" data-lang-ar="محشي"
+                    onclick="goTo('Chief.html')">
                     <div class="offer-content">
                     <p data-lang-en="a Deal From Samira's Kitchen" data-lang-ar="عرض من مطبخ سميره">from Samir's Kitchen</p>
                     </div>

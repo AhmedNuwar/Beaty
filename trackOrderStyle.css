@@ -2,9 +2,8 @@ main{
     width: 100%;
     height: 100%;
     padding: 10px;
-    background-color: white;
 }
-img{
+main img{
     width: 100%;
     height: 15vw;
     object-fit: cover;
@@ -29,8 +28,8 @@ ul.details {
     list-style-type: none; /* Remove default bullets */
     padding: 0;
     margin: 0;
-    background-color: #fff;
-    border: 1px solid #ddd;
+    background-color: var(--light-hover);
+    border: 1px solid var(--light-shadow);
     border-radius: 8px;
     padding: 10px 15px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);

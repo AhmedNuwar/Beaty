@@ -69,7 +69,7 @@ aside {
 .orders {
     flex: 3; /* Takes 3 parts of the available space */
     padding: 10px;
-    overflow-y: auto; /* Adds scrolling if content overflows */
+    
 }
 
 .order{

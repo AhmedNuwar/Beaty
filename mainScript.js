@@ -107,3 +107,40 @@ document.addEventListener("DOMContentLoaded", function(){
     }
     
 })
+function redeemPoints(method){
+    let points = document.getElementById('pointsAmount')
+    let pointsAmount = parseInt(points.textContent);
+    console.log(pointsAmount)
+    if(method === "wallet")
+    {
+        if(pointsAmount >= 1000){
+            alert('سيتم الرصيد الي المحفظة في خلال يومان عمل')
+            points.innerHTML="0";
+        }
+        else{
+                alert('لا يوجد نقاط كافية')
+            }
+    }
+    if(method === "voucher"){
+        let voucherList = document.getElementById('voucherList');
+        if(voucherList){
+            let newVoucher = document.createElement('li');
+            
+            if(pointsAmount >= 1000){
+                newVoucher.classList.add('voucher-item');
+                let voucherName = document.createElement('h5');
+                voucherName.innerHTML= "خصم اسبتدال النقاط";
+                let voucherDescrption = document.createElement('p');
+                voucherDescrption.innerHTML= "استبدل 1000 نقطة بخصم 100 جنية"
+                points.innerHTML = '0';
+                newVoucher.appendChild(voucherName);
+                newVoucher.appendChild(voucherDescrption);
+                voucherList.appendChild(newVoucher);
+            }
+            else{
+                alert('لا يوجد نقاط كافية')
+            }
+
+        }
+    }
+}

@@ -160,6 +160,7 @@ aside {
     border-radius: 8px;
     background-color: #f9f9f9;
     transition: box-shadow 0.3s ease-in-out, background-color 0.3s ease-in-out;
+    overflow: hidden;
 }
 
 .offer:hover {
@@ -175,6 +176,11 @@ aside {
     object-position: center;
     border-radius: 8px;
     object-fit: cover;
+    transition: transform 0.5s ease;
+}
+.offer-img:hover{
+    transform: scale(1.2);
+    cursor: pointer;
 }
 .offer-content{
     position: absolute;
