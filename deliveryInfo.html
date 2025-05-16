@@ -7,15 +7,15 @@
     <link rel="stylesheet" type="text/css" href="bootstrap-5.3.3-dist/css/bootstrap.min.css"> 
     <link rel="stylesheet" href="LayoutStyle.css">
     <link rel="stylesheet" href="styles/formStyle.css">
-    <title>Document</title>
+    <title data-lang-en="Beaty" data-lang-ar="بيتي"></title>
 </head>
 <body>
-    <nav class="navbar navbar-expand-md bg-light navbar-light sticky-top">
+    <nav class="navbar navbar-expand-md">
         <!--logo-->
-        <a href="index.html" class="navbar-brand text-danger" 
+        <a href="index.html" class="navbar-brand" 
            data-lang-en="Beaty" data-lang-ar="بيتي">بيتي</a>
         <!-- Language Switcher -->
-        <button id="languageToggle" class="btn btn-secondary">العربية</button>
+        <button id="languageToggle" class="btn">العربية</button>
         <div id="profile">
         </div>
         <!--toggle btn-->
@@ -25,18 +25,18 @@
         <!--nav links-->
         <div class="collapse navbar-collapse" id="collapsibleNavbar">
             <ul class="navbar-nav"> 
-                <li class="nav-item"><a href="index.html" class="nav-link active" data-lang-en="Home" data-lang-ar="الرئيسية">الرئيسية</a></li>
+                <li class="nav-item"><a href="index.html" class="nav-link " data-lang-en="Home" data-lang-ar="الرئيسية">الرئيسية</a></li>
                 <li class="nav-item user-content"><a href="Kitchens.html" class="nav-link    " data-lang-en="Discover Kitchens" data-lang-ar="اكتشف المطابخ">المطابخ</a></li>
                 <li class="nav-item"><a href="Partner.html" class="nav-link" data-lang-en="Be Our Partner" data-lang-ar="كن شريكنا">كن شريكنا</a></li>
-                <li class="nav-item"><a href="JoinTeam.html" class="nav-link" data-lang-en="Join Our Team" data-lang-ar="انضم لفريقنا">انضم لفريقنا</a></li>
+                <li class="nav-item"><a href="JoinTeam.html" class="nav-link active" data-lang-en="Join Our Team" data-lang-ar="انضم لفريقنا">انضم لفريقنا</a></li>
                 <li class="nav-item"><a href="Help.html" class="nav-link" data-lang-en="Help" data-lang-ar="مساعدة">مساعدة</a></li>
                 <li class="nav-item chief-content"><a href="dashboard.html" class="nav-link" data-lang-en="Dashboard" data-lang-ar="التحكم">مساعدة</a></li>
                 
                     <img src="" alt="" id="user-img" class="nav-link" onclick="goTo('profile.html')">
                
-                <li class="nav-item"> <a href="Login.html" class="btn btn-sm btn-danger" data-lang-en="sign in" data-lang-ar="تسجيل دخول">تسجيل خروج</a></li>
-                <li class="nav-item"> 
-                    <button class="btn btn-sm btn-outline-danger" onclick="logout()">
+                <li class="nav-item guest-content"> <a href="Login.html" class=" authBtn btn btn-sm" data-lang-en="sign in" data-lang-ar="تسجيل دخول">تسجيل خروج</a></li>
+                <li id="logioutBtn" class="nav-item login-content "> 
+                    <button class="btn btn-sm authBtn" onclick="logout()">
                     <span data-lang-en="logout" data-lang-ar="تسجيل خروج">تسجيل خروج</span>
                     </button>
                     
@@ -46,34 +46,35 @@
                 
         </div>
     </nav>
+    <h1 data-lang-ar="معلومات التوصيل" data-lang-en="Delievery Information" class="page-title"></h1>
+
     <form action="trackOrder.html" class="form-style">
-        <h3 data-lang-ar="معلومات التوصيل" data-lang-en="Delievery Information" class="form-title"></h3>
         <div class="form-group">
-            <label for="buildingNumber" class="form-label" data-lang-en="Building Number" data-lang-ar="رقم المبنى">رقم المبنى</label>
-            <input type="text" class="form-control" id="buildingNumber" data-lang-en="Building Number" data-lang-ar="رقم المبنى" required>
+            <label for="buildingNumber" class="form-label visually-hidden" data-lang-en="Building Number" data-lang-ar="رقم المبنى">رقم المبنى</label>
+            <input type="text" class="form-control" id="buildingNumber" placeholder="رقم المبنى" data-lang-en="Building Number" data-lang-ar="رقم المبنى" required>
         </div>
         
         <div class="form-group">
-            <label for="aptNumber" class="form-label " data-lang-en="Apartment Number" data-lang-ar="رقم الشقة">رقم الشقة</label>
-            <input type="text" class="form-control" id="aptNumber" data-lang-en="Apartment Number" data-lang-ar="رقم الشقة" required>
+            <label for="aptNumber" class="form-label visually-hidden" data-lang-en="Apartment Number" data-lang-ar="رقم الشقة">رقم الشقة</label>
+            <input type="number" class="form-control" id="aptNumber" placeholder="رقم الشقة" data-lang-en="Apartment Number" data-lang-ar="رقم الشقة" required>
         </div>
         <div class="form-group">
-            <label for="floor" class="form-label " data-lang-en="Floor" data-lang-ar="الطابق">الطابق</label>
-            <input type="text" class="form-control" id="floor" data-lang-en="Floor" data-lang-ar="الطابق" required>
+            <label for="floor" class="form-label visually-hidden" data-lang-en="Floor" data-lang-ar="الطابق">الطابق</label>
+            <input type="number" class="form-control" id="floor" placeholder="الطابق" data-lang-en="Floor" data-lang-ar="الطابق" required>
         </div>
         <div class="form-group">
-            <label for="streetName" class="form-label " data-lang-en="Street Name" data-lang-ar="اسم الشارع">اسم الشارع</label>
-            <input type="text" class="form-control" id="streetName" data-lang-en="Street Name" data-lang-ar="اسم الشارع" required>
+            <label for="streetName" class="form-label visually-hidden" data-lang-en="Street Name" data-lang-ar="اسم الشارع">اسم الشارع</label>
+            <input type="text" class="form-control" id="streetName" placeholder="اسم الشارع" data-lang-en="Street Name" data-lang-ar="اسم الشارع" required>
         </div>
         <div class="form-group">
-            <label for="additionalDirections" class="form-label" data-lang-en="Additional Directions" data-lang-ar="إرشادات إضافية">إرشادات إضافية</label>
-            <textarea class="form-control" id="additionalDirections" rows="3"></textarea>
+            <label for="additionalDirections" class="form-label visually-hidden" data-lang-en="Additional Directions" data-lang-ar="إرشادات إضافية">إرشادات إضافية</label>
+            <textarea class="form-control" id="additionalDirections" rows="3" placeholder="إرشادات إضافية" data-lang-en="Additional Directions" data-lang-ar="إرشادات إضافية"></textarea>
         </div>
         <div class="form-group">
-            <label for="phoneNumber" class="form-label" data-lang-en="Phone Number" data-lang-ar="رقم الهاتف">رقم الهاتف</label>
-            <input type="tel" class="form-control" id="phoneNumber" data-lang-en="Phone Number" data-lang-ar="رقم الهاتف" required>
+            <label for="phoneNumber" class="form-label visually-hidden" data-lang-en="Phone Number" data-lang-ar="رقم الهاتف">رقم الهاتف</label>
+            <input type="text" class="form-control" id="phoneNumber" placeholder="رقم الهاتف" data-lang-en="Phone Number" data-lang-ar="رقم الهاتف" required>
         </div>
-        <button type="submit" class="btn btn-primary" data-lang-en="Confirm Order" data-lang-ar="تأكيد الطلب"></button>
+        <button type="submit" class="btn btn-danger" data-lang-en="Confirm Order" data-lang-ar="تأكيد الطلب"></button>
     </form>
     <footer>
         <div class="footer-head">

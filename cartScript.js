@@ -106,8 +106,7 @@ function UpdateCart() {
         itemDiv.appendChild(removeBtn);
 
         // Append to both carts
-        if (cartList) cartList.appendChild(itemDiv.cloneNode(true));
-        if (menuCartList) menuCartList.appendChild(itemDiv);
+        if (cartList) cartList.appendChild(itemDiv);
     });
 
     // Update the total price display
@@ -137,28 +136,10 @@ if (clearCartBtn){
         UpdateCart(); // Re-render both carts
     });
 }
-
-let menuClearCartBtn = document.getElementById("menu-clear-cart");
-if (menuClearCartBtn) {
-    menuClearCartBtn.addEventListener("click", function () {
-        cart = []; // Empty the array
-        SaveCart(); // Update localStorage
-        UpdateCart(); // Re-render both carts
-    });
-}
-
 // Fix checkout button for both carts
 let checkoutBtn = document.getElementById("checkout-btn");
 if (checkoutBtn) {
     checkoutBtn.addEventListener("click", function () {
-        SaveCart(); // Save the current state of the cart
-        window.location.href = "checkout.html"; // Redirect to the checkout page
-    });
-}
-
-let menuCheckoutBtn = document.getElementById("menu-checkout-btn");
-if (menuCheckoutBtn) {
-    menuCheckoutBtn.addEventListener("click", function () {
         SaveCart(); // Save the current state of the cart
         window.location.href = "checkout.html"; // Redirect to the checkout page
     });
