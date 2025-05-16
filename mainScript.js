@@ -12,6 +12,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // set user data
     let userImg = document.getElementById('user-img') || "";
+    let userImgProfile = document.getElementById('userImgProfile') || "";
     let userName = document.getElementById('user-name')|| "";
     let userEmail = document.getElementById('user-email')|| "";
     let userPhone = document.getElementById('user-phone')|| "";
@@ -28,6 +29,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     if (currentUser){
         userImg.src = currentUser.avatar;
+        userImgProfile.src = currentUser.avatar;
         userName.innerHTML = currentUser.name;
         userEmail.innerHTML = currentUser.email;
 
@@ -81,14 +83,6 @@ document.addEventListener('DOMContentLoaded', function() {
         
     
 });
-function Run(id, url){
-    element = document.getElementById(id);
-    if(element) element.classList.add('active');
-    console.log(element,id, element.classList)
-    setTimeout(() => {
-        goTo(url);
-      }, 100);
-}
 document.addEventListener("DOMContentLoaded", function(){
     const kitchenImgs = ['Images/fatta.png', 'Images/bamia.png', 'Images/fteer.png'];
     const learnImgs =  ['Images/GreenSoup.png', 'Images/GoldenCrust.png', 'Images/Kunafa.png'];

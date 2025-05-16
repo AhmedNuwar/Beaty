@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="LayoutStyle.css">
     <link rel="stylesheet" href="styles/formStyle.css">
 
-    <title>Document</title>
+    <title data-lang-en="Beaty" data-lang-ar="بيتي"></title>
 </head>
 <body>
     <nav class="navbar navbar-expand-md">
@@ -29,11 +29,11 @@
                 <li class="nav-item"><a href="index.html" class="nav-link " data-lang-en="Home" data-lang-ar="الرئيسية">الرئيسية</a></li>
                 <li class="nav-item user-content"><a href="Kitchens.html" class="nav-link    " data-lang-en="Discover Kitchens" data-lang-ar="اكتشف المطابخ">المطابخ</a></li>
                 <li class="nav-item"><a href="Partner.html" class="nav-link" data-lang-en="Be Our Partner" data-lang-ar="كن شريكنا">كن شريكنا</a></li>
-                <li class="nav-item"><a href="JoinTeam.html" class="nav-link active" data-lang-en="Join Our Team" data-lang-ar="انضم لفريقنا">انضم لفريقنا</a></li>
+                <li class="nav-item"><a href="JoinTeam.html" class="nav-link " data-lang-en="Join Our Team" data-lang-ar="انضم لفريقنا">انضم لفريقنا</a></li>
                 <li class="nav-item"><a href="Help.html" class="nav-link" data-lang-en="Help" data-lang-ar="مساعدة">مساعدة</a></li>
                 <li class="nav-item chief-content"><a href="dashboard.html" class="nav-link" data-lang-en="Dashboard" data-lang-ar="التحكم">مساعدة</a></li>
                 
-                    <img src="" alt="" id="user-img" class="nav-link" onclick="goTo('profile.html')">
+                    <img src="" alt="" id="user-img" class="nav-link active" onclick="goTo('profile.html')">
                
                 <li class="nav-item guest-content"> <a href="Login.html" class=" authBtn btn btn-sm" data-lang-en="sign in" data-lang-ar="تسجيل دخول">تسجيل خروج</a></li>
                 <li id="logioutBtn" class="nav-item login-content "> 
@@ -47,11 +47,12 @@
                 
         </div>
     </nav>
+    <h1 class="page-title" data-lang-en="Add New Address" data-lang-ar="إضافة عنوان جديد"></h1>
+    
     <main class="container">
-       
+
     <form action="" class="form-style">
         <div class="form-group">
-            <h1 class="form-title" data-lang-en="Add New Address" data-lang-ar="إضافة عنوان جديد"></h1>
             <label for="buildingNumber" class="form-label visually-hidden" data-lang-en="Building Number" data-lang-ar="رقم المبنى">رقم المبنى</label>
             <input type="text" class="form-control" id="buildingNumber" placeholder="" data-lang-en="Building Number" data-lang-ar="رقم المبنى" required>
         </div>
@@ -78,6 +79,55 @@
         <button type="submit" class="btn btn-danger" data-lang-en="Submit" data-lang-ar="إرسال"></button>
     </form>
     </main>
+    <footer>
+        <div class="footer-head">
+            <ul>
+                <li><a href="Partner.html" data-lang-en="Be Our Partner" data-lang-ar="كن شريكنا">كن شريكنا</a></li>
+                <li><a href="Jobs.html" data-lang-en="Available Jobs" data-lang-ar="الوظائف المتاحة">الوظائف المتاحة</a></li>
+                <li><a href="FAQ.html" data-lang-en="FAQ" data-lang-ar="الأسئلة الشائعة">الأسئلة الشائعة</a></li>
+                <li><a href="Contact.html" data-lang-en="Contact Us" data-lang-ar="اتصل بنا">اتصل بنا</a></li>
+            </ul>
+            <a href="#" class="btn btn-light"><span data-lang-en="give us your recommendation" data-lang-ar="شاركنا باقرتاحك"></span></a>
+        </div>
+        <div class="footer-main">
+            <div class="chiefs">
+                <h4 data-lang-en="Our Famous Chefs" data-lang-ar="اشهر الطباخيين">طباخينا</h4>
+                <ul>
+                    <li data-lang-en="Chief 1" data-lang-ar="طباخ 1"></li>
+                    <li data-lang-en="Chief 2" data-lang-ar="طباخ 2"></li>
+                    <li data-lang-en="Chief 3" data-lang-ar="طباخ 3"></li>
+                    <li data-lang-en="Chief 4" data-lang-ar="طباخ 4"></li>
+                    <li data-lang-en="Chief 5" data-lang-ar="طباخ 5"></li>
+                    <li data-lang-en="Chief 6" data-lang-ar="طباخ 6"></li>
+                </ul>
+            </div>
+            <div class="cities">
+                <h4 data-lang-en="Cities" data-lang-ar="المدن">المدن</h4>
+                <ul>
+                    <li data-lang-en="Tanta" data-lang-ar="طنطا">طنطا</li>
+                    <li data-lang-en="Alexandria" data-lang-ar="الإسكندرية">الإسكندرية</li>
+                    <li data-lang-en="Cairo" data-lang-ar="القاهرة">القاهرة</li>
+                </ul>
+            </div>
+            <div class="services">
+                <h4 data-lang-en="Other Services" data-lang-ar="الخدمات الاخري">الخدمات</h4>
+                <ul>
+                    <li data-lang-en="Service 1" data-lang-ar="خدمة 1"></li>
+                    <li data-lang-en="Service 2" data-lang-ar="خدمة 2"></li>
+                    <li data-lang-en="Service 3" data-lang-ar="خدمة 3"></li>
+                    <li data-lang-en="Service 4" data-lang-ar="خدمة 4"></li>
+                    <li data-lang-en="Service 5" data-lang-ar="خدمة 5"></li>
+                </ul>
+            </div>
+            <div class="socials">
+                <h4 data-lang-en="Follow Us" data-lang-ar="تابعنا">تابعنا</h4>
+                <a href="#"><i class="bi bi-facebook"></i></a>
+                <a href="#"><i class="bi bi-instagram"></i></a>
+                <a href="#"><i class="bi bi-twitter-x"></i></a>
+                <a href="#"><i class="bi bi-youtube"></i></a>
+                <a href="#"><i class="bi bi-linkedin"></i></a>
+        </div>
+    </footer>
     <script src="bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
     <script src="LangScript.js"></script>
     <script src="mainScript.js"></script>

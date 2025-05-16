@@ -1,16 +1,15 @@
 main {
     display: flex;
     flex-wrap: nowrap; /* Ensures the divs stay in one row */
-    gap: 10px; /* Adds spacing between the divs */
+    gap: 0px; /* Adds spacing between the divs */
     height: 100vh; /* Makes the main container take the full height of the screen */
     box-sizing: border-box; /* Ensures padding is included in the height/width */
 }
-
 aside {
     flex: 1; /* Takes 1 part of the available space */
-    background-color: #f8f9fa;
     padding: 10px;
     overflow-y: auto; /* Adds scrolling if content overflows */
+    border-radius: 10px;
 }
 
 .user-avatar, .chief-avatar {
@@ -27,8 +26,9 @@ aside {
     width: 100%;
     border-bottom: rgb(181, 181, 181) 1px solid;
 }
-h4{
-    font-size: 18px;
+.user-info h4{
+    padding-block-start: 10px;
+    padding-inline-start: 5px;
 }
 .user-info p{
     font-size: 14px;
@@ -52,6 +52,9 @@ h4{
 .fav-chief-info:hover{
     cursor: pointer;
 }
+.fav-chief h4{
+    font-size: 18px;
+}
 .fav-chief-info p {
     margin: 0; /* Removes any default margin around the text */
 }
@@ -59,10 +62,12 @@ h4{
     margin-top: 5px;
     border-radius: 0;
 }
-  
+.section-title{
+    color: var(--orange);
+    font-weight: bold;
+}
 .orders {
     flex: 3; /* Takes 3 parts of the available space */
-    background-color: #ffffff;
     padding: 10px;
     overflow-y: auto; /* Adds scrolling if content overflows */
 }
@@ -76,8 +81,9 @@ h4{
     padding: 10px;
 }
 .kitchen-img{
-    width: 30%;
-    height: 30%;
+    width: 20%;
+    height: 20%;
+    aspect-ratio: 1/1;
     border-radius: 8px;
 }
 .order-info{
@@ -97,11 +103,15 @@ h4{
 
 #cart-container {
     flex: 1; /* Takes 1 part of the available space */
-    background-color: #f8f9fa;
-    padding: 10px;
     overflow-y: auto; /* Adds scrolling if content overflows */
+    border-radius: 10px;
+    padding-inline-end: 10px;
 }
+.cart{
+    background-color: var(--light-hover);
+    padding: 10px;
 
+}
 .order-item{
     display: flex;
     justify-content: space-between;
@@ -121,6 +131,8 @@ h4{
 .item-img{
     width: 100px !important;
     border-radius: 20px;
+    object-fit: cover;
+    aspect-ratio: 4/3;
 }
 
 .order-again{

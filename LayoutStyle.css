@@ -1,7 +1,6 @@
 :root{
     --light: #FEF3E2;
-    --light-hover: #fdeace
-;
+    --light-hover: #fdeace;
     --light-shadow: #c3b8a8;
     --red: #FA4032;
     --red-hover: #E71506;
@@ -12,6 +11,9 @@
     --dark: #1c0d14;
     --dark-blue: #495867
     
+}
+*{
+    box-sizing: border-box;
 }
 /*Font*/
 @font-face {
@@ -46,10 +48,11 @@ body{
     text-align: center;
     padding: 10px;
     font-weight: bold;
-    color: var(--light);
-    background-color: var(--red);
+    color: var(--red);
     margin: 0;
-
+    margin-block-end: 10px;
+    font-size: 36px;
+    
 }
 /* Navbar Styling */
 .navbar{
@@ -60,11 +63,11 @@ body{
 }
 .nav-link{
     margin-inline: 3px;
-
 }
 .nav-link.active, .nav-link:hover{
     border-top: 3px solid var(--red);
-}   
+}  
+ 
 .authBtn{
     margin-top: 5px;
     background-color: var(--red);
@@ -105,11 +108,15 @@ body{
 }
 nav #user-img{
     width: 50px;
-    border-radius: 50%; 
+    border-radius: 50%;
+    object-fit: cover;
     margin-top: -5px;
 }
 nav #user-img:hover{
     cursor: pointer;
+}
+img.nav-link.active, img.nav-link:hover{
+    border: 3px solid var(--red) !important;
 }
 @media (max-width: 768px) {
     .navbar{

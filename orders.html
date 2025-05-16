@@ -7,45 +7,53 @@
     <link rel="stylesheet" type="text/css" href="bootstrap-5.3.3-dist/css/bootstrap.min.css"> 
     <link rel="stylesheet" href="LayoutStyle.css">
     <link rel="stylesheet" href="styles/ordersStyle.css">
-    <title>Document</title>
+    <title data-lang-en="Beaty" data-lang-ar="بيتي"></title>
 </head>
 <body>
-    <nav class="navbar navbar-expand-md bg-light navbar-light sticky-top">
+    <nav class="navbar navbar-expand-md">
         <!--logo-->
-        <a href="index.html" class="navbar-brand text-danger" 
+        <a href="index.html" class="navbar-brand" 
            data-lang-en="Beaty" data-lang-ar="بيتي">بيتي</a>
         <!-- Language Switcher -->
-        <button id="languageToggle" class="btn btn-secondary">العربية</button>
+        <button id="languageToggle" class="btn">العربية</button>
+        <div id="profile">
+        </div>
         <!--toggle btn-->
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
             <span class="navbar-toggler-icon"></span>
         </button>
-        
         <!--nav links-->
         <div class="collapse navbar-collapse" id="collapsibleNavbar">
             <ul class="navbar-nav"> 
-                <li class="nav-item"><a href="index.html" class="nav-link" data-lang-en="Home" data-lang-ar="الرئيسية">الرئيسية</a></li>
-                <li class="nav-item"><a href="Kitchens.html" class="nav-link    " data-lang-en="Discover Kitchens" data-lang-ar="اكتشف المطابخ">المطابخ</a></li>
+                <li class="nav-item"><a href="index.html" class="nav-link " data-lang-en="Home" data-lang-ar="الرئيسية">الرئيسية</a></li>
+                <li class="nav-item user-content"><a href="Kitchens.html" class="nav-link    " data-lang-en="Discover Kitchens" data-lang-ar="اكتشف المطابخ">المطابخ</a></li>
                 <li class="nav-item"><a href="Partner.html" class="nav-link" data-lang-en="Be Our Partner" data-lang-ar="كن شريكنا">كن شريكنا</a></li>
                 <li class="nav-item"><a href="JoinTeam.html" class="nav-link" data-lang-en="Join Our Team" data-lang-ar="انضم لفريقنا">انضم لفريقنا</a></li>
                 <li class="nav-item"><a href="Help.html" class="nav-link" data-lang-en="Help" data-lang-ar="مساعدة">مساعدة</a></li>
-                <li class="nav-item">
-                    <a href="profile.html" class="nav-link" id="profile-link">
-                        <i class="bi bi-person-circle"></i>
-                        <span data-lang-en="Profile" data-lang-ar="الملف الشخصي">الملف الشخصي</span>
-                    </a>
+                <li class="nav-item chief-content"><a href="dashboard.html" class="nav-link" data-lang-en="Dashboard" data-lang-ar="التحكم">مساعدة</a></li>
+                
+                    <img src="" alt="" id="user-img" class="nav-link active" onclick="goTo('profile.html')">
+               
+                <li class="nav-item guest-content"> <a href="Login.html" class=" authBtn btn btn-sm" data-lang-en="sign in" data-lang-ar="تسجيل دخول">تسجيل خروج</a></li>
+                <li id="logioutBtn" class="nav-item login-content "> 
+                    <button class="btn btn-sm authBtn" onclick="logout()">
+                    <span data-lang-en="logout" data-lang-ar="تسجيل خروج">تسجيل خروج</span>
+                    </button>
+                    
                 </li>
-                <li class="nav-item"> <a href="Login.html" class="btn btn-sm btn-danger" data-lang-en="sign in" data-lang-ar="تسجيل دخول">تسجيل خروج</a></li>
+                
             </ul>
                 
         </div>
     </nav>
+    <h1 class="page-title" data-lang-ar="الطلبات" data-lang-en="Orders"></h1>
+
     <main>
         <aside class="">
             <div class="user-info">
-                <img id="user-img" src="Images/userAvatar.png" alt="user avatar" class="user-avatar">
-                <h4 id="user-name" data-lang-en="User Name" data-lang-ar="اسم المستخدم">اسم المستخدم</h4>
-                <p id="user-email" data-lang-en="Basic User info" data-lang-ar="معلومات المستخدم الاساسية">البريد الالكتروني</p>
+                <img id="userImgProfile" src="Images/userAvatar.png" alt="user avatar" class="user-avatar">
+                <h4 id="user-name" >اسم المستخدم</h4>
+                <p id="user-email">البريد الالكتروني</p>
             </div>
             <div class="fav-chief">
                 <h4 data-lang-en="Favorite Chief:" data-lang-ar="الطباخ المفضل:">الطباخ المفضل</h4>
@@ -58,11 +66,12 @@
               
         </aside>
         <div class="orders">
+            <h2 class="section-title" data-lang-en="Previous Orders" data-lang-ar="الطلبات السابقة"></h2>
             <div class="order">
-                <img src="Images/kitchenSquare.jpg" alt="" class="kitchen-img">
+                <img src="Images/womanBrown.jpeg" alt="" class="kitchen-img">
                 <div class="order-info">
                     <h4 class="kitchen-name">
-                        <span data-lang-en="Kitchen Name" data-lang-ar="اسم المطبخ">اسم المطبخ</span>
+                        <span>مطبخ اسيل</span>
                     </h4>
                     <div class="datePrice">
                         <p class="date">
@@ -74,24 +83,19 @@
                     </div>
                     <div id="1" class="order-items"> 
                         <div class="order-item"  
-                            data-name="Shawarma"   
-                            data-price="40"  
-                            data-img="Images/shawarma.jpg"  
+                            data-name="فته" 
+                            data-price="50"
+                            data-img="Images/recipes/fatta2.jpg"
                             data-quantity="4"> 
-                            
-                            <h3 class="item-name" data-lang-en=" Shawarma" data-lang-ar=" شاورما">
-                                <span data-lang-en>Shawarma</span>
-                                <span data-lang-ar>شاورما</span>
+                            <h3 class="item-name" data-lang-en=" Fatta" data-lang-ar="فتة">
                             </h3> 
-                            <p class="item-price" data-lang-en="Price: 40EGP" data-lang-ar="السعر: 40 جنيه">
-                                <span data-lang-en>Price: 40 EGP</span>
-                                <span data-lang-ar>السعر: 40 جنيه</span>
+                            <p class="item-price" data-lang-en="Price: 50EGP" data-lang-ar="السعر: 50 جنيه">
+                                
                             </p> 
                             <p class="item-quantity" data-lang-en="Quantity: 4" data-lang-ar="الكمية: 4">
-                                <span data-lang-en>Quantity: 4</span>
-                                <span data-lang-ar>الكمية: 4</span>
+                                
                             </p> 
-                            <img class="item-img" src="Images/shawarma.jpg" alt="Shawarma"
+                            <img class="item-img" src="Images/recipes/fatta2.jpg" alt="Fatta"
                                  data-lang-en="Shawarma image" data-lang-ar="صورة شاورما" width="150"> 
                         </div> 
                     </div>              
@@ -103,10 +107,10 @@
                 </button>
             </div>
             <div class="order">
-                <img src="Images/kitchenSquare.jpg" alt="" class="kitchen-img">
+                <img src="Images/womanGlasses.jpeg" alt="" class="kitchen-img">
                 <div class="order-info">
                     <h4 class="kitchen-name">
-                        <span data-lang-en="Kitchen Name" data-lang-ar="اسم المطبخ">اسم المطبخ</span>
+                        <span>مطبخ الاكله الشعبيه </span>
                     </h4>
                     <div class="datePrice">
                         <p class="date">
@@ -118,16 +122,15 @@
                     </div>
                     <div id="2" class="order-items"> 
                         <div class="order-item" 
-                            data-name="Falafel"  
-                            data-price="5" 
-                            data-img="Images/falafel.jpg" 
+                            data-name="فته" 
+                            data-price="50"
+                            data-img="Images/recipes/fatta2.jpg"
                             data-quantity="2">
                             
-                            <h3 class="item-name" data-lang-en="Falafel" data-lang-ar="فلافل">
-                                <span class="lang-en">Falafel</span>
-                                <span class="lang-ar">فلافل</span>
+                            <h3 class="item-name" data-lang-en="Ftta" data-lang-ar="فتة">
+                                
                             </h3>
-                            <p class="item-price" data-lang-en="Price: 5 EGP" data-lang-ar="السعر: 5 جنيه">
+                            <p class="item-price" data-lang-en="Price: 50 EGP" data-lang-ar="السعر: 50 جنيه">
                                 <span class="lang-en">Price: 5 EGP</span>
                                 <span class="lang-ar">السعر: 5 جنيه</span>
                             </p>
@@ -135,29 +138,26 @@
                                 <span class="lang-en">Quantity: 2</span>
                                 <span class="lang-ar">الكمية: 2</span>
                             </p>
-                            <img class="item-img" src="Images/falafel.jpg" alt="Falafel"
-                                 data-lang-en="Falafel image" data-lang-ar="صورة فلافل">
+                            <img class="item-img" src="Images/recipes/fatta2.jpg" alt="">
                         </div> 
                     
                         <div class="order-item" 
-                            data-name="Koshari"  
-                            data-price="35" 
-                            data-img="Images/koshari.jpg" 
+                        data-name="رز بلبن" 
+                        data-price="15"
+                        data-img="Images/recipes/rozBlabn.jpg"
                             data-quantity="1">
                             
-                            <h3 class="item-name" data-lang-en="Koshari" data-lang-ar="كشري">
-                                <span class="lang-en">Koshari</span>
-                                <span class="lang-ar">كشري</span>
+                            <h3 class="item-name" data-lang-en="Rice pudding" data-lang-ar="رز بلبن">
+                                
                             </h3>
-                            <p class="item-price" data-lang-en="Price: 35 EGP" data-lang-ar="السعر: 35 جنيه">
-                                <span class="lang-en">Price: 35 EGP</span>
-                                <span class="lang-ar">السعر: 35 جنيه</span>
+                            <p class="item-price" data-lang-en="Price: 15 EGP" data-lang-ar="السعر: 15 جنيه">
+                               
                             </p>
                             <p class="item-quantity" data-lang-en="Quantity: 1" data-lang-ar="الكمية: 1">
                                 <span class="lang-en">Quantity: 1</span>
                                 <span class="lang-ar">الكمية: 1</span>
                             </p>
-                            <img class="item-img" src="Images/koshari.jpg" alt="Koshari"
+                            <img class="item-img" src="Images/recipes/rozBlabn.jpg" alt="Koshari"
                                  data-lang-en="Koshari image" data-lang-ar="صورة كشري" width="150">
                         </div> 
                     
@@ -193,8 +193,8 @@
         </div>
         <!-- Cart Section -->
         <div id="cart-container" class="cart-container">
+            <h2 class="section-title" data-lang-en="Cart" data-lang-ar="السلة">سلة المشتريات</h2 class="section-title">
             <div id="cart" class="cart" >
-                <h3 data-lang-en="Cart" data-lang-ar="السلة">سلة المشتريات</h3>
                 <ul id="cart-items"></ul>
                 <p><strong data-lang-en="Total:" data-lang-ar="الإجمالي:">الإجمالي:</strong> 
                     <span id="cart-total">0</span> جنية
