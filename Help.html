@@ -6,16 +6,15 @@
     <link rel="stylesheet" href="Fonts/bootstrap-icons-1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" type="text/css" href="bootstrap-5.3.3-dist/css/bootstrap.min.css"> 
     <link rel="stylesheet" href="LayoutStyle.css">
-    <link rel="stylesheet" href="styles/formStyle.css">
+    <link rel="stylesheet" href="styles/HelpStyle.css">
     <title data-lang-en="Beaty" data-lang-ar="بيتي"></title>
 </head>
 <body>
     <nav class="navbar navbar-expand-md">
         <!--logo-->
-        <a href="index.html" class="navbar-brand" 
-           data-lang-en="Beaty" data-lang-ar="بيتي">بيتي</a>
+        <a href="index.html" class="navbar-brand" data-lang-ar="بيتي" data-lang-en="Beaty"></a>
         <!-- Language Switcher -->
-        <button id="languageToggle" class="btn">العربية</button>
+       <button id="languageToggle" class="btn">العربية</button>
         <div id="profile">
         </div>
         <!--toggle btn-->
@@ -27,9 +26,9 @@
             <ul class="navbar-nav"> 
                 <li class="nav-item"><a href="index.html" class="nav-link " data-lang-en="Home" data-lang-ar="الرئيسية">الرئيسية</a></li>
                 <li class="nav-item user-content"><a href="Kitchens.html" class="nav-link    " data-lang-en="Discover Kitchens" data-lang-ar="اكتشف المطابخ">المطابخ</a></li>
-                <li class="nav-item"><a href="Partner.html" class="nav-link active" data-lang-en="Be Our Partner" data-lang-ar="كن شريكنا">كن شريكنا</a></li>
-                <li class="nav-item"><a href="JoinTeam.html" class="nav-link " data-lang-en="Join Our Team" data-lang-ar="انضم لفريقنا">انضم لفريقنا</a></li>
-                <li class="nav-item"><a href="Help.html" class="nav-link " data-lang-en="Help" data-lang-ar="مساعدة">مساعدة</a></li>
+                <li class="nav-item"><a href="Partner.html" class="nav-link" data-lang-en="Be Our Partner" data-lang-ar="كن شريكنا">كن شريكنا</a></li>
+                <li class="nav-item"><a href="JoinTeam.html" class="nav-link" data-lang-en="Join Our Team" data-lang-ar="انضم لفريقنا">انضم لفريقنا</a></li>
+                <li class="nav-item"><a href="Help.html" class="nav-link active" data-lang-en="Help" data-lang-ar="مساعدة">مساعدة</a></li>
                 <li class="nav-item chief-content"><a href="dashboard.html" class="nav-link" data-lang-en="Dashboard" data-lang-ar="التحكم">مساعدة</a></li>
                 
                     <img src="" alt="" id="user-img" class="nav-link" onclick="goTo('profile.html')">
@@ -46,79 +45,39 @@
                 
         </div>
     </nav>
-    <h1 class="page-title" data-lang-en="Partnership Request" data-lang-ar="طلب شراكة">Partnership Request</h1>
-      <div class="form-note"> 
-    <h4>
-        <i class="bi bi-exclamation-triangle-fill"></i>
-        <span data-lang-ar="ملحوظة" data-lang-en="Note"></span>
-    </h4>
-    <p data-lang-ar="هذه الاستمارة لمن يريد أن يصبح شريكًا تجاريًا مع بيتي"
-       data-lang-en="This form is for those who be become a business partner with Beaty"></p>
+    <main>
+        <h1 class="page-title" data-lang-en="Help" data-lang-ar="المساعدة"></h1>
+    <h2 data-lang-ar="شرح لوحة التحكم" data-lang-en=""></h2>
+    <div class="video">
+        <h3 data-lang-ar="صفحة الماليات" data-lang-en="Finance Page"></h3>
+        <iframe width="885" height="498" 
+        src="https://www.youtube.com/embed/mBerz6iG07A" 
+        title="وده الشيف الشربيني تقليد موسيقى برنامج طبخ رمضان cbc سفره برلململم [الصوت الاصلي] #عمرو_خالد" 
+        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+        </iframe>
     </div>
-    <form class="parnter-form form-style">
-      
-        <div class="form-group">
-          <label for="name" class="" data-lang-en="Full Name" data-lang-ar="الاسم الكامل">Full Name</label>
-          <input type="text" class="form-control" id="name"
-                 placeholder="Enter your name"
-                 data-lang-en="Enter your name"
-                 data-lang-ar="أدخل اسمك"
-                 required>
-        </div>
-      
-        <div class="form-group">
-          <label for="phone" class="" data-lang-en="Phone" data-lang-ar="رقم الهاتف">Phone</label>
-          <input type="text" class="form-control" id="phone"
-                 placeholder="Enter your phone number"
-                 data-lang-en="Enter your phone number"
-                 data-lang-ar="أدخل رقم هاتفك"
-                 required>
-        </div>
-      
-        <div class="form-group">
-          <label for="email" class="" data-lang-en="Email" data-lang-ar="البريد الإلكتروني">Email</label>
-          <input type="email" class="form-control" id="email"
-                 placeholder="Enter your email"
-                 data-lang-en="Enter your email"
-                 data-lang-ar="أدخل بريدك الإلكتروني"
-                 required>
-        </div>
-      
-        <div class="form-group">
-          <label for="website" class="" data-lang-en="Website (optional)" data-lang-ar="الموقع الإلكتروني (اختياري)">Website (optional)</label>
-          <input type="url" class="form-control" id="website"
-                 placeholder="Enter your website"
-                 data-lang-en="Enter your website"
-                 data-lang-ar="أدخل موقعك الإلكتروني">
-        </div>
-      
-        <div class="form-group">
-          <label for="social" class="" data-lang-en="Enter your social media"
-          data-lang-ar="ادخل حسابات السوشيال مديا الخاصة بك"></label>
-          <input type="text" class="form-control" id="social"
-                 placeholder="Enter your social media"
-                 data-lang-en="Enter your social media"
-                 data-lang-ar="أدخل حسابات التواصل الاجتماعي الخاصة بك">
-        </div>
-      
-        <div class="form-group">
-          <label for="description"class="" data-lang-en="Partnership Description" data-lang-ar="وصف الشراكة">Partnership Description</label>
-          <textarea class="form-control" id="description" rows="4"
-                    placeholder="What do you need from our partnership?"
-                    data-lang-en="What do you need from our partnership?"
-                    data-lang-ar="ماذا تحتاج من شراكتنا؟"
-                    required></textarea>
-        </div>
-        <div class="form-group">
-            <label for="attachment" data-lang-ar="اضف ملف ملحق" data-lang-en="add an attachment"></label>
-            <input type="file" name="attachment" id="attachment" accept="application/pdf" class="form-control">
-        </div>
-        <button type="submit" class="btn btn-danger"
-                data-lang-en="Send Request"
-                data-lang-ar="إرسال الطلب">Send Request</button>
-      </form>
-      
-    <footer>
+    <div class="video">
+        <h3 data-lang-ar="صفحة الاصناف" data-lang-en="Dishes Page"></h3>
+        <iframe width="885" height="498" 
+        src="https://www.youtube.com/embed/mBerz6iG07A" 
+        title="وده الشيف الشربيني تقليد موسيقى برنامج طبخ رمضان cbc سفره برلململم [الصوت الاصلي] #عمرو_خالد" 
+        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+        </iframe>
+    </div>
+    <div class="video">
+        <h3 data-lang-ar="صفحة الطلبات" data-lang-en="Orders Page"></h3>
+        <iframe width="885" height="498" 
+        src="https://www.youtube.com/embed/mBerz6iG07A" 
+        title="وده الشيف الشربيني تقليد موسيقى برنامج طبخ رمضان cbc سفره برلململم [الصوت الاصلي] #عمرو_خالد" 
+        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+        </iframe>
+    </div>
+    
+    </main>
+   <footer>
         <div class="footer-head">
             <ul>
                 <li><a href="Partner.html" data-lang-en="Be Our Partner" data-lang-ar="كن شريكنا">كن شريكنا</a></li>

@@ -134,11 +134,18 @@ aside {
     object-fit: cover;
     aspect-ratio: 4/3;
 }
-
-.order-again{
+.buttons{ 
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
     width: 20%;
-    align-self: flex-end;
-    margin-right: auto;
+}
+.buttons .btn{
+    width: 100%;
+}
+.order-again{
     background-color: var(--red);
     border: 2px solid var(--red);
     color: var(--light);

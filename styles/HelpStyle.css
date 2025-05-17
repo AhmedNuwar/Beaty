@@ -1,0 +1,19 @@
+
+h2{
+    color: var(--light);
+    font-weight: bold;
+    background-color: var(--orange);
+    padding: 10px;
+}
+.video{
+    padding: 10px;
+    width: 100%;
+    margin-block-end: 10px;
+}
+
+.video h3{
+    color: var(--dark-blue);
+}
+.video iframe{
+    border-radius: 10px;
+}
