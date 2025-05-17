@@ -1,6 +1,26 @@
 main{
     padding: 5px;
 }
+form{
+    display: flex;
+    width: 100%;
+    padding: .5rem 1rem;
+
+}
+form #searchInput{
+    width: 98%;
+    display: inline;
+    background-color: transparent;
+}
+form .btn{
+    background-color: var(--red);
+    color: var(--light);
+}
+form .btn:hover{
+    background-color: var(--red-hover);
+    color: var(--light);
+}
+
 .recipes{
     padding: 0 10px;
     display: flex;
