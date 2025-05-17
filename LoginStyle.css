@@ -5,11 +5,12 @@ main{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-     /* Ensure the main element takes full viewport height */
+    padding-block: 40px;
 }
 .container{
-    background: #f9f9f9;
+    background-color: var(--light-hover);
     box-shadow: 0 0 10px #ccc;
+    border-radius: 10px;
     width: 70%;
     min-width: 350px;
     max-width: 600px;

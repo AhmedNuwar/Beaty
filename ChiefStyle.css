@@ -14,8 +14,8 @@
 }
 .cart-container {
     display: none;
-    position: relative; 
-
+    position: relative;
+    max-height: 900px; 
 }
 .cart-container.active{
     display: block;
