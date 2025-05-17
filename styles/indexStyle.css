@@ -195,8 +195,20 @@ form .btn, .form-control{
     flex-direction: column;
     gap: 10px;
 }
-.appImg{
-    background-color: gray;
+.appLogo{
+    background-color: var(--red);
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    color: var(--light);
+    display: flex;
+    align-items: center;
+}
+.appLogo h3{
+    text-align: center;
+    width: 100%;
+    font-weight: bold;
+    font-size: 44px;
 }
 #googleBtn{
     background-color: black;
