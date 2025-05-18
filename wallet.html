@@ -10,7 +10,7 @@
     <title>Document</title>
 </head>
 <body>
-     <nav class="navbar navbar-expand-md">
+    <nav class="navbar navbar-expand-md">
         <!--logo-->
         <a href="index.html" class="navbar-brand" 
            data-lang-en="Beaty" data-lang-ar="بيتي">بيتي</a>
@@ -30,7 +30,7 @@
                 <li class="nav-item"><a href="Partner.html" class="nav-link" data-lang-en="Be Our Partner" data-lang-ar="كن شريكنا">كن شريكنا</a></li>
                 <li class="nav-item"><a href="JoinTeam.html" class="nav-link" data-lang-en="Join Our Team" data-lang-ar="انضم لفريقنا">انضم لفريقنا</a></li>
                 <li class="nav-item"><a href="Help.html" class="nav-link" data-lang-en="Help" data-lang-ar="مساعدة">مساعدة</a></li>
-                <li class="nav-item chief-content"><a href="dashboard.html" class="nav-link" data-lang-en="Dashboard" data-lang-ar="التحكم">مساعدة</a></li>
+                <li class="nav-item chief-content"><a href="dashboard.html" class="nav-link" data-lang-en="Dashboard" data-lang-ar="ادارة المطبخ"></a></li>
                 
                     <img src="" alt="" id="user-img" class="nav-link active" onclick="goTo('profile.html')">
                
@@ -75,12 +75,14 @@
                     </button>
                 </div>
             </div>
+            <a href="files/transactions receipt.pdf" data-lang-ar="حمل الفاتوره" data-lang-en="Download Receipt" class="btn btn-sm btn-dark"></a>
+            <br>
             <button class="btn btn-sm btn-danger goTo-ktichens" onclick="goTo('Kitchens.html')">
                 <span data-lang-en="Go to Kitchens" data-lang-ar="اذهب إلى المطابخ">اذهب إلى المطابخ</span>
             </button>
         </aside>
         <div class="history">
-            <h3 data-lang-en="Previous Transactions" data-lang-ar="المعملات السابقة">تفاصيل التعملات السابقة</h3>
+            <h3 data-lang-en="Previous Transactions" data-lang-ar="المعاملات السابقة">تفاصيل التعملات السابقة</h3>
             <div class="transactions-list">
                 <div class="transaction">
                     <p>
@@ -89,12 +91,16 @@
                     </p>
                     <p>
                         <span data-lang-en="Transaction Amount:" data-lang-ar="قيمة المعاملة:">قيمة المعاملة:</span>
-                        <span class="amount" data-lang-en="1000" data-lang-ar="1000">1000</span>
+                        <span class="amount">300</span>
                         <span class="currency" data-lang-en="EGP" data-lang-ar="جنيه">جنيه</span>
                     </p>
                     <p>
                         <span data-lang-en="Kitchen:" data-lang-ar="المطبخ:">المطبخ:</span>
-                        <span class="kitchen-name" data-lang-en="Kitchen Name" data-lang-ar="اسم المطبخ">اسم المطبخ</span>
+                        <span class="kitchen-name">مطبخ اسيل</span>
+                    </p>
+                    <p>
+                        <span data-lang-en="Transaction type:" data-lang-ar="نوع المعاملة:">المطبخ:</span>
+                        <span  data-lang-ar="طلب" data-lang-en="order">مطبخ اسيل</span>
                     </p>
                 </div>
                 <div class="transaction">
@@ -104,12 +110,16 @@
                     </p>
                     <p>
                         <span data-lang-en="Transaction Amount:" data-lang-ar="قيمة المعاملة:">قيمة المعاملة:</span>
-                        <span class="amount" data-lang-en="500" data-lang-ar="500">500</span>
+                        <span class="amount">450</span>
                         <span class="currency" data-lang-en="EGP" data-lang-ar="جنيه">جنيه</span>
                     </p>
                     <p>
                         <span data-lang-en="Kitchen:" data-lang-ar="المطبخ:">المطبخ:</span>
-                        <span class="kitchen-name" data-lang-en="Another Kitchen" data-lang-ar="مطبخ آخر">مطبخ آخر</span>
+                        <span class="kitchen-name">مطبخ الاكله الشعبيه</span>
+                    </p>
+                    <p>
+                        <span data-lang-en="Transaction type:" data-lang-ar="نوع المعاملة:">المطبخ:</span>
+                        <span  data-lang-ar="طلب" data-lang-en="order"> </span>
                     </p>
                 </div>
                 <div class="transaction">
@@ -119,27 +129,16 @@
                     </p>
                     <p>
                         <span data-lang-en="Transaction Amount:" data-lang-ar="قيمة المعاملة:">قيمة المعاملة:</span>
-                        <span class="amount" data-lang-en="750" data-lang-ar="750">750</span>
+                        <span class="amount">1,240</span>
                         <span class="currency" data-lang-en="EGP" data-lang-ar="جنيه">جنيه</span>
                     </p>
                     <p>
                         <span data-lang-en="Kitchen:" data-lang-ar="المطبخ:">المطبخ:</span>
-                        <span class="kitchen-name" data-lang-en="Famous Kitchen" data-lang-ar="المطبخ الشهير">المطبخ الشهير</span>
-                    </p>
-                </div>
-                <div class="transaction">
-                    <p>
-                        <span data-lang-en="Transaction Date:" data-lang-ar="تاريخ المعاملة:">تاريخ المعاملة:</span>
-                        <span class="date" data-lang-en="25-5-2025" data-lang-ar="25-5-2025">25-5-2025</span>
+                        <span class="kitchen-name">مطبخ اللهم بارك</span>
                     </p>
                     <p>
-                        <span data-lang-en="Transaction Amount:" data-lang-ar="قيمة المعاملة:">قيمة المعاملة:</span>
-                        <span class="amount" data-lang-en="1200" data-lang-ar="1200">1200</span>
-                        <span class="currency" data-lang-en="EGP" data-lang-ar="جنيه">جنيه</span>
-                    </p>
-                    <p>
-                        <span data-lang-en="Kitchen:" data-lang-ar="المطبخ:">المطبخ:</span>
-                        <span class="kitchen-name" data-lang-en="Delicious Kitchen" data-lang-ar="المطبخ اللذيذ">المطبخ اللذيذ</span>
+                        <span data-lang-en="Transaction type:" data-lang-ar="نوع المعاملة:">المطبخ:</span>
+                        <span  data-lang-ar="طلب" data-lang-en="order"></span>
                     </p>
                 </div>
                 </div>

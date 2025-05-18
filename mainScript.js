@@ -114,7 +114,7 @@ function redeemPoints(method){
     if(method === "wallet")
     {
         if(pointsAmount >= 1000){
-            alert('سيتم الرصيد الي المحفظة في خلال يومان عمل')
+            alert('سيتم تحويل الرصيد الي المحفظة في خلال يومان عمل')
             points.innerHTML="0";
         }
         else{

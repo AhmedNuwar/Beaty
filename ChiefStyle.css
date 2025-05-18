@@ -15,7 +15,6 @@
 .cart-container {
     display: none;
     position: relative;
-    max-height: 700px; 
 }
 .cart-container.active{
     display: block;
