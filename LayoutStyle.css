@@ -136,6 +136,7 @@ footer{
     padding: 10px;
     bottom: 0;
     width: 100%;
+    min-height: 40dvh;
 }
 .footer-head{
     display: flex;
