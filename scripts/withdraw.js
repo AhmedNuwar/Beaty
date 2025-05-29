@@ -6,7 +6,7 @@ function withdraw(event){
     let errorMsg = document.getElementById('withdrawError');
 
     successMsg.classList.remove('hidden');
-    if (amount > 12000){
+    if (amount > 3000){
         showMsg(errorMsg.id, false)
     }
     else{

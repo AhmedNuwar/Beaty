@@ -14,6 +14,7 @@ h2{
 .video h3{
     color: var(--dark-blue);
 }
-.video iframe{
-    border-radius: 10px;
+video{
+    border-radius: 20px;
+    
 }
