@@ -4,8 +4,8 @@
     margin: 30px auto;
     padding: 20px;
     max-width: 600px;
-    background-color: #f8f9fa;
-    border-radius: 0px;
+    background-color: var(--light-hover);
+    border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 #submit{
@@ -24,9 +24,13 @@
 }
 .togl-btns .btn{
     border-radius: 20px;
-    
+    border: 2px solid var(--red);
+    color: var(--red);
 }
-
+.tab-btn.active{
+    background-color: var(--red);
+    color: var(--light);
+}
 .avatar-option {
     width: 70px;
     height: 70px;
@@ -48,4 +52,7 @@ input[type="radio"] {
     width: 0;
     height: 0;
     border: none;  /* Remove the border */
+}
+.form-control{
+    background-color: var(--light);
 }

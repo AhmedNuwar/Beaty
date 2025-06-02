@@ -11,38 +11,48 @@
 </head>
 <body>
     <!-- navbar -->
-    <nav class="navbar navbar-expand-md bg-light navbar-light sticky-top">
+    <nav class="navbar navbar-expand-md">
         <!--logo-->
-        <a href="index.html" class="navbar-brand text-danger" 
+        <a href="index.html" class="navbar-brand" 
            data-lang-en="Beaty" data-lang-ar="بيتي">بيتي</a>
         <!-- Language Switcher -->
-        <button id="languageToggle" class="btn btn-secondary">العربية</button>
+        <button id="languageToggle" class="btn">العربية</button>
+        <div id="profile">
+        </div>
         <!--toggle btn-->
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
             <span class="navbar-toggler-icon"></span>
         </button>
-        
         <!--nav links-->
         <div class="collapse navbar-collapse" id="collapsibleNavbar">
             <ul class="navbar-nav"> 
-                <li class="nav-item"><a href="index.html" class="nav-link" data-lang-en="Home" data-lang-ar="الرئيسية">الرئيسية</a></li>
-                <li class="nav-item"><a href="Kitchens.html" class="nav-link    " data-lang-en="Discover Kitchens" data-lang-ar="اكتشف المطابخ">المطابخ</a></li>
+                <li class="nav-item"><a href="index.html" class="nav-link " data-lang-en="Home" data-lang-ar="الرئيسية">الرئيسية</a></li>
+                <li class="nav-item user-content"><a href="Kitchens.html" class="nav-link    " data-lang-en="Discover Kitchens" data-lang-ar="اكتشف المطابخ">المطابخ</a></li>
                 <li class="nav-item"><a href="Partner.html" class="nav-link" data-lang-en="Be Our Partner" data-lang-ar="كن شريكنا">كن شريكنا</a></li>
                 <li class="nav-item"><a href="JoinTeam.html" class="nav-link" data-lang-en="Join Our Team" data-lang-ar="انضم لفريقنا">انضم لفريقنا</a></li>
                 <li class="nav-item"><a href="Help.html" class="nav-link" data-lang-en="Help" data-lang-ar="مساعدة">مساعدة</a></li>
-                <li class="nav-item">
-                    <a href="profile.html" class="nav-link" id="profile-link">
-                        <i class="bi bi-person-circle"></i>
-                        <span data-lang-en="Profile" data-lang-ar="الملف الشخصي">الملف الشخصي</span>
-                    </a>
+                <li class="nav-item chief-content"><a href="dashboard.html" class="nav-link" data-lang-en="Dashboard" data-lang-ar="ادارة المطبخ"></a></li>
+                
+                    <img src="" alt="" id="user-img" class="nav-link" onclick="goTo('profile.html')">
+               
+                <li class="nav-item guest-content "> <a href="Login.html" class=" authBtn btn btn-sm" data-lang-en="sign in" data-lang-ar="تسجيل دخول">تسجيل خروج</a></li>
+                <li id="logioutBtn" class="nav-item login-content "> 
+                    <button class="btn btn-sm authBtn" onclick="logout()">
+                    <span data-lang-en="logout" data-lang-ar="تسجيل خروج">تسجيل خروج</span>
+                    </button>
+                    
                 </li>
-                <li class="nav-item"> <a href="Login.html" class="btn btn-sm btn-danger" data-lang-en="sign in" data-lang-ar="تسجيل دخول">تسجيل خروج</a></li>
+                
             </ul>
                 
         </div>
     </nav>
     <!-- Page Content -->
      <main>
+        <form action="Chief.html" class="search">
+        <input type="text" class="form-control" placeholder="ابحث عن مطبخ قريب منك" id="searchInput" data-lang-en="Search Kitchens Near You" data-lang-ar="ابحث عن مطبخ قريب منك">
+        <button class="btn" type="submit"><i class="bi bi-search"></i></button>
+    </form>
         <!--Recipes-->
         <div class="recipes">  
             <!--recipe 1-->  
@@ -70,7 +80,7 @@
                 </div>
                 
                 <div class="prepContainer">
-                    <button class="prepToggle btn btn-primary">
+                    <button class="prepToggle btn">
                         <span data-lang-en="Preparation Method" data-lang-ar="طريقة التحضير">عرض طريقة التحضير</span>
                     </button>
                     <div class="prep-method">
@@ -108,7 +118,7 @@
                     <img src="Images/recipes/7mam.jfif" alt="Falafel image">
                 </div>
                 <div class="prepContainer">
-                    <button class="prepToggle btn btn-primary">
+                    <button class="prepToggle btn">
                         <span data-lang-en="Preparation Method" data-lang-ar="طريقة التحضير">عرض طريقة التحضير</span>
                     </button>
                 
@@ -151,7 +161,7 @@
 
                 </div>   
                 <div class="prepContainer">
-                    <button class="prepToggle btn btn-primary">
+                    <button class="prepToggle btn">
                         <span data-lang-en="Preparation Method" data-lang-ar="طريقة التحضير">عرض طريقة التحضير</span>
                     </button>
                 
@@ -189,7 +199,7 @@
                     <img src="Images/recipes/grilledChicken.jpg" alt="">                
                 </div>
                 <div class="prepContainer">
-                    <button class="prepToggle btn btn-primary">
+                    <button class="prepToggle btn">
                         <span data-lang-en="Preparation Method" data-lang-ar="طريقة التحضير">عرض طريقة التحضير</span>
                     </button>
                 
@@ -259,5 +269,6 @@
     <script src="bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
     <script src="LangScript.js"></script>
     <script src="scripts/recipesScript.js"></script>
+    <script src="mainScript.js"></script>
 </body>
 </html>

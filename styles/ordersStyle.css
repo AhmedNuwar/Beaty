@@ -63,13 +63,13 @@ aside {
     border-radius: 0;
 }
 .section-title{
-    color: var(--orange);
+    color: var(--dark-blue);
     font-weight: bold;
 }
 .orders {
     flex: 3; /* Takes 3 parts of the available space */
     padding: 10px;
-    overflow-y: auto; /* Adds scrolling if content overflows */
+    overflow: auto ;
 }
 
 .order{
@@ -134,13 +134,27 @@ aside {
     object-fit: cover;
     aspect-ratio: 4/3;
 }
-
-.order-again{
+.buttons{ 
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
     width: 20%;
-    align-self: flex-end;
-    margin-right: auto;
 }
-
+.buttons .btn{
+    width: 100%;
+}
+.order-again{
+    background-color: var(--red);
+    border: 2px solid var(--red);
+    color: var(--light);
+}
+.order-again:hover{
+    background-color: var(--red-hover);
+    border: 2px solid var(--red);
+    color: var(--light);
+}
 [lang='en'] .add-to-cart{
     margin-left: auto;
     margin-right: 0;

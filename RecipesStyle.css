@@ -1,10 +1,26 @@
 main{
-    background-color: white;
     padding: 5px;
 }
-.btn{
-    border-radius: 20px;
+form{
+    display: flex;
+    width: 100%;
+    padding: .5rem 1rem;
+
 }
+form #searchInput{
+    width: 98%;
+    display: inline;
+    background-color: transparent;
+}
+form .btn{
+    background-color: var(--red);
+    color: var(--light);
+}
+form .btn:hover{
+    background-color: var(--red-hover);
+    color: var(--light);
+}
+
 .recipes{
     padding: 0 10px;
     display: flex;
@@ -76,7 +92,14 @@ main{
     margin-top: 10px;
     font-size: 16px;
 }
-
+.prepToggle{
+    background-color: var(--red);
+    color: var(--light);
+}
+.prepToggle:hover{
+    background-color: var(--red-hover);
+    color: var(--light);
+}
 .recipe-info li{
     margin: 5px 0;
     font-size: 14px;

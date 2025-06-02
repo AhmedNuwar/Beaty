@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-lang-en="Beaty" data-lang-ar="بيتي"></title>
+    <link rel="stylesheet" type="text/css" href="bootstrap-5.3.3-dist/css/bootstrap.min.css"> 
+    <link rel="stylesheet" href="Fonts/bootstrap-icons-1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="LayoutStyle.css">
+    <link rel="stylesheet" href="ChiefStyle.css">
+</head>
+<body>
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-md bg-light navbar-light sticky-top">
+        <!--logo-->
+        <a href="index.html" class="navbar-brand text-danger" 
+           data-lang-en="Beaty" data-lang-ar="بيتي">بيتي</a>
+        <!--cart toggle button-->
+        <button id="cart-toggle-btn" class="btn btn-danger cart-btn">
+            <i class="bi bi-bag"></i>
+            <span id="cart-count" 
+            class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-dark">
+                0</span>
+        </button>
+        <!-- Cart Section -->
+        <div id="cart-container" class="cart-container">
+            <div id="cart" class="cart">
+                <h3 data-lang-en="Cart" data-lang-ar="السلة">سلة المشتريات</h3>
+                <ul id="cart-items"></ul>
+                <p><strong data-lang-en="Total:" data-lang-ar="الإجمالي:">الإجمالي:</strong> 
+                    <span id="cart-total" data-lang-en="0 EGP" data-lang-ar="0 جنية">0 جنية</span>
+                </p>
+                <button id="checkout-btn" class="btn btn-sm btn-danger">
+                    <span data-lang-en="Checkout" data-lang-ar="الدفع">الدفع</span>
+                </button>
+                <button class="btn btn-outline-danger btn-sm" id="clear-cart">
+                    <span data-lang-en="Clear Cart" data-lang-ar="إفراغ السلة">إفراغ السلة</span>
+                </button>
+               
+            </div>
+        </div>
+        <!-- Language Switcher -->
+        <button id="languageToggle" class="btn">العربية</button>
+        
+    </nav>
+    <!--navbar end-->
+    <!-- main -->
+    <main>
+        
+        <!-- cheif info -->
+        <div class="cheif-info">
+            <img src="Images/womanBrown.jpeg" alt="cheif profile picture">
+            <div class="all-data">
+                <h3>مطبخ سميره</h3>
+                <p class="data" data-lang-en="The bite of happiness satisfies a hundred" 
+                   data-lang-ar="اللقمة الهنية تكفي مية">فطار و غداء و عشاء
+                </p> 
+                <span class="stars">
+                    <i class="bi bi-star-fill text-warning"></i>
+                    <i class="bi bi-star-fill text-warning"></i>
+                    <i class="bi bi-star-fill text-warning"></i>
+                    <i class="bi bi-star-half text-warning"></i>
+                </span>
+            </div>
+        </div>
+        <div class="food-info">
+            <div class="togl-btns">
+                <button id="toglMenu" class="btn active" data-target="#menu-section">
+                    <span data-lang-en="Menu" data-lang-ar="القائمة">القائمة</span>
+                </button>
+                <button id="toglReview" class="btn" data-target="#reviews-section">
+                    <span data-lang-en="Reviews" data-lang-ar="التقييمات">التقييمات</span>
+                </button>
+            </div>
+            <div id="menu-section" class="menu active">
+                <!--menu items-->
+                <div class="menu-items">
+                    <h3 class="section-h3">
+                        <span data-lang-en="Menu" data-lang-ar="القائمة">القائمة</span>
+                    </h3>
+                    <!--item 1-->
+                    <div class="menu-item">
+                        <div class="menu-info">
+                            <h3>محشي</h3>
+                            <p data-lang-en="Enjoy our delicious Mahshi, a traditional Egyptian dish made with vegetables stuffed with seasoned rice and herbs, cooked to perfection for a savory treat!"
+                               data-lang-ar="استمتعوا بمحشي لذيذ، طبق مصري تقليدي محشو بالأرز المتبل والأعشاب، مطهو بعناية ليمنحكم مذاقاً رائعاً.">
+                                استمتعوا بمحشي لذيذ، طبق مصري تقليدي محشو بالأرز المتبل والأعشاب، مطهو بعناية ليمنحكم مذاقاً رائعاً.
+                            </p>
+                            <span class="price" data-lang-en=" 25 EGP" data-lang-ar="25 جنية">50 جنية</span>
+                            <span class="price" data-lang-en="(50% off)" data-lang-ar="(50% خصم)">50 جنية</span>
+                            <br>
+                            <div class="add-to-cart-section">
+                                <input type="number" class="item-quantity" min="1" value="1" 
+                                       data-lang-en="Quantity" data-lang-ar="الكمية">
+                                <button class="btn btn-sm add-to-cart"
+                                data-name="محشي" 
+                                data-price="25"
+                                data-img="Images/recipes/ma7shi.jfif">
+                                <span data-lang-en="Add to Cart" data-lang-ar="اضف للسلة">اضف للسلة</span>
+                                </button>
+                            </div>
+                        </div>
+                        <img src="Images/recipes/ma7shi.jfif" alt="item image" 
+                             data-lang-en="Falafel image" data-lang-ar="صورة فلافل">
+                    </div>
+                    <!--item 1-->
+                    <div class="menu-item">
+                        <div class="menu-info">
+                            <h3>فته</h3>
+                            <p data-lang-en="Enjoy our homemade Fataa, prepared with fresh rice, bread, and tender meat, topped with our special garlic tomato sauce. Perfect for a hearty meal!"
+                               data-lang-ar="استمتعوا بفتة منزلية محضرة من الأرز الطازج والخبز واللحم الطري، مع صلصة الطماطم بالثوم الخاصة بنا. مثالية لوجبة مشبعة!">
+                                استمتعوا بفتة منزلية محضرة من الأرز الطازج والخبز واللحم الطري، مع صلصة الطماطم بالثوم الخاصة بنا. مثالية لوجبة مشبعة!
+                            </p>
+                            <span class="price" data-lang-en="50 EGP" data-lang-ar="50 جنية">50 جنية</span>
+                            <br>
+                            <div class="add-to-cart-section">
+                                <input type="number" class="item-quantity" min="1" value="1" 
+                                       data-lang-en="Quantity" data-lang-ar="الكمية">
+                                <button class="btn btn-sm add-to-cart"
+                                data-name="فته" 
+                                data-price="50"
+                                data-img="Images/recipes/fatta2.jpg">
+                                <span data-lang-en="Add to Cart" data-lang-ar="اضف للسلة">اضف للسلة</span>
+                                </button>
+                            </div>
+                        </div>
+                        <img src="Images/recipes/fatta2.jpg" alt="item image" 
+                             data-lang-en="Falafel image" data-lang-ar="صورة فلافل">
+                    </div>
+                    <!--item 2-->
+                    <div class="menu-item">
+                        <div class="menu-info">
+                            <h3>رز بلبن</h3>
+                            <p data-lang-en="Indulge in our creamy Roz Bel Laban, a classic Egyptian rice pudding made with fresh milk, tender rice, and a hint of vanilla, topped with cinnamon for the perfect sweet treat."
+                                data-lang-ar="استمتع برز بلبن الكريمي لدينا، أرز بالحليب المصري التقليدي المحضر من الحليب الطازج والأرز الطري ولمسة فانيليا، ويزين بالقرفة لأحلى مذاق.">
+                                 استمتع برز بلبن الكريمي لدينا، أرز بالحليب المصري التقليدي المحضر من الحليب الطازج والأرز الطري ولمسة فانيليا، ويزين بالقرفة لأحلى مذاق.
+                            </p>
+                            <span class="price" data-lang-en="35 EGP" data-lang-ar="35 جنية">35 جنية</span>
+                            <br>
+                            <div class="add-to-cart-section">
+                                <input type="number" class="item-quantity" min="1" value="1" 
+                                       data-lang-en="Quantity" data-lang-ar="الكمية">
+                                <button class="btn btn-sm add-to-cart" 
+                                data-name="رز بلبن" 
+                                data-price="15"
+                                data-img="Images/recipes/rozBlabn.jpg">
+                                <span data-lang-en="Add to Cart" data-lang-ar="اضف للسلة">اضف للسلة</span>
+                                    
+                                </button>
+                            </div>
+                        </div>
+                        <img src="Images/recipes/rozBlabn.jpg" alt="item image" 
+                             data-lang-en="Koshari image" data-lang-ar="صورة كشري">
+                    </div>
+                    <!--item 3-->
+                    <div class="menu-item">
+                        <div class="menu-info">
+                            <h3>بطه مشويه</h3>
+                            <p data-lang-en="Enjoy our delicious grilled duck, marinated with special spices and cooked to perfection for a tender and flavorful meal. Served with rice and vegetables."
+                               data-lang-ar="استمتعوا ببطه مشويه لذيذة، متبلة بتوابل خاصة ومطهوة بعناية لتكون طرية وغنية بالنكهة. تقدم مع الأرز والخضار.">
+                                استمتعوا ببطه مشويه لذيذة، متبلة بتوابل خاصة ومطهوة بعناية لتكون طرية وغنية بالنكهة. تقدم مع الأرز والخضار.
+                            </p>
+                            <span class="price" data-lang-en="120 EGP" data-lang-ar="120 جنية">40 جنية</span>
+                            <br>
+                            <div class="add-to-cart-section">
+                                <input type="number" class="item-quantity" min="1" value="1" 
+                                       data-lang-en="Quantity" data-lang-ar="الكمية">
+                                <button class="btn btn-sm add-to-cart" 
+                                data-name="بطه مشويه" 
+                                data-price="120"
+                                data-img="Images/recipes/duck.jpg">
+                                    <span data-lang-en="Add to Cart" data-lang-ar="اضف للسلة">اضف للسلة</span>
+                                </button>
+                            </div>
+                        </div>
+                        <img src="Images/recipes/duck.jpg" alt="item image">
+                    </div>
+                </div>
+            </div>
+            <div id="reviews-section" class="reviews">
+                <h3 class="section-h3" data-lang-en="Reviews" data-lang-ar="التقييمات">التقييمات</h2> 
+
+                <!-- Existing Reviews -->
+                <div id="review-list">
+                    <div class="review">
+                        <img src="Images/userAvatar.png" alt="user profile picture">
+                        <div class="review-info">
+                            <h6 data-lang-en="John Doe" data-lang-ar="محمد أحمد">محمد أحمد</h6>
+                            <p data-lang-en="The food was amazing! Highly recommend." 
+                            data-lang-ar="الطعام كان رائعاً! أنصح به بشدة.">الطعام كان رائعاً! أنصح به بشدة.</p>
+                        </div> 
+                    </div>
+                    <div class="review">
+                   <img src="Images/userAvatar.png" alt="user profile picture">
+                        <div class="review-info">
+                            <h6 data-lang-en="Jane Smith" data-lang-ar="فاطمة علي">فاطمة علي</h6>
+                            <p data-lang-en="Great service and delicious meals." 
+                            data-lang-ar="خدمة رائعة ووجبات لذيذة.">خدمة رائعة ووجبات لذيذة.</p>
+                        </div>   
+                    </div>
+                </div>
+
+                <!-- Add Review Form -->
+                <form id="review-form">
+                    <input type="text" name="revTxt" id="review-text" 
+                           placeholder="اكتب مراجعتك هنا" 
+                           class="form-control" 
+                           data-lang-en="Write your review here" 
+                           data-lang-ar="اكتب مراجعتك هنا">
+                    <input type="submit" value="اضف مراجعتك" 
+                           class="btn btn-sm btn-danger" 
+                           data-lang-en="Add Review" 
+                           data-lang-ar="اضف مراجعتك">
+                </form>
+            </div>
+            
+        </div>
+    </main>
+    <script src="ChiefScript.js"></script>
+    <script src="cartScript.js"></script>
+    <script src="bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="LangScript.js"></script>
+    <script src="mainScript.js"> </script>
+</body>
+</html>

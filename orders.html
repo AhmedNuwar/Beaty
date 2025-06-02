@@ -30,7 +30,7 @@
                 <li class="nav-item"><a href="Partner.html" class="nav-link" data-lang-en="Be Our Partner" data-lang-ar="كن شريكنا">كن شريكنا</a></li>
                 <li class="nav-item"><a href="JoinTeam.html" class="nav-link" data-lang-en="Join Our Team" data-lang-ar="انضم لفريقنا">انضم لفريقنا</a></li>
                 <li class="nav-item"><a href="Help.html" class="nav-link" data-lang-en="Help" data-lang-ar="مساعدة">مساعدة</a></li>
-                <li class="nav-item chief-content"><a href="dashboard.html" class="nav-link" data-lang-en="Dashboard" data-lang-ar="التحكم">مساعدة</a></li>
+                <li class="nav-item chief-content"><a href="dashboard.html" class="nav-link" data-lang-en="Dashboard" data-lang-ar="ادارة المطبخ"></a></li>
                 
                     <img src="" alt="" id="user-img" class="nav-link active" onclick="goTo('profile.html')">
                
@@ -57,9 +57,9 @@
             </div>
             <div class="fav-chief">
                 <h4 data-lang-en="Favorite Chief:" data-lang-ar="الطباخ المفضل:">الطباخ المفضل</h4>
-                <div class="fav-chief-info" onclick="goTo('Chief.html')">
-                    <img src="Images/cheifAvatar.png" alt="user avatar" class="chief-avatar">
-                    <p data-lang-en="Chief Name" data-lang-ar="اسم الطباخ">اسم الطباخ</p>
+                <div class="fav-chief-info" onclick="goTo('ChiefAsel.html')">
+                    <img src="Images/womanBrown.jpeg" alt="user avatar" class="chief-avatar">
+                    <p>مطبخ اسيل</p>
                 </div>
             </div>
 
@@ -101,10 +101,16 @@
                     </div>              
                 </div>
                   
-                <button class="btn btn-sm btn-primary order-again"
+               <div class="buttons">
+                 <button class="btn btn-sm order-again"
                 onclick="orderAgain('1');">
                     <span data-lang-en="Order Again" data-lang-ar="اطلب مره اخري">أضف إلى السلة</span>
                 </button>
+                <a href="files/receipt 1.pdf" class="btn btn-sm btn-dark"
+                data-lang-ar="حمل الفاتورة" data-lang-en="download receipt" download>
+                    
+                </a>
+               </div>
             </div>
             <div class="order">
                 <img src="Images/womanGlasses.jpeg" alt="" class="kitchen-img">
@@ -185,10 +191,16 @@
                     </div>
                     
                 </div>
-                <button class="btn btn-sm btn-primary order-again"
+                <div class="buttons">
+                 <button class="btn btn-sm order-again"
                 onclick="orderAgain('2');">
                     <span data-lang-en="Order Again" data-lang-ar="اطلب مره اخري">أضف إلى السلة</span>
                 </button>
+                <a href="files/receipt 2.pdf" class="btn btn-sm btn-dark"
+                data-lang-ar="حمل الفاتورة" data-lang-en="download receipt" download>
+                    
+                </a>
+               </div>
             </div>
         </div>
         <!-- Cart Section -->
@@ -199,12 +211,13 @@
                 <p><strong data-lang-en="Total:" data-lang-ar="الإجمالي:">الإجمالي:</strong> 
                     <span id="cart-total">0</span> جنية
                 </p>
-                <button class="btn btn-danger btn-sm" id="clear-cart">
-                    <span data-lang-en="Clear Cart" data-lang-ar="إفراغ السلة">إفراغ السلة</span>
-                </button>
-                <button id="checkout-btn" class="btn btn-sm btn-dark">
+                <button id="checkout-btn" class="btn btn-sm btn-danger">
                     <span data-lang-en="Checkout" data-lang-ar="الدفع">الدفع</span>
                 </button>
+                <button class="btn btn-outline-danger btn-sm" id="clear-cart">
+                    <span data-lang-en="Clear Cart" data-lang-ar="إفراغ السلة">إفراغ السلة</span>
+                </button>
+                
             </div>
         </div>
     </main>
@@ -212,22 +225,19 @@
         <div class="footer-head">
             <ul>
                 <li><a href="Partner.html" data-lang-en="Be Our Partner" data-lang-ar="كن شريكنا">كن شريكنا</a></li>
-                <li><a href="Jobs.html" data-lang-en="Available Jobs" data-lang-ar="الوظائف المتاحة">الوظائف المتاحة</a></li>
-                <li><a href="FAQ.html" data-lang-en="FAQ" data-lang-ar="الأسئلة الشائعة">الأسئلة الشائعة</a></li>
-                <li><a href="Contact.html" data-lang-en="Contact Us" data-lang-ar="اتصل بنا">اتصل بنا</a></li>
+                <li><a href="JoinTeam.html" data-lang-en="Available Jobs" data-lang-ar="الوظائف المتاحة">الوظائف المتاحة</a></li>
+                <li><a href="#" data-lang-en="Contact Us" data-lang-ar="اتصل بنا">اتصل بنا</a></li>
             </ul>
-            <a href="#" class="btn btn-light"><span data-lang-en="give us your recommendation" data-lang-ar="شاركنا باقرتاحك"></span></a>
+            <a href="suggests.html" class="btn btn-light"><span data-lang-en="give us your recommendation" data-lang-ar="شاركنا باقرتاحك"></span></a>
         </div>
         <div class="footer-main">
             <div class="chiefs">
                 <h4 data-lang-en="Our Famous Chefs" data-lang-ar="اشهر الطباخيين">طباخينا</h4>
                 <ul>
-                    <li data-lang-en="Chief 1" data-lang-ar="طباخ 1"></li>
-                    <li data-lang-en="Chief 2" data-lang-ar="طباخ 2"></li>
-                    <li data-lang-en="Chief 3" data-lang-ar="طباخ 3"></li>
-                    <li data-lang-en="Chief 4" data-lang-ar="طباخ 4"></li>
-                    <li data-lang-en="Chief 5" data-lang-ar="طباخ 5"></li>
-                    <li data-lang-en="Chief 6" data-lang-ar="طباخ 6"></li>
+                    <li><a href="ChiefLocal.html">مطبخ الاكله الشعبيه</a></li>
+                    <li><a href="ChiefSayed.html">مطبخ سيد</a></li>
+                    <li><a href="ChiefAmira.html">مطبخ اميره</a></li>
+                   
                 </ul>
             </div>
             <div class="cities">
@@ -239,14 +249,7 @@
                 </ul>
             </div>
             <div class="services">
-                <h4 data-lang-en="Other Services" data-lang-ar="الخدمات الاخري">الخدمات</h4>
-                <ul>
-                    <li data-lang-en="Service 1" data-lang-ar="خدمة 1"></li>
-                    <li data-lang-en="Service 2" data-lang-ar="خدمة 2"></li>
-                    <li data-lang-en="Service 3" data-lang-ar="خدمة 3"></li>
-                    <li data-lang-en="Service 4" data-lang-ar="خدمة 4"></li>
-                    <li data-lang-en="Service 5" data-lang-ar="خدمة 5"></li>
-                </ul>
+                <h4 data-lang-en="Learn How To Cook" data-lang-ar="تعلم الطبخ" onclick="goTo('Recipes.html')">الخدمات</h4>
             </div>
             <div class="socials">
                 <h4 data-lang-en="Follow Us" data-lang-ar="تابعنا">تابعنا</h4>

@@ -30,7 +30,7 @@
                 <li class="nav-item"><a href="Partner.html" class="nav-link active" data-lang-en="Be Our Partner" data-lang-ar="كن شريكنا">كن شريكنا</a></li>
                 <li class="nav-item"><a href="JoinTeam.html" class="nav-link " data-lang-en="Join Our Team" data-lang-ar="انضم لفريقنا">انضم لفريقنا</a></li>
                 <li class="nav-item"><a href="Help.html" class="nav-link " data-lang-en="Help" data-lang-ar="مساعدة">مساعدة</a></li>
-                <li class="nav-item chief-content"><a href="dashboard.html" class="nav-link" data-lang-en="Dashboard" data-lang-ar="التحكم">مساعدة</a></li>
+                <li class="nav-item chief-content"><a href="dashboard.html" class="nav-link" data-lang-en="Dashboard" data-lang-ar="ادارة المطبخ"></a></li>
                 
                     <img src="" alt="" id="user-img" class="nav-link" onclick="goTo('profile.html')">
                
@@ -47,11 +47,18 @@
         </div>
     </nav>
     <h1 class="page-title" data-lang-en="Partnership Request" data-lang-ar="طلب شراكة">Partnership Request</h1>
-
+      <div class="form-note"> 
+    <h4>
+        <i class="bi bi-exclamation-triangle-fill"></i>
+        <span data-lang-ar="ملحوظة" data-lang-en="Note"></span>
+    </h4>
+    <p data-lang-ar="هذه الاستمارة لمن يريد أن يصبح شريكًا تجاريًا مع بيتي"
+       data-lang-en="This form is for those who want to become a business partner with Beaty"></p>
+    </div>
     <form class="parnter-form form-style">
       
         <div class="form-group">
-          <label for="name" class="visually-hidden" data-lang-en="Full Name" data-lang-ar="الاسم الكامل">Full Name</label>
+          <label for="name" class="" data-lang-en="Full Name" data-lang-ar="الاسم الكامل">Full Name</label>
           <input type="text" class="form-control" id="name"
                  placeholder="Enter your name"
                  data-lang-en="Enter your name"
@@ -60,7 +67,7 @@
         </div>
       
         <div class="form-group">
-          <label for="phone" class="visually-hidden" data-lang-en="Phone" data-lang-ar="رقم الهاتف">Phone</label>
+          <label for="phone" class="" data-lang-en="Phone" data-lang-ar="رقم الهاتف">Phone</label>
           <input type="text" class="form-control" id="phone"
                  placeholder="Enter your phone number"
                  data-lang-en="Enter your phone number"
@@ -69,7 +76,7 @@
         </div>
       
         <div class="form-group">
-          <label for="email" class="visually-hidden" data-lang-en="Email" data-lang-ar="البريد الإلكتروني">Email</label>
+          <label for="email" class="" data-lang-en="Email" data-lang-ar="البريد الإلكتروني">Email</label>
           <input type="email" class="form-control" id="email"
                  placeholder="Enter your email"
                  data-lang-en="Enter your email"
@@ -78,7 +85,7 @@
         </div>
       
         <div class="form-group">
-          <label for="website" class="visually-hidden" data-lang-en="Website (optional)" data-lang-ar="الموقع الإلكتروني (اختياري)">Website (optional)</label>
+          <label for="website" class="" data-lang-en="Website (optional)" data-lang-ar="الموقع الإلكتروني (اختياري)">Website (optional)</label>
           <input type="url" class="form-control" id="website"
                  placeholder="Enter your website"
                  data-lang-en="Enter your website"
@@ -86,7 +93,7 @@
         </div>
       
         <div class="form-group">
-          <label for="social" class="visually-hidden" data-lang-en="Enter your social media"
+          <label for="social" class="" data-lang-en="Enter your social media"
           data-lang-ar="ادخل حسابات السوشيال مديا الخاصة بك"></label>
           <input type="text" class="form-control" id="social"
                  placeholder="Enter your social media"
@@ -95,14 +102,17 @@
         </div>
       
         <div class="form-group">
-          <label for="description"class="visually-hidden" data-lang-en="Partnership Description" data-lang-ar="وصف الشراكة">Partnership Description</label>
+          <label for="description"class="" data-lang-en="Partnership Description" data-lang-ar="وصف الشراكة">Partnership Description</label>
           <textarea class="form-control" id="description" rows="4"
                     placeholder="What do you need from our partnership?"
                     data-lang-en="What do you need from our partnership?"
                     data-lang-ar="ماذا تحتاج من شراكتنا؟"
                     required></textarea>
         </div>
-      
+        <div class="form-group">
+            <label for="attachment" data-lang-ar="اضف ملف ملحق" data-lang-en="add an attachment"></label>
+            <input type="file" name="attachment" id="attachment" accept="application/pdf" class="form-control">
+        </div>
         <button type="submit" class="btn btn-danger"
                 data-lang-en="Send Request"
                 data-lang-ar="إرسال الطلب">Send Request</button>
@@ -112,22 +122,19 @@
         <div class="footer-head">
             <ul>
                 <li><a href="Partner.html" data-lang-en="Be Our Partner" data-lang-ar="كن شريكنا">كن شريكنا</a></li>
-                <li><a href="Jobs.html" data-lang-en="Available Jobs" data-lang-ar="الوظائف المتاحة">الوظائف المتاحة</a></li>
-                <li><a href="FAQ.html" data-lang-en="FAQ" data-lang-ar="الأسئلة الشائعة">الأسئلة الشائعة</a></li>
-                <li><a href="Contact.html" data-lang-en="Contact Us" data-lang-ar="اتصل بنا">اتصل بنا</a></li>
+                <li><a href="JoinTeam.html" data-lang-en="Available Jobs" data-lang-ar="الوظائف المتاحة">الوظائف المتاحة</a></li>
+                <li><a href="#" data-lang-en="Contact Us" data-lang-ar="اتصل بنا">اتصل بنا</a></li>
             </ul>
-            <a href="#" class="btn btn-light"><span data-lang-en="give us your recommendation" data-lang-ar="شاركنا باقرتاحك"></span></a>
+            <a href="suggests.html" class="btn btn-light"><span data-lang-en="give us your recommendation" data-lang-ar="شاركنا باقرتاحك"></span></a>
         </div>
         <div class="footer-main">
             <div class="chiefs">
                 <h4 data-lang-en="Our Famous Chefs" data-lang-ar="اشهر الطباخيين">طباخينا</h4>
                 <ul>
-                    <li data-lang-en="Chief 1" data-lang-ar="طباخ 1"></li>
-                    <li data-lang-en="Chief 2" data-lang-ar="طباخ 2"></li>
-                    <li data-lang-en="Chief 3" data-lang-ar="طباخ 3"></li>
-                    <li data-lang-en="Chief 4" data-lang-ar="طباخ 4"></li>
-                    <li data-lang-en="Chief 5" data-lang-ar="طباخ 5"></li>
-                    <li data-lang-en="Chief 6" data-lang-ar="طباخ 6"></li>
+                    <li><a href="ChiefLocal.html">مطبخ الاكله الشعبيه</a></li>
+                    <li><a href="ChiefSayed.html">مطبخ سيد</a></li>
+                    <li><a href="ChiefAmira.html">مطبخ اميره</a></li>
+                   
                 </ul>
             </div>
             <div class="cities">
@@ -139,14 +146,7 @@
                 </ul>
             </div>
             <div class="services">
-                <h4 data-lang-en="Other Services" data-lang-ar="الخدمات الاخري">الخدمات</h4>
-                <ul>
-                    <li data-lang-en="Service 1" data-lang-ar="خدمة 1"></li>
-                    <li data-lang-en="Service 2" data-lang-ar="خدمة 2"></li>
-                    <li data-lang-en="Service 3" data-lang-ar="خدمة 3"></li>
-                    <li data-lang-en="Service 4" data-lang-ar="خدمة 4"></li>
-                    <li data-lang-en="Service 5" data-lang-ar="خدمة 5"></li>
-                </ul>
+                <h4 data-lang-en="Learn How To Cook" data-lang-ar="تعلم الطبخ" onclick="goTo('Recipes.html')">الخدمات</h4>
             </div>
             <div class="socials">
                 <h4 data-lang-en="Follow Us" data-lang-ar="تابعنا">تابعنا</h4>

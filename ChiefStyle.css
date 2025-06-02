@@ -14,8 +14,7 @@
 }
 .cart-container {
     display: none;
-    position: relative; 
-
+    position: relative;
 }
 .cart-container.active{
     display: block;

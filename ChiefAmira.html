@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-lang-en="Beaty" data-lang-ar="بيتي"></title>
+    <link rel="stylesheet" type="text/css" href="bootstrap-5.3.3-dist/css/bootstrap.min.css"> 
+    <link rel="stylesheet" href="Fonts/bootstrap-icons-1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="LayoutStyle.css">
+    <link rel="stylesheet" href="ChiefStyle.css">
+</head>
+<body>
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-md bg-light navbar-light sticky-top">
+        <!--logo-->
+        <a href="index.html" class="navbar-brand text-danger" 
+           data-lang-en="Beaty" data-lang-ar="بيتي">بيتي</a>
+        <!--cart toggle button-->
+        <button id="cart-toggle-btn" class="btn btn-danger cart-btn">
+            <i class="bi bi-bag"></i>
+            <span id="cart-count" 
+            class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-dark">
+                0</span>
+        </button>
+        <!-- Cart Section -->
+        <div id="cart-container" class="cart-container">
+            <div id="cart" class="cart">
+                <h3 data-lang-en="Cart" data-lang-ar="السلة">سلة المشتريات</h3>
+                <ul id="cart-items"></ul>
+                <p><strong data-lang-en="Total:" data-lang-ar="الإجمالي:">الإجمالي:</strong> 
+                    <span id="cart-total" data-lang-en="0 EGP" data-lang-ar="0 جنية">0 جنية</span>
+                </p>
+                <button id="checkout-btn" class="btn btn-sm btn-danger">
+                    <span data-lang-en="Checkout" data-lang-ar="الدفع">الدفع</span>
+                </button>
+                <button class="btn btn-outline-danger btn-sm" id="clear-cart">
+                    <span data-lang-en="Clear Cart" data-lang-ar="إفراغ السلة">إفراغ السلة</span>
+                </button>
+               
+            </div>
+        </div>
+        <!-- Language Switcher -->
+        <button id="languageToggle" class="btn">العربية</button>
+        
+    </nav>
+    <!--navbar end-->
+    <!-- main -->
+    <main>
+        
+        <!-- cheif info -->
+        <div class="cheif-info">
+            <img src="Images/womanGlasses.jpeg" alt="cheif profile picture">
+            <div class="all-data">
+                <h3>مطبخ اميره</h3>
+                <p class="data" data-lang-en="Enough the ability on her mouth comes out the girl to her mother"
+                       data-lang-ar="اكفى القِدرة على فُمها تطلع البنت لأمها">فطار و غداء و عشاء
+                </p> 
+                <span class="stars">
+                    <i class="bi bi-star-fill text-warning"></i>
+                    <i class="bi bi-star-fill text-warning"></i>
+                    <i class="bi bi-star-fill text-warning"></i>
+                    <i class="bi bi-star-half text-warning"></i>
+                </span>
+            </div>
+        </div>
+        <div class="food-info">
+            <div class="togl-btns">
+                <button id="toglMenu" class="btn active" data-target="#menu-section">
+                    <span data-lang-en="Menu" data-lang-ar="القائمة">القائمة</span>
+                </button>
+                <button id="toglReview" class="btn" data-target="#reviews-section">
+                    <span data-lang-en="Reviews" data-lang-ar="التقييمات">التقييمات</span>
+                </button>
+            </div>
+            <div id="menu-section" class="menu active">
+                <!--menu items-->
+                <div class="menu-items">
+                    <h3 class="section-h3">
+                        <span data-lang-en="Menu" data-lang-ar="القائمة">القائمة</span>
+                    </h3>
+                    <!--item 4-->
+                    <div class="menu-item">
+                        <div class="menu-info">
+                            <h3>عرض الحمام</h3>
+                            <p data-lang-en="Enjoy our special Hamam (stuffed pigeon) offer: tender pigeons stuffed with seasoned rice, slow-cooked for a traditional Egyptian delicacy."
+                               data-lang-ar="استمتعوا بعرض الحمام الخاص بنا: حمام محشي بالأرز المتبل وطهي ببطء ليقدم لكم أشهى الأطباق المصرية الأصيلة.">
+                                استمتعوا بعرض الحمام الخاص بنا: حمام محشي بالأرز المتبل وطهي ببطء ليقدم لكم أشهى الأطباق المصرية الأصيلة.
+                            </p>
+                            <span class="price" data-lang-en="60 EGP" data-lang-ar="60 جنية">40 جنية</span>
+                            <span class="price" data-lang-en="(50% off)" data-lang-ar="(خصم 50%)"></span>
+                            <br>
+                            <div class="add-to-cart-section">
+                                <input type="number" class="item-quantity" min="1" value="1" 
+                                       data-lang-en="Quantity" data-lang-ar="الكمية">
+                                <button class="btn btn-sm add-to-cart" 
+                                data-name="حمام محشي" 
+                                data-price="60"
+                                data-img="Images/recipes/7mam.jfif">
+                                    <span data-lang-en="Add to Cart" data-lang-ar="اضف للسلة">اضف للسلة</span>
+                                </button>
+                            </div>
+                        </div>
+                        <img src="Images/recipes/7mam.jfif" alt="item image" 
+                             data-lang-en=" image" data-lang-ar="صورة ">
+                    </div>
+                    <!--item 1-->
+                    <div class="menu-item">
+                        <div class="menu-info">
+                            <h3>مكرونة بشاميل</h3>
+                            <p data-lang-en="Savor our homemade Macarona Bechamel, layers of pasta and seasoned minced meat, baked in a creamy béchamel sauce for a classic Egyptian comfort dish."
+                                data-lang-ar="استمتعوا بمكرونة بشاميل منزلية، طبقات من المكرونة واللحم المفروم المتبل، مخبوزة في صوص بشاميل كريمي لوصفة مصرية أصيلة.">
+                                 استمتعوا بمكرونة بشاميل منزلية، طبقات من المكرونة واللحم المفروم المتبل، مخبوزة في صوص بشاميل كريمي لوصفة مصرية أصيلة.
+                            </p>
+                            <span class="price" data-lang-en="60 EGP" data-lang-ar="60 جنية">60 جنية</span>
+                            <br>
+                            <div class="add-to-cart-section">
+                                <input type="number" class="item-quantity" min="1" value="1" 
+                                       data-lang-en="Quantity" data-lang-ar="الكمية">
+                                <button class="btn btn-sm add-to-cart"
+                                data-name="مكرونة بشاميل" 
+                                data-price="60"
+                                data-img="Images/recipes/bashaml.jpg">
+                                <span data-lang-en="Add to Cart" data-lang-ar="اضف للسلة">اضف للسلة</span>
+                                </button>
+                            </div>
+                        </div>
+                        <img src="Images/recipes/bashaml.jpg" alt="item image" 
+                             data-lang-en="Falafel image" data-lang-ar="صورة فلافل">
+                    </div>
+                    <!--item 2-->
+                    <div class="menu-item">
+                        <div class="menu-info">
+                            <h3> رقاق باللحمة المفرومة</h3>
+                            <p data-lang-en="Enjoy our savory Rokkak with minced meat, layers of crispy pastry filled with seasoned beef, baked to golden perfection for a traditional Egyptian delight."
+                               data-lang-ar="استمتعوا برقاق باللحمة المفرومة، طبقات من الرقاق المقرمش محشوة باللحم المفروم المتبل ومخبوزة حتى تصبح ذهبية لوصفة مصرية أصيلة.">
+                                استمتعوا برقاق باللحمة المفرومة، طبقات من الرقاق المقرمش محشوة باللحم المفروم المتبل ومخبوزة حتى تصبح ذهبية لوصفة مصرية أصيلة.
+                            </p>
+                            <span class="price" data-lang-en="35 EGP" data-lang-ar="35 جنية">35 جنية</span>
+                            <br>
+                            <div class="add-to-cart-section">
+                                <input type="number" class="item-quantity" min="1" value="1" 
+                                       data-lang-en="Quantity" data-lang-ar="الكمية">
+                                <button class="btn btn-sm add-to-cart" 
+                                data-name= "رقاق باللحمة المفرومة" 
+                                data-price="75"
+                                data-img="Images/recipes/rukak.jfif">
+                                <span data-lang-en="Add to Cart" data-lang-ar="اضف للسلة">اضف للسلة</span>
+                                    
+                                </button>
+                            </div>
+                        </div>
+                        <img src="Images/recipes/rukak.jfif" alt="item image" 
+                             data-lang-en="Koshari image" data-lang-ar="صورة كشري">
+                    </div>
+                    <!--item 3-->
+                    <div class="menu-item">
+                        <div class="menu-info">
+                            <h3>طاجن باميه باللحمة</h3>
+                            <p data-lang-en="Juicy and flavorful shawarma wrap with garlic sauce and pickles."
+                               data-lang-ar="ساندوتش شاورما شهي ولذيذ مع صوص الثوم والمخللات.">
+                                ساندوتش شاورما شهي ولذيذ مع صوص الثوم والمخللات.
+                            </p>
+                            <span class="price" data-lang-en="40 EGP" data-lang-ar="40 جنية">40 جنية</span>
+                            <br>
+                            <div class="add-to-cart-section">
+                                <input type="number" class="item-quantity" min="1" value="1" 
+                                       data-lang-en="Quantity" data-lang-ar="الكمية">
+                                <button class="btn btn-sm add-to-cart" 
+                                data-name="طاجن باميه باللحمة" 
+                                data-price="100"
+                                data-img="Images/recipes/bamia2.jpg">
+                                    <span data-lang-en="Add to Cart" data-lang-ar="اضف للسلة">اضف للسلة</span>
+                                </button>
+                            </div>
+                        </div>
+                        <img src="Images/recipes/bamia2.jpg" alt="item image" 
+                             data-lang-en=" image" data-lang-ar="صورة ">
+                    </div>
+                    
+                </div>
+            </div>
+            <div id="reviews-section" class="reviews">
+                <h3 class="section-h3" data-lang-en="Reviews" data-lang-ar="التقييمات">التقييمات</h2> 
+
+                <!-- Existing Reviews -->
+                <div id="review-list">
+                    <div class="review">
+                        <img src="Images/userAvatar.png" alt="user profile picture">
+                        <div class="review-info">
+                            <h6 data-lang-en="John Doe" data-lang-ar="محمد أحمد">محمد أحمد</h6>
+                            <p data-lang-en="The food was amazing! Highly recommend." 
+                            data-lang-ar="الطعام كان رائعاً! أنصح به بشدة.">الطعام كان رائعاً! أنصح به بشدة.</p>
+                        </div> 
+                    </div>
+                    <div class="review">
+                   <img src="Images/userAvatar.png" alt="user profile picture">
+                        <div class="review-info">
+                            <h6 data-lang-en="Jane Smith" data-lang-ar="فاطمة علي">فاطمة علي</h6>
+                            <p data-lang-en="Great service and delicious meals." 
+                            data-lang-ar="خدمة رائعة ووجبات لذيذة.">خدمة رائعة ووجبات لذيذة.</p>
+                        </div>   
+                    </div>
+                </div>
+
+                <!-- Add Review Form -->
+                <form id="review-form">
+                    <input type="text" name="revTxt" id="review-text" 
+                           placeholder="اكتب مراجعتك هنا" 
+                           class="form-control" 
+                           data-lang-en="Write your review here" 
+                           data-lang-ar="اكتب مراجعتك هنا">
+                    <input type="submit" value="اضف مراجعتك" 
+                           class="btn btn-sm btn-danger" 
+                           data-lang-en="Add Review" 
+                           data-lang-ar="اضف مراجعتك">
+                </form>
+            </div>
+            
+        </div>
+    </main>
+    <script src="ChiefScript.js"></script>
+    <script src="cartScript.js"></script>
+    <script src="bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="LangScript.js"></script>
+    <script src="mainScript.js"> </script>
+</body>
+</html>

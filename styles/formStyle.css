@@ -35,4 +35,11 @@
     background-color: var(--red-hover);
     
   }
-  
+.form-note{
+  border: 3px solid var(--dark-blue);
+  max-width: 500px;
+  margin: 40px auto;
+  padding: 10px;
+  border-radius: 10px;
+  color: var(--dark-blue);
+}
