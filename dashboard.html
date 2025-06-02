@@ -289,7 +289,7 @@
                         <table class="table table-sm table-bordered table-striped">
                             <thead class="thead-dark">
                                 <tr>
-                                    <th scope="col"><span data-lang-en="Dish Name" data-lang-ar="اسم الصنف">Dish Name</span></th>
+                                    <th scope="col"><span data-lang-en="Dish Name" data-lang-ar="اسم الصنف"></span></th>
                                     <th scope="col"><span data-lang-en="Quantity Sold" data-lang-ar="الكمية المباعة">Quantity Sold</span></th>
                                     <th scope="col"><span data-lang-en="Product Net Profit" data-lang-ar="صافي ربح المنتج">Product Net Profit</span></th>
                                     <th scope="col"><span data-lang-en="Percentage Sold" data-lang-ar="نسبة بيعه">Percentage Sold</span></th>
@@ -323,11 +323,12 @@
                         <div class="tab-head"><span data-lang-en="Dishes" data-lang-ar="الأصناف">Dish Statistics</span></div>
                         <table class="table table-sm table-striped table-bordered'">
                             <thead>
-                                <th>dish Img</th>
-                                <th>dish name</th>
-                                <th>dish Description</th>
-                                <th>dish Price</th>
-                                <th>dish Sale</th>
+                                <th data-lang-en="Dish Img" data-lang-ar="صورة الصنف">dish Img</th>
+                                <th data-lang-en="Dish Name" data-lang-ar="اسم الصنف">dish name</th>
+                                <th data-lang-en="Dish Description" data-lang-ar="وصف الصنف">dish Description</th>
+                                <th data-lang-en="Dish Price" data-lang-ar="سعر الصنف">dish Price</th>
+                                <th data-lang-en="Dish Sale" data-lang-ar="بيع الصنف">dish Sale</th>
+                                <th data-lang-en="Main/Side" data-lang-ar="جانبي/رئيسي"></th>
                                 <th></th>
                             </thead>
                             <tbody>
@@ -336,7 +337,8 @@
                                     <td>ملوخية</td>
                                     <td>ملوخية بالدجاج</td>
                                     <td>60EGP</td>
-                                    <td></td>
+                                    <td>0</td>
+                                    <td data-lang-en="Main" data-lang-ar="رئيسي">Main</td>
                                     <td>
                                         <button class="btn btn-sm" onclick="removeDish('row1')">
                                         <i class="bi bi-x"></i>
@@ -348,7 +350,8 @@
                                     <td>حمام محشي</td>
                                     <td>حمام محشي فريك</td>
                                     <td>50EGP</td>
-                                    <td></td>
+                                    <td>0</td>
+                                    <td data-lang-en="Main" data-lang-ar="رئيسي">Main</td>
                                     <td>
                                         <button class="btn btn-sm" onclick="removeDish('row2')">
                                         <i class="bi bi-x"></i>
@@ -360,15 +363,14 @@
                                     <td>محشي</td>
                                     <td>محشي ورق عنب</td>
                                     <td>40EGP</td>
-                                    <td></td>
+                                    <td>0</td>
+                                    <td data-lang-en="Main" data-lang-ar="رئيسي">Main</td>
                                     <td>
                                         <button class="btn btn-sm" onclick="removeDish('row3')">
                                         <i class="bi bi-x"></i>
                                     </button>
                                     </td>
                                 </tr>
-
-                               
                             </tbody>
                         </table>
                     </div>
@@ -377,56 +379,64 @@
                         <form id="addNewDishForm" action="" class="dish-form" onsubmit="alert('جاري مراجعة طلبك')">
                             <!-- Dish Name -->
                             <div class="name-descrption">
-                              <label for="dish-name" class="form-label">
-                                <span data-lang-en="Dish Name" data-lang-ar="اسم الطبق">Dish Name</span>:
-                              </label>
-                              <input type="text" id="dish-name" name="dish-name" class="form-control" required>
-                          
-                            <!-- Dish Description -->
-                        
-                              <label for="dish-description" class="form-label">
-                                <span data-lang-en="Dish Description" data-lang-ar="وصف الطبق">Dish Description</span>:
-                              </label>
-                              <textarea id="dish-description" name="dish-description" class="form-control" required></textarea>
+                                <label for="dish-name" class="form-label">
+                                    <span data-lang-en="Dish Name" data-lang-ar="اسم الطبق">Dish Name</span>:
+                                </label>
+                                <input type="text" id="dish-name" name="dish-name" class="form-control" required>
+
+                                <!-- Dish Description -->
+                                <label for="dish-description" class="form-label">
+                                    <span data-lang-en="Dish Description" data-lang-ar="وصف الطبق">Dish Description</span>:
+                                </label>
+                                <textarea id="dish-description" name="dish-description" class="form-control" required></textarea>
                             </div>
-                          
+
                             <!-- Dish Image -->
                             <div class="img-div">
-                              <label for="dish-image" class="form-label">
-                                <span data-lang-en="Dish Image" data-lang-ar="صورة الطبق">Dish Image</span>:
-                              </label>
-                              <input type="file" id="dish-image" name="dish-image" class="form-control" accept="image/*" required>
+                                <label for="dish-image" class="form-label">
+                                    <span data-lang-en="Dish Image" data-lang-ar="صورة الطبق">Dish Image</span>:
+                                </label>
+                                <input type="file" id="dish-image" name="dish-image" class="form-control" accept="image/*" required>
                             </div>
-                          
+
                             <!-- Price -->
                             <div>
-                              <label for="dish-price" class="form-label">
-                                <span data-lang-en="Price" data-lang-ar="السعر">Price</span>:
-                              </label>
-                              <input type="number" id="dish-price" name="dish-price" class="form-control" required>
+                                <label for="dish-price" class="form-label">
+                                    <span data-lang-en="Price" data-lang-ar="السعر">Price</span>:
+                                </label>
+                                <input type="number" id="dish-price" name="dish-price" class="form-control" required>
                             </div>
-                          
+
                             <!-- Sale (Optional) -->
                             <div>
-                              <label for="dish-sale" class="form-label">
-                                <span data-lang-en="Sale (Optional)" data-lang-ar="عرض (اختياري)">Sale (Optional)</span>:
-                              </label>
-                              <textarea id="dish-sale" name="dish-sale" class="form-control"></textarea>
+                                <label for="dish-sale" class="form-label">
+                                    <span data-lang-en="Sale (Optional)" data-lang-ar="عرض (اختياري)">Sale (Optional)</span>:
+                                </label>
+                                <textarea id="dish-sale" name="dish-sale" class="form-control"></textarea>
                             </div>
-                          
+
+                            <!-- Dish Type -->
+                            <div>
+                                <label for="dish-type" class="form-label">
+                                    <span data-lang-en="Dish Type" data-lang-ar="نوع الطبق">Dish Type</span>:
+                                </label>
+                                <select id="dish-type" name="dish-type" class="form-control" required>
+                                    <option value="main" data-lang-en="Main Dish" data-lang-ar="طبق رئيسي">Main Dish</option>
+                                    <option value="side" data-lang-en="Side Dish" data-lang-ar="طبق جانبي">Side Dish</option>
+                                </select>
+                            </div>
+
                             <div class="form-btns">
-                                 <!-- Submit Button -->
-                              <button type="submit" class="btn btn-sm btn-dark">
-                                <span data-lang-en="Submit" data-lang-ar="إرسال">Submit</span>
-                              </button>
+                                <!-- Submit Button -->
+                                <button type="submit" class="btn btn-sm btn-dark">
+                                    <span data-lang-en="Submit" data-lang-ar="إرسال">Submit</span>
+                                </button>
                                 <!-- Reset Button -->
-                            <button type="reset" class="btn btn-sm btn-outline-secondary">
-                                <span data-lang-en="Reset" data-lang-ar="إعادة تعيين">Reset</span>
-                              </button>
-                            
-                             
+                                <button type="reset" class="btn btn-sm btn-outline-secondary">
+                                    <span data-lang-en="Reset" data-lang-ar="إعادة تعيين">Reset</span>
+                                </button>
                             </div>
-                          </form>
+                        </form>
                           
                           
                           
