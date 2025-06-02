@@ -29,6 +29,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     if (currentUser){
         userImg.src = currentUser.avatar;
+        console.log(currentUser.avatar);
         userImgProfile.src = currentUser.avatar;
         userName.innerHTML = currentUser.name;
         userEmail.innerHTML = currentUser.email;
@@ -114,11 +115,11 @@ function redeemPoints(method){
     if(method === "wallet")
     {
         if(pointsAmount >= 1000){
-            alert('سيتم تحويل الرصيد الي المحفظة في خلال يومان عمل')
+            alert('funds will be transferred to your wallet within two business days');
             points.innerHTML="0";
         }
         else{
-                alert('لا يوجد نقاط كافية')
+                alert("No enough points to redeem");
             }
     }
     if(method === "voucher"){
@@ -129,16 +130,16 @@ function redeemPoints(method){
             if(pointsAmount >= 1000){
                 newVoucher.classList.add('voucher-item');
                 let voucherName = document.createElement('h5');
-                voucherName.innerHTML= "خصم اسبتدال النقاط";
+                voucherName.innerHTML= "Points Redemption Discount";
                 let voucherDescrption = document.createElement('p');
-                voucherDescrption.innerHTML= "استبدل 1000 نقطة بخصم 100 جنية"
+                voucherDescrption.innerHTML= "Redeemed 1000 points for a 100 EGP discount";
                 points.innerHTML = '0';
                 newVoucher.appendChild(voucherName);
                 newVoucher.appendChild(voucherDescrption);
                 voucherList.appendChild(newVoucher);
             }
             else{
-                alert('لا يوجد نقاط كافية')
+                alert("No enough points to redeem");
             }
 
         }
